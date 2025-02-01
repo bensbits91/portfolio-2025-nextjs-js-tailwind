@@ -1,54 +1,42 @@
 'use client';
 import Image from 'next/image';
+import { createColumnHelper } from '@tanstack/react-table';
+import DataTable from '../components/table';
 import { skills, skillsForTable } from '../data.js';
 // import { camelToTitle,  makeKey } from '../utils.js';
-import DataTable from '../components/table';
-import { createColumnHelper } from '@tanstack/react-table';
 
-const generateStars = (x) => {
-    const fullStars = Math.floor(x / 2);
-    const halfStar = x % 2 === 1;
-    const stars = [];
-    for (let i = 0; i < fullStars; i++) {
-        stars.push(
-            <Image
-                key={`full-${i}`}
-                src='/star-fill.svg'
-                alt='Star'
-                width={16}
-                height={16}
-            />
-        );
-    }
+const generateStars = (rating) => { // todo: move to utils
+  const fullStars = Math.floor(rating / 2);
+  const halfStar = rating % 2 === 1;
+  const stars = [];
+  for (let i = 0; i < fullStars; i++) {
+    stars.push(
+      <Image key={`full-${i}`} src='/star-fill.svg' alt='Star' width={16} height={16} />
+    );
+  }
 
-    if (halfStar) {
-        stars.push(
-            <Image
-                key='half'
-                src='/star-half-fill.svg'
-                alt='Half Star'
-                width={8}
-                height={16}
-            />
-        );
-    }
+  if (halfStar) {
+    stars.push(
+      <Image key='half' src='/star-half-fill.svg' alt='Half Star' width={8} height={16} />
+    );
+  }
 
-    return stars;
+  return stars;
 };
 
-const generateYearIcon = (years) => {
-    return (
-        <div className='flex row'>
-            <Image
-                src={`/yrs-${years}.svg`}
-                alt='number of years icon'
-                width={24}
-                height={24}
-                className='mr-2'
-            />
-            <span className='text-teal-400'>years</span>
-        </div>
-    );
+const generateYearIcon = (years) => { // todo: move to utils
+  return (
+    <div className='flex row'>
+      <Image
+        src={`/yrs-${years}.svg`}
+        alt='number of years icon'
+        width={24}
+        height={24}
+        className='mr-2'
+      />
+      <span className='text-teal-400'>years</span>
+    </div>
+  );
 };
 
 // todo: replace h-[32px] and h-[16px]
@@ -80,68 +68,61 @@ const generateYearIcon = (years) => {
 
 const columnHelper = createColumnHelper();
 const columns = [
-    columnHelper.accessor('icon', {
-        header: 'Icon',
-        cell: (info) => {
-            const { name } = info.row.original;
-            return (
-                <div className='relative flex justify-center mr-2 h-[32px] w-full min-w-[32px]'>
-                    <Image src={info.getValue()} alt={name} fill contain='true' />
-                </div>
-            );
-        }
-    }),
-    columnHelper.accessor('name', {
-        header: 'Name',
-        cell: (info) => info.getValue()
-    }),
-    columnHelper.accessor('type', {
-        header: 'Type',
-        cell: (info) => info.getValue()
-    }),
-    columnHelper.accessor('years', {
-        header: 'Years',
-        cell: (info) => (
-            <div className='flex row'>{generateYearIcon(info.getValue())}</div>
-        )
-    }),
-    columnHelper.accessor('rating', {
-        header: 'Rating',
-        cell: (info) => <div className='flex row'>{generateStars(info.getValue())}</div>
-    }),
-    columnHelper.accessor('haveUsedProfessionally', {
-        header: 'Used Professionally',
-        cell: (info) =>
-            info.getValue() ? (
-                <Image
-                    src='/chair-office.svg'
-                    alt='Office chair'
-                    width={24}
-                    height={24}
-                />
-            ) : (
-                <></>
-            )
-    }),
-    columnHelper.accessor('haveUsedForFun', {
-        header: 'Used for Fun',
-        cell: (info) =>
-            info.getValue() ? (
-                <Image src='chair-comfy.svg' alt='Comfy chair' width={24} height={24} />
-            ) : (
-                <></>
-            )
-    })
+  columnHelper.accessor('icon', {
+    header: 'Icon',
+    cell: (info) => {
+      const { name } = info.row.original;
+      return (
+        <div className='relative flex justify-center mr-2 h-[32px] w-full min-w-[32px]'>
+          <Image src={info.getValue()} alt={name} fill contain='true' />
+        </div>
+      );
+    }
+  }),
+  columnHelper.accessor('name', {
+    header: 'Name',
+    cell: (info) => info.getValue()
+  }),
+  columnHelper.accessor('type', {
+    header: 'Type',
+    cell: (info) => info.getValue()
+  }),
+  columnHelper.accessor('years', {
+    header: 'Years',
+    cell: (info) => <div className='flex row'>{generateYearIcon(info.getValue())}</div>
+  }),
+  columnHelper.accessor('rating', {
+    header: 'Rating',
+    cell: (info) => <div className='flex row'>{generateStars(info.getValue())}</div>
+  }),
+  columnHelper.accessor('haveUsedProfessionally', {
+    header: 'Used Professionally',
+    cell: (info) =>
+      info.getValue() ? (
+        <Image src='/chair-office.svg' alt='Office chair' width={24} height={24} />
+      ) : (
+        <></>
+      )
+  }),
+  columnHelper.accessor('haveUsedForFun', {
+    header: 'Used for Fun',
+    cell: (info) =>
+      info.getValue() ? (
+        <Image src='chair-comfy.svg' alt='Comfy chair' width={24} height={24} />
+      ) : (
+        <></>
+      )
+  })
 ];
 
 const Skills = () => {
-    console.log('bb ~ skills:', skills);
+  console.log('bb ~ skills:', skills);
 
-    return (
-        <>
-            <h1>Skills</h1>
-            <DataTable columns={columns} data={skillsForTable} />
-            {/* <div>
+  return (
+    <>
+      <h1>Skills</h1>
+      <DataTable columns={columns} data={skillsForTable} />
+      {/* <div>
                 {Object.keys(skills).map((category) => {
                     const catSkills = skills[category];
                     return (
@@ -156,8 +137,8 @@ const Skills = () => {
                     );
                 })}
             </div> */}
-        </>
-    );
+    </>
+  );
 };
 
 export default Skills;
