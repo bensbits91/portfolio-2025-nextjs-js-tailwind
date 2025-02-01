@@ -96,17 +96,17 @@ import Image from 'next/image';
 // };
 
 const Home = () => (
-    <>
-        <div>Hi</div>
-        <div>I'm Ben</div>
-        <div>This page is a WIP</div>
-        <div>Overview</div>
-        <div>Expertise</div>
-        <div>Skills</div>
-        <div>Expereience</div>
-        <div>Projects</div>
-        <div>Contact</div>
-    </>
+  <>
+    <div>Hi</div>
+    <div>I'm Ben</div>
+    <div>This page is a WIP</div>
+    <div>Overview</div>
+    <div>Expertise</div>
+    <div>Skills</div>
+    <div>Expereience</div>
+    <div>Projects</div>
+    <div>Contact</div>
+  </>
 );
 
 export default Home;
