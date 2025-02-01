@@ -913,7 +913,7 @@ export const experience = [
       {
         name: '',
         description:
-          'Produced user guides, in-app help systems, and a knowledge base of technical articles. Contributed to cryptographic patent applications with research, mathematical consultation, and diagrams.'
+          'Produced technical documentation for end users and internal users, including user guides, in-app help systems, and hundreds of technical articles. Interviewed developers and other stakeholders. Contributed to cryptographic patent applications with research, mathematical consultation, and diagrams.'
       }
     ]
   }
