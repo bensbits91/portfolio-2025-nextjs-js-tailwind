@@ -1,19 +1,24 @@
 'use client';
-import Image from 'next/image';
+import CloudinaryImage from '../components/CloudinaryImage';
 import { createColumnHelper } from '@tanstack/react-table';
-import DataTable from '../components/table';
-import { skills, skillsForTable } from '../data.js';
+import DataTable from '../components/Table';
+import { skillsForTable } from '../data.js';
 import { generateStars, generateYearIcon } from '../utils.js';
 
 const columnHelper = createColumnHelper();
 const columns = [
-   columnHelper.accessor('icon', {
+   columnHelper.accessor('cloudinary', {
       header: 'Icon',
       cell: info => {
          const { name } = info.row.original;
          return (
             <div className='relative flex justify-center mr-2 h-[32px] w-full min-w-[32px]'>
-               <Image src={info.getValue()} alt={name} fill contain='true' />
+               <CloudinaryImage
+                  cloudinaryId={info.getValue()}
+                  alt={name}
+                  width={32}
+                  height={32}
+               />
             </div>
          );
       }
@@ -42,12 +47,14 @@ const columns = [
       header: 'Used Professionally',
       cell: info =>
          info.getValue() ? (
-            <Image
-               src='/chair-office.svg'
-               alt='Office chair'
-               width={24}
-               height={24}
-            />
+            <div className='h-[24px] w-[24px]'>
+               <CloudinaryImage
+                  cloudinaryId='chair-office_ivsvtp'
+                  alt='Office chair'
+                  width={24}
+                  height={24}
+               />
+            </div>
          ) : (
             <></>
          )
@@ -56,12 +63,14 @@ const columns = [
       header: 'Used for Fun',
       cell: info =>
          info.getValue() ? (
-            <Image
-               src='chair-comfy.svg'
-               alt='Comfy chair'
-               width={24}
-               height={24}
-            />
+            <div className='h-[24px] w-[24px]'>
+               <CloudinaryImage
+                  cloudinaryId='chair-comfy_wx9oj4'
+                  alt='Comfy chair'
+                  width={24}
+                  height={24}
+               />
+            </div>
          ) : (
             <></>
          )
@@ -69,8 +78,6 @@ const columns = [
 ];
 
 const Skills = () => {
-   console.log('bb ~ skills:', skills);
-
    return (
       <>
          <h1>Skills</h1>
