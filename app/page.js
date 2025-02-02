@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getTopSkills, about, expertise, experience } from './data';
@@ -11,21 +12,28 @@ import {
 // todo: replace flex with grid
 const Home = () => {
    const SkillItem = ({ item }) => {
-      const { name, icon, rating, years } = item;
+      const { name, cloudinary, rating, years } = item;
       const key = makeKey(name);
       return (
          <li key={key}>
             <div className='flex'>
                <div className='flex items-center mb-4'>
-                  {icon && (
+                  {cloudinary && (
                      <div className='relative flex justify-center mr-2 h-[32px] w-full min-w-[32px]'>
-                        <Image src={icon} alt={name} fill contain='true' />
+                        <Image
+                           src={`https://res.cloudinary.com/ddfrx5278/image/upload/c_limit,w_400,q_auto/v1738447608/${cloudinary}`}
+                           width={32}
+                           height={32}
+                           alt={name}
+                        />
                      </div>
                   )}
                   <h3>{name}</h3>
                </div>
-               <div className='relative flex justify-center mr-2 h-[32px] w-full'>
-                  <div className='flex row'>{generateStars(rating)}</div>
+               <div className='relative flex justify-center mr-2 h-[24px] w-full'>
+                  <div className='flex row h-[16px]'>
+                     {generateStars(rating)}
+                  </div>
                   <div className='flex row'>{generateYearIcon(years)}</div>
                </div>
             </div>
@@ -55,16 +63,16 @@ const Home = () => {
          case 'experience':
             return <ExperienceItem item={item} />;
          default:
-            return <li key={key}>{name}</li>;
+            return <li key={key}>Unkown Type</li>;
       }
    };
 
    const HomeCard = ({ items, type, heading, allText, link }) => (
       <div>
          <div>{heading}</div>
-         <ul>
-            {items.map(item => {
-               return <HomeCardItem item={item} type={type} />;
+         <ul key={type}>
+            {items.map((item, index) => {
+               return <HomeCardItem key={index} item={item} type={type} />;
             })}
          </ul>
          {allText && (

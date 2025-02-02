@@ -1,6 +1,4 @@
 import dayjs from 'dayjs';
-// import relativeTime from "dayjs/plugin/relativeTime";
-// dayjs.extend(relativeTime);
 import Image from 'next/image';
 
 export const camelToTitle = str =>
@@ -18,10 +16,10 @@ export const generateStars = rating => {
       stars.push(
          <Image
             key={`full-${i}`}
-            src='/star-fill.svg'
+            src='https://res.cloudinary.com/ddfrx5278/image/upload/c_limit,w_16,h_16,q_auto/v1738447608/star-fill_lyszfd'
             alt='Star'
-            width={16}
-            height={16}
+            width='16'
+            height='16'
          />
       );
    }
@@ -30,10 +28,10 @@ export const generateStars = rating => {
       stars.push(
          <Image
             key='half'
-            src='/star-half-fill.svg'
-            alt='Half Star'
-            width={8}
-            height={16}
+            src='https://res.cloudinary.com/ddfrx5278/image/upload/c_limit,w_8,h_16,q_auto/v1738447608/star-half-fill_a932md'
+            alt='Half star'
+            width='8'
+            height='16'
          />
       );
    }
@@ -45,11 +43,10 @@ export const generateYearIcon = years => {
    return (
       <div className='flex row'>
          <Image
-            src={`/yrs-${years}.svg`}
-            alt='number of years icon'
-            width={24}
-            height={24}
-            className='mr-2'
+            src={`https://res.cloudinary.com/ddfrx5278/image/upload/c_limit,w_8,h_16,q_auto/v1738447608/yrs-${years}`}
+            alt='Number of years icon'
+            width='24'
+            height='24'
          />
          <span className='text-teal-400'>years</span>
       </div>
