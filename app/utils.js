@@ -1,5 +1,5 @@
 import dayjs from 'dayjs';
-import Image from 'next/image';
+import CloudinaryImage from './components/CloudinaryImage';
 
 export const camelToTitle = str =>
    // todo: don't capitalize if "and" or "or"...
@@ -14,25 +14,27 @@ export const generateStars = rating => {
    const stars = [];
    for (let i = 0; i < fullStars; i++) {
       stars.push(
-         <Image
-            key={`full-${i}`}
-            src='https://res.cloudinary.com/ddfrx5278/image/upload/c_limit,w_16,h_16,q_auto/v1738447608/star-fill_lyszfd'
-            alt='Star'
-            width='16'
-            height='16'
-         />
+         <div key={`full-${i}`} className='h-[16px] w-[16px]'>
+            <CloudinaryImage
+               cloudinaryId='star-fill_lyszfd'
+               alt='Star'
+               width='16'
+               height='16'
+            />
+         </div>
       );
    }
 
    if (halfStar) {
       stars.push(
-         <Image
-            key='half'
-            src='https://res.cloudinary.com/ddfrx5278/image/upload/c_limit,w_8,h_16,q_auto/v1738447608/star-half-fill_a932md'
-            alt='Half star'
-            width='8'
-            height='16'
-         />
+         <div key='half' className='h-[16px] w-[16px]'>
+            <CloudinaryImage
+               cloudinaryId='star-half-fill_a932md' // todo: move to constants
+               alt='Half star'
+               width='8'
+               height='16'
+            />
+         </div>
       );
    }
 
@@ -41,9 +43,9 @@ export const generateStars = rating => {
 
 export const generateYearIcon = years => {
    return (
-      <div className='flex row'>
-         <Image
-            src={`https://res.cloudinary.com/ddfrx5278/image/upload/c_limit,w_8,h_16,q_auto/v1738447608/yrs-${years}`}
+      <div className='flex row h-[24px]'>
+         <CloudinaryImage
+            cloudinaryId={`yrs-${years}`} // todo: move to constants
             alt='Number of years icon'
             width='24'
             height='24'

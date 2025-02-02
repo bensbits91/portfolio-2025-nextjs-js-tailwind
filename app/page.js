@@ -1,6 +1,5 @@
-'use client';
-import Image from 'next/image';
 import Link from 'next/link';
+import CloudinaryImage from './components/CloudinaryImage';
 import { getTopSkills, about, expertise, experience } from './data';
 import {
    makeKey,
@@ -20,11 +19,11 @@ const Home = () => {
                <div className='flex items-center mb-4'>
                   {cloudinary && (
                      <div className='relative flex justify-center mr-2 h-[32px] w-full min-w-[32px]'>
-                        <Image
-                           src={`https://res.cloudinary.com/ddfrx5278/image/upload/c_limit,w_400,q_auto/v1738447608/${cloudinary}`}
+                        <CloudinaryImage
+                           cloudinaryId={cloudinary}
+                           alt={name}
                            width={32}
                            height={32}
-                           alt={name}
                         />
                      </div>
                   )}

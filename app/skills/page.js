@@ -1,5 +1,5 @@
 'use client';
-import Image from 'next/image';
+import CloudinaryImage from '../components/CloudinaryImage';
 import { createColumnHelper } from '@tanstack/react-table';
 import DataTable from '../components/Table';
 import { skillsForTable } from '../data.js';
@@ -13,12 +13,11 @@ const columns = [
          const { name } = info.row.original;
          return (
             <div className='relative flex justify-center mr-2 h-[32px] w-full min-w-[32px]'>
-               <Image
-                  src={`https://res.cloudinary.com/ddfrx5278/image/upload/c_limit,w_32,h_32,q_auto/v1738447608/${info.getValue()}`}
+               <CloudinaryImage
+                  cloudinaryId={info.getValue()}
+                  alt={name}
                   width={32}
                   height={32}
-                  alt={name}
-                  className='w-full h-auto'
                />
             </div>
          );
@@ -48,12 +47,14 @@ const columns = [
       header: 'Used Professionally',
       cell: info =>
          info.getValue() ? (
-            <Image
-               src='https://res.cloudinary.com/ddfrx5278/image/upload/c_limit,w_24,h_24,q_auto/v1738447608/chair-office_ivsvtp'
-               alt='Office chair'
-               width='24'
-               height='24'
-            />
+            <div className='h-[24px] w-[24px]'>
+               <CloudinaryImage
+                  cloudinaryId='chair-office_ivsvtp'
+                  alt='Office chair'
+                  width={24}
+                  height={24}
+               />
+            </div>
          ) : (
             <></>
          )
@@ -62,12 +63,14 @@ const columns = [
       header: 'Used for Fun',
       cell: info =>
          info.getValue() ? (
-            <Image
-               src='https://res.cloudinary.com/ddfrx5278/image/upload/c_limit,w_24,h_24,q_auto/v1738447608/chair-comfy_wx9oj4'
-               alt='Comfy chair'
-               width='24'
-               height='24'
-            />
+            <div className='h-[24px] w-[24px]'>
+               <CloudinaryImage
+                  cloudinaryId='chair-comfy_wx9oj4'
+                  alt='Comfy chair'
+                  width={24}
+                  height={24}
+               />
+            </div>
          ) : (
             <></>
          )

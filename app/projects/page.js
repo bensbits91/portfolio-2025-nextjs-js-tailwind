@@ -1,8 +1,8 @@
 'use client';
 import { useState } from 'react';
-import Image from 'next/image';
 import { projects } from '../data';
 import ImageCarousel from '../components/ImageCarousel';
+import CloudinaryImage from '../components/CloudinaryImage';
 
 const Projects = () => {
    const [modalData, setModalData] = useState(null);
@@ -15,11 +15,11 @@ const Projects = () => {
                <div key={index} onClick={() => setModalData(project)}>
                   <h2>{project.name}</h2>
                   {project.images.length > 0 && (
-                     <Image
-                        src={`https://res.cloudinary.com/ddfrx5278/image/upload/c_limit,w_200,q_auto/v1738447608/${project.images[0]}`}
+                     <CloudinaryImage
+                        cloudinaryId={project.images[0]}
+                        alt={project.name}
                         width={200}
                         height={200}
-                        alt={project.name}
                      />
                   )}
                   <p>{project.description}</p>

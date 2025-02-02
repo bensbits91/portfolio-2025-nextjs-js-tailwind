@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import Image from 'next/image';
+import CloudinaryImage from './CloudinaryImage';
 
 const ImageCarousel = ({ images }) => {
    const isMulti = images.length > 1;
@@ -30,12 +30,11 @@ const ImageCarousel = ({ images }) => {
                   style={{
                      transform: `translateX(${(index - currentIndex) * 100}%)`
                   }}>
-                  <Image
-                     src={`https://res.cloudinary.com/ddfrx5278/image/upload/c_limit,w_400,q_auto/v1738447608/${image}`}
+                  <CloudinaryImage
+                     cloudinaryId={image}
+                     alt={`Image ${index + 1}`}
                      width={400}
                      height={400}
-                     alt={`Image ${index + 1}`}
-                     className='w-full h-auto'
                   />
                </div>
             ))}
