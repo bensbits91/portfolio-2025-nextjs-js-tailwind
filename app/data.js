@@ -5,6 +5,8 @@ export const about = {
    title: 'Software Engineer',
    otherTitles: ['Web Developer', 'Full-Stack Developer', 'Frontend Developer'],
    location: 'Portland, Oregon',
+   summary:
+      'Experienced and versatile software engineer with a front-end leaning, full-stack background.',
    overview:
       'Experienced and versatile software engineer with a front-end leaning, full-stack background and a passion for continuous improvement. Known for clear communication, empathy, and a big-picture mindset, I thrive as a dedicated team player and contributor. With leadership experience and a love for mentoring, I bring a growth-oriented approach to any engineering role, always eager to learn, support others, and deliver impactful solutions.'
 };
@@ -13,6 +15,7 @@ export const expertise = [
    'Microservices & APIs',
    'Scalable & Accessible UI',
    'A/B Testing & Experimentation',
+   'Monitoring & Observability',
    'Data Security & Privacy',
    'Process Improvement & Technical Leadership',
    'Cross-functional Team Collaboration & Mentorship',
@@ -20,7 +23,7 @@ export const expertise = [
    'Cloud Infrastructure',
    'CI/CD & Agile Development Practice'
 ];
-export const skillsForTable = [
+export const skills = [
    {
       type: 'Language',
       name: 'JavaScript',
@@ -29,7 +32,9 @@ export const skillsForTable = [
       years: 10,
       rating: 8,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: true,
+      showInSkillsTable: true
    },
    {
       type: 'Language',
@@ -39,7 +44,9 @@ export const skillsForTable = [
       years: 7,
       rating: 6,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Frontend Library',
@@ -49,7 +56,9 @@ export const skillsForTable = [
       years: 8,
       rating: 9,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: true,
+      showInSkillsTable: true
    },
    {
       type: 'Fontend Framework',
@@ -59,7 +68,9 @@ export const skillsForTable = [
       years: 3,
       rating: 8,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: true,
+      showInSkillsTable: true
    },
    {
       type: 'Frontend Framework',
@@ -69,7 +80,9 @@ export const skillsForTable = [
       years: 2,
       rating: 7,
       haveUsedProfessionally: false,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'State Management',
@@ -79,17 +92,21 @@ export const skillsForTable = [
       years: 8,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
-   // {
-   //     type: 'State Management',
-   //     name: 'Thunk',
-   //     icon: '/react.svg',
-   //     years: 6,
-   //     rating: 6,
-   //     haveUsedProfessionally: true,
-   //     haveUsedForFun: true
-   // },
+   {
+      type: 'State Management',
+      name: 'Thunk',
+      icon: '/react.svg',
+      years: 6,
+      rating: 6,
+      haveUsedProfessionally: true,
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: false
+   },
    {
       type: 'Styling',
       name: 'CSS',
@@ -98,7 +115,9 @@ export const skillsForTable = [
       years: 12,
       rating: 9,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Styling',
@@ -108,7 +127,9 @@ export const skillsForTable = [
       years: 8,
       rating: 8,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: true,
+      showInSkillsTable: true
    },
    {
       type: 'Styling',
@@ -118,7 +139,9 @@ export const skillsForTable = [
       years: 2,
       rating: 8,
       haveUsedProfessionally: false,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: true,
+      showInSkillsTable: true
    },
    {
       type: 'Styling',
@@ -128,7 +151,9 @@ export const skillsForTable = [
       years: 8,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Styling',
@@ -138,7 +163,9 @@ export const skillsForTable = [
       years: 8,
       rating: 8,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: true,
+      showInSkillsTable: true
    },
    {
       type: 'UI/UX',
@@ -148,7 +175,9 @@ export const skillsForTable = [
       years: 10,
       rating: 8,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'UI/UX',
@@ -158,7 +187,9 @@ export const skillsForTable = [
       years: 3,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'UI/UX',
@@ -168,7 +199,9 @@ export const skillsForTable = [
       years: 3,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Build Tools',
@@ -178,7 +211,9 @@ export const skillsForTable = [
       years: 7,
       rating: 5,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Build Tools',
@@ -188,7 +223,9 @@ export const skillsForTable = [
       years: 1,
       rating: 5,
       haveUsedProfessionally: false,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Build Tools',
@@ -198,7 +235,9 @@ export const skillsForTable = [
       years: 1,
       rating: 5,
       haveUsedProfessionally: false,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Testing',
@@ -208,7 +247,9 @@ export const skillsForTable = [
       years: 3,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Testing',
@@ -218,7 +259,9 @@ export const skillsForTable = [
       years: 1,
       rating: 6,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Backend Development',
@@ -228,7 +271,9 @@ export const skillsForTable = [
       years: 8,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: true,
+      showInSkillsTable: true
    },
    {
       type: 'Backend Development',
@@ -238,7 +283,9 @@ export const skillsForTable = [
       years: 9,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Backend Development',
@@ -248,7 +295,9 @@ export const skillsForTable = [
       years: 9,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Backend Development',
@@ -258,7 +307,9 @@ export const skillsForTable = [
       years: 3,
       rating: 5,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Backend Framework',
@@ -268,7 +319,9 @@ export const skillsForTable = [
       years: 4,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Backend Framework',
@@ -278,7 +331,9 @@ export const skillsForTable = [
       years: 2,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Backend Framework',
@@ -288,7 +343,9 @@ export const skillsForTable = [
       years: 1,
       rating: 4,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Database',
@@ -298,7 +355,9 @@ export const skillsForTable = [
       years: 2,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Database',
@@ -308,7 +367,9 @@ export const skillsForTable = [
       years: 4,
       rating: 6,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Database',
@@ -318,7 +379,9 @@ export const skillsForTable = [
       years: 10,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'APIs',
@@ -328,7 +391,9 @@ export const skillsForTable = [
       years: 15,
       rating: 8,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'APIs',
@@ -338,7 +403,9 @@ export const skillsForTable = [
       years: 4,
       rating: 6,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Architecture',
@@ -348,7 +415,9 @@ export const skillsForTable = [
       years: 2,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Architecture',
@@ -358,7 +427,9 @@ export const skillsForTable = [
       years: 2,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Cloud Platform',
@@ -368,7 +439,9 @@ export const skillsForTable = [
       years: 3,
       rating: 6,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Cloud Platform',
@@ -378,7 +451,9 @@ export const skillsForTable = [
       years: 3,
       rating: 5,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Cloud Platform',
@@ -388,7 +463,9 @@ export const skillsForTable = [
       years: 2,
       rating: 5,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Containerization',
@@ -398,7 +475,9 @@ export const skillsForTable = [
       years: 4,
       rating: 5,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Containerization',
@@ -408,7 +487,9 @@ export const skillsForTable = [
       years: 2,
       rating: 5,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Infrastructure Orchestration',
@@ -418,7 +499,9 @@ export const skillsForTable = [
       years: 3,
       rating: 5,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Infrastructure Orchestration',
@@ -428,7 +511,9 @@ export const skillsForTable = [
       years: 3,
       rating: 5,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Infrastructure Orchestration',
@@ -438,7 +523,9 @@ export const skillsForTable = [
       years: 3,
       rating: 5,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    }
 ];
 // export const skills = {
@@ -971,7 +1058,9 @@ export const projects = [
          'To showcase my skills and experience. Also, to brush the rust off some of my front-end skills. I have spent the past few years gaining experience in the rest of the stack, but am excited to get back to my roots.',
       outcome:
          'A clean, responsive, and accessible website that showcases my skills and experience.',
-      images: []
+      images: [],
+      showInProjectsGallery: true,
+      featureOnHome: false
    },
    {
       name: 'Agenda Builder',
@@ -995,7 +1084,9 @@ export const projects = [
          'To provide to multiple customers. To gain experience with drag and drop.',
       outcome:
          'Used by multiple customers. Gained experience with drag and drop.',
-      images: ['sharepoint-agenda-builder-dnd_vn1e8a']
+      images: ['sharepoint-agenda-builder-dnd_vn1e8a'],
+      showInProjectsGallery: true,
+      featureOnHome: true
    },
    {
       name: 'Assessment Checklist',
@@ -1014,7 +1105,9 @@ export const projects = [
       description: '',
       motivation: '',
       outcome: '',
-      images: ['sharepoint-assessment-checklist_hjqsg2']
+      images: ['sharepoint-assessment-checklist_hjqsg2'],
+      showInProjectsGallery: true,
+      featureOnHome: true
    },
    {
       name: 'Classifieds, Announcements & Events',
@@ -1036,7 +1129,9 @@ export const projects = [
       images: [
          'spfxClassifieds_focus_ab3e7m',
          'spfxClassifieds_features_p6oa0b'
-      ]
+      ],
+      showInProjectsGallery: true,
+      featureOnHome: false
    },
    {
       name: 'Contact Directory',
@@ -1058,30 +1153,35 @@ export const projects = [
       images: [
          'spfxContactSearch_focus_z4jkqy',
          'spfxContactSearch_features_ls6yng'
-      ]
+      ],
+      showInProjectsGallery: true,
+      featureOnHome: false
    },
    {
       name: 'Form Journey',
       year: '2021',
       tech: [
-        'node.js',
-        'React.js',
-        'TypeScript',
-        'Fabric UI',
-        'SCSS',
-        'Gulp',
-        'Webpack'
-     ],
+         'node.js',
+         'React.js',
+         'TypeScript',
+         'Fabric UI',
+         'SCSS',
+         'Gulp',
+         'Webpack'
+      ],
       code: 'https://github.com/bensbits91/vertical-growing-form',
-      description: 'Enables form admins to build different journeys for different types requests. Using intuitive tools, admins can add, remove, and rearrange steps, fields, sections and pages. Admins can also control branching and conditional logic, as well as choosing from different display styles.',
+      description:
+         'Enables form admins to build different journeys for different types requests. Using intuitive tools, admins can add, remove, and rearrange steps, fields, sections and pages. Admins can also control branching and conditional logic, as well as choosing from different display styles.',
       motivation: '',
       outcome: '',
       images: [
-        'growing-form_mxndcb',
-        'sharepoint-dynamic-form-builder-dark_dupi6b',
-        'sharepoint-dynamic-form-builder_vaq1ol',
-        'sharepoint-form-slider_kgs8re'
-      ]
+         'growing-form_mxndcb',
+         'sharepoint-dynamic-form-builder-dark_dupi6b',
+         'sharepoint-dynamic-form-builder_vaq1ol',
+         'sharepoint-form-slider_kgs8re'
+      ],
+      showInProjectsGallery: true,
+      featureOnHome: true
    },
    {
       name: '',
@@ -1091,7 +1191,9 @@ export const projects = [
       description: '',
       motivation: '',
       outcome: '',
-      images: []
+      images: [],
+      showInProjectsGallery: true,
+      featureOnHome: false
    },
    {
       name: '',
@@ -1101,7 +1203,9 @@ export const projects = [
       description: '',
       motivation: '',
       outcome: '',
-      images: []
+      images: [],
+      showInProjectsGallery: true,
+      featureOnHome: false
    },
    {
       name: '',
@@ -1111,7 +1215,9 @@ export const projects = [
       description: '',
       motivation: '',
       outcome: '',
-      images: []
+      images: [],
+      showInProjectsGallery: true,
+      featureOnHome: false
    },
    {
       name: '',
@@ -1121,7 +1227,9 @@ export const projects = [
       description: '',
       motivation: '',
       outcome: '',
-      images: []
+      images: [],
+      showInProjectsGallery: true,
+      featureOnHome: false
    },
    {
       name: '',
@@ -1131,7 +1239,9 @@ export const projects = [
       description: '',
       motivation: '',
       outcome: '',
-      images: []
+      images: [],
+      showInProjectsGallery: true,
+      featureOnHome: false
    },
    {
       name: '',
@@ -1141,7 +1251,9 @@ export const projects = [
       description: '',
       motivation: '',
       outcome: '',
-      images: []
+      images: [],
+      showInProjectsGallery: true,
+      featureOnHome: false
    },
    {
       name: '',
@@ -1151,7 +1263,9 @@ export const projects = [
       description: '',
       motivation: '',
       outcome: '',
-      images: []
+      images: [],
+      showInProjectsGallery: true,
+      featureOnHome: false
    },
    {
       name: '',
@@ -1161,7 +1275,9 @@ export const projects = [
       description: '',
       motivation: '',
       outcome: '',
-      images: []
+      images: [],
+      showInProjectsGallery: true,
+      featureOnHome: false
    },
    {
       name: '',
@@ -1171,7 +1287,9 @@ export const projects = [
       description: '',
       motivation: '',
       outcome: '',
-      images: []
+      images: [],
+      showInProjectsGallery: true,
+      featureOnHome: false
    },
    {
       name: '',
@@ -1181,7 +1299,9 @@ export const projects = [
       description: '',
       motivation: '',
       outcome: '',
-      images: []
+      images: [],
+      showInProjectsGallery: true,
+      featureOnHome: false
    },
    {
       name: '',
@@ -1191,7 +1311,9 @@ export const projects = [
       description: '',
       motivation: '',
       outcome: '',
-      images: []
+      images: [],
+      showInProjectsGallery: true,
+      featureOnHome: false
    },
    {
       name: '',
@@ -1201,7 +1323,9 @@ export const projects = [
       description: '',
       motivation: '',
       outcome: '',
-      images: []
+      images: [],
+      showInProjectsGallery: true,
+      featureOnHome: false
    },
    {
       name: '',
@@ -1211,7 +1335,9 @@ export const projects = [
       description: '',
       motivation: '',
       outcome: '',
-      images: []
+      images: [],
+      showInProjectsGallery: true,
+      featureOnHome: false
    },
    {
       name: '',
@@ -1273,3 +1399,15 @@ export const certifications = [
 
 export const getTopSkills = (gte = 7) =>
    skillsForTable.filter(skill => skill.rating >= gte);
+
+export const homeSkills = skills
+   .filter(skill => skill.featureOnHome === true)
+   .sort((a, b) => b.rating - a.rating);
+
+export const skillsForTable = skills.filter(
+   skill => skill.showInSkillsTable === true
+);
+
+export const homeProjects = projects.filter(
+   project => project.featureOnHome === true
+);
