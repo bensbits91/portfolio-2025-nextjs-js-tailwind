@@ -9,7 +9,7 @@ const columns = [
       cell: info => {
          const { name } = info.row.original;
          return (
-            <div className='relative flex justify-center mr-2 h-[32px] w-full min-w-[32px]'>
+            <div className='relative flex justify-center mr-2 h-8 w-full min-w-8'>
                <CloudinaryImage
                   cloudinaryId={info.getValue()}
                   alt={name}
@@ -44,7 +44,7 @@ const columns = [
       header: 'Used Professionally',
       cell: info =>
          info.getValue() ? (
-            <div className='h-[24px] w-[24px]'>
+            <div className='h-6 w-6'>
                <CloudinaryImage
                   cloudinaryId='chair-office_ivsvtp'
                   alt='Office chair'
@@ -60,7 +60,7 @@ const columns = [
       header: 'Used for Fun',
       cell: info =>
          info.getValue() ? (
-            <div className='h-[24px] w-[24px]'>
+            <div className='h-6 w-6'>
                <CloudinaryImage
                   cloudinaryId='chair-comfy_wx9oj4'
                   alt='Comfy chair'

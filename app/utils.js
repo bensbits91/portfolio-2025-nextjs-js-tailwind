@@ -14,7 +14,7 @@ export const generateStars = rating => {
    const stars = [];
    for (let i = 0; i < fullStars; i++) {
       stars.push(
-         <div key={`full-${i}`} className='h-[16px] w-[16px]'>
+         <div key={`full-${i}`} className='h-4 w-4'>
             <CloudinaryImage
                cloudinaryId='star-fill_lyszfd'
                alt='Star'
@@ -27,11 +27,11 @@ export const generateStars = rating => {
 
    if (halfStar) {
       stars.push(
-         <div key='half' className='h-[16px] w-[16px]'>
+         <div key='half' className='h-4 w-4'>
             <CloudinaryImage
                cloudinaryId='star-half-fill_a932md' // todo: move to constants
                alt='Half star'
-               width='8'
+               width='16'
                height='16'
             />
          </div>
@@ -43,9 +43,9 @@ export const generateStars = rating => {
 
 export const generateYearIcon = years => {
    return (
-      <div className='flex row h-[24px]'>
+      <div className='flex row h-6 w-6 items-center'>
          <CloudinaryImage
-            cloudinaryId={`yrs-${years}`} // todo: move to constants
+            cloudinaryId={`yrs-${years}`}
             alt='Number of years icon'
             width='24'
             height='24'

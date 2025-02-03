@@ -1,7 +1,8 @@
-import { getTopSkills, about, expertise, experience } from './data';
+import { getHomeSkills, about, expertise, experience } from './data';
 import HomeCard from './components/HomeCard';
 
 const Home = () => {
+   const homeSkills = getHomeSkills();
    return (
       <>
          <div>Hi I'm Ben</div>
@@ -11,7 +12,7 @@ const Home = () => {
          </p>
          <div className='grid grid-cols-2 gap-4 my-12'>
             <HomeCard
-               items={getTopSkills(8)}
+               items={homeSkills}
                type='skill'
                heading='Top skills'
                allText='View all skills'

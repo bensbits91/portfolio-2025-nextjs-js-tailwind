@@ -13,6 +13,7 @@ export const expertise = [
    'Microservices & APIs',
    'Scalable & Accessible UI',
    'A/B Testing & Experimentation',
+   'Monitoring & Observability',
    'Data Security & Privacy',
    'Process Improvement & Technical Leadership',
    'Cross-functional Team Collaboration & Mentorship',
@@ -29,7 +30,9 @@ export const skillsForTable = [
       years: 10,
       rating: 8,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: true,
+      showInSkillsTable: true
    },
    {
       type: 'Language',
@@ -39,7 +42,9 @@ export const skillsForTable = [
       years: 7,
       rating: 6,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Frontend Library',
@@ -49,7 +54,9 @@ export const skillsForTable = [
       years: 8,
       rating: 9,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: true,
+      showInSkillsTable: true
    },
    {
       type: 'Fontend Framework',
@@ -59,7 +66,9 @@ export const skillsForTable = [
       years: 3,
       rating: 8,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: true,
+      showInSkillsTable: true
    },
    {
       type: 'Frontend Framework',
@@ -69,7 +78,9 @@ export const skillsForTable = [
       years: 2,
       rating: 7,
       haveUsedProfessionally: false,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'State Management',
@@ -79,17 +90,21 @@ export const skillsForTable = [
       years: 8,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
-   // {
-   //     type: 'State Management',
-   //     name: 'Thunk',
-   //     icon: '/react.svg',
-   //     years: 6,
-   //     rating: 6,
-   //     haveUsedProfessionally: true,
-   //     haveUsedForFun: true
-   // },
+   {
+      type: 'State Management',
+      name: 'Thunk',
+      icon: '/react.svg',
+      years: 6,
+      rating: 6,
+      haveUsedProfessionally: true,
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: false
+   },
    {
       type: 'Styling',
       name: 'CSS',
@@ -98,7 +113,9 @@ export const skillsForTable = [
       years: 12,
       rating: 9,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Styling',
@@ -108,7 +125,9 @@ export const skillsForTable = [
       years: 8,
       rating: 8,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: true,
+      showInSkillsTable: true
    },
    {
       type: 'Styling',
@@ -118,7 +137,9 @@ export const skillsForTable = [
       years: 2,
       rating: 8,
       haveUsedProfessionally: false,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: true,
+      showInSkillsTable: true
    },
    {
       type: 'Styling',
@@ -128,7 +149,9 @@ export const skillsForTable = [
       years: 8,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Styling',
@@ -138,7 +161,9 @@ export const skillsForTable = [
       years: 8,
       rating: 8,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: true,
+      showInSkillsTable: true
    },
    {
       type: 'UI/UX',
@@ -148,7 +173,9 @@ export const skillsForTable = [
       years: 10,
       rating: 8,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'UI/UX',
@@ -158,7 +185,9 @@ export const skillsForTable = [
       years: 3,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'UI/UX',
@@ -168,7 +197,9 @@ export const skillsForTable = [
       years: 3,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Build Tools',
@@ -178,7 +209,9 @@ export const skillsForTable = [
       years: 7,
       rating: 5,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Build Tools',
@@ -188,7 +221,9 @@ export const skillsForTable = [
       years: 1,
       rating: 5,
       haveUsedProfessionally: false,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Build Tools',
@@ -198,7 +233,9 @@ export const skillsForTable = [
       years: 1,
       rating: 5,
       haveUsedProfessionally: false,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Testing',
@@ -208,7 +245,9 @@ export const skillsForTable = [
       years: 3,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Testing',
@@ -218,7 +257,9 @@ export const skillsForTable = [
       years: 1,
       rating: 6,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Backend Development',
@@ -228,7 +269,9 @@ export const skillsForTable = [
       years: 8,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Backend Development',
@@ -238,7 +281,9 @@ export const skillsForTable = [
       years: 9,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Backend Development',
@@ -248,7 +293,9 @@ export const skillsForTable = [
       years: 9,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Backend Development',
@@ -258,7 +305,9 @@ export const skillsForTable = [
       years: 3,
       rating: 5,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Backend Framework',
@@ -268,7 +317,9 @@ export const skillsForTable = [
       years: 4,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Backend Framework',
@@ -278,7 +329,9 @@ export const skillsForTable = [
       years: 2,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Backend Framework',
@@ -288,7 +341,9 @@ export const skillsForTable = [
       years: 1,
       rating: 4,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Database',
@@ -298,7 +353,9 @@ export const skillsForTable = [
       years: 2,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Database',
@@ -308,7 +365,9 @@ export const skillsForTable = [
       years: 4,
       rating: 6,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Database',
@@ -318,7 +377,9 @@ export const skillsForTable = [
       years: 10,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'APIs',
@@ -328,7 +389,9 @@ export const skillsForTable = [
       years: 15,
       rating: 8,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'APIs',
@@ -338,7 +401,9 @@ export const skillsForTable = [
       years: 4,
       rating: 6,
       haveUsedProfessionally: true,
-      haveUsedForFun: true
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Architecture',
@@ -348,7 +413,9 @@ export const skillsForTable = [
       years: 2,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Architecture',
@@ -358,7 +425,9 @@ export const skillsForTable = [
       years: 2,
       rating: 7,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Cloud Platform',
@@ -368,7 +437,9 @@ export const skillsForTable = [
       years: 3,
       rating: 6,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Cloud Platform',
@@ -378,7 +449,9 @@ export const skillsForTable = [
       years: 3,
       rating: 5,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Cloud Platform',
@@ -388,7 +461,9 @@ export const skillsForTable = [
       years: 2,
       rating: 5,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Containerization',
@@ -398,7 +473,9 @@ export const skillsForTable = [
       years: 4,
       rating: 5,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Containerization',
@@ -408,7 +485,9 @@ export const skillsForTable = [
       years: 2,
       rating: 5,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Infrastructure Orchestration',
@@ -418,7 +497,9 @@ export const skillsForTable = [
       years: 3,
       rating: 5,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Infrastructure Orchestration',
@@ -428,7 +509,9 @@ export const skillsForTable = [
       years: 3,
       rating: 5,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    },
    {
       type: 'Infrastructure Orchestration',
@@ -438,7 +521,9 @@ export const skillsForTable = [
       years: 3,
       rating: 5,
       haveUsedProfessionally: true,
-      haveUsedForFun: false
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
    }
 ];
 // export const skills = {
@@ -1064,23 +1149,24 @@ export const projects = [
       name: 'Form Journey',
       year: '2021',
       tech: [
-        'node.js',
-        'React.js',
-        'TypeScript',
-        'Fabric UI',
-        'SCSS',
-        'Gulp',
-        'Webpack'
-     ],
+         'node.js',
+         'React.js',
+         'TypeScript',
+         'Fabric UI',
+         'SCSS',
+         'Gulp',
+         'Webpack'
+      ],
       code: 'https://github.com/bensbits91/vertical-growing-form',
-      description: 'Enables form admins to build different journeys for different types requests. Using intuitive tools, admins can add, remove, and rearrange steps, fields, sections and pages. Admins can also control branching and conditional logic, as well as choosing from different display styles.',
+      description:
+         'Enables form admins to build different journeys for different types requests. Using intuitive tools, admins can add, remove, and rearrange steps, fields, sections and pages. Admins can also control branching and conditional logic, as well as choosing from different display styles.',
       motivation: '',
       outcome: '',
       images: [
-        'growing-form_mxndcb',
-        'sharepoint-dynamic-form-builder-dark_dupi6b',
-        'sharepoint-dynamic-form-builder_vaq1ol',
-        'sharepoint-form-slider_kgs8re'
+         'growing-form_mxndcb',
+         'sharepoint-dynamic-form-builder-dark_dupi6b',
+         'sharepoint-dynamic-form-builder_vaq1ol',
+         'sharepoint-form-slider_kgs8re'
       ]
    },
    {
@@ -1273,3 +1359,14 @@ export const certifications = [
 
 export const getTopSkills = (gte = 7) =>
    skillsForTable.filter(skill => skill.rating >= gte);
+
+export const getHomeSkills = () => {
+   const homeSkills = skillsForTable
+      .filter(skill => skill.featureOnHome === true)
+      .sort((a, b) => b.rating - a.rating);
+   return homeSkills;
+};
+
+export const getSkillsForTable = () => {
+   return skillsForTable.filter(skill => skill.showInSkillsTable === true);
+};

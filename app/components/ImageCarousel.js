@@ -18,7 +18,7 @@ const ImageCarousel = ({ images }) => {
 
    return (
       <div className='relative w-full max-w-lg mx-auto'>
-         <div className='overflow-hidden relative h-[400px]'>
+         <div className='overflow-hidden relative h-96'>
             {images.map((image, index) => (
                <div
                   key={index}
@@ -33,8 +33,9 @@ const ImageCarousel = ({ images }) => {
                   <CloudinaryImage
                      cloudinaryId={image}
                      alt={`Image ${index + 1}`}
-                     width={400}
-                     height={400}
+                     width={384}
+                     height={384}
+                     full
                   />
                </div>
             ))}

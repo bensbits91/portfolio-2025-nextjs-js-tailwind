@@ -6,10 +6,10 @@ const SkillsCardListItem = ({ item }) => {
    const key = makeKey(name);
    return (
       <li key={key}>
-         <div className='flex'>
-            <div className='flex items-center mb-4'>
+         <div className='grid grid-cols-2 gap-4'>
+            <div className='grid grid-cols-2 gap-4'>
                {cloudinary && (
-                  <div className='relative flex justify-center mr-2 h-[32px] w-full min-w-[32px]'>
+                  <div className='flex mr-2 h-6'>
                      <CloudinaryImage
                         cloudinaryId={cloudinary}
                         alt={name}
@@ -20,9 +20,9 @@ const SkillsCardListItem = ({ item }) => {
                )}
                <h3>{name}</h3>
             </div>
-            <div className='relative flex justify-center mr-2 h-[24px] w-full'>
-               <div className='flex row h-[16px]'>{generateStars(rating)}</div>
-               <div className='flex row'>{generateYearIcon(years)}</div>
+            <div className='grid grid-cols-2 gap-4 justify-center mr-2 h-6 w-full'>
+               <div className='flex h-4'>{generateStars(rating)}</div>
+               <div className='h-4'>{generateYearIcon(years)}</div>
             </div>
          </div>
       </li>
