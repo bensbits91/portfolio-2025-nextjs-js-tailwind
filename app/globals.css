@@ -3,19 +3,20 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #ffffff; /* todo: handle light mode */
   --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #222;
-    --foreground: #ededed;
+    --background: #191f25;
+    --foreground: #a0b3c6;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-family: var(--font-roboto-mono), var(--font-roboto-sans), sans-serif;;
 }
