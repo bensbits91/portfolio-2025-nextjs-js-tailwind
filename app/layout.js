@@ -27,9 +27,7 @@ export const metadata = {
 export default async function RootLayout({ children }) {
    return (
       <html lang="en">
-         <body
-            className={`${robotoMono.variable} ${robotoSans.variable} antialiased`}
-         >
+         <body className={`${robotoMono.variable} ${robotoSans.variable} antialiased`}>
             <Navbar />
             <main>{children}</main>
          </body>

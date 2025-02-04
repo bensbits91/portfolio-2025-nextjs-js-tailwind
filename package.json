@@ -30,6 +30,7 @@
     "singleQuote": true,
     "trailingComma": "none",
     "tabWidth": 3,
-    "arrowParens": "avoid"
+    "arrowParens": "avoid",
+    "bracketSameLine": true
   }
 }

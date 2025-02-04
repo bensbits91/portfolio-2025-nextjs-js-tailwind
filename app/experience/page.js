@@ -1,18 +1,7 @@
-// 'use client';
-// import { useState } from 'react';
 import { duration } from '../utils.js';
 import { experience } from '../data.js';
 
 const Experience = () => {
-   //   const [visible, setVisible] = useState([false, false, false, false]);
-   //   const toggleVisibility = (index) => {
-   //     setVisible((prevVisible) => {
-   //       const newVisible = [...prevVisible];
-   //       newVisible[index] = !newVisible[index];
-   //       return newVisible;
-   //     });
-   //   };
-
    const Duty = ({ duty }) => {
       const { name, description } = duty;
       return (
@@ -65,23 +54,6 @@ const Experience = () => {
          {experience.map((job, index) => (
             <Job key={index} job={job} />
          ))}
-         {/* {['Experience One', 'Experience Two', 'Experience Three', 'Experience Four'].map(
-        (title, index) => (
-          <div key={index}>
-            <h2
-              className='text-xl font-semibold cursor-pointer'
-              onClick={() => toggleVisibility(index)}>
-              {title}
-            </h2>
-            <p
-              className={`transition-all duration-500 ease-in-out ${
-                visible[index] ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
-              } overflow-hidden`}>
-              This is the experience page
-            </p>
-          </div>
-        )
-      )} */}
       </div>
    );
 };

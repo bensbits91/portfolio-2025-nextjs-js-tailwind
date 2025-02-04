@@ -1,52 +1,65 @@
 import { about, expertise, experience, homeSkills, homeProjects } from './data';
 import HomeCard from './components/HomeCard';
 import { HeadingOne, Subheading, SubtleText } from './components/typography';
+import { HeroSection, TwoColumnSection } from './components/layout';
 
 const Home = () => {
    return (
       <>
-         <section className="py-32">
-            <div className="container mx-auto max-w-[640px] px-8">
-               <HeadingOne>Hi <div className='inline-block animate-spin-slow'>:)</div> I'm Ben</HeadingOne>
-               <Subheading>{about.summary}</Subheading>
-               <SubtleText>{expertise.join(' | ')}</SubtleText>
-            </div>
-         </section>
-         <section className="container mx-auto grid max-w-[1200px] grid-cols-2 gap-12 overflow-hidden pb-32">
-            <div className="pb-10 pl-20">
-               <HomeCard
-                  items={homeSkills}
-                  type="skill"
-                  heading="Top skills"
-                  buttonText="View all skills"
-                  link="/skills"
-               />
-            </div>
-            <div className="pb-10 pr-20">
-               <HomeCard
-                  items={experience}
-                  type="experience"
-                  heading="Professional experience"
-                  buttonText="View detailed experience"
-                  link="/experience"
-               />
-            </div>
-         </section>
-         <section className="container mx-auto grid max-w-[1200px] grid-cols-2 gap-12 overflow-hidden pb-32">
-            <div className="pb-10 pl-20">
-               <HomeCard
-                  items={homeProjects}
-                  type="project"
-                  heading="Sample projects"
-                  headingColor='red'
-                  buttonText="View more projects"
-                  link="/projects"
-               />
-            </div>
-            <div className="pb-10 pr-20">
-               <div>Contact Mini Card</div>
-            </div>
-         </section>
+         <HeroSection>
+            <HeadingOne>
+               Hi <div className="animate-spin-slow inline-block">:)</div> I'm
+               Ben
+            </HeadingOne>
+            <Subheading>{about.summary}</Subheading>
+            <SubtleText>{expertise.join(' | ')}</SubtleText>
+         </HeroSection>
+         <TwoColumnSection
+            columns={[
+               // note to self: this is more complex but allows the column classes to be reused; reconsider when less tired
+               {
+                  content: (
+                     <HomeCard
+                        items={homeSkills}
+                        type="skill"
+                        heading="Top skills"
+                        buttonText="View all skills"
+                        link="/skills"
+                     />
+                  )
+               },
+               {
+                  content: (
+                     <HomeCard
+                        items={experience}
+                        type="experience"
+                        heading="Professional experience"
+                        buttonText="View detailed experience"
+                        link="/experience"
+                     />
+                  )
+               }
+            ]}
+         />
+         <TwoColumnSection
+            columns={[
+               {
+                  content: (
+                     <HomeCard
+                        items={homeProjects}
+                        type="project"
+                        heading="Sample projects"
+                        headingColor="red"
+                        buttonText="View more projects"
+                        link="/projects"
+                     />
+                  )
+               },
+               {
+                  content: <div>Contact Mini Card</div>
+               }
+            ]}
+         />
       </>
    );
 };

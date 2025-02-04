@@ -1050,7 +1050,14 @@ export const projects = [
    {
       name: 'This website',
       year: '2025',
-      tech: ['Next.js', 'React.js', 'Tailwind CSS', 'React Table', 'Vercel'],
+      tech: [
+         'Next.js',
+         'React.js',
+         'Tailwind CSS',
+         'React Table',
+         'Node.js',
+         '...'
+      ],
       code: '',
       description:
          'My personal website, built with Next.js, Tailwind CSS, React Table... deployed using Vercel...',
@@ -1058,7 +1065,31 @@ export const projects = [
          'To showcase my skills and experience. Also, to brush the rust off some of my front-end skills. I have spent the past few years gaining experience in the rest of the stack, but am excited to get back to my roots.',
       outcome:
          'A clean, responsive, and accessible website that showcases my skills and experience.',
-      images: [],
+      images: ['no-image_ilu6tx'],
+      showInProjectsGallery: true,
+      featureOnHome: false
+   },
+   {
+      name: 'Things',
+      year: '2025',
+      tech: [
+         'React.js',
+         'Styled Components',
+         'Prime React',
+         'Node.js',
+         'Fastify',
+         'MongoDB',
+         'Mongoose',
+         '...'
+      ],
+      code: '',
+      description:
+         'Track and anything... integrates with multiple third-party APIs to find and display information about your tracked items... built entirely using free tech so far...',
+      motivation:
+         "To practices some skills. To build something that I can use (an idea I've had for awhile). To build something that I can show off. Possibly make availalbe as a site and/or app someday.",
+      outcome:
+         '...',
+      images: ['no-image_ilu6tx'],
       showInProjectsGallery: true,
       featureOnHome: false
    },
