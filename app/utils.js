@@ -16,7 +16,7 @@ export const generateStars = rating => {
       stars.push(
          <div key={`full-${i}`} className="h-4 w-4">
             <CloudinaryImage
-               cloudinaryId="star-fill_lyszfd"
+               cloudinaryId="star-white_ehbqmh"
                alt="Star"
                width="16"
                height="16"
@@ -30,7 +30,7 @@ export const generateStars = rating => {
       stars.push(
          <div key="half" className="ml-[-4px] h-4 w-4">
             <CloudinaryImage
-               cloudinaryId="star-half-fill_a932md" // todo: move to constants
+               cloudinaryId="star-white-half_bfoszw"
                alt="Half star"
                width="16"
                height="16"
@@ -66,7 +66,20 @@ export const getYearsAndMonths = (start, end) => {
 
 export const getPrettyDate = date => dayjs(date).format('MMM YYYY');
 
-export const duration = (start, end) => {
+export const duration = (start, end, style) => {
    const { years, months } = getYearsAndMonths(start, end);
-   return `${getPrettyDate(start)} to ${getPrettyDate(end)} (${years} years ${months} months)`;
+   const pretty = `${getPrettyDate(start)} to ${getPrettyDate(end)}`;
+   const yoMo = `${years} years ${months} months`;
+   const approxYears = `~ ${Math.round(years + months / 12)} years`;
+
+   switch (style) {
+      case 'pretty':
+         return pretty;
+      case 'yoMo':
+         return yoMo;
+      case 'approxYears':
+         return approxYears;
+      default:
+         return `${pretty} (${yoMo})`;
+   }
 };

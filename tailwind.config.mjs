@@ -11,9 +11,13 @@ export default {
             background: 'var(--background)',
             foreground: 'var(--foreground)'
          },
+         fontFamily: {
+            'roboto-sans': ['Roboto', 'sans-serif'],
+            'roboto-mono': ['RobotoRoboto_Mono', 'serif']
+         },
          animation: {
-            'spin-slow': 'spin 60s linear infinite',
-            'fade-in': 'fadeIn 1s ease-out'
+            'spin-slow': 'spin 120s linear infinite',
+            'fade-in': 'fadeIn .75s ease-out'
          },
          keyframes: {
             fadeIn: {

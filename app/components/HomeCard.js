@@ -1,11 +1,19 @@
-import Link from 'next/link';
+import Button from './Button';
 import SkillsCardListItem from './SkillsCardListItem';
 import ExperienceCardListItem from './ExperienceCardListItem';
 import ProjectsCardListItem from './ProjectsCardListItem';
+import { HeadingTwo } from './typography';
 
-const HomeCard = ({ items, type, heading, allText, link }) => (
+const HomeCard = ({
+   items,
+   type,
+   heading,
+   headingColor = 'yellow',
+   buttonText,
+   link
+}) => (
    <div>
-      <div>{heading}</div>
+      <HeadingTwo color={headingColor}>{heading}</HeadingTwo>
       <ul>
          {items.map((item, index) => {
             switch (type) {
@@ -20,13 +28,7 @@ const HomeCard = ({ items, type, heading, allText, link }) => (
             }
          })}
       </ul>
-      {allText && (
-         <Link href={link}>
-            <div className="border border-white bg-red-500 p-2 transition duration-300 hover:bg-teal-500">
-               {allText}
-            </div>
-         </Link>
-      )}
+      {buttonText && <Button link={link}>{buttonText}</Button>}
    </div>
 );
 

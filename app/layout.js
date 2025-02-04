@@ -1,20 +1,9 @@
 import {
-   /* Geist, Geist_Mono,  */ Roboto,
+   Roboto,
    Roboto_Mono
 } from 'next/font/google';
 import Navbar from './components/Navbar';
 import './globals.css';
-// import 'next/font/google/target.css';
-
-// const geistSans = Geist({
-//    variable: '--font-geist-sans',
-//    subsets: ['latin']
-// });
-
-// const geistMono = Geist_Mono({
-//    variable: '--font-geist-mono',
-//    subsets: ['latin']
-// });
 
 const robotoSans = Roboto({
    weight: '700',
@@ -39,7 +28,7 @@ export default async function RootLayout({ children }) {
    return (
       <html lang="en">
          <body
-            className={`${robotoMono.variable} ${robotoSans.variable} antialiased animate-fade-in`}
+            className={`${robotoMono.variable} ${robotoSans.variable} antialiased`}
          >
             <Navbar />
             <main>{children}</main>

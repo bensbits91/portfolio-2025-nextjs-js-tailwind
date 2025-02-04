@@ -13,36 +13,37 @@ const Home = () => {
             </div>
          </section>
          <section className="container mx-auto grid max-w-[1200px] grid-cols-2 gap-12 overflow-hidden pb-32">
-            <div className="pb-10">
+            <div className="pb-10 pl-20">
                <HomeCard
                   items={homeSkills}
                   type="skill"
                   heading="Top skills"
-                  allText="View all skills"
+                  buttonText="View all skills"
                   link="/skills"
                />
             </div>
-            <div className="pb-10">
+            <div className="pb-10 pr-20">
                <HomeCard
                   items={experience}
                   type="experience"
                   heading="Professional experience"
-                  allText="View detailed experience"
+                  buttonText="View detailed experience"
                   link="/experience"
                />
             </div>
          </section>
          <section className="container mx-auto grid max-w-[1200px] grid-cols-2 gap-12 overflow-hidden pb-32">
-            <div className="pb-10">
+            <div className="pb-10 pl-20">
                <HomeCard
                   items={homeProjects}
                   type="project"
-                  heading="Top projects"
-                  allText="View all projects"
+                  heading="Sample projects"
+                  headingColor='red'
+                  buttonText="View more projects"
                   link="/projects"
                />
             </div>
-            <div className="pb-10">
+            <div className="pb-10 pr-20">
                <div>Contact Mini Card</div>
             </div>
          </section>

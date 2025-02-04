@@ -1,5 +1,5 @@
 const SubtleText = ({ children }) => (
-   <p className="text-[#4f5f6d]">{children}</p>
+   <p className="text-[#4f5f6d] text-xs">{children}</p>
 );
 
 export default SubtleText;
