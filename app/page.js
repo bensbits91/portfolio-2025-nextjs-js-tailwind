@@ -1,40 +1,64 @@
+import HomeCard from './components/home/HomeCard';
+import { HeroSection, TwoColumnSection } from './components/layout';
+import { HeadingOne, Subheading, SubtleText } from './components/typography';
 import { about, expertise, experience, homeSkills, homeProjects } from './data';
-import HomeCard from './components/HomeCard';
 
 const Home = () => {
    return (
       <>
-         <h1 className="mb-8 text-5xl">Hi I'm Ben</h1>
-         <p className="mb-2 text-center text-xl">{about.summary}</p>
-         <p className="mx-10 mb-10 text-center text-sm text-gray-400">
-            {expertise.join(' | ')}
-         </p>
-         <div className="mb-6 grid grid-cols-2 gap-12">
-            <HomeCard
-               items={homeSkills}
-               type="skill"
-               heading="Top skills"
-               allText="View all skills"
-               link="/skills"
-            />
-            <HomeCard
-               items={experience}
-               type="experience"
-               heading="Professional experience"
-               allText="View detailed experience"
-               link="/experience"
-            />
-         </div>
-         <div className="mb-6 grid grid-cols-2 gap-12">
-            <HomeCard
-               items={homeProjects}
-               type="project"
-               heading="Top projects"
-               allText="View all projects"
-               link="/projects"
-            />
-            <div>Contact Mini Card</div>
-         </div>
+         <HeroSection>
+            <HeadingOne>
+               Hi <div className="animate-spin-slow inline-block">:)</div> I'm
+               Ben
+            </HeadingOne>
+            <Subheading>{about.summary}</Subheading>
+            <SubtleText>{expertise.join(' | ')}</SubtleText>
+         </HeroSection>
+         <TwoColumnSection
+            columns={[
+               {
+                  content: (
+                     <HomeCard
+                        items={homeSkills}
+                        type="skill"
+                        heading="Top skills"
+                        buttonText="View all skills"
+                        link="/skills"
+                     />
+                  )
+               },
+               {
+                  content: (
+                     <HomeCard
+                        items={experience}
+                        type="experience"
+                        heading="Experience"
+                        buttonText="View detailed experience"
+                        link="/experience"
+                     />
+                  )
+               }
+            ]}
+         />
+         <TwoColumnSection
+            columns={[
+               {
+                  content: (
+                     <HomeCard
+                        items={homeProjects}
+                        type="project"
+                        heading="Sample projects"
+                        headingColor="red"
+                        buttonText="View more projects"
+                        link="/projects"
+                     />
+                  )
+               },
+               {
+                  content: <div>Contact Mini Card</div>
+               }
+            ]}
+         />
       </>
    );
 };

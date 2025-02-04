@@ -3,19 +3,25 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #ffffff; /* todo: handle light mode */
   --foreground: #171717;
+  --bb-teal: #33ced8;
+  --bb-dark-gray: #181e24;
+  --bb-yellow: #f0be72;
+  --bb-blue: #499bfc;
+  --bb-green: #60af73;
+  --bb-red: #d95468;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #222;
-    --foreground: #ededed;
+    --background: #191f25;
+    --foreground: #a0b3c6;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-roboto-mono), var(--font-roboto-sans), Arial, Helvetica, sans-serif;
 }

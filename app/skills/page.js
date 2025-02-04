@@ -1,12 +1,16 @@
 'use client';
-import DataTable from '../components/Table';
-import { skillsForTable } from '../data.js';
+import { HeroSection } from '@/app/components/layout';
+import { HeadingOne } from '@/app/components/typography';
+import DataTable from '@/app/components/common/Table';
+import { skillsForTable } from '@/app/data.js';
 import columns from './columns.js';
 
 const Skills = () => {
    return (
       <>
-         <h1>Skills</h1>
+         <HeroSection bigBottom={false}>
+            <HeadingOne>Skills</HeadingOne>
+         </HeroSection>
          <DataTable columns={columns} data={skillsForTable} />
       </>
    );

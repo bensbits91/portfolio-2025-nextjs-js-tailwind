@@ -17,8 +17,8 @@ const ImageCarousel = ({ images }) => {
    };
 
    return (
-      <div className='relative w-full max-w-lg mx-auto'>
-         <div className='overflow-hidden relative h-96'>
+      <div className="relative mx-auto w-full max-w-lg">
+         <div className="relative h-96 overflow-hidden">
             {images.map((image, index) => (
                <div
                   key={index}
@@ -44,12 +44,12 @@ const ImageCarousel = ({ images }) => {
             <>
                <button
                   onClick={prevImage}
-                  className='absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-2'>
+                  className="font-roboto-sans absolute left-0 top-1/2 w-24 -translate-x-14 -translate-y-1/2 transform cursor-pointer rounded-sm bg-[--bb-teal] p-4 text-center text-sm tracking-wide text-[--bb-dark-gray] transition duration-700 hover:brightness-125">
                   Prev
                </button>
                <button
                   onClick={nextImage}
-                  className='absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-2'>
+                  className="font-roboto-sans absolute right-0 top-1/2 w-24 -translate-y-1/2 translate-x-14 transform cursor-pointer rounded-sm bg-[--bb-teal] p-4 text-center text-sm tracking-wide text-[--bb-dark-gray] transition duration-700 hover:brightness-125">
                   Next
                </button>
             </>
