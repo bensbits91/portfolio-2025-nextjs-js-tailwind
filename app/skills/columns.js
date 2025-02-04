@@ -24,10 +24,10 @@ const columns = [
       header: 'Name',
       cell: info => <div className="w-36 pr-3">{info.getValue()}</div>
    }),
-   columnHelper.accessor('type', {
-      header: 'Type',
-      cell: info => <div className="w-40 pr-3">{info.getValue()}</div>
-   }),
+   // columnHelper.accessor('type', {
+   //    header: 'Type',
+   //    cell: info => <div className="w-40 pr-3">{info.getValue()}</div>
+   // }),
    columnHelper.accessor('years', {
       header: 'Years',
       cell: info => <div className="pr-3">~ {info.getValue()} years</div>

@@ -35,9 +35,8 @@ const DataTable = ({ columns, data }) => {
    });
 
    return (
-      <div className="overflow-x-auto">
+      <div className="flex justify-center overflow-x-auto">
          <table className='border-collapse'>
-            {/* <table className="min-w-full"> */}
             <thead>
                {table.getHeaderGroups().map(headerGroup => (
                   <HeaderRow key={headerGroup.id} headerGroup={headerGroup} />
