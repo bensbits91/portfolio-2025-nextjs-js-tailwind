@@ -1,4 +1,4 @@
-import { duration } from '../utils';
+import { duration } from '@/app/utils';
 
 const ExperienceCardListItem = ({ item }) => {
    const { role, company, start, end } = item;

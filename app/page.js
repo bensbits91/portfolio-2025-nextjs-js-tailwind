@@ -1,7 +1,7 @@
-import { about, expertise, experience, homeSkills, homeProjects } from './data';
-import HomeCard from './components/HomeCard';
-import { HeadingOne, Subheading, SubtleText } from './components/typography';
+import HomeCard from './components/home/HomeCard';
 import { HeroSection, TwoColumnSection } from './components/layout';
+import { HeadingOne, Subheading, SubtleText } from './components/typography';
+import { about, expertise, experience, homeSkills, homeProjects } from './data';
 
 const Home = () => {
    return (
@@ -16,7 +16,6 @@ const Home = () => {
          </HeroSection>
          <TwoColumnSection
             columns={[
-               // note to self: this is more complex but allows the column classes to be reused; reconsider when less tired
                {
                   content: (
                      <HomeCard
@@ -33,7 +32,7 @@ const Home = () => {
                      <HomeCard
                         items={experience}
                         type="experience"
-                        heading="Professional experience"
+                        heading="Experience"
                         buttonText="View detailed experience"
                         link="/experience"
                      />

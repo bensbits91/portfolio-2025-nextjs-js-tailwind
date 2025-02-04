@@ -1,5 +1,5 @@
-import CloudinaryImage from './CloudinaryImage';
-import { generateStars } from '../utils';
+import CloudinaryImage from '@/app/components/common/CloudinaryImage';
+import { generateStars } from '@/app/utils';
 
 const SkillsCardListItem = ({ item }) => {
    const { name, cloudinary, rating, years } = item;

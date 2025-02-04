@@ -1,14 +1,30 @@
-import { about } from '../data.js';
+import { HeroSection, OneColumnSection } from '@/app/components/layout';
+import { HeadingOne, SubtleText } from '@/app/components/typography';
+import { about, expertise } from '@/app/data.js';
 
 const About = () => {
-    const { overview, firstName, lastName, location, preferredName, title, otherTitles } =
-        about;
-    return (
-        <div>
-            <h1>About</h1>
+   const {
+      overview,
+      firstName,
+      lastName,
+      location,
+      preferredName,
+      title,
+      otherTitles
+   } = about;
+   return (
+      <div>
+         <HeroSection bigBottom={false}>
+            <HeadingOne>About</HeadingOne>
+         </HeroSection>
+         <OneColumnSection>
             <p>{overview}</p>
-        </div>
-    );
+         </OneColumnSection>
+         <OneColumnSection>
+         <SubtleText>{expertise.join(' | ')}</SubtleText>
+         </OneColumnSection>
+      </div>
+   );
 };
 
 export default About;

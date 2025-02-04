@@ -12,7 +12,7 @@ const NavLink = ({ text }) => ( // todo: move to separate file
 
 const Navbar = () => {
    return (
-      <div className="fixed right-0 top-0 bg-[--background]">
+      <div className="fixed left-0 right-0 top-0 border-b-2 border-b-gray-800 z-10 bg-[--background]">
          <nav className="w-full p-4">
             <ul className="font-roboto-sans flex justify-end space-x-6">
                {links.map(link => (

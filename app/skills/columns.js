@@ -1,6 +1,6 @@
-import CloudinaryImage from '../components/CloudinaryImage';
+import CloudinaryImage from '@/app/components/common/CloudinaryImage';
 import { createColumnHelper } from '@tanstack/react-table';
-import { generateStars, generateYearIcon } from '../utils.js';
+import { generateStars, generateYearIcon } from '@/app/utils.js';
 
 const columnHelper = createColumnHelper();
 const columns = [

@@ -1,5 +1,5 @@
-import CloudinaryImage from '../components/CloudinaryImage';
-import { makeKey } from '../utils';
+import CloudinaryImage from '@/app/components/common/CloudinaryImage';
+import { makeKey } from '@/app/utils';
 
 const ProjectsCardListItem = ({ project }) => {
    const { name } = project;

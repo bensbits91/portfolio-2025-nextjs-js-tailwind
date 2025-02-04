@@ -1,14 +1,14 @@
-import Button from './Button';
+import Button from '@/app/components/common/Button';
 import SkillsCardListItem from './SkillsCardListItem';
 import ExperienceCardListItem from './ExperienceCardListItem';
 import ProjectsCardListItem from './ProjectsCardListItem';
-import { HeadingTwo } from './typography';
+import { HeadingTwo } from '../typography';
 
 const HomeCard = ({
    items,
    type,
    heading,
-   headingColor = 'yellow',
+   headingColor = 'green',
    buttonText,
    link
 }) => (

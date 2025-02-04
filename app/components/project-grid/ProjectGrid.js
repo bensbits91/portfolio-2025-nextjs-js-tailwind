@@ -1,8 +1,8 @@
 'use client';
 import { useState } from 'react';
-import { projects } from '../../data';
 import { TwoColumnSection } from '../layout';
 import { ProjectGridCard, ProjectGridModal } from './index';
+import { projects } from '@/app/data';
 
 const ProjectGridWithModal = () => {
    const [modalData, setModalData] = useState(null);

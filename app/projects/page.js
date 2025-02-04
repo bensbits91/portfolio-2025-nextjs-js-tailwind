@@ -1,6 +1,6 @@
-import ProjectGrid from '../components/project-grid/ProjectGrid';
-import { HeadingOne } from '../components/typography';
-import { HeroSection } from '../components/layout';
+import ProjectGrid from '@/app/components/project-grid/ProjectGrid';
+import { HeadingOne } from '@/app/components/typography';
+import { HeroSection } from '@/app/components/layout';
 
 const Projects = () => {
    return (

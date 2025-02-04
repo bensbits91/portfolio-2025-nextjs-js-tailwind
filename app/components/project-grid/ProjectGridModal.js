@@ -1,4 +1,4 @@
-import ImageCarousel from '../ImageCarousel';
+import ImageCarousel from '@/app/components/common/ImageCarousel';
 
 const ProjectGridModal = ({ modalData, closeModal }) => ( // todo: typography and layout components; better classes/style
    <div

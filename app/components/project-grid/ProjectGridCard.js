@@ -1,4 +1,4 @@
-import CloudinaryImage from '../CloudinaryImage';
+import CloudinaryImage from '@/app/components/common/CloudinaryImage';
 
 const ProjectGridCard = ({ project }) => ( // todo: typography and layout components
     <div>
