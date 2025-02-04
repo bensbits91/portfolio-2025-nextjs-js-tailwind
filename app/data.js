@@ -61,7 +61,7 @@ export const skills = [
       showInSkillsTable: true
    },
    {
-      type: 'Fontend Framework',
+      type: 'Frontend Framework',
       name: 'Vue.js',
       icon: '/vue.svg',
       cloudinary: 'vue_thuhnk',
@@ -181,9 +181,21 @@ export const skills = [
    },
    {
       type: 'UI/UX',
-      name: 'A/B and multivariate testing',
+      name: 'A/B Testing',
       icon: '/beaker.svg',
       cloudinary: 'beaker_vqshpg',
+      years: 3,
+      rating: 7,
+      haveUsedProfessionally: true,
+      haveUsedForFun: false,
+      featureOnHome: false,
+      showInSkillsTable: true
+   },
+   {
+      type: 'UI/UX',
+      name: 'Multivariate Expirementation',
+      icon: '/beaker1.svg',
+      cloudinary: 'beakers_yellow_eehkpx',
       years: 3,
       rating: 7,
       haveUsedProfessionally: true,

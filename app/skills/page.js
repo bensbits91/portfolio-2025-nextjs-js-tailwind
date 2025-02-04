@@ -1,5 +1,5 @@
 'use client';
-import { HeroSection } from '@/app/components/layout';
+import { HeroSection, OneColumnSection } from '@/app/components/layout';
 import { HeadingOne } from '@/app/components/typography';
 import DataTable from '@/app/components/common/Table';
 import { skillsForTable } from '@/app/data.js';
@@ -11,7 +11,9 @@ const Skills = () => {
          <HeroSection bigBottom={false}>
             <HeadingOne>Skills</HeadingOne>
          </HeroSection>
-         <DataTable columns={columns} data={skillsForTable} />
+         <OneColumnSection size='narrow'>
+            <DataTable columns={columns} data={skillsForTable} />
+         </OneColumnSection>
       </>
    );
 };
