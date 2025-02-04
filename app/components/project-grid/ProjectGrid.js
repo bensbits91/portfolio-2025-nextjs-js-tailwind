@@ -1,16 +1,17 @@
 'use client';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { TwoColumnSection } from '../layout';
 import { ProjectGridCard, ProjectGridModal } from './index';
 import { projects } from '@/app/data';
 
 const ProjectGridWithModal = () => {
+   const projs = useMemo(() => projects, []);
    const [modalData, setModalData] = useState(null);
 
    return (
       <>
          <TwoColumnSection
-            columns={projects.map(project => ({
+            columns={projs.map(project => ({
                content: <ProjectGridCard project={project} />,
                handleClick: () => setModalData(project)
             }))}
