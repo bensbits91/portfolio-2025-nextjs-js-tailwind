@@ -1,18 +1,29 @@
+'use client';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
 const links = ['Home', 'About', 'Skills', 'Experience', 'Projects', 'Contact'];
-// todo: make full width -- maybe use a container? maybe add a photo? maybe subtle border buttom?
-const NavLink = ({ text }) => ( // todo: move to separate file
-   <li className="cursor-pointer border-b-2 border-b-transparent transition duration-700 hover:border-b-white hover:brightness-125">
-      <Link href={`/${text === 'Home' ? '' : text.toLowerCase()}`}>
-         {text}
-      </Link>
-   </li>
-);
+
+const NavLink = ({ text }) => { // todo: move to separate file
+   const pathname = usePathname();
+   console.log('bb ~ pathname:', pathname);
+   const href = `/${text === 'Home' ? '' : text.toLowerCase()}`;
+   const isActive = pathname === href;
+   return (
+      <li
+         className={`cursor-pointer border-b-2 transition duration-700 ${
+            isActive
+               ? 'border-b-[--bb-yellow] text-[--bb-yellow]'
+               : 'border-b-transparent hover:border-b-[--bb-blue] hover:text-[--bb-blue] hover:brightness-125'
+         }`}>
+         <Link href={href}>{text}</Link>
+      </li>
+   );
+};
 
 const Navbar = () => {
    return (
-      <div className="fixed left-0 right-0 top-0 border-b-2 border-b-gray-800 z-10 bg-[--background]">
+      <div className="fixed left-0 right-0 top-0 z-10 border-b-2 border-b-gray-800 bg-[--background]">
          <nav className="w-full p-4">
             <ul className="font-roboto-sans flex justify-end space-x-6">
                {links.map(link => (
