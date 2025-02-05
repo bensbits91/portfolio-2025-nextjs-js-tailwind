@@ -1,5 +1,9 @@
-const Subheading = ({ children }) => (
-   <p className="text-center text-lg/8 tracking-wide pb-8">{children}</p>
-);
+const Subheading = ({ children, left = false, shrink = false }) => {
+   const alignment = left ? 'text-left' : 'text-center';
+   const spacing = shrink ? 'text-lg/6' : 'text-lg/8 tracking-wide';
+   return (
+      <p className={`pb-8 ${alignment} ${spacing}`}>{children}</p>
+   );
+};
 
 export default Subheading;

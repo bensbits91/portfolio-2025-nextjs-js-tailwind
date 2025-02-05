@@ -1072,7 +1072,7 @@ export const projects = [
       ],
       code: '',
       description:
-         'My personal website, built with Next.js, Tailwind CSS, React Table... deployed using Vercel...',
+         'My personal website, built with Next.js, Tailwind CSS, React Table... deployed using Vercel... minimal dependencies... content stored as JSON inside the project...',
       motivation:
          'To showcase my skills and experience. Also, to brush the rust off some of my front-end skills. I have spent the past few years gaining experience in the rest of the stack, but am excited to get back to my roots.',
       outcome:
@@ -1096,11 +1096,10 @@ export const projects = [
       ],
       code: '',
       description:
-         'Track and anything... integrates with multiple third-party APIs to find and display information about your tracked items... built entirely using free tech so far...',
+         'Track anything... integrates with multiple third-party APIs to find and display information about your tracked items... built entirely using free tech so far...',
       motivation:
          "To practices some skills. To build something that I can use (an idea I've had for awhile). To build something that I can show off. Possibly make availalbe as a site and/or app someday.",
-      outcome:
-         '...',
+      outcome: '...',
       images: ['no-image_ilu6tx'],
       showInProjectsGallery: true,
       featureOnHome: false
@@ -1235,7 +1234,7 @@ export const projects = [
       motivation: '',
       outcome: '',
       images: [],
-      showInProjectsGallery: true,
+      showInProjectsGallery: false,
       featureOnHome: false
    },
    {
@@ -1247,7 +1246,7 @@ export const projects = [
       motivation: '',
       outcome: '',
       images: [],
-      showInProjectsGallery: true,
+      showInProjectsGallery: false,
       featureOnHome: false
    },
    {
@@ -1259,7 +1258,7 @@ export const projects = [
       motivation: '',
       outcome: '',
       images: [],
-      showInProjectsGallery: true,
+      showInProjectsGallery: false,
       featureOnHome: false
    },
    {
@@ -1271,7 +1270,7 @@ export const projects = [
       motivation: '',
       outcome: '',
       images: [],
-      showInProjectsGallery: true,
+      showInProjectsGallery: false,
       featureOnHome: false
    },
    {
@@ -1283,7 +1282,7 @@ export const projects = [
       motivation: '',
       outcome: '',
       images: [],
-      showInProjectsGallery: true,
+      showInProjectsGallery: false,
       featureOnHome: false
    },
    {
@@ -1295,7 +1294,7 @@ export const projects = [
       motivation: '',
       outcome: '',
       images: [],
-      showInProjectsGallery: true,
+      showInProjectsGallery: false,
       featureOnHome: false
    },
    {
@@ -1307,7 +1306,7 @@ export const projects = [
       motivation: '',
       outcome: '',
       images: [],
-      showInProjectsGallery: true,
+      showInProjectsGallery: false,
       featureOnHome: false
    },
    {
@@ -1319,7 +1318,7 @@ export const projects = [
       motivation: '',
       outcome: '',
       images: [],
-      showInProjectsGallery: true,
+      showInProjectsGallery: false,
       featureOnHome: false
    },
    {
@@ -1331,7 +1330,7 @@ export const projects = [
       motivation: '',
       outcome: '',
       images: [],
-      showInProjectsGallery: true,
+      showInProjectsGallery: false,
       featureOnHome: false
    },
    {
@@ -1343,7 +1342,7 @@ export const projects = [
       motivation: '',
       outcome: '',
       images: [],
-      showInProjectsGallery: true,
+      showInProjectsGallery: false,
       featureOnHome: false
    },
    {
@@ -1355,7 +1354,7 @@ export const projects = [
       motivation: '',
       outcome: '',
       images: [],
-      showInProjectsGallery: true,
+      showInProjectsGallery: false,
       featureOnHome: false
    },
    {
@@ -1367,7 +1366,7 @@ export const projects = [
       motivation: '',
       outcome: '',
       images: [],
-      showInProjectsGallery: true,
+      showInProjectsGallery: false,
       featureOnHome: false
    },
    {
@@ -1379,7 +1378,7 @@ export const projects = [
       motivation: '',
       outcome: '',
       images: [],
-      showInProjectsGallery: true,
+      showInProjectsGallery: false,
       featureOnHome: false
    },
    {
@@ -1453,4 +1452,8 @@ export const skillsForTable = skills.filter(
 
 export const homeProjects = projects.filter(
    project => project.featureOnHome === true
+);
+
+export const projectsForGallery = projects.filter(
+   project => project.showInProjectsGallery === true
 );

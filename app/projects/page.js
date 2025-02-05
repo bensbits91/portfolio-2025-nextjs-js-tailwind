@@ -1,12 +1,13 @@
 import ProjectGrid from '@/app/components/project-grid/ProjectGrid';
-import { HeadingOne } from '@/app/components/typography';
+import { HeadingOne, Subheading } from '@/app/components/typography';
 import { HeroSection } from '@/app/components/layout';
 
 const Projects = () => {
    return (
       <>
-         <HeroSection>
-            <HeadingOne>Projects</HeadingOne>
+         <HeroSection bigBottom={false}>
+            <HeadingOne>Sample Projects</HeadingOne>
+            <Subheading>Most of these are a few years old. I've spent the past few years earning some full-stack chops...</Subheading>
          </HeroSection>
          <ProjectGrid />
       </>
