@@ -28,7 +28,6 @@ const Form = () => {
          });
 
          if (response.ok) {
-            console.log('bb ~ response:', response);
             alert('Email sent successfully');
          } else {
             console.log('bb ~ response:', response);
@@ -42,7 +41,7 @@ const Form = () => {
 
    return (
       <form onSubmit={handleSubmit}>
-         <div className="form-group">
+         <div className="form-group mb-4 flex flex-col gap-1">
             <label htmlFor="name">Name</label>
             <input
                type="text"
@@ -52,9 +51,10 @@ const Form = () => {
                value={formData.name}
                onChange={handleChange}
                required
+               className="h-9 rounded px-3 text-[--bb-dark-gray]"
             />
          </div>
-         <div className="form-group">
+         <div className="form-group mb-4 flex flex-col gap-1">
             <label htmlFor="email">Email</label>
             <input
                type="email"
@@ -64,9 +64,10 @@ const Form = () => {
                value={formData.email}
                onChange={handleChange}
                required
+               className="h-9 rounded px-3 text-[--bb-dark-gray]"
             />
          </div>
-         <div className="form-group">
+         <div className="form-group mb-4 flex flex-col gap-1">
             <label htmlFor="message">Message</label>
             <textarea
                id="message"
@@ -75,9 +76,13 @@ const Form = () => {
                value={formData.message}
                onChange={handleChange}
                required
+               className="h-24 rounded px-3 text-[--bb-dark-gray]"
             />
          </div>
-         <button type="submit" id="submitBtn">
+         <button
+            type="submit"
+            id="submitBtn"
+            className="w-40 mt-4 cursor-pointer rounded-sm bg-[--bb-teal] p-4 text-center font-roboto-sans text-sm tracking-wide text-[--bb-dark-gray] transition duration-700 hover:brightness-125">
             Send
          </button>
       </form>

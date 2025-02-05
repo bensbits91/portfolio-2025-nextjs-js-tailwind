@@ -1,8 +1,5 @@
-import {
-   Roboto,
-   Roboto_Mono
-} from 'next/font/google';
-import Navbar from './components/Navbar';
+import { Roboto, Roboto_Mono } from 'next/font/google';
+import { Navbar } from './components/navbar';
 import './globals.css';
 
 const robotoSans = Roboto({
@@ -27,7 +24,8 @@ export const metadata = {
 export default async function RootLayout({ children }) {
    return (
       <html lang="en">
-         <body className={`${robotoMono.variable} ${robotoSans.variable} antialiased`}>
+         <body
+            className={`${robotoMono.variable} ${robotoSans.variable} antialiased`}>
             <Navbar />
             <main>{children}</main>
          </body>
