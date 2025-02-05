@@ -1,6 +1,6 @@
 import HomeCard from './components/home/HomeCard';
 import { HeroSection, TwoColumnSection } from './components/layout';
-import { HeadingOne, Subheading, SubtleText } from './components/typography';
+import { HeadingOne, Subheading, WhisperText } from './components/typography';
 import { about, expertise, experience, homeSkills, homeProjects } from './data';
 
 const Home = () => {
@@ -12,7 +12,7 @@ const Home = () => {
                Ben
             </HeadingOne>
             <Subheading>{about.summary}</Subheading>
-            <SubtleText>{expertise.join(' | ')}</SubtleText>
+            <WhisperText>{expertise.join(' | ')}</WhisperText>
          </HeroSection>
          <TwoColumnSection
             columns={[

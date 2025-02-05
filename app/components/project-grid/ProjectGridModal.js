@@ -1,26 +1,58 @@
-import ImageCarousel from '@/app/components/common/ImageCarousel';
+import ImageGallery from '@/app/components/common/ImageGallery';
+import CloudinaryImage from '../common/CloudinaryImage';
+import { HeadingTwo, Subheading, SubtleText } from '../typography';
 
-const ProjectGridModal = ({ modalData, closeModal }) => ( // todo: typography and layout components; better classes/style
-   <div
-      className={`fixed bottom-[5vh] left-[5vh] right-[5vh] h-[90vh] w-[90vw] transform bg-gray-500 p-4 text-white transition-transform duration-500 ease-in-out ${
-         modalData ? 'translate-y-0' : 'translate-y-[100vh]'
-      }`}>
-      <div className="relative max-h-[80vh] overflow-y-auto bg-gray-800 p-4 text-white">
-         <button className="absolute right-0 top-0" onClick={closeModal}>
-            x
-         </button>
-         <h2>{modalData?.name}</h2>
-         {modalData?.images.length > 0 && (
-            <ImageCarousel images={modalData?.images} />
+const ProjectGridModal = ({ modalData, closeModal }) => {
+   const { name, images, description, tech } = modalData || {};
+
+   const CloseButton = () => (
+      <button
+         className="transition-all delay-75 ease-in-out hover:scale-125"
+         onClick={closeModal}>
+         <CloudinaryImage
+            cloudinaryId="close_wd9td4"
+            alt="Close"
+            width="24"
+            height="24"
+         />
+      </button>
+   );
+
+   // todo: typography and layout components; better classes/style
+   return (
+      <>
+         {modalData && (
+            <div
+               onClick={closeModal}
+               className="fixed inset-0 z-40 bg-black bg-opacity-50"
+            />
          )}
-         <p>{modalData?.description}</p>
-         {modalData?.tech.length > 0 && (
-            <p className="text-sm text-gray-400">
-               {(modalData?.tech).join(' | ')}
-            </p>
-         )}
-      </div>
-   </div>
-);
+         <div
+            className={`rounded-lg fixed bottom-[5vh] left-[7.5vh] z-50 h-[85vh] w-[90vw] transform bg-[--bb-dark-gray-900] p-4 transition-transform duration-500 ease-in-out ${
+               modalData ? 'translate-y-0' : 'translate-y-[100vh]'
+            }`}>
+            <div className="relative h-full p-4 text-[--bb-dark-gray-200]">
+               <div className="flex h-16 w-full justify-between">
+                  <HeadingTwo color='red'>{name}</HeadingTwo>
+                  <CloseButton />
+               </div>
+               <div className="h-[calc(100%-60px)] overflow-y-auto">
+                  {description && (
+                     <Subheading left shrink>
+                        {description}
+                     </Subheading>
+                  )}
+                  {tech && tech.length > 0 && (
+                     <SubtleText>Built using: {tech.join(' | ')}</SubtleText>
+                  )}
+                  {images && images.length > 0 && (
+                     <ImageGallery images={images} />
+                  )}
+               </div>
+            </div>
+         </div>
+      </>
+   );
+};
 
 export default ProjectGridModal;
