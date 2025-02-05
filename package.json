@@ -11,10 +11,13 @@
   "dependencies": {
     "@tanstack/react-table": "^8.20.6",
     "dayjs": "^1.11.13",
+    "dotenv": "^16.4.7",
     "next": "15.1.6",
     "next-cloudinary": "^6.16.0",
+    "nodemailer": "^6.10.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "validator": "^13.12.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -26,7 +29,9 @@
     "tailwindcss": "^3.4.1"
   },
   "prettier": {
-    "plugins": ["prettier-plugin-tailwindcss"],
+    "plugins": [
+      "prettier-plugin-tailwindcss"
+    ],
     "singleQuote": true,
     "trailingComma": "none",
     "tabWidth": 3,

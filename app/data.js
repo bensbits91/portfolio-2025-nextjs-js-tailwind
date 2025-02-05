@@ -1074,7 +1074,7 @@ export const projects = [
       description:
          'My personal website, built with Next.js, Tailwind CSS, React Table... deployed using Vercel... minimal dependencies... content stored as JSON inside the project...',
       motivation:
-         'To showcase my skills and experience. Also, to brush the rust off some of my front-end skills. I have spent the past few years gaining experience in the rest of the stack, but am excited to get back to my roots.',
+         'To showcase my skills and experience. Also, to brush the rust off some of my front-end skills, especially with Next.js and Tailwind CSS. I have spent the past few years gaining experience in the rest of the stack, but am excited to get back to my roots.',
       outcome:
          'A clean, responsive, and accessible website that showcases my skills and experience.',
       images: ['no-image_ilu6tx'],

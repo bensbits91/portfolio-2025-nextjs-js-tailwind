@@ -6,7 +6,6 @@ const links = ['Home', 'About', 'Skills', 'Experience', 'Projects', 'Contact'];
 
 const NavLink = ({ text }) => { // todo: move to separate file
    const pathname = usePathname();
-   console.log('bb ~ pathname:', pathname);
    const href = `/${text === 'Home' ? '' : text.toLowerCase()}`;
    const isActive = pathname === href;
    return (
