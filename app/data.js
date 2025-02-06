@@ -1072,7 +1072,7 @@ export const projects = [
       ],
       code: '',
       description:
-         'My personal website, built with Next.js, Tailwind CSS, React Table... deployed using Vercel... minimal dependencies... content stored as JSON inside the project...',
+         'My personal website, built with Next.js, Tailwind CSS, React Table... deployed using Vercel... minimal dependencies... content stored as JSON inside the project... custom css animations/transitions... images stored in cloudinary and optimized using next/image...',
       motivation:
          'To showcase my skills and experience. Also, to brush the rust off some of my front-end skills, especially with Next.js and Tailwind CSS. I have spent the past few years gaining experience in the rest of the stack, but am excited to get back to my roots.',
       outcome:
@@ -1219,8 +1219,8 @@ export const projects = [
       images: [
          'growing-form_mxndcb',
          'sharepoint-dynamic-form-builder-dark_dupi6b',
-         'sharepoint-dynamic-form-builder_vaq1ol',
-         'sharepoint-form-slider_kgs8re'
+         // 'sharepoint-dynamic-form-builder_vaq1ol',
+         // 'sharepoint-form-slider_kgs8re'
       ],
       showInProjectsGallery: true,
       featureOnHome: true
@@ -1394,22 +1394,9 @@ export const projects = [
 ];
 export const education = [
    {
-      degree:
-         'Master-Level Coursework before choosing to pursue a career in software engineering',
-      major: 'Applied Mathematics',
-      school: 'Claremont Graduate University',
-      location: 'Claremont, CA',
-      startYear: 2001,
-      endYear: 2001,
-      awards: [
-         'Fully Paid PhD Fellowship',
-         'Helped professors author the second edition of their popular textbook on differential equations. Devised complex mathematical problems and authored solutions. Edited and proofread the text. Used LaTeX to typeset the book. Trained other students in LaTeX.'
-      ]
-   },
-   {
       degree: 'Bachelor of Science',
       major: 'Mathematics',
-      school: 'University of Redlands',
+      institution: 'University of Redlands',
       location: 'Redlands, CA',
       startYear: 1996,
       endYear: 2001,
@@ -1418,24 +1405,37 @@ export const education = [
          'Presidential Scholarship',
          'Scholar-Athlete'
       ]
+   },
+   {
+      degree:
+         'Master-Level Coursework before choosing to pursue a career in software engineering',
+      major: 'Applied Mathematics',
+      institution: 'Claremont Graduate University',
+      location: 'Claremont, CA',
+      startYear: 2001,
+      endYear: 2001,
+      awards: [
+         'Fully Paid PhD Fellowship',
+         'Helped distinguished professors emeritus produce the second edition of their popular textbook on differential equations. Devised complex mathematical problems and authored solutions. Edited and proofread the text. Used LaTeX to typeset the book. Trained other students in LaTeX. Developed a love of tech. Also enhanced my life-long love of mentoring and teaching.'
+      ]
    }
 ];
 export const certifications = [
    {
       name: 'LaunchDarkly Gold Certification',
-      issueDate: '2024'
+      date: '2024'
    },
    {
       name: 'Software Security Training',
-      issueDate: '2021-2024'
+      date: '2021-2024'
    },
    {
       name: 'Information Security Awareness (AgLearn)',
-      issueDate: '2020'
+      date: '2020'
    },
    {
       name: 'Nielsen Norman Group User Experience training',
-      issueDate: '2012'
+      date: '2012'
    }
 ];
 

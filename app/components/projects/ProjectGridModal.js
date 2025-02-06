@@ -29,7 +29,7 @@ const ProjectGridModal = ({ modalData, closeModal }) => {
             />
          )}
          <div
-            className={`fixed bottom-[5vh] left-[7.5vw] z-50 h-[85vh] w-[85vw] rounded-lg bg-[--bb-dark-gray-900] p-4 md:w-[90vw] ${
+            className={`fixed bottom-[5vh] left-[7.5vw] z-50 h-[85vh] w-[85vw] rounded-lg bg-[--bb-dark-gray-900] p-4 md:left-[5vw] md:w-[90vw] ${
                modalData ? 'translate-y-0' : 'translate-y-[100vh]'
             } transform transition-transform duration-500 ease-in-out`}>
             <div className="relative h-full p-4 text-[--bb-dark-gray-200]">
