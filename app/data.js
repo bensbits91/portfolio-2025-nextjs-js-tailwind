@@ -1152,7 +1152,7 @@ export const projects = [
       featureOnHome: true
    },
    {
-      name: 'Classifieds, Announcements & Events',
+      name: 'Classifieds & Events',
       year: '2021',
       tech: [
          'node.js',

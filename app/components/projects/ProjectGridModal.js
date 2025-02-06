@@ -19,7 +19,7 @@ const ProjectGridModal = ({ modalData, closeModal }) => {
    );
 
    // todo: typography and layout components; better classes/style
-   // todo: move animation to global styles or tailwind config
+
    return (
       <>
          {modalData && (
@@ -29,12 +29,12 @@ const ProjectGridModal = ({ modalData, closeModal }) => {
             />
          )}
          <div
-            className={`rounded-lg fixed bottom-[5vh] left-[7.5vh] z-50 h-[85vh] w-[90vw] transform bg-[--bb-dark-gray-900] p-4 transition-transform duration-500 ease-in-out ${
+            className={`fixed bottom-[5vh] left-[7.5vw] z-50 h-[85vh] w-[85vw] rounded-lg bg-[--bb-dark-gray-900] p-4 md:w-[90vw] ${
                modalData ? 'translate-y-0' : 'translate-y-[100vh]'
-            }`}>
+            } transform transition-transform duration-500 ease-in-out`}>
             <div className="relative h-full p-4 text-[--bb-dark-gray-200]">
                <div className="flex h-16 w-full justify-between">
-                  <HeadingTwo color='red'>{name}</HeadingTwo>
+                  <HeadingTwo color="red">{name}</HeadingTwo>
                   <CloseButton />
                </div>
                <div className="h-[calc(100%-60px)] overflow-y-auto">
