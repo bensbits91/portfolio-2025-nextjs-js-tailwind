@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import CloudinaryImage from '@/app/components/common/CloudinaryImage';
+import { CloudinaryImage } from '@/app/components/image';
 
 const ContactLinks = ({ isNavbar = false }) => {
    return (

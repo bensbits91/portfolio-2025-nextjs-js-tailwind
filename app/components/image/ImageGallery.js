@@ -1,4 +1,4 @@
-import CloudinaryImage from './CloudinaryImage';
+import { CloudinaryImage } from '@/app/components/image';
 
 const ImageGallery = ({ images }) => {
    return (

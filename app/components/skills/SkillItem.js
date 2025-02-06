@@ -1,7 +1,7 @@
-import CloudinaryImage from '@/app/components/common/CloudinaryImage';
+import { CloudinaryImage } from '@/app/components/image';
 import { generateStars } from '@/app/utils';
 
-const SkillsCardListItem = ({ item }) => {
+const SkillItem = ({ item }) => {
    const { name, cloudinary, rating, years } = item;
    return (
       <li>
@@ -17,11 +17,11 @@ const SkillsCardListItem = ({ item }) => {
                </div>
             )}
             <div className="text-sm">{name}</div>
-            <div className="text-sm">~ {years} years</div>
+            <div className="min-w-24 text-sm">~ {years} years</div>
             <div className="flex h-4">{generateStars(rating)}</div>
          </div>
       </li>
    );
 };
 
-export default SkillsCardListItem;
+export default SkillItem;
