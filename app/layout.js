@@ -1,5 +1,5 @@
 import { Roboto, Roboto_Mono } from 'next/font/google';
-import { Navbar } from './components/navbar';
+import { Nav } from './components/navbar';
 import './globals.css';
 
 const robotoSans = Roboto({
@@ -26,7 +26,7 @@ export default async function RootLayout({ children }) {
       <html lang="en">
          <body
             className={`${robotoMono.variable} ${robotoSans.variable} antialiased`}>
-            <Navbar />
+            <Nav />
             <main>{children}</main>
          </body>
       </html>
