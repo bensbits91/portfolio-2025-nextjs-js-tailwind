@@ -1,10 +1,12 @@
 import NavLink from './NavLink';
+import { navLinkDefs } from '@/app/constants';
 
-const NavLinks = ({ links, pathname }) => (
+const NavLinks = ({ pathname }) => (
    <ul className="flex h-7 justify-end space-x-6 font-roboto-sans">
-      {links.map(link => (
-         <NavLink key={link} text={link} pathname={pathname} />
-      ))}
+      {navLinkDefs.map(def => {
+         const { text, link } = def;
+         return <NavLink key={text} text={text} link={link} pathname={pathname} />;
+      })}
    </ul>
 );
 

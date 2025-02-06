@@ -1,0 +1,83 @@
+'use client';
+import { useState } from 'react';
+import Link from 'next/link';
+import ContactLinks from '@/app/components/contact/ContactLinks';
+import { navLinkDefs } from '@/app/constants';
+
+const MobileNav = () => {
+   const [isOpen, setIsOpen] = useState(false);
+
+   const toggleMenu = () => {
+      setIsOpen(!isOpen);
+   };
+
+   const NavLink = ({ link, text, isFirst }) => (
+      <li className="my-2">
+         <Link
+            href={link}
+            onClick={toggleMenu}
+            className={`inline-block px-9 pb-6 ${isFirst ? 'pt-6' : ''}`}>
+            {text}
+         </Link>
+      </li>
+   );
+
+   // todo: add #A0AFBE to var (or replace with existing var)
+   // todo: move svgs to public folder
+
+   return (
+      <nav className="fixed left-0 right-0 top-0 z-40 bg-[--background] p-4 text-[#A0AFBE] lg:hidden">
+         <div className="container z-50 mx-auto flex items-center justify-between">
+            <div className="text-lg font-bold">
+               <ContactLinks isNavbar />
+            </div>
+            <button onClick={toggleMenu} className="focus:outline-none">
+               {isOpen ? (
+                  <svg
+                     className="h-6 w-6"
+                     fill="none"
+                     stroke="currentColor"
+                     viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M6 18L18 6M6 6l12 12"></path>
+                  </svg>
+               ) : (
+                  <svg
+                     className="h-6 w-6"
+                     fill="none"
+                     stroke="currentColor"
+                     viewBox="0 0 24 24"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M4 6h16M4 12h16m-7 6h7"></path>
+                  </svg>
+               )}
+            </button>
+         </div>
+         <div
+            className={`fixed right-0 top-[60px] z-40 h-[100vh] w-[100vw] bg-[--bb-dark-gray-900] text-right font-roboto-sans text-2xl ${
+               isOpen ? 'translate-x-0' : 'translate-x-[100vh]'
+            } transform transition-transform duration-500 ease-in-out`}>
+            <ul>
+               {navLinkDefs.map(({ link, text }, index) => (
+                  <NavLink
+                     key={index}
+                     link={link}
+                     text={text}
+                     isFirst={index === 0}
+                  />
+               ))}
+            </ul>
+         </div>
+      </nav>
+   );
+};
+
+export default MobileNav;

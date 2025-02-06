@@ -44,6 +44,7 @@ body {
       Helvetica, sans-serif;
 }
 
-body:has(.translate-y-0) {
+body:has(.translate-y-0),
+body:has(.translate-x-0) {
    overflow: hidden;
 }

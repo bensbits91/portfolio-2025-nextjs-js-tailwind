@@ -19,6 +19,7 @@ const ProjectGridModal = ({ modalData, closeModal }) => {
    );
 
    // todo: typography and layout components; better classes/style
+   // todo: move animation to global styles or tailwind config
    return (
       <>
          {modalData && (
