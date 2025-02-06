@@ -7,7 +7,7 @@ const ProjectGridModal = ({ modalData, closeModal }) => {
 
    const CloseButton = () => (
       <button
-         className="transition-all delay-75 ease-in-out hover:scale-125"
+         className="transition-all duration-300 ease-in-out hover:scale-125"
          onClick={closeModal}>
          <CloudinaryImage
             cloudinaryId="close_wd9td4"
