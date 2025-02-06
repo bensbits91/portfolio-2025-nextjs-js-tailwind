@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import CloudinaryImage from './CloudinaryImage';
+import { CloudinaryImage } from '@/app/components/image';
 
 const ImageCarousel = ({ images }) => {
    const isMulti = images.length > 1;

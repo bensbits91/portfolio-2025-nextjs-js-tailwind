@@ -23,7 +23,15 @@
    --bb-teal: #33ced8;
    --bb-yellow: #f0be72;
    --bb-blue: #499bfc;
-   --bb-green: #60af73;
+
+   --bb-jade: #60af73;
+   --bb-jade-900: #76BA86;
+   --bb-jade-800: #8DC69A;
+   --bb-jade-700: #A4D1AE;
+   --bb-jade-600: #BBDDC3;
+   --bb-jade-500: #D1E8D7;
+   --bb-jade-400: #E8F4EB;
+
    --bb-red: #d95468;
 
    --background: var(--bb-white);

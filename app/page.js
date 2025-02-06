@@ -8,7 +8,7 @@ const Home = () => {
       <>
          <HeroSection>
             <HeadingOne>
-               Hi <div className="animate-spin-slow inline-block">:)</div> I'm
+               Hi <div className="inline-block animate-spin-slow">:)</div> I'm
                Ben
             </HeadingOne>
             <Subheading>{about.summary}</Subheading>

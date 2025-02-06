@@ -1,5 +1,5 @@
 import dayjs from 'dayjs';
-import CloudinaryImage from './components/common/CloudinaryImage';
+import { CloudinaryImage } from '@/app/components/image';
 
 // string helpers
 export const camelToTitle = str =>
@@ -82,22 +82,38 @@ export const duration = (start, end, style) => {
          return `${pretty} (${yoMo})`;
    }
 };
+export const getYearsSince = date => {
+   const now = dayjs();
+   const then = dayjs(date);
+   const years = now.diff(then, 'year');
+   // const months = now.diff(then, 'month') % 12;
+   return years;
+};
 
 // theme helpers
 export const colorCode = color => {
    switch (color) {
-      case 'red':
-         return 'text-[--bb-red]';
-      case 'green':
-         return 'text-[--bb-green]';
       case 'blue':
          return 'text-[--bb-blue]';
+      case 'jade':
+         return 'text-[--bb-jade]';
+      case 'jade-800':
+         return 'text-[--bb-jade-800]';
+      case 'jade-600':
+         return 'text-[--bb-jade-600]';
+      case 'jade-700':
+         return 'text-[--bb-jade-700]';
+      case 'red':
+         return 'text-[--bb-red]';
+      case 'teal':
+         return 'text-[--bb-teal]';
       case 'yellow':
          return 'text-[--bb-yellow]';
       default:
-         return 'text-[--bb-green]';
+         return 'text-[--bb-jade]';
    }
 };
+
 export const maxWidthCode = size => {
    switch (size) {
       case 'wide':

@@ -1,32 +1,22 @@
-const TwoColumnSection = ({ columns }) => {
+import { HeadingTwo } from '../typography';
+
+const TwoColumnSection = ({ heading = '', columns }) => {
    return (
       <>
          <section className="container mx-auto max-w-[1200px] pb-32">
+            {heading && (
+               <div className="pl-10 md:pl-20">
+                  <HeadingTwo>{heading}</HeadingTwo>
+               </div>
+            )}
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-               {columns.map((column, index) => {
-                  const { content, handleClick } = column;
-                  const isOdd = index % 2 === 0;
-                  return handleClick ? (
-                     <div
-                        key={index}
-                        className={`px-10 pb-10 ${
-                           isOdd ? 'md:pl-20' : 'md:pr-20'
-                        }${
-                           handleClick
-                              ? `${' '}cursor-pointer transition-colors duration-1000 hover:bg-red-400` // todo: yuck - maybe just add a button?
-                              : ''
-                        }`}
-                        onClick={handleClick || undefined}>
-                        {content}
-                     </div>
-                  ) : (
-                     <div
-                        key={index}
-                        className={`px-10 pb-10 ${isOdd ? 'md:pl-20' : 'md:pr-20'}`}>
-                        {content}
-                     </div>
-                  );
-               })}
+               {columns.map((column, index) => (
+                  <div
+                     key={index}
+                     className={`px-10 pb-10 ${index % 2 === 0 ? 'md:pl-20' : 'md:pr-20'}`}>
+                     {column.content}
+                  </div>
+               ))}
             </div>
          </section>
       </>

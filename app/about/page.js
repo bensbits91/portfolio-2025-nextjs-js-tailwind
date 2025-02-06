@@ -7,6 +7,8 @@ import {
 } from '@/app/components/typography';
 import { about, certifications, education, expertise } from '@/app/data.js';
 
+// todo: move to components Education, Certification, About (ish)
+
 const About = () => {
    const {
       overview,

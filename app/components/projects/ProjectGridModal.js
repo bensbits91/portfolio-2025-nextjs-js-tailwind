@@ -1,6 +1,9 @@
-import ImageGallery from '@/app/components/common/ImageGallery';
-import CloudinaryImage from '../common/CloudinaryImage';
-import { HeadingTwo, Subheading, SubtleText } from '../typography';
+import { ImageGallery, CloudinaryImage } from '@/app/components/image';
+import {
+   HeadingTwo,
+   Subheading,
+   SubtleText
+} from '@/app/components/typography';
 
 const ProjectGridModal = ({ modalData, closeModal }) => {
    const { name, images, description, tech } = modalData || {};

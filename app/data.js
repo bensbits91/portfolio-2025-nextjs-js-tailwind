@@ -1,3 +1,5 @@
+import { getYearsSince } from './utils';
+
 export const about = {
    firstName: 'Bennett',
    lastName: 'Brooks',
@@ -78,10 +80,10 @@ export const skills = [
       icon: '/next.svg',
       cloudinary: 'next_tpw7a4',
       years: 2,
-      rating: 7,
+      rating: 8,
       haveUsedProfessionally: false,
       haveUsedForFun: true,
-      featureOnHome: false,
+      featureOnHome: true,
       showInSkillsTable: true
    },
    {
@@ -1099,7 +1101,7 @@ export const projects = [
          'Track anything... integrates with multiple third-party APIs to find and display information about your tracked items... built entirely using free tech so far...',
       motivation:
          "To practices some skills. To build something that I can use (an idea I've had for awhile). To build something that I can show off. Possibly make availalbe as a site and/or app someday.",
-      outcome: '...',
+      outcome: 'WIP',
       images: ['no-image_ilu6tx'],
       showInProjectsGallery: true,
       featureOnHome: false
@@ -1218,7 +1220,7 @@ export const projects = [
       outcome: '',
       images: [
          'growing-form_mxndcb',
-         'sharepoint-dynamic-form-builder-dark_dupi6b',
+         'sharepoint-dynamic-form-builder-dark_dupi6b'
          // 'sharepoint-dynamic-form-builder_vaq1ol',
          // 'sharepoint-form-slider_kgs8re'
       ],
@@ -1439,9 +1441,6 @@ export const certifications = [
    }
 ];
 
-export const getTopSkills = (gte = 7) =>
-   skillsForTable.filter(skill => skill.rating >= gte);
-
 export const homeSkills = skills
    .filter(skill => skill.featureOnHome === true)
    .sort((a, b) => b.rating - a.rating);
@@ -1456,4 +1455,21 @@ export const homeProjects = projects.filter(
 
 export const projectsForGallery = projects.filter(
    project => project.showInProjectsGallery === true
+);
+
+// export const recentProjects = projectsForGallery.filter(
+//    project => getYearsSince(project.year) < 2
+// );
+// export const olderProjects = projectsForGallery.filter(
+//    project => getYearsSince(project.year) >= 2
+// );
+
+const filterAndInverse = (array, callback) => {
+   const filtered = array.filter(callback);
+   const inverseFiltered = array.filter(item => !callback(item));
+   return [filtered, inverseFiltered];
+};
+export const [recentProjects, olderProjects] = filterAndInverse(
+   projectsForGallery,
+   project => getYearsSince(project.year) < 2
 );
