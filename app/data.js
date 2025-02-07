@@ -1202,7 +1202,7 @@ export const projects = [
       featureOnHome: false
    },
    {
-      name: 'Form Journey',
+      name: 'Form Builder',
       year: '2021',
       tech: [
          'node.js',
@@ -1223,6 +1223,9 @@ export const projects = [
          'sharepoint-dynamic-form-builder-dark_dupi6b'
          // 'sharepoint-dynamic-form-builder_vaq1ol',
          // 'sharepoint-form-slider_kgs8re'
+      ],
+      videos: [
+         'form-builder_ndi0uf' // todo: probably remove this cloudinary mp4 url
       ],
       showInProjectsGallery: true,
       featureOnHome: true
