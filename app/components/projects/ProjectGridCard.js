@@ -4,16 +4,19 @@ import { HeadingThree } from '../typography';
 const ProjectGridCard = (
    { project, handleClick } // todo: typography and layout components
 ) => {
-   const { name, images, tech, year } = project;
+   const { name, tech, year } = project;
+   const featuredImage = project.getFeaturedImage();
+
    return (
       <div className="rounded-lg p-8 shadow-dark-card">
          <HeadingThree>{name}</HeadingThree>
-         {images.length > 0 && (
+         {featuredImage && (
             <CloudinaryImage
-               cloudinaryId={images[0]}
+               cloudinaryId={featuredImage.name}
                alt={name}
                width={200}
                height={200}
+               suppressAnimation={featuredImage.suppressAnimation}
             />
          )}
          {year && <p className="text-sm text-gray-500">{year}</p>}

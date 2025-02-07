@@ -1,15 +1,14 @@
-import {
-   ImageGallery,
-   CloudinaryImage,
-   VideoPlayer
-} from '@/app/components/image';
+import { ImageGallery, CloudinaryImage } from '@/app/components/image';
 import {
    HeadingTwo,
    Subheading,
    SubtleText
 } from '@/app/components/typography';
 
-const ProjectGridModal = ({ modalData, closeModal }) => {
+// todo: typography and layout components; better classes/style
+// todo: modal as HOC
+
+   const ProjectGridModal = ({ modalData, closeModal }) => {
    const { name, images, description, tech } = modalData || {};
 
    const CloseButton = () => (
@@ -24,8 +23,6 @@ const ProjectGridModal = ({ modalData, closeModal }) => {
          />
       </button>
    );
-
-   // todo: typography and layout components; better classes/style
 
    return (
       <>
@@ -53,7 +50,6 @@ const ProjectGridModal = ({ modalData, closeModal }) => {
                   {tech && tech.length > 0 && (
                      <SubtleText>Built using: {tech.join(' | ')}</SubtleText>
                   )}
-                  <VideoPlayer />
                   {images && images.length > 0 && (
                      <ImageGallery images={images} />
                   )}

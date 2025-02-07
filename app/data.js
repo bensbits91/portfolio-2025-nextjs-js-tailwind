@@ -1079,7 +1079,7 @@ export const projects = [
          'To showcase my skills and experience. Also, to brush the rust off some of my front-end skills, especially with Next.js and Tailwind CSS. I have spent the past few years gaining experience in the rest of the stack, but am excited to get back to my roots.',
       outcome:
          'A clean, responsive, and accessible website that showcases my skills and experience.',
-      images: ['no-image_ilu6tx'],
+      images: [{ name: 'no-image_ilu6tx' }],
       showInProjectsGallery: true,
       featureOnHome: false
    },
@@ -1102,7 +1102,7 @@ export const projects = [
       motivation:
          "To practices some skills. To build something that I can use (an idea I've had for awhile). To build something that I can show off. Possibly make availalbe as a site and/or app someday.",
       outcome: 'WIP',
-      images: ['no-image_ilu6tx'],
+      images: [{ name: 'no-image_ilu6tx' }],
       showInProjectsGallery: true,
       featureOnHome: false
    },
@@ -1128,7 +1128,7 @@ export const projects = [
          'To provide to multiple customers. To gain experience with drag and drop.',
       outcome:
          'Used by multiple customers. Gained experience with drag and drop.',
-      images: ['sharepoint-agenda-builder-dnd_vn1e8a'],
+      images: [{ name: 'sharepoint-agenda-builder-dnd_vn1e8a', suppressAnimation: true }],
       showInProjectsGallery: true,
       featureOnHome: true
    },
@@ -1149,7 +1149,7 @@ export const projects = [
       description: '',
       motivation: '',
       outcome: '',
-      images: ['sharepoint-assessment-checklist_hjqsg2'],
+      images: [{ name: 'sharepoint-assessment-checklist_hjqsg2' }],
       showInProjectsGallery: true,
       featureOnHome: true
    },
@@ -1171,8 +1171,8 @@ export const projects = [
       motivation: '',
       outcome: '',
       images: [
-         'spfxClassifieds_focus_ab3e7m',
-         'spfxClassifieds_features_p6oa0b'
+         { name: 'spfxClassifieds_focus_ab3e7m' },
+         { name: 'spfxClassifieds_features_p6oa0b' }
       ],
       showInProjectsGallery: true,
       featureOnHome: false
@@ -1195,8 +1195,8 @@ export const projects = [
       code: 'https://github.com/bensbits91/spfxContactSearch',
       outcome: '',
       images: [
-         'spfxContactSearch_focus_z4jkqy',
-         'spfxContactSearch_features_ls6yng'
+         { name: 'spfxContactSearch_focus_z4jkqy' },
+         { name: 'spfxContactSearch_features_ls6yng' }
       ],
       showInProjectsGallery: true,
       featureOnHome: false
@@ -1219,13 +1219,14 @@ export const projects = [
       motivation: '',
       outcome: '',
       images: [
-         'growing-form_mxndcb',
-         'sharepoint-dynamic-form-builder-dark_dupi6b'
+         {
+            name: 'form-builder-A8W3CLnzDdvZH4fZ3Yod5M9uCM9p1Y.mp4',
+            type: 'video'
+         },
+         { name: 'growing-form_mxndcb' }
+         // 'sharepoint-dynamic-form-builder-dark_dupi6b'
          // 'sharepoint-dynamic-form-builder_vaq1ol',
          // 'sharepoint-form-slider_kgs8re'
-      ],
-      videos: [
-         'form-builder_ndi0uf' // todo: probably remove this cloudinary mp4 url
       ],
       showInProjectsGallery: true,
       featureOnHome: true
@@ -1460,13 +1461,6 @@ export const projectsForGallery = projects.filter(
    project => project.showInProjectsGallery === true
 );
 
-// export const recentProjects = projectsForGallery.filter(
-//    project => getYearsSince(project.year) < 2
-// );
-// export const olderProjects = projectsForGallery.filter(
-//    project => getYearsSince(project.year) >= 2
-// );
-
 const filterAndInverse = (array, callback) => {
    const filtered = array.filter(callback);
    const inverseFiltered = array.filter(item => !callback(item));
@@ -1476,3 +1470,12 @@ export const [recentProjects, olderProjects] = filterAndInverse(
    projectsForGallery,
    project => getYearsSince(project.year) < 2
 );
+
+const getFeaturedImage = function () {
+   // con't be arrow function because it needs to be able to access 'this'
+   return this.images.find(image => image.type !== 'video');
+};
+
+projects.forEach(project => {
+   project.getFeaturedImage = getFeaturedImage;
+});

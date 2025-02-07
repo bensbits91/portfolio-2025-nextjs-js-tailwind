@@ -2,25 +2,27 @@ import { CloudinaryImage } from '@/app/components/image';
 import { makeKey } from '@/app/utils';
 
 const ProjectsCardListItem = ({ project }) => {
-   const { name } = project;
+   const { name, description, tech } = project;
    const key = makeKey(name);
+   const featuredImage = project.getFeaturedImage();
+
+   // todo: typography and layout components; better classes/style
    return (
       <li key={key}>
          <div>
-            <h2>{project.name}</h2>
-            {project.images.length > 0 && (
+            <h2>{name}</h2>
+            {featuredImage && (
                <CloudinaryImage
-                  cloudinaryId={project.images[0]}
+                  cloudinaryId={featuredImage.name}
                   alt={name}
                   width={200}
                   height={200}
+                  suppressAnimation={featuredImage.suppressAnimation}
                />
             )}
-            <p>{project.description}</p>
-            {project.tech.length > 0 && (
-               <p className="text-sm text-gray-500">
-                  {(project?.tech).join(' | ')}
-               </p>
+            <p>{description}</p>
+            {tech.length > 0 && (
+               <p className="text-sm text-gray-500">{tech.join(' | ')}</p>
             )}
          </div>
       </li>

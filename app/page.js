@@ -40,24 +40,13 @@ const Home = () => {
                }
             ]}
          />
-         <TwoColumnSection
-            columns={[
-               {
-                  content: (
-                     <HomeCard
-                        items={homeProjects}
-                        type="project"
-                        heading="Sample projects"
-                        headingColor="red"
-                        buttonText="View more projects"
-                        link="/projects"
-                     />
-                  )
-               },
-               {
-                  content: <div>Contact Mini Card</div>
-               }
-            ]}
+         <HomeCard
+            items={homeProjects}
+            type="project"
+            heading="Sample projects"
+            headingColor="red"
+            buttonText="View more projects"
+            link="/projects"
          />
       </>
    );
