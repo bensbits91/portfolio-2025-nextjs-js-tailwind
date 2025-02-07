@@ -1,4 +1,8 @@
-import { ImageGallery, CloudinaryImage } from '@/app/components/image';
+import {
+   ImageGallery,
+   CloudinaryImage,
+   VideoPlayer
+} from '@/app/components/image';
 import {
    HeadingTwo,
    Subheading,
@@ -49,6 +53,7 @@ const ProjectGridModal = ({ modalData, closeModal }) => {
                   {tech && tech.length > 0 && (
                      <SubtleText>Built using: {tech.join(' | ')}</SubtleText>
                   )}
+                  <VideoPlayer />
                   {images && images.length > 0 && (
                      <ImageGallery images={images} />
                   )}
