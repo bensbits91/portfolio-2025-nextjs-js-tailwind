@@ -31,7 +31,7 @@ const ImageCarousel = ({ images }) => {
                      transform: `translateX(${(index - currentIndex) * 100}%)`
                   }}>
                   <CloudinaryImage
-                     cloudinaryId={image}
+                     cloudinaryId={image.name}
                      alt={`Image ${index + 1}`}
                      width={384}
                      height={384}
@@ -44,12 +44,12 @@ const ImageCarousel = ({ images }) => {
             <>
                <button
                   onClick={prevImage}
-                  className="font-roboto-sans absolute left-0 top-1/2 w-24 -translate-x-14 -translate-y-1/2 transform cursor-pointer rounded-sm bg-[--bb-teal] p-4 text-center text-sm tracking-wide text-[--bb-dark-gray] transition duration-700 hover:brightness-125">
+                  className="absolute left-0 top-1/2 w-24 -translate-x-14 -translate-y-1/2 transform cursor-pointer rounded-sm bg-[--bb-teal] p-4 text-center font-roboto-sans text-sm tracking-wide text-[--bb-dark-gray] transition duration-700 hover:brightness-125">
                   Prev
                </button>
                <button
                   onClick={nextImage}
-                  className="font-roboto-sans absolute right-0 top-1/2 w-24 -translate-y-1/2 translate-x-14 transform cursor-pointer rounded-sm bg-[--bb-teal] p-4 text-center text-sm tracking-wide text-[--bb-dark-gray] transition duration-700 hover:brightness-125">
+                  className="absolute right-0 top-1/2 w-24 -translate-y-1/2 translate-x-14 transform cursor-pointer rounded-sm bg-[--bb-teal] p-4 text-center font-roboto-sans text-sm tracking-wide text-[--bb-dark-gray] transition duration-700 hover:brightness-125">
                   Next
                </button>
             </>
