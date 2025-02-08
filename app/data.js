@@ -1066,43 +1066,357 @@ export const projects = [
       year: '2025',
       tech: [
          'Next.js',
-         'React.js',
          'Tailwind CSS',
-         'React Table',
          'Node.js',
-         '...'
+         'nodemailer',
+         'dayjs',
+         'Turbopack',
+         'Vercel',
+         'Cloudinary'
       ],
-      code: '',
+      codeLink:
+         'https://github.com/bensbits91/portfolio-2025-nextjs-js-tailwind',
       description:
-         'My personal website, built with Next.js, Tailwind CSS, React Table... deployed using Vercel... minimal dependencies... content stored as JSON inside the project... custom css animations/transitions... images stored in cloudinary and optimized using next/image...',
+         "My personal website, built in about a week... deployed using Vercel... minimal dependencies... content stored as JSON inside the project... a few li'l custom animations and transitions... images stored in cloudinary and optimized using next/image... videos stored using Vercel Blob storage... contact form sends email using nodemailer... ",
       motivation:
-         'To showcase my skills and experience. Also, to brush the rust off some of my front-end skills, especially with Next.js and Tailwind CSS. I have spent the past few years gaining experience in the rest of the stack, but am excited to get back to my roots.',
+         'To showcase my skills and experience. To brush the rust off some of my front-end skills.',
       outcome:
-         'A clean, responsive, and accessible website that showcases my skills and experience.',
-      images: [{ name: 'no-image_ilu6tx' }],
+         'A clean, responsive, and accessible website that showcases my skills and experience. Fun excerise.',
+      images: [{ name: 'this-site_pyfjwv' }],
       showInProjectsGallery: true,
       featureOnHome: false
    },
    {
-      name: 'Things',
+      name: 'Things app',
       year: '2025',
       tech: [
          'React.js',
+         'Redux',
+         'Thunk',
          'Styled Components',
          'Prime React',
          'Node.js',
          'Fastify',
-         'MongoDB',
          'Mongoose',
-         '...'
+         'MongoDB'
       ],
-      code: '',
+      codeLink: 'https://github.com/bensbits91/primereact-test-01',
       description:
-         'Track anything... integrates with multiple third-party APIs to find and display information about your tracked items... built entirely using free tech so far...',
+         "Add, rate and track anything... Integrates with multiple third-party APIs to find and display information about supported types (currently books, TV shows, movies and video games)... I'll be adding more types soon... Ability to export your Things to CSV. Built entirely using free tech so far (third-party APIs, Mongo Atlas...)... Built in about two weeks so far. Kinda ugly so far :/",
       motivation:
-         "To practices some skills. To build something that I can use (an idea I've had for awhile). To build something that I can show off. Possibly make availalbe as a site and/or app someday.",
-      outcome: 'WIP',
-      images: [{ name: 'no-image_ilu6tx' }],
+         "To practices some skills. To build something that I can use (an idea I've had for awhile). Hope to make an app available to others someday. Users will be able to log in (probably using auth0, including social auth), manage a profile and share their interests with others. Get recommendations on things you might like. Eventually find people with similar interests.",
+      outcome: 'WIP, super fun',
+      images: [
+         {
+            name: 'things-app-search-save-3a4zDc6ssBNHkL9x1Q1Ee0MBBnIzHM.mp4',
+            type: 'video'
+         },
+         {
+            name: 'things-sort-export-trimmed-p3sKqPpzhmwOd18Nj7nizb6YfVBvTh.mp4',
+            type: 'video'
+         },
+         { name: 'things_w7q8lq', hideFromModal: true },
+         { name: 'things-detail_mqkcqy' }
+      ],
+      showInProjectsGallery: true,
+      featureOnHome: true
+   },
+   {
+      name: 'Sales Dashboard Widgets',
+      year: '2021',
+      tech: [
+         'node.js',
+         'React.js',
+         'TypeScript',
+         'React Simple Maps',
+         'Recharts',
+         'd3js',
+         'Fabric UI',
+         'SCSS',
+         'Microsoft Graph API',
+         'Gulp',
+         'Webpack'
+      ],
+      codeLink: 'https://github.com/bensbits91/goal-tracker',
+      description: '',
+      motivation: '',
+      outcome: '',
+      images: [
+         {
+            name: 'sharepoint-assessment-checklist-listview-still_50_eyxmcn',
+            hideFromModal: true
+         },
+         {
+            name: 'dashboard-widgets-f8sx586nmqQSXKynsHJSn53TWch3sC.mp4',
+            type: 'video'
+         }
+      ],
+      showInProjectsGallery: true,
+      featureOnHome: true
+   },
+   {
+      name: 'Radial Progress Bar',
+      year: '2020',
+      tech: [
+         'node.js',
+         'React.js',
+         'TypeScript',
+         'Recharts',
+         'd3js',
+         'SCSS',
+         'Microsoft Graph API',
+         'Gulp',
+         'Webpack'
+      ],
+      codeLink: '',
+      description: 'asdf',
+      motivation: 'asdf',
+      outcome: 'asdf',
+      images: [
+         {
+            name: 'sharepoint-goal-tracker-multiple-dark_dblqv0',
+            hideFromModal: true
+         },
+         {
+            name: 'goal-tracker-dark-FF6p2xvEaXGrp7vOy5c3YHzmGflN4u.mp4',
+            type: 'video'
+         },
+         {
+            name: 'goal-tracker-light-HW77LDzOLYRWS1SIX589eb8B5WVbms.mp4',
+            type: 'video'
+         }
+      ],
+      showInProjectsGallery: true,
+      featureOnHome: true
+   },
+   {
+      name: 'Map-based data display',
+      year: '2020',
+      tech: [
+         'node.js',
+         'React.js',
+         'TypeScript',
+         'React Simple Maps',
+         'Recharts',
+         'd3js',
+         'SCSS',
+         'Microsoft Graph API',
+         'Gulp',
+         'Webpack'
+      ],
+      codeLink: '',
+      description: 'asdf',
+      motivation:
+         'Provide for clients... plug into existing apps... pracitce handling geo data... practice visualization...',
+      outcome: 'asdf',
+      images: [
+         { name: 'sharepoint-franchise-map_crr8ou', hideFromModal: true },
+         {
+            name: 'map-based-data-KFOSSvaGa1LwHYTcgO8lHm5DukE33l.mp4',
+            type: 'video'
+         }
+      ],
+      showInProjectsGallery: true,
+      featureOnHome: false
+   },
+   {
+      name: 'Weather Widget',
+      year: '2020',
+      tech: [
+         'node.js',
+         'React.js',
+         'TypeScript',
+         'Fabric UI',
+         'moment.js',
+         'SCSS',
+         'Gulp',
+         'Webpack'
+      ],
+      codeLink: 'https://github.com/bensbits91/weather-widget',
+      description: '',
+      motivation: '',
+      outcome: '',
+      images: [
+         {
+            name: 'sharepoint-weather-widget-onecard-dark-orange_vzn4uf',
+            hideFromModal: true
+         },
+         {
+            name: 'weather-widget-dark-orange-5w6Os9Ev2FI5ran2QB1UHEQPRf6ucR.mp4',
+            type: 'video'
+         },
+         {
+            name: 'weather-widget-light-black-13mowkkWY1N3q22bMe1ksNRZ2CzFps.mp4',
+            type: 'video'
+         },
+         {
+            name: 'weather-widget-dark-blue-tTdDa07yqLCJuyFohA1e6Sh5HyH3vg.mp4',
+            type: 'video'
+         },
+         {
+            name: 'weather-widget-light-red-tBoTEFmWXQVAncd0A46lG1BPwXFYrT.mp4',
+            type: 'video'
+         },
+         {
+            name: 'weather-widget-light-vertical-Ez8UYrqwWQQlRKBaDIeIwxLVQfPpjS.mp4',
+            type: 'video'
+         }
+      ],
+      showInProjectsGallery: true,
+      featureOnHome: true
+   },
+   {
+      name: 'Org Chart',
+      year: '2021',
+      tech: [
+         'node.js',
+         'React.js',
+         'TypeScript',
+         'React Org Chart',
+         'React Treebeard',
+         'SCSS',
+         'Microsoft Graph API',
+         'Gulp',
+         'Webpack'
+      ],
+      codeLink: 'https://github.com/bensbits91/org-chart-2021',
+      description: 'asdf',
+      motivation: 'asdf',
+      outcome: 'asdf',
+      images: [
+         { name: 'sharepoint-org-chart_full_ibyyjd', hideFromModal: true },
+         {
+            name: 'org-chart-expand-T2laSJesfK7meF6ltsM3L32nE71CpA.mp4',
+            type: 'video'
+         },
+         {
+            name: 'org-chart-pan-zoom-3Itkoe7jZQ8VvLuiOsVIhsJ2iOb4rw.mp4',
+            type: 'video'
+         }
+      ],
+      showInProjectsGallery: true,
+      featureOnHome: false
+   },
+   {
+      name: 'Org Directory',
+      year: '2021',
+      tech: [
+         'node.js',
+         'React.js',
+         'TypeScript',
+         'Fabric UI',
+         'React Treebeard',
+         'SCSS',
+         'Microsoft Graph API',
+         'Gulp',
+         'Webpack'
+      ],
+      codeLink: 'https://github.com/bensbits91/org-tree',
+      description: '',
+      motivation: '',
+      outcome: '',
+      images: [
+         { name: 'sharepoint-org-tree_focus_bdqjup', hideFromModal: true },
+         {
+            name: 'org-tree-expand-mUBZq1hSrbbQkoN8wuccNHU9liZHyI.mp4',
+            type: 'video'
+         },
+         {
+            name: 'org-tree-details-lKwZyG0zF3BiK8hBRHLFmpr33Qxzzd.mp4',
+            type: 'video'
+         }
+      ],
+      showInProjectsGallery: true,
+      featureOnHome: false
+   },
+   {
+      name: 'Form Builder',
+      year: '2021',
+      tech: [
+         'node.js',
+         'React.js',
+         'TypeScript',
+         'Fabric UI',
+         'SCSS',
+         'Microsoft Graph API',
+         'Gulp',
+         'Webpack'
+      ],
+      codeLink: 'https://github.com/bensbits91/vertical-growing-form',
+      description:
+         'Enables form admins to build different journeys for different types requests. Using intuitive tools, admins can add, remove, and rearrange steps, fields, sections and pages. Admins can also control branching and conditional logic, as well as choosing from different display styles.',
+      motivation: '',
+      outcome: '',
+      images: [
+         {
+            name: 'growing-form_mxndcb',
+            hideFromModal: true
+         },
+         {
+            name: 'form-builder-A8W3CLnzDdvZH4fZ3Yod5M9uCM9p1Y.mp4',
+            type: 'video'
+         }
+      ],
+      showInProjectsGallery: true,
+      featureOnHome: false
+   },
+   {
+      name: 'Team Site Directory',
+      year: '2021',
+      tech: [
+         'node.js',
+         'React.js',
+         'TypeScript',
+         'React Treebeard',
+         'Fabric UI',
+         'SCSS',
+         'Microsoft Graph API',
+         'Gulp',
+         'Webpack'
+      ],
+      codeLink: 'https://github.com/bensbits91/site-directory',
+      description: '',
+      motivation: '',
+      outcome: '',
+      images: [
+         { name: 'spfxSiteExplorer_focus_bhu8j7', hideFromModal: true },
+         {
+            name: 'team-site-directory-Ssm349O61xFKDLLO28OH7jrWsKpbGN.mp4',
+            type: 'video'
+         }
+      ],
+      showInProjectsGallery: true,
+      featureOnHome: false
+   },
+   {
+      name: 'Stock Widget',
+      year: '2020',
+      tech: [
+         'node.js',
+         'React.js',
+         'TypeScript',
+         'Recharts',
+         'Fabric UI',
+         'moment.js',
+         'SCSS',
+         'Gulp',
+         'Webpack'
+      ],
+      codeLink: 'https://github.com/bensbits91/stock-widget',
+      description: '',
+      motivation: '',
+      outcome: '',
+      images: [
+         { name: 'sharepoint-stocks-widget-dark_b7lzrd', hideFromModal: true },
+         {
+            name: 'stock-widget-dark-TUvdH7GMsjVsPPjrrQT4k28WiTe4xZ.mp4',
+            type: 'video'
+         },
+         {
+            name: 'stock-widget-light-3q8RXMVCRRzg1886FwttcpB7g2cu5g.mp4',
+            type: 'video'
+         }
+      ],
       showInProjectsGallery: true,
       featureOnHome: false
    },
@@ -1121,16 +1435,26 @@ export const projects = [
          'Gulp',
          'Webpack'
       ],
-      code: 'https://github.com/bensbits91/agenda-builder',
+      codeLink: 'https://github.com/bensbits91/agenda-builder',
       description:
          'Drag and drop to change the order of items... Editable agenda item details... This demo has minimal styling to facilitate customer-specific branding and easy integration into other projects.',
       motivation:
          'To provide to multiple customers. To gain experience with drag and drop.',
       outcome:
          'Used by multiple customers. Gained experience with drag and drop.',
-      images: [{ name: 'sharepoint-agenda-builder-dnd_vn1e8a', suppressAnimation: true }],
+      images: [
+         {
+            name: 'sharepoint-agenda-builder-dnd_vn1e8a',
+            hideFromModal: true,
+            frame: 1 // note to self: added this flag because I only had an animated gif for this project, adds cloudinary flag pg_1
+         },
+         {
+            name: 'draggable-agenda-builder-wxSKOMTiDt63TP4oLG8yuQD852DuvP.mp4',
+            type: 'video'
+         }
+      ],
       showInProjectsGallery: true,
-      featureOnHome: true
+      featureOnHome: false
    },
    {
       name: 'Assessment Checklist',
@@ -1142,14 +1466,21 @@ export const projects = [
          'Fabric UI',
          'moment.js',
          'SCSS',
+         'Microsoft Graph API',
          'Gulp',
          'Webpack'
       ],
-      code: '',
+      codeLink: '',
       description: '',
       motivation: '',
       outcome: '',
-      images: [{ name: 'sharepoint-assessment-checklist_hjqsg2' }],
+      images: [
+         { name: 'assessment-checklist_joi1zh', hideFromModal: true },
+         {
+            name: 'assessment-checklist-EW7BTvTA37P1Tgv3K1qyB9jOgOgKQ6.mp4',
+            type: 'video'
+         }
+      ],
       showInProjectsGallery: true,
       featureOnHome: true
    },
@@ -1166,13 +1497,16 @@ export const projects = [
          'Gulp',
          'Webpack'
       ],
-      code: 'https://github.com/bensbits91/classifieds-2021',
+      codeLink: 'https://github.com/bensbits91/classifieds-2021',
       description: '',
       motivation: '',
       outcome: '',
       images: [
-         { name: 'spfxClassifieds_focus_ab3e7m' },
-         { name: 'spfxClassifieds_features_p6oa0b' }
+         { name: 'spfxClassifieds_focus_ab3e7m', hideFromModal: true },
+         {
+            name: 'classifieds-events-PVIWwq4wEE0X3bubcTOYtmM2bYlXaz.mp4',
+            type: 'video'
+         }
       ],
       showInProjectsGallery: true,
       featureOnHome: false
@@ -1192,210 +1526,17 @@ export const projects = [
       ],
       motivation: '',
       description: '',
-      code: 'https://github.com/bensbits91/spfxContactSearch',
+      codeLink: 'https://github.com/bensbits91/spfxContactSearch',
       outcome: '',
       images: [
-         { name: 'spfxContactSearch_focus_z4jkqy' },
-         { name: 'spfxContactSearch_features_ls6yng' }
-      ],
-      showInProjectsGallery: true,
-      featureOnHome: false
-   },
-   {
-      name: 'Form Builder',
-      year: '2021',
-      tech: [
-         'node.js',
-         'React.js',
-         'TypeScript',
-         'Fabric UI',
-         'SCSS',
-         'Gulp',
-         'Webpack'
-      ],
-      code: 'https://github.com/bensbits91/vertical-growing-form',
-      description:
-         'Enables form admins to build different journeys for different types requests. Using intuitive tools, admins can add, remove, and rearrange steps, fields, sections and pages. Admins can also control branching and conditional logic, as well as choosing from different display styles.',
-      motivation: '',
-      outcome: '',
-      images: [
+         { name: 'spfxContactSearch_focus_z4jkqy', hideFromModal: true },
          {
-            name: 'form-builder-A8W3CLnzDdvZH4fZ3Yod5M9uCM9p1Y.mp4',
+            name: '',
             type: 'video'
-         },
-         { name: 'growing-form_mxndcb' }
-         // 'sharepoint-dynamic-form-builder-dark_dupi6b'
-         // 'sharepoint-dynamic-form-builder_vaq1ol',
-         // 'sharepoint-form-slider_kgs8re'
+         }
       ],
       showInProjectsGallery: true,
-      featureOnHome: true
-   },
-   {
-      name: '',
-      year: '',
-      tech: [],
-      code: '',
-      description: '',
-      motivation: '',
-      outcome: '',
-      images: [],
-      showInProjectsGallery: false,
       featureOnHome: false
-   },
-   {
-      name: '',
-      year: '',
-      tech: [],
-      code: '',
-      description: '',
-      motivation: '',
-      outcome: '',
-      images: [],
-      showInProjectsGallery: false,
-      featureOnHome: false
-   },
-   {
-      name: '',
-      year: '',
-      tech: [],
-      code: '',
-      description: '',
-      motivation: '',
-      outcome: '',
-      images: [],
-      showInProjectsGallery: false,
-      featureOnHome: false
-   },
-   {
-      name: '',
-      year: '',
-      tech: [],
-      code: '',
-      description: '',
-      motivation: '',
-      outcome: '',
-      images: [],
-      showInProjectsGallery: false,
-      featureOnHome: false
-   },
-   {
-      name: '',
-      year: '',
-      tech: [],
-      code: '',
-      description: '',
-      motivation: '',
-      outcome: '',
-      images: [],
-      showInProjectsGallery: false,
-      featureOnHome: false
-   },
-   {
-      name: '',
-      year: '',
-      tech: [],
-      code: '',
-      description: '',
-      motivation: '',
-      outcome: '',
-      images: [],
-      showInProjectsGallery: false,
-      featureOnHome: false
-   },
-   {
-      name: '',
-      year: '',
-      tech: [],
-      code: '',
-      description: '',
-      motivation: '',
-      outcome: '',
-      images: [],
-      showInProjectsGallery: false,
-      featureOnHome: false
-   },
-   {
-      name: '',
-      year: '',
-      tech: [],
-      code: '',
-      description: '',
-      motivation: '',
-      outcome: '',
-      images: [],
-      showInProjectsGallery: false,
-      featureOnHome: false
-   },
-   {
-      name: '',
-      year: '',
-      tech: [],
-      code: '',
-      description: '',
-      motivation: '',
-      outcome: '',
-      images: [],
-      showInProjectsGallery: false,
-      featureOnHome: false
-   },
-   {
-      name: '',
-      year: '',
-      tech: [],
-      code: '',
-      description: '',
-      motivation: '',
-      outcome: '',
-      images: [],
-      showInProjectsGallery: false,
-      featureOnHome: false
-   },
-   {
-      name: '',
-      year: '',
-      tech: [],
-      code: '',
-      description: '',
-      motivation: '',
-      outcome: '',
-      images: [],
-      showInProjectsGallery: false,
-      featureOnHome: false
-   },
-   {
-      name: '',
-      year: '',
-      tech: [],
-      code: '',
-      description: '',
-      motivation: '',
-      outcome: '',
-      images: [],
-      showInProjectsGallery: false,
-      featureOnHome: false
-   },
-   {
-      name: '',
-      year: '',
-      tech: [],
-      code: '',
-      description: '',
-      motivation: '',
-      outcome: '',
-      images: [],
-      showInProjectsGallery: false,
-      featureOnHome: false
-   },
-   {
-      name: '',
-      year: '',
-      tech: [],
-      code: '',
-      description: '',
-      motivation: '',
-      outcome: '',
-      images: []
    }
 ];
 export const education = [
@@ -1445,6 +1586,8 @@ export const certifications = [
    }
 ];
 
+// todo: attach as methods/properties to each data object
+
 export const homeSkills = skills
    .filter(skill => skill.featureOnHome === true)
    .sort((a, b) => b.rating - a.rating);
@@ -1476,6 +1619,11 @@ const getFeaturedImage = function () {
    return this.images.find(image => image.type !== 'video');
 };
 
+const getMadalImages = function () {
+   return this.images.filter(image => !image.hideFromModal);
+};
+
 projects.forEach(project => {
    project.getFeaturedImage = getFeaturedImage;
+   project.getMadalImages = getMadalImages;
 });

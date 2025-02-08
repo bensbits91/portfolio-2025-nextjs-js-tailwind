@@ -8,8 +8,7 @@ const Projects = () => {
          <HeroSection bigBottom={false}>
             <HeadingOne>Sample Projects</HeadingOne>
             <Subheading>
-               Most of these are a few years old. I've spent the past few years
-               earning some full-stack chops...
+               A couple newer projects and a bunch of older work.
             </Subheading>
          </HeroSection>
          <ProjectGrid />

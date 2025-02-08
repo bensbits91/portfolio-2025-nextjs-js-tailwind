@@ -26,6 +26,7 @@ export default function VideoPlayer({ filename }) {
       fetchVideoUrl();
    }, []);
 
+   // todo: add loading spinner
    return (
       <div>
          {videoUrl ? (
@@ -34,7 +35,8 @@ export default function VideoPlayer({ filename }) {
                   controls
                   preload="none"
                   aria-label="Video player"
-                  autoPlay>
+                  autoPlay
+                  loop>
                   <source src={videoUrl} type="video/mp4" />
                   Your browser does not support the video tag.
                </video>

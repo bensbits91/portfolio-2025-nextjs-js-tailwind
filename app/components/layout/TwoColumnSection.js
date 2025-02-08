@@ -1,4 +1,4 @@
-import { HeadingTwo } from '../typography';
+import { HeadingTwo } from '@/app/components/typography';
 
 const TwoColumnSection = ({ heading = '', columns }) => {
    return (

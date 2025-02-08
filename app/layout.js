@@ -1,6 +1,7 @@
 import { Roboto, Roboto_Mono } from 'next/font/google';
 import { Nav } from './components/navbar';
 import './globals.css';
+import Head from 'next/head';
 
 const robotoSans = Roboto({
    weight: '700',
@@ -24,6 +25,14 @@ export const metadata = {
 export default async function RootLayout({ children }) {
    return (
       <html lang="en">
+         <Head>
+            <link
+               rel="icon"
+               type="image/svg+xml"
+               href="/icon.svg"
+               sizes="any"
+            />
+         </Head>
          <body
             className={`${robotoMono.variable} ${robotoSans.variable} antialiased`}>
             <Nav />
