@@ -36,6 +36,7 @@ export default function VideoPlayer({ filename }) {
                   preload="none"
                   aria-label="Video player"
                   autoPlay
+                  playsInline // for iOS
                   loop>
                   <source src={videoUrl} type="video/mp4" />
                   Your browser does not support the video tag.

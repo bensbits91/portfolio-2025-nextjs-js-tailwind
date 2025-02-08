@@ -2,6 +2,7 @@ import { HeroSection, OneColumnSection } from '@/app/components/layout';
 import {
    HeadingOne,
    HeadingTwo,
+   HeadingThree,
    Subheading,
    SubtleText
 } from '@/app/components/typography';
@@ -34,16 +35,21 @@ const About = () => {
                   awards
                } = item;
                return (
-                  <div key={index}>
-                     <h3>
+                  <div key={index} className="mb-10">
+                     <HeadingThree>
                         {degree} in {major}
-                     </h3>
+                     </HeadingThree>
                      <h4>
-                        {institution}, {location} {endYear}
+                        {institution}
                      </h4>
-                     {awards.map((award, index) => {
-                        return <p key={index}>{award}</p>;
-                     })}
+                     <p className='mb-4'>
+                        {location} {endYear}
+                     </p>
+                     <ul className="list-outisde list-disc pl-4">
+                        {awards.map((award, index) => {
+                           return <li key={index} className="pl-2">{award}</li>;
+                        })}
+                     </ul>
                   </div>
                );
             })}
@@ -53,18 +59,16 @@ const About = () => {
 
    const Certifications = ({ certifications }) => (
       <div>
-         <div>
+         <ul className="list-outisde list-disc pl-4">
             {certifications.map((item, index) => {
                const { name, date } = item;
                return (
-                  <div key={index}>
-                     <h3>
-                        {name} {date}
-                     </h3>
-                  </div>
+                  <li key={index} className="pl-2">
+                     {name} {date}
+                  </li>
                );
             })}
-         </div>
+         </ul>
       </div>
    );
 
