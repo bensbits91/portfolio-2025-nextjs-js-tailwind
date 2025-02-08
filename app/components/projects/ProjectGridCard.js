@@ -37,7 +37,7 @@ const ProjectGridCard = (
          {featuredImage && imageToDisplay}
          {tech.length > 0 && (
             <p className="text-sm text-gray-500">
-               {(project?.tech).join(' | ')}
+               {(project?.tech).join('\xA0| ')}
             </p>
          )}
          {handleClick && (
