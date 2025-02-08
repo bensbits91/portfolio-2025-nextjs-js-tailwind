@@ -1119,7 +1119,7 @@ export const projects = [
          { name: 'things-detail_mqkcqy' }
       ],
       showInProjectsGallery: true,
-      featureOnHome: false
+      featureOnHome: true
    },
    {
       name: 'Sales Dashboard Widgets',
@@ -1152,7 +1152,7 @@ export const projects = [
          }
       ],
       showInProjectsGallery: true,
-      featureOnHome: false
+      featureOnHome: true
    },
    {
       name: 'Radial Progress Bar',
@@ -1187,7 +1187,7 @@ export const projects = [
          }
       ],
       showInProjectsGallery: true,
-      featureOnHome: false
+      featureOnHome: true
    },
    {
       name: 'Map-based data display',
@@ -1263,7 +1263,7 @@ export const projects = [
          }
       ],
       showInProjectsGallery: true,
-      featureOnHome: false
+      featureOnHome: true
    },
    {
       name: 'Org Chart',
@@ -1358,7 +1358,7 @@ export const projects = [
          }
       ],
       showInProjectsGallery: true,
-      featureOnHome: true
+      featureOnHome: false
    },
    {
       name: 'Team Site Directory',
@@ -1454,7 +1454,7 @@ export const projects = [
          }
       ],
       showInProjectsGallery: true,
-      featureOnHome: true
+      featureOnHome: false
    },
    {
       name: 'Assessment Checklist',

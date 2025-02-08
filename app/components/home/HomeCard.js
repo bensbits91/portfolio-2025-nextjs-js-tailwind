@@ -1,9 +1,7 @@
 import Button from '@/app/components/common/Button';
-// import SkillsCardListItem from './SkillsCardListItem';
 import { SkillItem } from '@/app/components/skills';
 import ExperienceCardListItem from './ExperienceCardListItem';
-import ProjectsCardListItem from './ProjectsCardListItem';
-import { HeadingTwo } from '../typography';
+import { HeadingTwo } from '@/app/components/typography';
 
 const HomeCard = ({
    items,
@@ -22,10 +20,8 @@ const HomeCard = ({
                   return <SkillItem key={index} item={item} />;
                case 'experience':
                   return <ExperienceCardListItem key={index} item={item} />;
-               case 'project':
-                  return <ProjectsCardListItem key={index} project={item} />;
                default:
-                  return <li key={key}>Unkown Type</li>;
+                  return <li key={index}>Unkown Type</li>;
             }
          })}
       </ul>

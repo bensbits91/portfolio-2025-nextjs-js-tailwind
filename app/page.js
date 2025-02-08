@@ -1,6 +1,12 @@
 import HomeCard from './components/home/HomeCard';
-import { HeroSection, TwoColumnSection } from './components/layout';
+import { ProjectGridCard } from './components/projects';
+import {
+   HeroSection,
+   TwoColumnSection,
+   ThreeColumnSection
+} from './components/layout';
 import { HeadingOne, Subheading, WhisperText } from './components/typography';
+import Button from '@/app/components/common/Button';
 import { about, expertise, experience, homeSkills, homeProjects } from './data';
 
 const Home = () => {
@@ -40,13 +46,14 @@ const Home = () => {
                }
             ]}
          />
-         <HomeCard
-            items={homeProjects}
-            type="project"
+         <ThreeColumnSection
             heading="Sample projects"
-            headingColor="red"
-            buttonText="View more projects"
-            link="/projects"
+            columns={[
+               ...homeProjects.map(project => ({
+                  content: <ProjectGridCard project={project} />
+               })),
+               { content: <Button link="/projects">View more projects</Button> }
+            ]}
          />
       </>
    );

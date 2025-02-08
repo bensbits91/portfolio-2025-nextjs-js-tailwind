@@ -1,6 +1,6 @@
 'use client';
 import { usePathname } from 'next/navigation';
-import { ContactLinks } from '../contact';
+import { ContactLinks } from '@/app/components/contact';
 import NavLinks from './NavLinks';
 
 const Navbar = () => {
