@@ -8,6 +8,7 @@ const ContactLinks = ({ isNavbar = false }) => {
             <a
                href="https://www.linkedin.com/in/benbrooks/"
                target="_blank"
+               rel="noreferrer"
                className="inline-block transition-all duration-300 ease-in-out hover:scale-125">
                <CloudinaryImage
                   cloudinaryId="linkedin-white_t7tuve"
@@ -21,6 +22,7 @@ const ContactLinks = ({ isNavbar = false }) => {
             <a
                href="https://github.com/bensbits91"
                target="_blank"
+               rel="noreferrer"
                className="inline-block transition-all duration-300 ease-in-out hover:scale-125">
                <CloudinaryImage
                   cloudinaryId="github1_o1ok5i"

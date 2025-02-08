@@ -6,10 +6,11 @@ import {
 } from '@/app/components/typography';
 
 // todo: typography and layout components; better classes/style
-// todo: modal as HOC
 
-   const ProjectGridModal = ({ modalData, closeModal }) => {
-   const { name, images, description, tech } = modalData || {};
+const ProjectGridModal = ({ modalData, closeModal }) => {
+   const { name, description, tech, codeLink, year, motivation, outcome } =
+      modalData || {};
+   const images = modalData?.getMadalImages();
 
    const CloseButton = () => (
       <button
@@ -23,6 +24,42 @@ import {
          />
       </button>
    );
+
+   // todo: modal as HOC
+   const TempChildren = () => {
+      return (
+         <>
+            {tech && tech.length > 0 && (
+               <Subheading left shrink color="jade-800">
+                  {tech.join(', ')}
+               </Subheading>
+            )}
+            <div className="flex flex-col gap-4">
+               {codeLink && (
+                  <a
+                     href={codeLink}
+                     target="_blank"
+                     rel="noreferrer"
+                     className="block w-36 cursor-pointer rounded-sm border-2 border-[--bb-dark-gray-500] p-4 text-center font-roboto-sans text-sm tracking-wide text-[--bb-dark-gray] transition duration-700 hover:brightness-125">
+                     <div className="flex items-center gap-2">
+                        <CloudinaryImage
+                           cloudinaryId="github1_o1ok5i"
+                           alt="GitHub"
+                           width={30}
+                           height={30}
+                        />
+                        <SubtleText>View Code</SubtleText>
+                     </div>
+                  </a>
+               )}
+               {description && <SubtleText>What: {description}</SubtleText>}
+               {motivation && <SubtleText>Why: {motivation}</SubtleText>}
+               {outcome && <SubtleText>Outcome: {outcome}</SubtleText>}
+               {images && images.length > 0 && <ImageGallery images={images} />}
+            </div>
+         </>
+      );
+   };
 
    return (
       <>
@@ -38,21 +75,14 @@ import {
             } transform transition-transform duration-500 ease-in-out`}>
             <div className="relative h-full p-4 text-[--bb-dark-gray-200]">
                <div className="flex h-16 w-full justify-between">
-                  <HeadingTwo color="red">{name}</HeadingTwo>
+                  <div className='flex items-baseline gap-4'>
+                     <HeadingTwo>{name}</HeadingTwo>
+                     <p>{year}</p>
+                  </div>
                   <CloseButton />
                </div>
-               <div className="h-[calc(100%-60px)] overflow-y-auto">
-                  {description && (
-                     <Subheading left shrink>
-                        {description}
-                     </Subheading>
-                  )}
-                  {tech && tech.length > 0 && (
-                     <SubtleText>Built using: {tech.join(' | ')}</SubtleText>
-                  )}
-                  {images && images.length > 0 && (
-                     <ImageGallery images={images} />
-                  )}
+               <div className="h-[calc(100%-60px)] overflow-y-auto px-5">
+                  <TempChildren data={modalData} />
                </div>
             </div>
          </div>

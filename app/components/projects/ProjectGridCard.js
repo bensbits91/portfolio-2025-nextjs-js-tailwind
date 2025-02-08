@@ -11,15 +11,18 @@ const ProjectGridCard = (
       <div className="rounded-lg p-8 shadow-dark-card">
          <HeadingThree>{name}</HeadingThree>
          {featuredImage && (
-            <CloudinaryImage
-               cloudinaryId={featuredImage.name}
-               alt={name}
-               width={200}
-               height={200}
-               suppressAnimation={featuredImage.suppressAnimation}
-            />
+            <div
+               onClick={handleClick}
+               className="cursor-pointer inline-block overflow-hidden rounded-sm border-2 border-[--bb-dark-gray-900] transition-all duration-700 hover:brightness-125 ease-in-out hover:scale-110">
+               <CloudinaryImage
+                  cloudinaryId={featuredImage.name}
+                  alt={name}
+                  width={200}
+                  height={200}
+                  frame={featuredImage.frame}
+               />
+            </div>
          )}
-         {year && <p className="text-sm text-gray-500">{year}</p>}
          {tech.length > 0 && (
             <p className="text-sm text-gray-500">
                {(project?.tech).join(' | ')}
@@ -27,7 +30,7 @@ const ProjectGridCard = (
          )}
          <button
             onClick={handleClick}
-            className="mt-12 cursor-pointer rounded-sm bg-[--bb-teal] p-4 text-center font-roboto-sans text-sm tracking-wide text-[--bb-dark-gray] transition duration-700 hover:brightness-125">
+            className="mt-12 cursor-pointer rounded-sm bg-[--bb-teal] p-4 text-center font-roboto-sans text-sm tracking-wide text-[--bb-dark-gray] transition duration-700 hover:brightness-125 ease-in-out hover:scale-110">
             View Project Details
          </button>
       </div>

@@ -17,7 +17,7 @@ const ProjectsCardListItem = ({ project }) => {
                   alt={name}
                   width={200}
                   height={200}
-                  suppressAnimation={featuredImage.suppressAnimation}
+                  frame={featuredImage.frame}
                />
             )}
             <p>{description}</p>
