@@ -53,7 +53,7 @@ const MobileNav = () => {
             />
          )}
          <div
-            className={`fixed right-0 top-[60px] z-40 h-[500px] w-[300px] bg-[--bb-dark-gray-900] text-2xl ${
+            className={`fixed right-0 top-[60px] z-40 h-[500px] w-[300px] bg-[--bb-dark-gray] text-2xl ${
                isOpen
                   ? 'translate-x-0'
                   : 'translate-x-[100vh] md:translate-x-[130vh]'

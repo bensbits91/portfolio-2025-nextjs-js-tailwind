@@ -1,6 +1,7 @@
 import { ImageGallery, CloudinaryImage } from '@/app/components/image';
 import {
    HeadingTwo,
+   HeadingThree,
    Subheading,
    SubtleText
 } from '@/app/components/typography';
@@ -29,6 +30,7 @@ const ProjectGridModal = ({ modalData, closeModal }) => {
    const TempChildren = () => {
       return (
          <>
+            <p className='sm:hidden'>{year}</p>
             {tech && tech.length > 0 && (
                <Subheading left shrink color="jade-800">
                   {tech.join(', ')}
@@ -73,11 +75,14 @@ const ProjectGridModal = ({ modalData, closeModal }) => {
             className={`fixed bottom-[5vh] left-[7.5vw] z-50 h-[85vh] w-[85vw] rounded-lg bg-[--bb-dark-gray-900] p-4 md:left-[5vw] md:w-[90vw] ${
                modalData ? 'translate-y-0' : 'translate-y-[100vh]'
             } transform transition-transform duration-500 ease-in-out`}>
-            <div className="relative h-full p-4 text-[--bb-dark-gray-200]">
-               <div className="flex h-16 w-full justify-between">
-                  <div className='flex items-baseline gap-4'>
+            <div className="relative h-full text-[--bb-dark-gray-200] md:p-4">
+               <div className="flex h-16 w-full justify-between items-start">
+                  <div className="hidden items-baseline gap-4 sm:flex">
                      <HeadingTwo>{name}</HeadingTwo>
                      <p>{year}</p>
+                  </div>
+                  <div className="flex items-baseline gap-4 sm:hidden">
+                     <HeadingThree>{name}</HeadingThree>
                   </div>
                   <CloseButton />
                </div>

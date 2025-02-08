@@ -1122,7 +1122,7 @@ export const projects = [
       featureOnHome: true
    },
    {
-      name: 'Sales Dashboard Widgets',
+      name: 'Dashboard Widgets',
       year: '2021',
       tech: [
          'node.js',
@@ -1555,7 +1555,7 @@ export const education = [
    },
    {
       degree:
-         'Master-Level Coursework before choosing to pursue a career in software engineering',
+         'Master-Level Coursework',
       major: 'Applied Mathematics',
       institution: 'Claremont Graduate University',
       location: 'Claremont, CA',
@@ -1563,6 +1563,7 @@ export const education = [
       endYear: 2001,
       awards: [
          'Fully Paid PhD Fellowship',
+         'Exceled, tutored peers, led study groups',
          'Helped distinguished professors emeritus produce the second edition of their popular textbook on differential equations. Devised complex mathematical problems and authored solutions. Edited and proofread the text. Used LaTeX to typeset the book. Trained other students in LaTeX. Developed a love of tech. Also enhanced my life-long love of mentoring and teaching.'
       ]
    }
