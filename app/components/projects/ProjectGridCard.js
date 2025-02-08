@@ -2,7 +2,7 @@ import { CloudinaryImage } from '@/app/components/image';
 import { HeadingThree } from '@/app/components/typography';
 
 const ProjectGridCard = (
-   { project, handleClick } // todo: typography and layout components
+   { project, handleClick }
 ) => {
    const { name, tech } = project;
    const featuredImage = project.getFeaturedImage();
