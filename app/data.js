@@ -1554,8 +1554,7 @@ export const education = [
       ]
    },
    {
-      degree:
-         'Master-Level Coursework',
+      degree: 'Master-Level Coursework',
       major: 'Applied Mathematics',
       institution: 'Claremont Graduate University',
       location: 'Claremont, CA',
@@ -1564,7 +1563,8 @@ export const education = [
       awards: [
          'Fully Paid PhD Fellowship',
          'Exceled, tutored peers, led study groups',
-         'Helped distinguished professors emeritus produce the second edition of their popular textbook on differential equations. Devised complex mathematical problems and authored solutions. Edited and proofread the text. Used LaTeX to typeset the book. Trained other students in LaTeX. Developed a love of tech. Also enhanced my life-long love of mentoring and teaching.'
+         'Helped distinguished professors emeritus produce the second edition of their popular textbook on differential equations. Devised complex mathematical problems and authored solutions. Edited and proofread the text. Used LaTeX to typeset the book. Trained other students in LaTeX. Developed a love of tech. Also enhanced my life-long love of mentoring and teaching.',
+         "Wasn't planning on grad school but couldn't pass up the fully-paid PhD fellowship. Although I enjoyed the work, I realized that I didn't want to be a mathematician. I followed my new-found love of software to a career in tech."
       ]
    }
 ];
