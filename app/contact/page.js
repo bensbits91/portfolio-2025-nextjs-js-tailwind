@@ -1,4 +1,4 @@
-import { Form, ContactLinks } from '@/app/components/contact';
+import { ContactForm, ContactLinks } from '@/app/components/contact';
 import { HeadingOne, Subheading } from '@/app/components/typography';
 import { HeroSection, OneColumnSection } from '@/app/components/layout';
 
@@ -16,7 +16,7 @@ const Contact = () => {
             <div className="mb-12">
                <ContactLinks />
             </div>
-            <Form />
+            <ContactForm />
          </OneColumnSection>
       </>
    );

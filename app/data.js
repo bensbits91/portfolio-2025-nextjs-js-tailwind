@@ -1077,7 +1077,7 @@ export const projects = [
       codeLink:
          'https://github.com/bensbits91/portfolio-2025-nextjs-js-tailwind',
       description:
-         "My personal website, built in about a week... deployed using Vercel... minimal dependencies... content stored as JSON inside the project... a few li'l custom animations and transitions... images stored in cloudinary and optimized using next/image... videos stored using Vercel Blob storage... contact form sends email using nodemailer... ",
+         "My personal website, built in about a week... deployed using Vercel... custom components and theme... atomic component structure, including custom typography and layout... minimal dependencies... content stored as JSON inside the project... a few li'l custom animations and transitions... images stored in cloudinary and optimized using next/image... videos stored using Vercel Blob storage... contact form sends email using nodemailer... api routes for contact form and image/video storage... Turbopack for faster page loads... dayjs for date formatting... Tailwind CSS for styling... Next.js for SSR and SSG... Vercel for deployment... Cloudinary for image and video storage... fun fun fun",
       motivation:
          'To showcase my skills and experience. To brush the rust off some of my front-end skills.',
       outcome:
@@ -1554,8 +1554,7 @@ export const education = [
       ]
    },
    {
-      degree:
-         'Master-Level Coursework',
+      degree: 'Master-Level Coursework',
       major: 'Applied Mathematics',
       institution: 'Claremont Graduate University',
       location: 'Claremont, CA',
@@ -1564,7 +1563,8 @@ export const education = [
       awards: [
          'Fully Paid PhD Fellowship',
          'Exceled, tutored peers, led study groups',
-         'Helped distinguished professors emeritus produce the second edition of their popular textbook on differential equations. Devised complex mathematical problems and authored solutions. Edited and proofread the text. Used LaTeX to typeset the book. Trained other students in LaTeX. Developed a love of tech. Also enhanced my life-long love of mentoring and teaching.'
+         'Helped distinguished professors emeritus produce the second edition of their popular textbook on differential equations. Devised complex mathematical problems and authored solutions. Edited and proofread the text. Used LaTeX to typeset the book. Trained other students in LaTeX. Developed a love of tech. Also enhanced my life-long love of mentoring and teaching.',
+         "Wasn't planning on grad school but couldn't pass up the fully-paid PhD fellowship. Although I enjoyed the work, I realized that I didn't want to be a mathematician. I followed my new-found love of software to a career in tech."
       ]
    }
 ];

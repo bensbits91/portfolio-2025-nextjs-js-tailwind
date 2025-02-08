@@ -3,7 +3,7 @@ import { HeadingTwo } from '@/app/components/typography';
 const TwoColumnSection = ({ heading = '', columns }) => {
    return (
       <>
-         <section className="container mx-auto max-w-[1200px] pb-32">
+         <section className="container mx-auto max-w-[1200px] mb-20 md:mb-32">
             {heading && (
                <div className="pl-10 md:pl-20">
                   <HeadingTwo>{heading}</HeadingTwo>
@@ -20,7 +20,7 @@ const TwoColumnSection = ({ heading = '', columns }) => {
                        : '';
 
                   return (
-                     <div key={index} className={`px-5 pb-10${outsidePadding}`}>
+                     <div key={index} className={`px-5 mb-10${outsidePadding}`}>
                         {column.content}
                      </div>
                   );

@@ -16,7 +16,7 @@ const MobileNav = () => {
          <Link
             href={link}
             onClick={toggleMenu}
-            className={`inline-block px-9 pb-6 ${isFirst ? 'pt-6' : ''}`}>
+            className={`inline-block px-9 mb-6 ${isFirst ? 'mt-6' : ''}`}>
             {text}
          </Link>
       </li>

@@ -4,7 +4,9 @@ const OneColumnSection = ({ children, size = 'normal', bigBottom = false }) => {
    return (
       <>
          <section
-            className={`container mx-auto ${maxWidthCode(size)} ${bigBottom ? 'mb-32' : 'mb-4'}`}>
+            className={`container mx-auto ${maxWidthCode(size)} ${
+               bigBottom ? 'mb-20 md:mb-32' : 'mb-4'
+            }`}>
             <div className="px-10">{children}</div>
          </section>
       </>

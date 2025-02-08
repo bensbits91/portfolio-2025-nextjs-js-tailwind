@@ -2,7 +2,7 @@ import { CloudinaryImage } from '@/app/components/image';
 import { HeadingThree } from '@/app/components/typography';
 
 const ProjectGridCard = (
-   { project, handleClick } // todo: typography and layout components
+   { project, handleClick }
 ) => {
    const { name, tech } = project;
    const featuredImage = project.getFeaturedImage();
@@ -37,7 +37,7 @@ const ProjectGridCard = (
          {featuredImage && imageToDisplay}
          {tech.length > 0 && (
             <p className="text-sm text-gray-500">
-               {(project?.tech).join(' | ')}
+               {(project?.tech).join('\xA0| ')}
             </p>
          )}
          {handleClick && (

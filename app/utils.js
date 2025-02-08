@@ -1,11 +1,9 @@
 import dayjs from 'dayjs';
 import { CloudinaryImage } from '@/app/components/image';
 
+export const noop = () => {};
+
 // string helpers
-export const camelToTitle = str =>
-   // todo: don't capitalize if 'and' or 'or'...
-   // todo: Ui Ux -> UI/UX (toUpper, separator='/'
-   str.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase());
 export const makeKey = str => str.replace(/ /g, '-').toLowerCase();
 
 // ui helpers
