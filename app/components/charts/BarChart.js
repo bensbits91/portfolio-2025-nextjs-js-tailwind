@@ -4,7 +4,7 @@ import {
    Bar,
    XAxis,
    YAxis,
-   CartesianGrid,
+//    CartesianGrid,
    Tooltip,
    Legend,
    ResponsiveContainer
@@ -15,45 +15,6 @@ const BarChart = dynamic(
 );
 
 import { skills } from '@/app/data';
-console.log('bb ~ skills:', skills);
-
-// const data = [
-//    {
-//       name: 'Page A',
-//       uv: 4000,
-//       pv: 2400
-//    },
-//    {
-//       name: 'Page B',
-//       uv: 3000,
-//       pv: 1398
-//    },
-//    {
-//       name: 'Page C',
-//       uv: 2000,
-//       pv: 9800
-//    },
-//    {
-//       name: 'Page D',
-//       uv: 2780,
-//       pv: 3908
-//    },
-//    {
-//       name: 'Page E',
-//       uv: 1890,
-//       pv: 4800
-//    },
-//    {
-//       name: 'Page F',
-//       uv: 2390,
-//       pv: 3800
-//    },
-//    {
-//       name: 'Page G',
-//       uv: 3490,
-//       pv: 4300
-//    }
-// ];
 
 const CustomizedTooltip = ({ active, payload, label }) => {
    if (active) {
@@ -70,16 +31,8 @@ const CustomizedTooltip = ({ active, payload, label }) => {
    return null;
 };
 
-const CustomizedLabel = ({ x, y, stroke, value }) => {
-   return (
-      <text x={x} y={y} dy={-4} fill="white" fontSize={12} textAnchor="middle">
-         asdf {value}
-      </text>
-   );
-};
-
 const CustomizedTick = ({ x, y, stroke, payload }) => {
-   console.log('bb ~ payload:', payload); // todo: can we show the icon here?
+   //    console.log('bb ~ payload:', payload); // todo: show icon
    return (
       <text x={x} y={y} dy={16} fill="white" fontSize={12} textAnchor="middle">
          {payload.value}
