@@ -402,7 +402,7 @@ export const skills = [
       name: 'RESTful APIs',
       icon: '/rest.svg',
       cloudinary: 'rest_vt3dwy',
-      years: 15,
+      years: 12,
       rating: 8,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
