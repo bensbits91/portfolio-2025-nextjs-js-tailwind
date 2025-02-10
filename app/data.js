@@ -28,6 +28,8 @@ export const expertise = [
 export const skills = [
    {
       type: 'Language',
+      stackArea: 'General',
+      stackCategory: 'Language',
       name: 'JavaScript',
       icon: '/js.svg',
       cloudinary: 'js_au9kmj',
@@ -41,6 +43,8 @@ export const skills = [
    },
    {
       type: 'Language',
+      stackArea: 'General',
+      stackCategory: 'Language',
       name: 'TypeScript',
       icon: '/ts1.svg',
       cloudinary: 'ts1_nbdvxm',
@@ -54,6 +58,8 @@ export const skills = [
    },
    {
       type: 'Frontend Library',
+      stackArea: 'Frontend',
+      stackCategory: 'Library',
       name: 'React.js',
       icon: '/react.svg',
       cloudinary: 'react_g4rwdx',
@@ -67,6 +73,8 @@ export const skills = [
    },
    {
       type: 'Frontend Framework',
+      stackArea: 'Frontend',
+      stackCategory: 'Framework',
       name: 'Vue.js',
       icon: '/vue.svg',
       cloudinary: 'vue_thuhnk',
@@ -80,6 +88,8 @@ export const skills = [
    },
    {
       type: 'Frontend Framework',
+      stackArea: 'Frontend',
+      stackCategory: 'Framework',
       name: 'Next.js',
       icon: '/next.svg',
       cloudinary: 'next_tpw7a4',
@@ -93,6 +103,8 @@ export const skills = [
    },
    {
       type: 'State Management',
+      stackArea: 'Frontend',
+      stackCategory: 'Library',
       name: 'Redux',
       icon: '/redux.svg',
       cloudinary: 'redux_vd28jd',
@@ -106,6 +118,8 @@ export const skills = [
    },
    {
       type: 'State Management',
+      stackArea: 'Frontend',
+      stackCategory: 'Library',
       name: 'Thunk',
       icon: '/react.svg',
       yearLearned: 2019,
@@ -118,6 +132,8 @@ export const skills = [
    },
    {
       type: 'Styling',
+      stackArea: 'Frontend',
+      stackCategory: 'Styling',
       name: 'CSS',
       icon: '/css3.svg',
       cloudinary: 'css3_mvgbbf',
@@ -131,6 +147,8 @@ export const skills = [
    },
    {
       type: 'Styling',
+      stackArea: 'Frontend',
+      stackCategory: 'Styling',
       name: 'Sass/SCSS',
       icon: '/sass.svg',
       cloudinary: 'sass_s3kz3x',
@@ -144,6 +162,8 @@ export const skills = [
    },
    {
       type: 'Styling',
+      stackArea: 'Frontend',
+      stackCategory: 'Styling',
       name: 'Tailwind',
       icon: '/tailwind.svg',
       cloudinary: 'tailwind_k9r34s',
@@ -157,6 +177,8 @@ export const skills = [
    },
    {
       type: 'Styling',
+      stackArea: 'Frontend',
+      stackCategory: 'Styling',
       name: 'JSS',
       icon: '/jss.svg',
       cloudinary: 'jss_zewece',
@@ -170,6 +192,8 @@ export const skills = [
    },
    {
       type: 'Styling',
+      stackArea: 'Frontend',
+      stackCategory: 'Styling',
       name: 'Styled Components',
       icon: '/styled-components.svg',
       cloudinary: 'styled-components_fd8fvo',
@@ -183,6 +207,8 @@ export const skills = [
    },
    {
       type: 'UI/UX',
+      stackArea: 'Frontend',
+      stackCategory: 'UI/UX',
       name: 'Responsive Design',
       icon: '/rwd.svg',
       cloudinary: 'rwd_o9z8s0',
@@ -196,6 +222,8 @@ export const skills = [
    },
    {
       type: 'UI/UX',
+      stackArea: 'Experimentation & Optiminzation',
+      stackCategory: '',
       name: 'A/B Testing',
       icon: '/beaker.svg',
       cloudinary: 'beaker_vqshpg',
@@ -209,6 +237,8 @@ export const skills = [
    },
    {
       type: 'UI/UX',
+      stackArea: 'Experimentation & Optiminzation',
+      stackCategory: '',
       name: 'Multivariate Experimentation',
       icon: '/beaker1.svg',
       cloudinary: 'beakers_yellow_eehkpx',
@@ -222,6 +252,8 @@ export const skills = [
    },
    {
       type: 'UI/UX',
+      stackArea: 'Experimentation & Optiminzation',
+      stackCategory: '',
       name: 'LaunchDarkly',
       icon: '/launchdarkly.svg',
       cloudinary: 'launchdarkly_kdznir',
@@ -235,6 +267,8 @@ export const skills = [
    },
    {
       type: 'Build Tools',
+      stackArea: 'Build & Testing Tools',
+      stackCategory: 'Build Tools',
       name: 'Webpack',
       icon: '/webpack.svg',
       cloudinary: 'webpack_ycdnkv',
@@ -248,6 +282,8 @@ export const skills = [
    },
    {
       type: 'Build Tools',
+      stackArea: 'Build & Testing Tools',
+      stackCategory: 'Build Tools',
       name: 'Turbopack',
       icon: '/turbopack.svg',
       cloudinary: 'turbopack_gvkvbu',
@@ -261,6 +297,8 @@ export const skills = [
    },
    {
       type: 'Build Tools',
+      stackArea: 'Build & Testing Tools',
+      stackCategory: 'Build Tools',
       name: 'Parcel',
       icon: '/parcel.svg',
       cloudinary: 'parcel_ik2cum',
@@ -274,6 +312,8 @@ export const skills = [
    },
    {
       type: 'Testing',
+      stackArea: 'Build & Testing Tools',
+      stackCategory: 'Testing',
       name: 'Jest',
       icon: '/jest.svg',
       cloudinary: 'jest_djvbcr',
@@ -287,6 +327,8 @@ export const skills = [
    },
    {
       type: 'Testing',
+      stackArea: 'Build & Testing Tools',
+      stackCategory: 'Testing',
       name: 'Cypress',
       icon: '/cypress.svg',
       cloudinary: 'cypress_ihahr3',
@@ -300,6 +342,8 @@ export const skills = [
    },
    {
       type: 'Backend Development',
+      stackArea: 'Backend',
+      stackCategory: 'Language',
       name: 'NodeJS',
       icon: '/node.svg',
       cloudinary: 'node_hl58om',
@@ -313,6 +357,8 @@ export const skills = [
    },
    {
       type: 'Backend Development',
+      stackArea: 'Backend',
+      stackCategory: 'Language',
       name: 'PHP',
       icon: '/php.svg',
       cloudinary: 'php_hylcjn',
@@ -326,6 +372,8 @@ export const skills = [
    },
    {
       type: 'Backend Development',
+      stackArea: 'General',
+      stackCategory: 'Content Management',
       name: 'WordPress',
       icon: '/wordpress.svg',
       cloudinary: 'wordpress_xkgfcd',
@@ -339,6 +387,8 @@ export const skills = [
    },
    {
       type: 'Backend Development',
+      stackArea: 'Backend',
+      stackCategory: 'Language',
       name: 'Python',
       icon: '/python.svg',
       cloudinary: 'python_g5utim',
@@ -352,6 +402,8 @@ export const skills = [
    },
    {
       type: 'Backend Framework',
+      stackArea: 'Backend',
+      stackCategory: 'Framework',
       name: 'Express',
       icon: '/express.svg',
       cloudinary: 'express_bqzgin',
@@ -365,6 +417,8 @@ export const skills = [
    },
    {
       type: 'Backend Framework',
+      stackArea: 'Backend',
+      stackCategory: 'Framework',
       name: 'Fastify',
       icon: '/fastify.svg',
       cloudinary: 'fastify_zy8jul',
@@ -378,6 +432,8 @@ export const skills = [
    },
    {
       type: 'Backend Framework',
+      stackArea: 'Backend',
+      stackCategory: 'Framework',
       name: 'Django',
       icon: '/django.svg',
       cloudinary: 'django_yilgyq',
@@ -391,6 +447,8 @@ export const skills = [
    },
    {
       type: 'Database',
+      stackArea: 'Data Storage & Databases',
+      stackCategory: 'NoSQL',
       name: 'MongoDB',
       icon: '/mongodb.svg',
       cloudinary: 'mongodb_kv7lxz',
@@ -404,6 +462,8 @@ export const skills = [
    },
    {
       type: 'Database',
+      stackArea: 'Data Storage & Databases',
+      stackCategory: 'SQL',
       name: 'PostgreSQL',
       icon: '/postgresql.svg',
       cloudinary: 'postgresql_dx4o4h',
@@ -417,6 +477,8 @@ export const skills = [
    },
    {
       type: 'Database',
+      stackArea: 'Data Storage & Databases',
+      stackCategory: 'SQL',
       name: 'SQL',
       icon: '/sql.svg',
       cloudinary: 'sql_dxvo6o',
@@ -430,6 +492,8 @@ export const skills = [
    },
    {
       type: 'APIs',
+      stackArea: 'Backend',
+      stackCategory: 'API Design & Development',
       name: 'RESTful APIs',
       icon: '/rest.svg',
       cloudinary: 'rest_vt3dwy',
@@ -443,6 +507,8 @@ export const skills = [
    },
    {
       type: 'APIs',
+      stackArea: 'Backend',
+      stackCategory: 'API Design & Development',
       name: 'GraphQL',
       icon: '/graphql.svg',
       cloudinary: 'graphql_ztconi',
@@ -456,6 +522,8 @@ export const skills = [
    },
    {
       type: 'Architecture',
+      stackArea: 'Architecture & Patterns',
+      stackCategory: '',
       name: 'Microservices',
       icon: '/microservice.svg',
       cloudinary: 'microservice_xcczrj',
@@ -469,6 +537,8 @@ export const skills = [
    },
    {
       type: 'Architecture',
+      stackArea: 'Architecture & Patterns',
+      stackCategory: '',
       name: 'Micro-frontends',
       icon: '/micro-frontend.svg',
       cloudinary: 'micro-frontend_sx9fbr',
@@ -482,6 +552,8 @@ export const skills = [
    },
    {
       type: 'Cloud Platform',
+      stackArea: 'DevOps & Cloud Infrastructure',
+      stackCategory: 'Cloud Platforms',
       name: 'GCP',
       icon: '/gcp.svg',
       cloudinary: 'gcp_h0xhhn',
@@ -495,6 +567,8 @@ export const skills = [
    },
    {
       type: 'Cloud Platform',
+      stackArea: 'DevOps & Cloud Infrastructure',
+      stackCategory: 'Cloud Platforms',
       name: 'GKE',
       icon: '/gke.svg',
       cloudinary: 'gke_dwffq2',
@@ -508,6 +582,8 @@ export const skills = [
    },
    {
       type: 'Cloud Platform',
+      stackArea: 'DevOps & Cloud Infrastructure',
+      stackCategory: 'Cloud Platforms',
       name: 'AWS',
       icon: '/aws.svg',
       cloudinary: 'aws_ntzjf4',
@@ -521,6 +597,8 @@ export const skills = [
    },
    {
       type: 'Containerization',
+      stackArea: 'DevOps & Cloud Infrastructure',
+      stackCategory: 'Containerization & Orchestration',
       name: 'Docker',
       icon: '/docker.svg',
       cloudinary: 'docker_fx1vot',
@@ -534,6 +612,8 @@ export const skills = [
    },
    {
       type: 'Containerization',
+      stackArea: 'DevOps & Cloud Infrastructure',
+      stackCategory: 'Containerization & Orchestration',
       name: 'Colima',
       icon: '/colima-no-bg.png',
       cloudinary: 'colima-no-bg_t4awkl',
@@ -547,6 +627,8 @@ export const skills = [
    },
    {
       type: 'Infrastructure Orchestration',
+      stackArea: 'DevOps & Cloud Infrastructure',
+      stackCategory: 'Containerization & Orchestration',
       name: 'Kubernetes',
       icon: '/kubernetes.svg',
       cloudinary: 'kubernetes_z2x5da',
@@ -560,6 +642,8 @@ export const skills = [
    },
    {
       type: 'Infrastructure Orchestration',
+      stackArea: 'DevOps & Cloud Infrastructure',
+      stackCategory: 'Containerization & Orchestration',
       name: 'Helm',
       icon: '/helm.svg',
       cloudinary: 'helm_nqdtj8',
@@ -573,6 +657,8 @@ export const skills = [
    },
    {
       type: 'Infrastructure Orchestration',
+      stackArea: 'DevOps & Cloud Infrastructure',
+      stackCategory: 'Infrastructure as Code',
       name: 'Terraform',
       icon: '/terraform.svg',
       cloudinary: 'terraform_elhgrr',

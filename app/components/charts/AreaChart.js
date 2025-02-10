@@ -72,7 +72,7 @@ const CustomizedTooltip = ({ active, payload, label }) => {
 const legendProcessor = (value, entry) => <span>{entry.payload.label}</span>;
 
 const myAreaChart = () => (
-   <ResponsiveContainer width="100%" height={500}>
+   <ResponsiveContainer width="100%" height={300}>
       <AreaChart
          width={730}
          height={250}
@@ -80,31 +80,35 @@ const myAreaChart = () => (
          margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
          <defs>
             <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
-               <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8} />
-               <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
+               <stop offset="5%" stopColor="#f0be72" stopOpacity={0.8} />
+               <stop offset="95%" stopColor="#f0be72" stopOpacity={0} />
             </linearGradient>
             <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
-               <stop offset="5%" stopColor="#82ca9d" stopOpacity={0.8} />
-               <stop offset="95%" stopColor="#82ca9d" stopOpacity={0} />
+               <stop offset="5%" stopColor="#60af73" stopOpacity={0.8} />
+               <stop offset="95%" stopColor="#60af73" stopOpacity={0} />
             </linearGradient>
          </defs>
          <XAxis dataKey="year" />
-         <YAxis />
+         <YAxis domain={['dataMin', 'dataMax']} />
          <CartesianGrid strokeDasharray="3 3" />
          <Tooltip content={<CustomizedTooltip />} />
-         <Legend formatter={legendProcessor} />
+         <Legend
+            formatter={legendProcessor}
+            verticalAlign="top"
+            margin={{ top: 10, right: 0, left: 0, bottom: 10 }}
+         />
          <Area
             type="monotone"
             dataKey="countLearned"
-            stroke="#82ca9d"
+            stroke="#60af73"
             fillOpacity={1}
             fill="url(#colorPv)"
-            label="Learned this year"
+            label="Learned"
          />
          <Area
             type="monotone"
             dataKey="cumulativeCount"
-            stroke="#8884d8"
+            stroke="#f0be72"
             fillOpacity={1}
             fill="url(#colorUv)"
             label="Total known"

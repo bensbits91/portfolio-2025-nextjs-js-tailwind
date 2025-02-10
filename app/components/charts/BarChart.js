@@ -4,7 +4,7 @@ import {
    Bar,
    XAxis,
    YAxis,
-//    CartesianGrid,
+   // CartesianGrid,
    Tooltip,
    Legend,
    ResponsiveContainer
@@ -31,40 +31,40 @@ const CustomizedTooltip = ({ active, payload, label }) => {
    return null;
 };
 
-const CustomizedTick = ({ x, y, stroke, payload }) => {
-   //    console.log('bb ~ payload:', payload); // todo: show icon
-   return (
-      <text x={x} y={y} dy={16} fill="white" fontSize={12} textAnchor="middle">
-         {payload.value}
-      </text>
-   );
-};
+// const CustomizedTick = ({ x, y, stroke, payload }) => {
+//    // console.log('bb ~ payload:', payload); // todo: show icon
+//    return (
+//       <text x={x} y={y} dy={16} fill="white" fontSize={12} textAnchor="middle">
+//          {payload.value}
+//       </text>
+//    );
+// };
 
 const MyBarChart = () => (
-   <ResponsiveContainer width="100%" height={2500}>
+   <ResponsiveContainer width="100%" height={1800}>
       <BarChart
          layout="vertical"
          width={1000}
-         height={1500}
+         // height={1000}
          data={skills}
-         barGap={140}
-         barSize={100}>
+         barGap={5}
+         barSize={10}>
          {/* <CartesianGrid strokeDasharray="3 3" /> */}
          <Legend verticalAlign="top" />
          <XAxis dataKey="years" type="number" />
          <XAxis dataKey="rating" type="number" />
          <YAxis
-            width={300}
+            width={150}
             type="category"
             dataKey="name"
-            tick={<CustomizedTick />}
+            // tick={<CustomizedTick />}
          />
          <Tooltip content={<CustomizedTooltip />} />
-         <Bar dataKey="years" fill="var(--bb-yellow)" />
+         <Bar dataKey="years" name="Years" fill="var(--bb-yellow)" />
          <Bar
             dataKey="rating"
             name="Self-assessed rating out of 10"
-            fill="var(--bb-teal)"
+            fill="var(--bb-jade)"
          />
       </BarChart>
    </ResponsiveContainer>
