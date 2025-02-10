@@ -90,7 +90,7 @@ const About = () => {
             <HeadingTwo>Education</HeadingTwo>
             <Education education={education} />
          </OneColumnSection>
-         <OneColumnSection>
+         <OneColumnSection bigBottom>
             <HeadingTwo>Certifications & Training</HeadingTwo>
             <Certifications certifications={certifications} />
          </OneColumnSection>

@@ -12,7 +12,7 @@ const Contact = () => {
                free to reach out!
             </Subheading>
          </HeroSection>
-         <OneColumnSection size="narrow">
+         <OneColumnSection size="narrow" bigBottom>
             <div className="mb-12">
                <ContactLinks />
             </div>

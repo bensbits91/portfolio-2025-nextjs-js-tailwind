@@ -1,5 +1,6 @@
 import { Roboto, Roboto_Mono } from 'next/font/google';
 import { Nav } from './components/navbar';
+import { Footer } from './components/footer';
 import './globals.css';
 import Head from 'next/head';
 
@@ -37,6 +38,7 @@ export default async function RootLayout({ children }) {
             className={`${robotoMono.variable} ${robotoSans.variable} antialiased`}>
             <Nav />
             <main>{children}</main>
+            <Footer />
          </body>
       </html>
    );
