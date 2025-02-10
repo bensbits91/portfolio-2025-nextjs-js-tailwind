@@ -47,7 +47,7 @@ const Skills = () => {
                The different views are hydrated by the same JSON data
             </SubtleText>
          </HeroSection>
-         <OneColumnSection size="narrow">
+         <OneColumnSection size="narrow" bigBottom>
             <Nav />
             <div className="pt-4 border-t border-[--bb-teal]">
                {selectedView === 'list' && <SkillList />}

@@ -8,6 +8,7 @@ const ContactLinks = ({ isNavbar = false }) => {
             <a
                href="https://www.linkedin.com/in/benbrooks/"
                target="_blank"
+               title="LinkedIn"
                rel="noreferrer"
                className="inline-block transition-all duration-300 ease-in-out hover:scale-125">
                <CloudinaryImage
@@ -22,6 +23,7 @@ const ContactLinks = ({ isNavbar = false }) => {
             <a
                href="https://github.com/bensbits91"
                target="_blank"
+               title="GitHub"
                rel="noreferrer"
                className="inline-block transition-all duration-300 ease-in-out hover:scale-125">
                <CloudinaryImage
@@ -34,8 +36,9 @@ const ContactLinks = ({ isNavbar = false }) => {
          </li>
          <li>
             <a
-               href="https://res.cloudinary.com/ddfrx5278/image/upload/v1738795669/Bennett_Brooks_Resume_2025_yxwtpt.pdf"
+               href="https://res.cloudinary.com/ddfrx5278/image/upload/v1739151148/Bennett_Brooks_Resume_2025_eb9wr3.pdf"
                target="_blank"
+               title="Download PDF"
                className="inline-block transition-all duration-300 ease-in-out hover:scale-125">
                <CloudinaryImage
                   cloudinaryId="resume_o5rgfa"
@@ -49,6 +52,7 @@ const ContactLinks = ({ isNavbar = false }) => {
             <li>
                <Link
                   href="/contact"
+                  title="Contact"
                   className="inline-block transition-all duration-300 ease-in-out hover:scale-125">
                   <CloudinaryImage
                      cloudinaryId="mail_snle7z"
