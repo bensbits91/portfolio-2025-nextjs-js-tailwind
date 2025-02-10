@@ -1206,7 +1206,7 @@ export const projects = [
       codeLink:
          'https://github.com/bensbits91/portfolio-2025-nextjs-js-tailwind',
       description:
-         "My personal website, built in about a week... deployed using Vercel... custom components and theme... atomic component structure, including custom typography and layout... minimal dependencies... content stored as JSON inside the project (simple but inconvenient, considering moving data to my mongodb atlas)... a few li'l custom animations and transitions... images stored in cloudinary and optimized using next/image... videos stored using Vercel Blob storage... contact form sends email using nodemailer... api routes for contact form and image/video storage... Turbopack for faster page loads... dayjs for date formatting... Tailwind CSS for styling... Next.js for SSR and SSG... Vercel for deployment... Cloudinary for image and video storage... fun fun fun",
+         "My personal website, built in about a week... custom components and theme... atomic component structure, including custom typography and layout... minimal dependencies... content stored as JSON inside the project (simple but inconvenient, considering moving data to my mongodb atlas)... a few li'l custom animations and transitions... images stored in cloudinary and optimized using next/image... videos stored using Vercel Blob storage... contact form sends email using nodemailer... api routes for contact form and image/video storage... Turbopack for faster page loads... dayjs for date formatting... Tailwind CSS for styling... Next.js for SSR and SSG... Vercel for auto-deployment from GitHub... Cloudinary for image and video storage... fun fun fun",
       motivation:
          'To showcase my skills and experience. To brush the rust off some of my front-end skills.',
       outcome:
@@ -1231,10 +1231,10 @@ export const projects = [
       ],
       codeLink: 'https://github.com/bensbits91/primereact-test-01',
       description:
-         "Add, rate and track anything... Integrates with multiple third-party APIs to find and display information about supported types (currently books, TV shows, movies and video games)... I'll be adding more types soon... Ability to export your Things to CSV. Built entirely using free tech so far (third-party APIs, Mongo Atlas...)... Built in about two weeks so far. Kinda ugly so far :/",
+         "Add, rate and track anything... Integrates with multiple third-party APIs to find and display information about supported types (currently books, TV shows, movies and video games)... I'll be adding more types soon... Ability to export your Things to CSV. Built entirely using free tech so far (third-party APIs, Mongo Atlas...)... Built in about two weeks so far. Still kinda ugly :/",
       motivation:
-         "To practices some skills. To build something that I can use (an idea I've had for awhile). Hope to make an app available to others someday. Users will be able to log in (probably using auth0, including social auth), manage a profile and share their interests with others. Get recommendations on things you might like. Eventually find people with similar interests.",
-      outcome: 'WIP, super fun',
+         "To practices some skills. To build something that I can use (an idea I've had for awhile). Hope to make an app available to others someday. Users will be able to log in (probably using auth0, including support for social auth), manage a profile and share their interests with others. Get recommendations on things you might like. Eventually find people with similar interests.",
+      outcome: 'WIP, super fun so far',
       images: [
          {
             name: 'things-app-search-save-3a4zDc6ssBNHkL9x1Q1Ee0MBBnIzHM.mp4',
@@ -1267,9 +1267,10 @@ export const projects = [
          'Webpack'
       ],
       codeLink: 'https://github.com/bensbits91/goal-tracker',
-      description: '',
-      motivation: '',
-      outcome: '',
+      description:
+         'Reusable animated widgets for building dynamic pages and dashboards. Minimal style so they can be easily customized.',
+      motivation: 'Provide reusable widgets to clients.',
+      outcome: 'Very popular among clients. Easy to customize and use.',
       images: [
          {
             name: 'sharepoint-assessment-checklist-listview-still_50_eyxmcn',
@@ -1298,9 +1299,10 @@ export const projects = [
          'Webpack'
       ],
       codeLink: '',
-      description: 'asdf',
-      motivation: 'asdf',
-      outcome: 'asdf',
+      description:
+         'Reusable animated radial charts to enhance pages and dashboards. Minimal style so they can be easily customized.',
+      motivation: 'Provide a visually-appealing reusable widget to clients.',
+      outcome: 'Very popular among clients. Easy to customize and use.',
       images: [
          {
             name: 'sharepoint-goal-tracker-multiple-dark_dblqv0',
@@ -1333,11 +1335,12 @@ export const projects = [
          'Gulp',
          'Webpack'
       ],
-      codeLink: '',
-      description: 'asdf',
+      codeLink: 'https://github.com/bensbits91/map-demo',
+      description:
+         'Ability to display geodata on a map. Customizable display of data points and regions. Clickable data points to present more informaiton.',
       motivation:
-         'Provide for clients... plug into existing apps... pracitce handling geo data... practice visualization...',
-      outcome: 'asdf',
+         'Provide geodata visualization for clients... plug into existing apps. Pracitce handling geodata and visualization.',
+      outcome: 'Purchased by a few clients. Easy to customize and use.',
       images: [
          { name: 'sharepoint-franchise-map_crr8ou', hideFromModal: true },
          {
@@ -1362,9 +1365,11 @@ export const projects = [
          'Webpack'
       ],
       codeLink: 'https://github.com/bensbits91/weather-widget',
-      description: '',
-      motivation: '',
-      outcome: '',
+      description:
+         'Classy animated weaher widget. Easy to customize and use. Can auto-detect location or be set manually.',
+      motivation:
+         'Provide weather data in a visually-appealing way to enhance pages and dashboards.',
+      outcome: 'Moderately popular among clients. Easy to customize and use.',
       images: [
          {
             name: 'sharepoint-weather-widget-onecard-dark-orange_vzn4uf',
@@ -1409,9 +1414,11 @@ export const projects = [
          'Webpack'
       ],
       codeLink: 'https://github.com/bensbits91/org-chart-2021',
-      description: 'asdf',
-      motivation: 'asdf',
-      outcome: 'asdf',
+      description:
+         "Present your organization's heirarchy and contact information in a visually-appealing way. Automatically pulls data from an existing directory. Easy to customize and use.",
+      motivation:
+         "Provide clients with a visually-appealing way to display their organization's heirarchy and contact information.",
+      outcome: 'Moderalty popular among clients. Easy to customize and use.',
       images: [
          { name: 'sharepoint-org-chart_full_ibyyjd', hideFromModal: true },
          {
@@ -1441,9 +1448,11 @@ export const projects = [
          'Webpack'
       ],
       codeLink: 'https://github.com/bensbits91/org-tree',
-      description: '',
-      motivation: '',
-      outcome: '',
+      description:
+         "Present your organization's heirarchy and contact information in a visually-appealing way. Automatically pulls data from an existing directory. Easy to customize and use.",
+      motivation:
+         "Provide clients with a visually-appealing way to display their organization's heirarchy and contact information.",
+      outcome: 'Moderalty popular among clients. Easy to customize and use.',
       images: [
          { name: 'sharepoint-org-tree_focus_bdqjup', hideFromModal: true },
          {
@@ -1474,8 +1483,8 @@ export const projects = [
       codeLink: 'https://github.com/bensbits91/vertical-growing-form',
       description:
          'Enables form admins to build different journeys for different types requests. Using intuitive tools, admins can add, remove, and rearrange steps, fields, sections and pages. Admins can also control branching and conditional logic, as well as choosing from different display styles.',
-      motivation: '',
-      outcome: '',
+      motivation: 'Provide clients an easy way to build and manage custom forms. Provide different presentation methods to help make filling out forms less mundane',
+      outcome: 'Popular among clients. Easy to customize and use.',
       images: [
          {
             name: 'growing-form_mxndcb',
@@ -1483,6 +1492,10 @@ export const projects = [
          },
          {
             name: 'form-builder-A8W3CLnzDdvZH4fZ3Yod5M9uCM9p1Y.mp4',
+            type: 'video'
+         },
+         {
+            name: 'form-builder-slider-8pfobRaCW9Y6q6LlAgAFnbm0Md9dIM.mp4',
             type: 'video'
          }
       ],
@@ -1504,9 +1517,9 @@ export const projects = [
          'Webpack'
       ],
       codeLink: 'https://github.com/bensbits91/site-directory',
-      description: '',
-      motivation: '',
-      outcome: '',
+      description: 'Automatically detects sites and subsites in a site collection. Displays them in a visually-appealing way. Easy to customize and use.',
+      motivation: 'Provide clients with a no-config, visually-appealing way to display their site collections.',
+      outcome: 'Popular among clients. Easy to customize and use.',
       images: [
          { name: 'spfxSiteExplorer_focus_bhu8j7', hideFromModal: true },
          {
@@ -1532,9 +1545,9 @@ export const projects = [
          'Webpack'
       ],
       codeLink: 'https://github.com/bensbits91/stock-widget',
-      description: '',
-      motivation: '',
-      outcome: '',
+      description: 'Simple, animated stock widget. Composable to incorporate multiple stocks.',
+      motivation: 'Provide clients with a visually-appealing way to display stock data.',
+      outcome: 'Moderately popular among clients. Easy to customize and use.',
       images: [
          { name: 'sharepoint-stocks-widget-dark_b7lzrd', hideFromModal: true },
          {
@@ -1570,7 +1583,7 @@ export const projects = [
       motivation:
          'To provide to multiple customers. To gain experience with drag and drop.',
       outcome:
-         'Used by multiple customers. Gained experience with drag and drop.',
+         'Used by multiple customers. Easy to customize and use.',
       images: [
          {
             name: 'sharepoint-agenda-builder-dnd_vn1e8a',
@@ -1599,10 +1612,10 @@ export const projects = [
          'Gulp',
          'Webpack'
       ],
-      codeLink: '',
-      description: '',
-      motivation: '',
-      outcome: '',
+      codeLink: 'https://github.com/bensbits91/project-assessment-tool',
+      description: 'Powerful tool for tracking and assessing project progress. Colors change as progress is made. Permitted users can sign approval.',
+      motivation: 'Provide clients with an engaging and powerful tool for tracking and assessing project progress.',
+      outcome: 'Popular among clients. Easy to customize and use.',
       images: [
          { name: 'assessment-checklist_joi1zh', hideFromModal: true },
          {
@@ -1627,9 +1640,9 @@ export const projects = [
          'Webpack'
       ],
       codeLink: 'https://github.com/bensbits91/classifieds-2021',
-      description: '',
-      motivation: '',
-      outcome: '',
+      description: 'Provide a social aspect for employees. Post, find and communicate about items and services. Announce and track events. Moderators can approve posts or request changes.',
+      motivation: 'Inject some fun into the workplace. Provide a way for employees to connect and share.',
+      outcome: 'Very popular. Easy to customize and use.',
       images: [
          { name: 'spfxClassifieds_focus_ab3e7m', hideFromModal: true },
          {
@@ -1653,14 +1666,14 @@ export const projects = [
          'Gulp',
          'Webpack'
       ],
-      motivation: '',
-      description: '',
       codeLink: 'https://github.com/bensbits91/spfxContactSearch',
-      outcome: '',
+      description: 'Fast and easy to use. Search by name, department, location, etc. Click to call, email, or chat. View org chart. Automatically syncs with existing data.',
+      motivation: 'Provide a more engaging way to access contact information. Provide a way to easily find and connect with coworkers.',
+      outcome: 'Popular among clients. Easy to customize and use.',
       images: [
          { name: 'spfxContactSearch_focus_z4jkqy', hideFromModal: true },
          {
-            name: '',
+            name: 'contact-directory-T3AOPpE5uSIQzP68mpaSKyBpllBvA7.mp4',
             type: 'video'
          }
       ],
