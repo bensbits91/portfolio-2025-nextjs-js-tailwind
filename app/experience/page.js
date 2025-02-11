@@ -19,7 +19,7 @@ const Experience = () => {
                   href="https://res.cloudinary.com/ddfrx5278/image/upload/v1739151148/Bennett_Brooks_Resume_2025_eb9wr3.pdf"
                   target="_blank"
                   rel="noreferrer"
-                  className="block w-52 cursor-pointer rounded-sm border-2 border-[--bb-dark-gray-500] p-4 text-center font-roboto-sans text-sm tracking-wide text-[--bb-dark-gray] transition duration-700 hover:brightness-125">
+                  className="block w-52 rounded-sm border-2 border-[--bb-dark-gray-500] p-4 text-center font-roboto-sans text-sm tracking-wide text-[--bb-dark-gray] lg:transition lg:duration-700 lg:hover:brightness-125">
                   <div className="flex items-center gap-2">
                      <CloudinaryImage
                         cloudinaryId="resume_o5rgfa"

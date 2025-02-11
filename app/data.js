@@ -14,16 +14,16 @@ export const about = {
 };
 export const expertise = [
    'Front-End + Full-Stack',
-   'Microservices & APIs',
+   'Responsive Design',
    'Scalable & Accessible UI',
+   'Pixel-Perfect Implementation',
+   'SEO & Performance Optimization',
+   'Microservices & APIs',
    'A/B Testing & Experimentation',
    'Monitoring & Observability',
-   'Data Security & Privacy',
    'Process Improvement & Technical Leadership',
-   'Cross-functional Team Collaboration & Mentorship',
-   'Performance Optimization',
-   'Cloud Infrastructure',
-   'CI/CD & Agile Development Practice'
+   'Mentoring & Team Development',
+   'Cloud Infrastructure & CI/CD'
 ];
 export const skills = [
    {

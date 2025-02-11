@@ -8,12 +8,12 @@ const NavLink = ({ text, link, pad = false }) => {
    return (
       <li className={pad ? 'p-2' : ''}>
          <Link
-            className={`border-b-2 transition duration-700 ${
+            className={`border-b-2 lg:transition lg:duration-700 ${
                pad ? 'p-2' : ''
             } ${
                isActive
                   ? 'border-b-[--bb-yellow] text-[--bb-yellow]'
-                  : 'border-b-transparent hover:border-b-[--bb-teal] hover:text-[--bb-teal] hover:brightness-125'
+                  : 'border-b-transparent lg:hover:border-b-[--bb-teal] lg:hover:text-[--bb-teal] lg:hover:brightness-125'
             }`}
             href={link}>
             {text}

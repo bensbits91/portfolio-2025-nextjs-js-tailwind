@@ -99,7 +99,7 @@ const ContactForm = () => {
 
    const CloseButton = () => (
       <button
-         className="transition-all duration-300 ease-in-out hover:scale-125"
+         className="lg:transition-all lg:duration-300 lg:ease-in-out lg:hover:scale-125"
          onClick={closeModal}>
          <CloudinaryImage
             cloudinaryId="close_wd9td4"
@@ -205,7 +205,7 @@ const ContactForm = () => {
             <button
                type="submit"
                id="submitBtn"
-               className="mt-4 w-40 cursor-pointer rounded-sm bg-[--bb-teal] p-4 text-center font-roboto-sans text-sm tracking-wide text-[--bb-dark-gray] transition duration-700 hover:brightness-125">
+               className="mt-4 w-40 rounded-sm bg-[--bb-teal] p-4 text-center font-roboto-sans text-sm tracking-wide text-[--bb-dark-gray] lg:transition lg:duration-700 lg:hover:brightness-125">
                Send
             </button>
          </form>

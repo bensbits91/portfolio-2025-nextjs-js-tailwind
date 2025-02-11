@@ -23,9 +23,9 @@ const miscLinkDefs = [
 const ContactLinks = () => (
    <ul className="order-3 md:order-1">
       {miscLinkDefs.map(({ link, text, cloudinaryId }, index) => (
-         <li className="p-2" key={index}>
+         <li key={index}>
             <a
-               className="border-b-2 border-b-transparent transition duration-700 hover:border-b-[--bb-teal] hover:text-[--bb-teal] hover:brightness-125"
+               className="inline-block border-b-2 border-b-transparent p-2 lg:transition lg:duration-700 lg:hover:border-b-[--bb-teal] lg:hover:text-[--bb-teal] lg:hover:brightness-125"
                href={link}
                target="_blank"
                rel="noreferrer">

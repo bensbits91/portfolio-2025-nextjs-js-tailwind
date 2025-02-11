@@ -18,7 +18,7 @@ const Home = () => {
                Ben
             </HeadingOne>
             <Subheading>{about.summary}</Subheading>
-            <WhisperText>{expertise.join(' | ')}</WhisperText>
+            <WhisperText commentStyle>{expertise.join(' | ')}</WhisperText>
          </HeroSection>
          <TwoColumnSection
             columns={[
