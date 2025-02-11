@@ -20,7 +20,7 @@ const ProjectGridCard = (
    const clickableImageElement = (
       <div
          onClick={handleClick}
-         className="mb-4 inline-block cursor-pointer overflow-hidden rounded-sm border-2 border-[--bb-dark-gray-900] transition-all duration-700 ease-in-out hover:scale-110 hover:brightness-125">
+         className="mb-4 inline-block lg:cursor-pointer overflow-hidden rounded-sm border-2 border-bb-gray-900 hover-delay hover-brightness hover-scale">
          {imageElement}
       </div>
    );
@@ -43,7 +43,7 @@ const ProjectGridCard = (
          {handleClick && (
             <button
                onClick={handleClick}
-               className="mt-12 cursor-pointer rounded-sm bg-[--bb-teal] p-4 text-center font-roboto-sans text-sm tracking-wide text-[--bb-dark-gray] transition duration-700 ease-in-out hover:scale-110 hover:brightness-125">
+               className="mt-12 rounded-sm bg-bb-teal p-4 text-center font-roboto-sans text-sm tracking-wide text-bb-gray hover-delay hover-brightness hover-scale">
                View Project Details
             </button>
          )}

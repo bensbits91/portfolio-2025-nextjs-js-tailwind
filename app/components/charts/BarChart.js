@@ -20,7 +20,7 @@ const CustomizedTooltip = ({ active, payload, label }) => {
    if (active) {
       const { name, years, rating } = payload[0].payload;
       return (
-         <div className="custom-tooltip bg-[--bb-dark-gray] p-4">
+         <div className="custom-tooltip bg-bb-gray p-4">
             <p className="label">{`${name}`}</p>
             <p className="desc">Years: {years}</p>
             <p className="desc">Rating: {rating}</p>

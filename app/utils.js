@@ -92,23 +92,23 @@ export const getYearsSince = date => {
 export const colorCode = color => {
    switch (color) {
       case 'blue':
-         return 'text-[--bb-blue]';
+         return 'text-bb-blue';
       case 'jade':
-         return 'text-[--bb-jade]';
+         return 'text-bb-jade';
       case 'jade-800':
-         return 'text-[--bb-jade-800]';
-      case 'jade-600':
-         return 'text-[--bb-jade-600]';
+         return 'text-bb-jade-800';
       case 'jade-700':
-         return 'text-[--bb-jade-700]';
+         return 'text-bb-jade-700';
+      case 'jade-600':
+         return 'text-bb-jade-600';
       case 'red':
-         return 'text-[--bb-red]';
+         return 'text-bb-red';
       case 'teal':
-         return 'text-[--bb-teal]';
+         return 'text-bb-teal';
       case 'yellow':
-         return 'text-[--bb-yellow]';
+         return 'text-bb-yellow';
       default:
-         return 'text-[--bb-jade]';
+         return 'text-bb-jade';
    }
 };
 

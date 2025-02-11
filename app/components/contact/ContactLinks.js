@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { CloudinaryImage } from '@/app/components/image';
 
+// todo: reusable <a/> hoc
+
 const ContactLinks = ({ isNavbar = false }) => {
    return (
       <ul className="flex h-7 gap-4">
@@ -10,7 +12,7 @@ const ContactLinks = ({ isNavbar = false }) => {
                target="_blank"
                title="LinkedIn"
                rel="noreferrer"
-               className="inline-block transition-all duration-300 ease-in-out hover:scale-125">
+               className="inline-block hover-delay hover-brightness hover-scale">
                <CloudinaryImage
                   cloudinaryId="linkedin-white_t7tuve"
                   alt="LinkedIn"
@@ -25,7 +27,7 @@ const ContactLinks = ({ isNavbar = false }) => {
                target="_blank"
                title="GitHub"
                rel="noreferrer"
-               className="inline-block transition-all duration-300 ease-in-out hover:scale-125">
+               className="inline-block hover-delay hover-brightness hover-scale">
                <CloudinaryImage
                   cloudinaryId="github1_o1ok5i"
                   alt="GitHub"
@@ -39,7 +41,7 @@ const ContactLinks = ({ isNavbar = false }) => {
                href="https://res.cloudinary.com/ddfrx5278/image/upload/v1739151148/Bennett_Brooks_Resume_2025_eb9wr3.pdf"
                target="_blank"
                title="Download PDF"
-               className="inline-block transition-all duration-300 ease-in-out hover:scale-125">
+               className="inline-block hover-delay hover-brightness hover-scale">
                <CloudinaryImage
                   cloudinaryId="resume_o5rgfa"
                   alt="Resume"
@@ -53,7 +55,7 @@ const ContactLinks = ({ isNavbar = false }) => {
                <Link
                   href="/contact"
                   title="Contact"
-                  className="inline-block transition-all duration-300 ease-in-out hover:scale-125">
+                  className="inline-block hover-delay hover-brightness hover-scale">
                   <CloudinaryImage
                      cloudinaryId="mail_snle7z"
                      alt="Envelope"
