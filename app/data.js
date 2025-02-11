@@ -1206,7 +1206,7 @@ export const projects = [
       codeLink:
          'https://github.com/bensbits91/portfolio-2025-nextjs-js-tailwind',
       description:
-         "My personal website, built in about a week... custom components and theme... atomic component structure, including custom typography and layout... minimal dependencies... content stored as JSON inside the project (simple but inconvenient, considering moving data to my mongodb atlas)... a few li'l custom animations and transitions... images stored in cloudinary and optimized using next/image... videos stored using Vercel Blob storage... contact form sends email using nodemailer... api routes for contact form and image/video storage... Turbopack for faster page loads... dayjs for date formatting... Tailwind CSS for styling... Next.js for SSR and SSG... Vercel for auto-deployment from GitHub... Cloudinary for image and video storage... fun fun fun",
+         "My personal website, built in about a week... custom components and theme... atomic component structure, including custom typography and layout... minimal dependencies... content stored as JSON inside the project (simple but inconvenient, considering moving data to my mongodb atlas)... a few li'l custom animations and transitions... images stored in cloudinary and optimized using next/image... videos stored using Vercel Blob storage... contact form sends email using nodemailer... api routes for contact form and image/video storage... Turbopack for faster page loads... dayjs for date formatting... Tailwind CSS for styling... Next.js for SSR and SSG... Vercel for auto-deployment from GitHub...",
       motivation:
          'To showcase my skills and experience. To brush the rust off some of my front-end skills.',
       outcome:
