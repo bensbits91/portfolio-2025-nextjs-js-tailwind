@@ -1,4 +1,3 @@
-'use client';
 // import dynamic from 'next/dynamic';
 import {
    PolarGrid,
@@ -10,6 +9,7 @@ import {
    RadarChart,
    Tooltip
 } from 'recharts';
+import { skills } from '@/app/data';
 
 // todo: why is dynamic import not needed here? Will it be needed after I add Tooltip?
 // const RadarChart = dynamic(
@@ -17,7 +17,6 @@ import {
 //    { ssr: false }
 // );
 
-import { skills } from '@/app/data';
 const sumRatingsByStackArea = skills.reduce((acc, skill) => {
    const { stackArea, rating } = skill;
    if (acc[stackArea]) {

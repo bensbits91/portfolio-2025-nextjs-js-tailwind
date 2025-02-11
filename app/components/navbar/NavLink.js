@@ -1,4 +1,4 @@
-'use client';
+'use client'; // todo: would be more performant to pass pathname as a prop
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
