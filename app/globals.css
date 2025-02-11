@@ -3,44 +3,44 @@
 @tailwind utilities;
 
 :root {
-   /* --bb-dark-gray: #181e24; */
-   --bb-dark-gray: #181e24;
-   --bb-dark-gray-900: #262f37;
-   --bb-dark-gray-800: #333f4b;
-   --bb-dark-gray-700: #404f5e;
-   --bb-dark-gray-600: #4d5f71;
-   --bb-dark-gray-500: #5a6f84;
-   --bb-dark-gray-400: #677f97;
-   --bb-dark-gray-300: #798fa4;
-   --bb-dark-gray-200: #8d9fb1;
-   --bb-dark-gray-100: #a0afbe;
-   --bb-dark-gray-50: #b3bfcb;
-   --bb-dark-gray-25: #c6cfd8;
-   --bb-dark-gray-10: #d9dfe5;
-   --bb-dark-gray-0: #eceff2;
-   --bb-white: #ffffff; /* todo: handle light mode */
+   /* todo: handle light mode */
+   --bb-gray: #181e24;
+   --bb-gray-900: #262f37;
+   --bb-gray-800: #333f4b;
+   --bb-gray-700: #404f5e;
+   --bb-gray-600: #4d5f71;
+   --bb-gray-500: #5a6f84;
+   --bb-gray-400: #677f97;
+   --bb-gray-300: #798fa4;
+   --bb-gray-200: #8d9fb1;
+   --bb-gray-100: #a0afbe;
+   --bb-gray-50: #b3bfcb;
+   --bb-gray-25: #c6cfd8;
+   --bb-gray-10: #d9dfe5;
+   --bb-gray-0: #eceff2;
+   --bb-white: #ffffff;
 
    --bb-teal: #33ced8;
    --bb-yellow: #f0be72;
    --bb-blue: #499bfc;
 
    --bb-jade: #60af73;
-   --bb-jade-900: #76BA86;
-   --bb-jade-800: #8DC69A;
-   --bb-jade-700: #A4D1AE;
-   --bb-jade-600: #BBDDC3;
-   --bb-jade-500: #D1E8D7;
-   --bb-jade-400: #E8F4EB;
+   --bb-jade-900: #76ba86;
+   --bb-jade-800: #8dc69a;
+   --bb-jade-700: #a4d1ae;
+   --bb-jade-600: #bbddc3;
+   --bb-jade-500: #d1e8d7;
+   --bb-jade-400: #e8f4eb;
 
    --bb-red: #d95468;
 
    --background: var(--bb-white);
-   --foreground: var(--bb-dark-gray);
+   --foreground: var(--bb-gray);
 }
 
 @media (prefers-color-scheme: dark) {
    :root {
-      --background: var(--bb-dark-gray);
+      --background: var(--bb-gray);
       --foreground: #a0b3c6;
    }
 }
@@ -55,4 +55,16 @@ body {
 body:has(.translate-y-0),
 body:has(.translate-x-0) {
    overflow: hidden;
+}
+
+.hover-delay {
+   @apply lg:transition-all lg:duration-500 lg:ease-in-out;
+}
+
+.hover-brightness {
+   @apply lg:hover:brightness-125;
+}
+
+.hover-scale {
+   @apply lg:hover:scale-110;
 }

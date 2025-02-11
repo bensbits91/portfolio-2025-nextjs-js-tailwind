@@ -99,7 +99,7 @@ const ContactForm = () => {
 
    const CloseButton = () => (
       <button
-         className="lg:transition-all lg:duration-300 lg:ease-in-out lg:hover:scale-125"
+         className="hover-delay hover-brightness hover-scale"
          onClick={closeModal}>
          <CloudinaryImage
             cloudinaryId="close_wd9td4"
@@ -135,10 +135,10 @@ const ContactForm = () => {
                />
             )}
             <div
-               className={`fixed bottom-[5vh] left-[7.5vw] z-50 h-[85vh] w-[85vw] rounded-lg bg-[--bb-dark-gray-900] p-4 md:left-[5vw] md:w-[90vw] ${
+               className={`fixed bottom-[5vh] left-[7.5vw] z-50 h-[85vh] w-[85vw] rounded-lg bg-bb-gray-900 p-4 md:left-[5vw] md:w-[90vw] ${
                   showModal ? 'translate-y-0' : 'translate-y-[100vh]'
                } transform transition-transform duration-500 ease-in-out`}>
-               <div className="relative h-full text-[--bb-dark-gray-200] md:p-4">
+               <div className="relative h-full text-bb-gray-200 md:p-4">
                   <div className="flex h-16 w-full items-start justify-between">
                      <div className="hidden items-baseline gap-4 sm:flex">
                         <HeadingTwo>{heading}</HeadingTwo>
@@ -174,7 +174,7 @@ const ContactForm = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="h-9 rounded px-3 text-[--bb-dark-gray]"
+                  className="h-9 rounded px-3 text-bb-gray"
                />
             </div>
             <div className="form-group mb-4 flex flex-col gap-1">
@@ -187,7 +187,7 @@ const ContactForm = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="h-9 rounded px-3 text-[--bb-dark-gray]"
+                  className="h-9 rounded px-3 text-bb-gray"
                />
             </div>
             <div className="form-group mb-4 flex flex-col gap-1">
@@ -199,13 +199,13 @@ const ContactForm = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="h-24 rounded px-3 text-[--bb-dark-gray]"
+                  className="h-24 rounded px-3 text-bb-gray"
                />
             </div>
             <button
                type="submit"
                id="submitBtn"
-               className="mt-4 w-40 rounded-sm bg-[--bb-teal] p-4 text-center font-roboto-sans text-sm tracking-wide text-[--bb-dark-gray] lg:transition lg:duration-700 lg:hover:brightness-125">
+               className="mt-4 w-40 rounded-sm bg-bb-teal p-4 text-center font-roboto-sans text-sm tracking-wide text-bb-gray hover-delay hover-brightness">
                Send
             </button>
          </form>

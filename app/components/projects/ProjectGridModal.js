@@ -15,7 +15,7 @@ const ProjectGridModal = ({ modalData, closeModal }) => {
 
    const CloseButton = () => (
       <button
-         className="lg:transition-all lg:duration-300 lg:ease-in-out lg:hover:scale-125"
+         className="hover-delay hover-brightness hover-scale"
          onClick={closeModal}>
          <CloudinaryImage
             cloudinaryId="close_wd9td4"
@@ -42,7 +42,7 @@ const ProjectGridModal = ({ modalData, closeModal }) => {
                      href={codeLink}
                      target="_blank"
                      rel="noreferrer"
-                     className="block w-36 rounded-sm border-2 border-[--bb-dark-gray-500] p-4 text-center font-roboto-sans text-sm tracking-wide text-[--bb-dark-gray] lg:transition lg:duration-700 lg:hover:brightness-125">
+                     className="hover-delay hover-brightness block w-36 rounded-sm border-2 border-bb-gray-500 p-4 text-center font-roboto-sans text-sm tracking-wide text-bb-gray">
                      <div className="flex items-center gap-2">
                         <CloudinaryImage
                            cloudinaryId="github1_o1ok5i"
@@ -72,10 +72,10 @@ const ProjectGridModal = ({ modalData, closeModal }) => {
             />
          )}
          <div
-            className={`fixed bottom-[5vh] left-[7.5vw] z-50 h-[85vh] w-[85vw] rounded-lg bg-[--bb-dark-gray-900] p-4 md:left-[5vw] md:w-[90vw] ${
+            className={`fixed bottom-[5vh] left-[7.5vw] z-50 h-[85vh] w-[85vw] rounded-lg bg-bb-gray-900 p-4 md:left-[5vw] md:w-[90vw] ${
                modalData ? 'translate-y-0' : 'translate-y-[100vh]'
             } transform transition-transform duration-500 ease-in-out`}>
-            <div className="relative h-full text-[--bb-dark-gray-200] md:p-4">
+            <div className="relative h-full text-bb-gray-200 md:p-4">
                <div className="flex h-16 w-full items-start justify-between">
                   <div className="hidden items-baseline gap-4 sm:flex">
                      <HeadingTwo>{name}</HeadingTwo>

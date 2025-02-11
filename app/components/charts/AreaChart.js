@@ -60,7 +60,7 @@ const CustomizedTooltip = ({ active, payload, label }) => {
       </ul>
    );
    return (
-      <div className="rounded-md border border-[--bb-dark-gray-700] bg-[--bb-dark-gray-900] p-2 shadow-md">
+      <div className="rounded-md border border-bb-gray-700 bg-bb-gray-900 p-2 shadow-md">
          <p>{year}</p>
          <p>{countLearned} skills learned:</p>
          <div>{skillList}</div>

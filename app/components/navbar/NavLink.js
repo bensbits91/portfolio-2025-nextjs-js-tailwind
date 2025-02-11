@@ -8,12 +8,10 @@ const NavLink = ({ text, link, pad = false }) => {
    return (
       <li className={pad ? 'p-2' : ''}>
          <Link
-            className={`border-b-2 lg:transition lg:duration-700 ${
-               pad ? 'p-2' : ''
-            } ${
+            className={`hover-delay border-b-2 ${pad ? 'p-2' : ''} ${
                isActive
-                  ? 'border-b-[--bb-yellow] text-[--bb-yellow]'
-                  : 'border-b-transparent lg:hover:border-b-[--bb-teal] lg:hover:text-[--bb-teal] lg:hover:brightness-125'
+                  ? 'border-b-bb-yellow text-bb-yellow'
+                  : 'hover-brightness border-b-transparent lg:hover:border-b-bb-teal lg:hover:text-bb-teal'
             }`}
             href={link}>
             {text}

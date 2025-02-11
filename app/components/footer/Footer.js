@@ -25,7 +25,7 @@ const ContactLinks = () => (
       {miscLinkDefs.map(({ link, text, cloudinaryId }, index) => (
          <li key={index}>
             <a
-               className="inline-block border-b-2 border-b-transparent p-2 lg:transition lg:duration-700 lg:hover:border-b-[--bb-teal] lg:hover:text-[--bb-teal] lg:hover:brightness-125"
+               className="hover-delay hover-brightness inline-block border-b-2 border-b-transparent p-2 lg:hover:border-b-bb-teal lg:hover:text-bb-teal"
                href={link}
                target="_blank"
                rel="noreferrer">
