@@ -13,9 +13,9 @@ const Skills = () => {
    const [selectedView, setSelectedView] = useState('list');
 
    const navDefs = [
-      { view: 'list', text: 'All skills' },
-      { view: 'rating', text: 'Skill by rating/years' },
-      { view: 'years', text: 'Growth by year' },
+      { view: 'list', text: 'List' },
+      { view: 'rating', text: 'Rating & years' },
+      { view: 'growth', text: 'Growth by year' },
       { view: 'stack', text: 'Stack coverage' }
    ];
 
@@ -52,7 +52,7 @@ const Skills = () => {
             <div className="pt-4">
                {selectedView === 'list' && <SkillList />}
                {selectedView === 'rating' && <BarChart />}
-               {selectedView === 'years' && <AreaChart />}
+               {selectedView === 'growth' && <AreaChart />}
                {selectedView === 'stack' && <RadarChart />}
             </div>
          </OneColumnSection>

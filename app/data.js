@@ -35,7 +35,7 @@ export const skills = [
       cloudinary: 'js_au9kmj',
       yearLearned: 2013,
       years: 11,
-      rating: 8,
+      rating: 9,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
       featureOnHome: true,
@@ -120,15 +120,16 @@ export const skills = [
       type: 'State Management',
       stackArea: 'Frontend',
       stackCategory: 'Library',
-      name: 'Thunk',
+      name: 'Zustand',
       icon: '/react.svg',
-      yearLearned: 2019,
-      years: 6,
+      cloudinary: 'zustand_wrx1q3',
+      yearLearned: 2024,
+      years: 1,
       rating: 7,
-      haveUsedProfessionally: true,
+      haveUsedProfessionally: false,
       haveUsedForFun: true,
       featureOnHome: false,
-      showInSkillsTable: false
+      showInSkillsTable: true
    },
    {
       type: 'Styling',
@@ -157,7 +158,7 @@ export const skills = [
       rating: 9,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
-      featureOnHome: true,
+      featureOnHome: false,
       showInSkillsTable: true
    },
    {
@@ -201,6 +202,21 @@ export const skills = [
       years: 8,
       rating: 9,
       haveUsedProfessionally: true,
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
+   },
+   {
+      type: 'Styling',
+      stackArea: 'Frontend',
+      stackCategory: 'Styling',
+      name: 'Panda CSS',
+      icon: '/react.svg',
+      cloudinary: 'panda-css_av1hkt',
+      yearLearned: 2025,
+      years: 1,
+      rating: 9,
+      haveUsedProfessionally: false,
       haveUsedForFun: true,
       featureOnHome: true,
       showInSkillsTable: true
