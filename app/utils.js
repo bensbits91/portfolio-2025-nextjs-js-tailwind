@@ -13,7 +13,7 @@ export const generateStars = rating => {
    const stars = [];
    for (let i = 0; i < fullStars; i++) {
       stars.push(
-         <div key={`full-${i}`} className="h-4 w-4">
+         <div key={`full-${i}`} className="h-3 w-3">
             <CloudinaryImage
                cloudinaryId="star-white_ehbqmh"
                alt="Star"
@@ -27,7 +27,7 @@ export const generateStars = rating => {
    if (halfStar) {
       // todo: better half-star implementation
       stars.push(
-         <div key="half" className="ml-[-4px] h-4 w-4">
+         <div key="half" className="ml-[-4px] h-3 w-3">
             <CloudinaryImage
                cloudinaryId="star-white-half_bfoszw"
                alt="Half star"
