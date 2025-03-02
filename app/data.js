@@ -53,7 +53,7 @@ export const skills = [
       rating: 7,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
-      featureOnHome: false,
+      featureOnHome: true,
       showInSkillsTable: true
    },
    {
@@ -150,6 +150,21 @@ export const skills = [
       type: 'Styling',
       stackArea: 'Frontend',
       stackCategory: 'Styling',
+      name: 'CSS Modules',
+      icon: '/sass.svg',
+      cloudinary: 'css3_mvgbbf',
+      yearLearned: 2015,
+      years: 8,
+      rating: 9,
+      haveUsedProfessionally: true,
+      haveUsedForFun: true,
+      featureOnHome: true,
+      showInSkillsTable: true
+   },
+   {
+      type: 'Styling',
+      stackArea: 'Frontend',
+      stackCategory: 'Styling',
       name: 'Sass/SCSS',
       icon: '/sass.svg',
       cloudinary: 'sass_s3kz3x',
@@ -218,7 +233,7 @@ export const skills = [
       rating: 9,
       haveUsedProfessionally: false,
       haveUsedForFun: true,
-      featureOnHome: true,
+      featureOnHome: false,
       showInSkillsTable: true
    },
    {
