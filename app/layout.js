@@ -1,8 +1,9 @@
+import Head from 'next/head';
+import { Analytics } from '@vercel/analytics/next';
 import { Roboto, Roboto_Mono } from 'next/font/google';
 import { Nav } from './components/navbar';
 import { Footer } from './components/footer';
 import './globals.css';
-import Head from 'next/head';
 
 const robotoSans = Roboto({
    weight: '700',
@@ -37,7 +38,10 @@ export default async function RootLayout({ children }) {
          <body
             className={`${robotoMono.variable} ${robotoSans.variable} antialiased`}>
             <Nav />
-            <main>{children}</main>
+            <main>
+               {children}
+               <Analytics />
+            </main>
             <Footer />
          </body>
       </html>
