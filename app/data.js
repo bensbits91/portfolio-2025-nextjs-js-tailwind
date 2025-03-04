@@ -34,7 +34,7 @@ export const skills = [
       icon: '/js.svg',
       cloudinary: 'js_au9kmj',
       yearLearned: 2013,
-      years: 11,
+      years: 12,
       rating: 9,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
@@ -49,8 +49,8 @@ export const skills = [
       icon: '/ts1.svg',
       cloudinary: 'ts1_nbdvxm',
       yearLearned: 2015,
-      years: 7,
-      rating: 7,
+      years: 8,
+      rating: 8,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
       featureOnHome: true,
@@ -95,7 +95,7 @@ export const skills = [
       cloudinary: 'next_tpw7a4',
       yearLearned: 2020,
       years: 2,
-      rating: 8,
+      rating: 9,
       haveUsedProfessionally: false,
       haveUsedForFun: true,
       featureOnHome: true,
@@ -125,7 +125,7 @@ export const skills = [
       cloudinary: 'zustand_wrx1q3',
       yearLearned: 2024,
       years: 1,
-      rating: 7,
+      rating: 8,
       haveUsedProfessionally: false,
       haveUsedForFun: true,
       featureOnHome: false,
@@ -244,7 +244,7 @@ export const skills = [
       icon: '/rwd.svg',
       cloudinary: 'rwd_o9z8s0',
       yearLearned: 2007,
-      years: 10,
+      years: 11,
       rating: 9,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
@@ -379,8 +379,8 @@ export const skills = [
       icon: '/node.svg',
       cloudinary: 'node_hl58om',
       yearLearned: 2015,
-      years: 8,
-      rating: 8,
+      years: 9,
+      rating: 9,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
       featureOnHome: true,
@@ -395,7 +395,7 @@ export const skills = [
       cloudinary: 'php_hylcjn',
       yearLearned: 2013,
       years: 9,
-      rating: 7,
+      rating: 8,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
       featureOnHome: false,
@@ -425,7 +425,7 @@ export const skills = [
       cloudinary: 'python_g5utim',
       yearLearned: 2021,
       years: 3,
-      rating: 6,
+      rating: 7,
       haveUsedProfessionally: true,
       haveUsedForFun: false,
       featureOnHome: false,
@@ -439,8 +439,8 @@ export const skills = [
       icon: '/express.svg',
       cloudinary: 'express_bqzgin',
       yearLearned: 2015,
-      years: 4,
-      rating: 7,
+      years: 9,
+      rating: 8,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
       featureOnHome: false,
@@ -455,7 +455,7 @@ export const skills = [
       cloudinary: 'fastify_zy8jul',
       yearLearned: 2023,
       years: 2,
-      rating: 7,
+      rating: 8,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
       featureOnHome: false,
@@ -484,8 +484,8 @@ export const skills = [
       icon: '/mongodb.svg',
       cloudinary: 'mongodb_kv7lxz',
       yearLearned: 2020,
-      years: 2,
-      rating: 8,
+      years: 3,
+      rating: 9,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
       featureOnHome: false,
@@ -499,8 +499,8 @@ export const skills = [
       icon: '/postgresql.svg',
       cloudinary: 'postgresql_dx4o4h',
       yearLearned: 2020,
-      years: 4,
-      rating: 7,
+      years: 5,
+      rating: 8,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
       featureOnHome: false,
@@ -515,7 +515,7 @@ export const skills = [
       cloudinary: 'sql_dxvo6o',
       yearLearned: 2007,
       years: 10,
-      rating: 7,
+      rating: 8,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
       featureOnHome: false,
@@ -545,7 +545,7 @@ export const skills = [
       cloudinary: 'graphql_ztconi',
       yearLearned: 2020,
       years: 4,
-      rating: 7,
+      rating: 8,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
       featureOnHome: false,
@@ -560,7 +560,7 @@ export const skills = [
       cloudinary: 'microservice_xcczrj',
       yearLearned: 2022,
       years: 2,
-      rating: 7,
+      rating: 8,
       haveUsedProfessionally: true,
       haveUsedForFun: false,
       featureOnHome: false,
@@ -575,7 +575,7 @@ export const skills = [
       cloudinary: 'micro-frontend_sx9fbr',
       yearLearned: 2022,
       years: 2,
-      rating: 7,
+      rating: 8,
       haveUsedProfessionally: true,
       haveUsedForFun: false,
       featureOnHome: false,
@@ -605,7 +605,7 @@ export const skills = [
       cloudinary: 'gke_dwffq2',
       yearLearned: 2021,
       years: 3,
-      rating: 5,
+      rating: 6,
       haveUsedProfessionally: true,
       haveUsedForFun: false,
       featureOnHome: false,
@@ -620,7 +620,7 @@ export const skills = [
       cloudinary: 'aws_ntzjf4',
       yearLearned: 2018,
       years: 2,
-      rating: 5,
+      rating: 6,
       haveUsedProfessionally: true,
       haveUsedForFun: false,
       featureOnHome: false,
@@ -650,7 +650,7 @@ export const skills = [
       cloudinary: 'colima-no-bg_t4awkl',
       yearLearned: 2023,
       years: 2,
-      rating: 5,
+      rating: 6,
       haveUsedProfessionally: true,
       haveUsedForFun: false,
       featureOnHome: false,
@@ -665,7 +665,7 @@ export const skills = [
       cloudinary: 'kubernetes_z2x5da',
       yearLearned: 2021,
       years: 3,
-      rating: 5,
+      rating: 6,
       haveUsedProfessionally: true,
       haveUsedForFun: false,
       featureOnHome: false,
@@ -702,390 +702,6 @@ export const skills = [
       showInSkillsTable: true
    }
 ];
-// export const skills = {
-//    languages: [
-//       {
-//          name: 'JavaScript',
-//          icon: '/js.svg',
-//          years: 10,
-//          rating: 8,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: true
-//       },
-//       {
-//          name: 'TypeScript',
-//          icon: '/ts1.svg',
-//          years: 7,
-//          rating: 7,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: true
-//       }
-//    ],
-//    frontendLibrariesAndFrameworks: [
-//       {
-//          name: 'React.js',
-//          icon: '/react.svg',
-//          years: 8,
-//          rating: 9,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: true
-//       },
-//       {
-//          name: 'Vue.js',
-//          icon: '/react.svg',
-//          years: 3,
-//          rating: 7,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: false
-//       },
-//       {
-//          name: 'Next.js',
-//          icon: '/next.svg',
-//          years: 2,
-//          rating: 7,
-//          haveUsedProfessionally: false,
-//          haveUsedForFun: true
-//       }
-//    ],
-//    stateManagement: [
-//       {
-//          name: 'Redux',
-//          icon: '/react.svg',
-//          years: 8,
-//          rating: 7,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: true
-//       },
-//       {
-//          name: 'Thunk',
-//          icon: '/react.svg',
-//          years: 6,
-//          rating: 6,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: true
-//       }
-//    ],
-//    styling: [
-//       {
-//          name: 'CSS',
-//          icon: '/react.svg',
-//          years: 12,
-//          rating: 9,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: true
-//       },
-//       {
-//          name: 'SCSS',
-//          icon: '/react.svg',
-//          years: 8,
-//          rating: 7,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: true
-//       },
-//       {
-//          name: 'Sass',
-//          icon: '/react.svg',
-//          years: 8,
-//          rating: 7,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: true
-//       },
-//       {
-//          name: 'Tailwind',
-//          icon: '/react.svg',
-//          years: 2,
-//          rating: 6,
-//          haveUsedProfessionally: false,
-//          haveUsedForFun: true
-//       },
-//       {
-//          name: 'JSS',
-//          icon: '/react.svg',
-//          years: 8,
-//          rating: 7,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: true
-//       },
-//       {
-//          name: 'Styled Components',
-//          icon: '/react.svg',
-//          years: 8,
-//          rating: 8,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: true
-//       }
-//    ],
-//    uiUx: [
-//       {
-//          name: 'Responsive Design',
-//          icon: '/rwd.svg',
-//          years: 10,
-//          rating: 8,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: true
-//       },
-//       {
-//          name: 'A/B and multivariate testing',
-//          icon: '/react.svg',
-//          years: 3,
-//          rating: 7,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: false
-//       },
-//       {
-//          name: 'LaunchDarkly',
-//          icon: '/react.svg',
-//          years: 3,
-//          rating: 7,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: false
-//       } /* ,
-//         {
-//             name: 'Google Optimize',
-//             icon: '/react.svg',
-//             years: 0,
-//             rating: 0,
-//             haveUsedProfessionally: true,
-//             haveUsedForFun: true
-//         } */
-//    ],
-//    buildTools: [
-//       {
-//          name: 'Webpack',
-//          icon: '/react.svg',
-//          years: 7,
-//          rating: 5,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: true
-//       },
-//       {
-//          name: 'Turbopack',
-//          icon: '/react.svg',
-//          years: 1,
-//          rating: 5,
-//          haveUsedProfessionally: false,
-//          haveUsedForFun: true
-//       },
-//       {
-//          name: 'Parcel',
-//          icon: '/react.svg',
-//          years: 1,
-//          rating: 5,
-//          haveUsedProfessionally: false,
-//          haveUsedForFun: true
-//       }
-//    ],
-//    testing: [
-//       {
-//          name: 'Jest',
-//          icon: '/react.svg',
-//          years: 3,
-//          rating: 7,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: true
-//       },
-//       {
-//          name: 'Cypress',
-//          icon: '/react.svg',
-//          years: 1,
-//          rating: 6,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: false
-//       }
-//    ],
-//    backendDevelopment: [
-//       {
-//          name: 'NodeJS',
-//          icon: '/react.svg',
-//          years: 8,
-//          rating: 7,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: true
-//       },
-//       {
-//          name: 'PHP',
-//          icon: '/react.svg',
-//          years: 9,
-//          rating: 7,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: true
-//       },
-//       {
-//          name: 'WordPress',
-//          icon: '/react.svg',
-//          years: 9,
-//          rating: 7,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: true
-//       },
-//       {
-//          name: 'Python',
-//          icon: '/react.svg',
-//          years: 3,
-//          rating: 5,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: false
-//       }
-//    ],
-//    backendFrameworks: [
-//       {
-//          name: 'Express',
-//          icon: '/react.svg',
-//          years: 4,
-//          rating: 7,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: true
-//       },
-//       {
-//          name: 'Fastify',
-//          icon: '/react.svg',
-//          years: 2,
-//          rating: 7,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: true
-//       },
-//       {
-//          name: 'Django',
-//          icon: '/react.svg',
-//          years: 1,
-//          rating: 4,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: false
-//       }
-//    ],
-//    databases: [
-//       {
-//          name: 'MongoDB',
-//          icon: '/react.svg',
-//          years: 2,
-//          rating: 7,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: true
-//       },
-//       {
-//          name: 'PostgreSQL',
-//          icon: '/react.svg',
-//          years: 4,
-//          rating: 6,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: true
-//       },
-//       {
-//          name: 'SQL',
-//          icon: '/react.svg',
-//          years: 10,
-//          rating: 8,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: true
-//       }
-//    ],
-//    apis: [
-//       {
-//          name: 'RESTful APIs',
-//          icon: '/react.svg',
-//          years: 15,
-//          rating: 8,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: true
-//       },
-//       {
-//          name: 'GraphQL',
-//          icon: '/react.svg',
-//          years: 4,
-//          rating: 6,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: true
-//       }
-//    ],
-//    architecture: [
-//       {
-//          name: 'Microservices',
-//          icon: '/react.svg',
-//          years: 2,
-//          rating: 6,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: false
-//       },
-//       {
-//          name: 'micro-frontends',
-//          icon: '/react.svg',
-//          years: 2,
-//          rating: 6,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: false
-//       }
-//    ],
-//    cloudPlatforms: [
-//       {
-//          name: 'GCP',
-//          icon: '/react.svg',
-//          years: 3,
-//          rating: 6,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: false
-//       },
-//       {
-//          name: 'GKE',
-//          icon: '/react.svg',
-//          years: 3,
-//          rating: 5,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: false
-//       },
-//       {
-//          name: 'AWS',
-//          icon: '/react.svg',
-//          years: 2,
-//          rating: 5,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: false
-//       }
-//    ],
-//    containerization: [
-//       {
-//          name: 'Docker',
-//          icon: '/react.svg',
-//          years: 4,
-//          rating: 5,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: false
-//       },
-//       {
-//          name: 'Colima',
-//          icon: '/react.svg',
-//          years: 2,
-//          rating: 5,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: false
-//       }
-//    ],
-//    infrastructureOrchestration: [
-//       {
-//          name: 'Kubernetes',
-//          icon: '/react.svg',
-//          years: 3,
-//          rating: 5,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: false
-//       },
-//       {
-//          name: 'Helm',
-//          icon: '/react.svg',
-//          years: 3,
-//          rating: 5,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: false
-//       },
-//       {
-//          name: 'Terraform',
-//          icon: '/react.svg',
-//          years: 3,
-//          rating: 5,
-//          haveUsedProfessionally: true,
-//          haveUsedForFun: false
-//       }
-//    ]
-// };
 export const experience = [
    {
       role: 'Staff Full-Stack Engineer',
