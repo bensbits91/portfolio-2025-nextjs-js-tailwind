@@ -294,13 +294,13 @@ const Things = () => {
             </p>
             <HeadingThree color="yellow">Multi-Tiered Caching</HeadingThree>
             <p className="mb-4 text-sm">
-               To minimize how many request we make to third-party APIs, we
-               cache search results in:
+               To minimize how many request users make to third-party APIs, I
+               cache search results:
             </p>
             <ul className="mb-4 ml-6 list-outside list-disc text-sm">
-               <li className="mb-1">In our database, with a long-ish TTL</li>
+               <li className="mb-1">In my database, with a long-ish TTL</li>
                <li className="mb-1">
-                  In-memory cache on the server, with a medium-ish TTL. I'll
+                  Using in-memory cache on the server, with a medium-ish TTL. I'll
                   replace this in-memory cache with Redis soon. Pretty excited
                   about that :)
                </li>
@@ -309,7 +309,7 @@ const Things = () => {
                </li>
             </ul>
             <p className="mb-4 text-sm">
-               ... and to minimize our requests to our own database, we cache
+               ... and to minimize requests to my own database, I cache
                user and community data as needed, using the same strategy
                described for search results above.
             </p>
