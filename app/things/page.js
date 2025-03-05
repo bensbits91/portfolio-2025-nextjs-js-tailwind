@@ -37,9 +37,9 @@ const Things = () => {
             <HeadingTwo color="purple">Track, Rate & Discover</HeadingTwo>
             <p className="mb-4 text-sm">
                Track anything. Kind of like Goodreads but for everything. See
-               what you've done, what you want to do, what you're doing. Track
-               how many times you've watched a movie, read a book, played a
-               game, and so forth.
+               what you've done, what you're currently doing, and what you want
+               to do. Track how many times you've watched a movie, read a book,
+               played a game, and so forth.
             </p>
             <p className="mb-4 text-sm">
                Rate anything. See your favorite things across different
@@ -47,7 +47,7 @@ const Things = () => {
                ways.
             </p>
             <p className="mb-4 text-sm">
-               Discover new things in all-kindsa ways. Get recommondation on
+               Discover new things in all-kindsa ways. Get recommondations on
                books you might like based on movies you've seen. Find new
                podcasts based on the video games you play. See what your friends
                are into. Find things by genre, tags, language, country, decade,
@@ -67,7 +67,7 @@ const Things = () => {
             </p>
             <HeadingTwo color="purple">More Types on the Way!</HeadingTwo>
             <p className="mb-4 text-sm">
-               Seardh results coming soon for podcasts, bands, albums, songs,
+               Search results coming soon for podcasts, bands, albums, songs,
                board and card games, actors and stand-up comics, athletes and
                teams, and comic books.
             </p>
@@ -80,8 +80,8 @@ const Things = () => {
             </p>
             <HeadingTwo color="purple">Why a New Version?</HeadingTwo>
             <p className="mb-4 text-sm">
-               I've been using verions 1.0 of the Things app and have curated my
-               own library of things. Works well for a small user base.
+               I've been using verion 1.0 of the Things app and have curated my
+               own library of things. It works well for a small user base.
             </p>
             <p className="mb-4 text-sm">
                Version 2.0 separates the frontend and backend, with a focus on
@@ -180,7 +180,7 @@ const Things = () => {
                               <li className="mb-1">
                                  Responsive layouts & grids
                               </li>
-                              <li className="mb-1">Pallete & theming...</li>
+                              <li className="mb-1">Palete & theming...</li>
                            </ul>
                         </div>
                         <div>
@@ -289,7 +289,7 @@ const Things = () => {
             <p className="mb-4 text-sm">
                Auth0 on the frontend for user management, authentication
                (login/logout), session management and authorization for
-               protected page and API routes. Auth0 on the backend, too, to
+               protected pages and API routes. Auth0 on the backend, too, to
                handle authorization for protected routes.
             </p>
             <HeadingThree color="yellow">Multi-Tiered Caching</HeadingThree>
