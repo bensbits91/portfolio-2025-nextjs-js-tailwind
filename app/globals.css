@@ -33,6 +33,8 @@
    --bb-jade-400: #e8f4eb;
 
    --bb-red: #d95468;
+   --bb-pink: #e370dc;
+   --bb-purple:#9033d8;
 
    --background: var(--bb-white);
    --foreground: var(--bb-gray);
