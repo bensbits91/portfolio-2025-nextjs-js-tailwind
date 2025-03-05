@@ -863,7 +863,7 @@ export const projects = [
       featureOnHome: false
    },
    {
-      name: 'Things app',
+      name: 'Things App v1.0',
       year: '2025',
       tech: [
          'React.js',
