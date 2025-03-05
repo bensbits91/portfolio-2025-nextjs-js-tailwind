@@ -10,6 +10,16 @@ import {
    HeadingThree,
    SubtleText
 } from '@/app/components/typography';
+import { CloudinaryImage } from '@/app/components/image';
+
+/*
+ * todo:
+ * fun heading colors
+ * add link somewhere on homepage
+ * add to project data/page
+ * make some content truncated and/or collapsible/expandable, or tabbed
+ * add images
+ */
 
 const Things = () => {
    return (
@@ -94,8 +104,7 @@ const Things = () => {
                   content: (
                      <div>
                         <HeadingTwo color="purple">Frontend</HeadingTwo>
-                        <div>
-                           <HeadingThree color="yellow">Stack</HeadingThree>
+                        <div className="mb-8">
                            <ul className="mb-4 ml-6 list-outside list-disc text-sm">
                               <li className="mb-1">Node.js</li>
                               <li className="mb-1">React.js</li>
@@ -103,6 +112,21 @@ const Things = () => {
                               <li className="mb-1">CSS Modules</li>
                               <li className="mb-1">Tanstack React-Query</li>
                            </ul>
+                           <a
+                              href="https://github.com/bensbits91/things-client"
+                              target="_blank"
+                              rel="noreferrer"
+                              className="hover-delay hover-brightness block w-52 rounded-sm border-2 border-bb-gray-500 p-4 text-center font-roboto-sans text-sm tracking-wide text-bb-gray">
+                              <div className="flex items-center gap-2">
+                                 <CloudinaryImage
+                                    cloudinaryId="github1_o1ok5i"
+                                    alt="GitHub"
+                                    width={30}
+                                    height={30}
+                                 />
+                                 <SubtleText>View Frontend Code</SubtleText>
+                              </div>
+                           </a>
                         </div>
                         <div>
                            <HeadingThree color="yellow">
@@ -182,8 +206,7 @@ const Things = () => {
                   content: (
                      <div>
                         <HeadingTwo color="purple">Backend</HeadingTwo>
-                        <div>
-                           <HeadingThree color="yellow">Stack</HeadingThree>
+                        <div className="mb-8">
                            <ul className="mb-4 ml-6 list-outside list-disc text-sm">
                               <li className="mb-1">Node.js</li>
                               <li className="mb-1">Fastify</li>
@@ -195,6 +218,21 @@ const Things = () => {
                                  replace with Redis soon
                               </li>
                            </ul>
+                           <a
+                              href="https://github.com/bensbits91/things-server"
+                              target="_blank"
+                              rel="noreferrer"
+                              className="hover-delay hover-brightness block w-52 rounded-sm border-2 border-bb-gray-500 p-4 text-center font-roboto-sans text-sm tracking-wide text-bb-gray">
+                              <div className="flex items-center gap-2">
+                                 <CloudinaryImage
+                                    cloudinaryId="github1_o1ok5i"
+                                    alt="GitHub"
+                                    width={30}
+                                    height={30}
+                                 />
+                                 <SubtleText>View Backend Code</SubtleText>
+                              </div>
+                           </a>
                         </div>
                         <div>
                            <HeadingThree color="yellow">
@@ -292,7 +330,7 @@ const Things = () => {
          </OneColumnSection>
          <OneColumnSection bigBottom>
             <HeadingTwo color="purple">In Progress</HeadingTwo>
-            <p className="mb-4 text-sm">Tags</p>
+            <HeadingThree color="yellow">Tags</HeadingThree>
             <ul className="mb-4 ml-6 list-outside list-disc text-sm">
                <li className="mb-1">
                   Community tags shared by all users (e.g. Nostalgia, Chill,
@@ -305,7 +343,7 @@ const Things = () => {
                <li className="mb-1">Enables virtual lists</li>
                <li className="mb-1">Facilitates discovery & organization</li>
             </ul>
-            <p className="mb-4 text-sm">User-Curated Lists</p>
+            <HeadingThree color="yellow">User-Curated Lists</HeadingThree>
             <ul className="mb-4 ml-6 list-outside list-disc text-sm">
                <li className="mb-1">
                   Manually curated, sorted lists, like playlists
@@ -315,7 +353,7 @@ const Things = () => {
                   If public, other users can "like" the list
                </li>
             </ul>
-            <p className="mb-4 text-sm">Community Lists & Stats</p>
+            <HeadingThree color="yellow">Community Lists & Stats</HeadingThree>
             <ul className="mb-4 ml-6 list-outside list-disc text-sm">
                <li className="mb-1">Top 10 Scary Movies Right Now</li>
                <li className="mb-1">Recently Added Podcasts</li>
@@ -388,7 +426,7 @@ const Things = () => {
             </ul>
          </OneColumnSection>
          <OneColumnSection bigBottom>
-            <HeadingTwo color="purple">Whoa! Still with Me?</HeadingTwo>
+            <HeadingTwo color="purple">Still with Me?</HeadingTwo>
             <p className="mb-4 text-sm">
                Thanks for reading all that! This is a fun passion project.
                <Link
