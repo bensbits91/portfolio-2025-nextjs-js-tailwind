@@ -1,18 +1,18 @@
 const content = {
    heading: 'SEO & Web Optimization',
    subheading: 'Core Web Vitals, Performance, Accessibility, and more',
-   mainSections: [
+   sections: [
       {
          heading: 'Overview',
+         layout: 'OneColumnSection',
          content: [
             "The biggest web performance optimization project that I've been heavily involved with was an overhaul of the public website at www.zenbusiness.com."
          ]
-      }
-   ],
-   moreSections: [
+      },
       {
          heading: 'Background',
-         sections: [
+         layout: 'OneColumnSection',
+         subsections: [
             {
                heading: 'Adapting to SEO Changes',
                content: [
@@ -29,7 +29,8 @@ const content = {
       },
       {
          heading: 'The Approach',
-         sections: [
+         layout: 'OneColumnSection',
+         subsections: [
             {
                heading: 'Getting Started',
                content: [
@@ -58,7 +59,8 @@ const content = {
       },
       {
          heading: 'Success Then & Ongoing',
-         sections: [
+         layout: 'OneColumnSection',
+         subsections: [
             {
                heading: 'Positive Results',
                content: [
@@ -72,16 +74,17 @@ const content = {
                ]
             }
          ]
+      },
+      {
+         heading: 'Need help with Web Optimization?',
+         layout: 'Cta',
+         content: ["Let's chat and see if I can help you with your project."],
+         link: {
+            href: '/contact',
+            text: "Let's connect!"
+         }
       }
-   ],
-   ctaBottom: {
-      heading: 'Need help with Web Optimization?',
-      content: ["Let's chat and see if I can help you with your project."],
-      link: {
-         href: '/contact',
-         text: "Let's connect!"
-      }
-   }
+   ]
 };
 
 export default content;

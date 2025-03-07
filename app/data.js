@@ -723,7 +723,7 @@ export const experience = [
          {
             name: 'Public Website',
             description:
-               'Enhanced the company’s public website using WordPress, PHP, CSS/SASS, and JavaScript. Supported the shift to a page-speed-based SEO strategy, collaborating with the SEO Team to meet performance targets (e.g. TTFB, LCP, CLS). Vastly improved page speed. Optimized code organization and performance. Planned, implemented, documented and supported an atomic component structure, facilitating quick and consistent development.',
+               "Enhanced the company's public website using WordPress, PHP, CSS/SASS, and JavaScript. Supported the shift to a page-speed-based SEO strategy, collaborating with the SEO Team to meet performance targets (e.g. TTFB, LCP, CLS). Vastly improved page speed. Optimized code organization and performance. Planned, implemented, documented and supported an atomic component structure, facilitating quick and consistent development.",
             moreInfoLink: {
                href: '/experience/zb-seo',
                text: 'Read more about optimizing the website...'
