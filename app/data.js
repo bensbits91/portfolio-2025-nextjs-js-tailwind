@@ -723,7 +723,11 @@ export const experience = [
          {
             name: 'Public Website',
             description:
-               'Enhanced the company’s public website using WordPress, PHP, CSS/SASS, and JavaScript. Supported the shift to a page-speed-based SEO strategy, collaborating with the SEO Team to meet performance targets (e.g. TTFB, LCP, CLS). Vastly improved page speed. Optimized code organization and performance. Planned, implemented, documented and supported an atomic component structure, facilitating quick and consistent development.'
+               'Enhanced the company’s public website using WordPress, PHP, CSS/SASS, and JavaScript. Supported the shift to a page-speed-based SEO strategy, collaborating with the SEO Team to meet performance targets (e.g. TTFB, LCP, CLS). Vastly improved page speed. Optimized code organization and performance. Planned, implemented, documented and supported an atomic component structure, facilitating quick and consistent development.',
+            moreInfoLink: {
+               href: '/experience/zb-seo',
+               text: 'Read more about optimizing the website...'
+            }
          },
          {
             name: 'Experimentation',
@@ -1130,7 +1134,8 @@ export const projects = [
       codeLink: 'https://github.com/bensbits91/vertical-growing-form',
       description:
          'Enables form admins to build different journeys for different types requests. Using intuitive tools, admins can add, remove, and rearrange steps, fields, sections and pages. Admins can also control branching and conditional logic, as well as choosing from different display styles.',
-      motivation: 'Provide clients an easy way to build and manage custom forms. Provide different presentation methods to help make filling out forms less mundane',
+      motivation:
+         'Provide clients an easy way to build and manage custom forms. Provide different presentation methods to help make filling out forms less mundane',
       outcome: 'Popular among clients. Easy to customize and use.',
       images: [
          {
@@ -1164,8 +1169,10 @@ export const projects = [
          'Webpack'
       ],
       codeLink: 'https://github.com/bensbits91/site-directory',
-      description: 'Automatically detects sites and subsites in a site collection. Displays them in a visually-appealing way. Easy to customize and use.',
-      motivation: 'Provide clients with a no-config, visually-appealing way to display their site collections.',
+      description:
+         'Automatically detects sites and subsites in a site collection. Displays them in a visually-appealing way. Easy to customize and use.',
+      motivation:
+         'Provide clients with a no-config, visually-appealing way to display their site collections.',
       outcome: 'Popular among clients. Easy to customize and use.',
       images: [
          { name: 'spfxSiteExplorer_focus_bhu8j7', hideFromModal: true },
@@ -1192,8 +1199,10 @@ export const projects = [
          'Webpack'
       ],
       codeLink: 'https://github.com/bensbits91/stock-widget',
-      description: 'Simple, animated stock widget. Composable to incorporate multiple stocks.',
-      motivation: 'Provide clients with a visually-appealing way to display stock data.',
+      description:
+         'Simple, animated stock widget. Composable to incorporate multiple stocks.',
+      motivation:
+         'Provide clients with a visually-appealing way to display stock data.',
       outcome: 'Moderately popular among clients. Easy to customize and use.',
       images: [
          { name: 'sharepoint-stocks-widget-dark_b7lzrd', hideFromModal: true },
@@ -1229,8 +1238,7 @@ export const projects = [
          'Drag and drop to change the order of items... Editable agenda item details... This demo has minimal styling to facilitate customer-specific branding and easy integration into other projects.',
       motivation:
          'To provide to multiple customers. To gain experience with drag and drop.',
-      outcome:
-         'Used by multiple customers. Easy to customize and use.',
+      outcome: 'Used by multiple customers. Easy to customize and use.',
       images: [
          {
             name: 'sharepoint-agenda-builder-dnd_vn1e8a',
@@ -1260,8 +1268,10 @@ export const projects = [
          'Webpack'
       ],
       codeLink: 'https://github.com/bensbits91/project-assessment-tool',
-      description: 'Powerful tool for tracking and assessing project progress. Colors change as progress is made. Permitted users can sign approval.',
-      motivation: 'Provide clients with an engaging and powerful tool for tracking and assessing project progress.',
+      description:
+         'Powerful tool for tracking and assessing project progress. Colors change as progress is made. Permitted users can sign approval.',
+      motivation:
+         'Provide clients with an engaging and powerful tool for tracking and assessing project progress.',
       outcome: 'Popular among clients. Easy to customize and use.',
       images: [
          { name: 'assessment-checklist_joi1zh', hideFromModal: true },
@@ -1287,8 +1297,10 @@ export const projects = [
          'Webpack'
       ],
       codeLink: 'https://github.com/bensbits91/classifieds-2021',
-      description: 'Provide a social aspect for employees. Post, find and communicate about items and services. Announce and track events. Moderators can approve posts or request changes.',
-      motivation: 'Inject some fun into the workplace. Provide a way for employees to connect and share.',
+      description:
+         'Provide a social aspect for employees. Post, find and communicate about items and services. Announce and track events. Moderators can approve posts or request changes.',
+      motivation:
+         'Inject some fun into the workplace. Provide a way for employees to connect and share.',
       outcome: 'Very popular. Easy to customize and use.',
       images: [
          { name: 'spfxClassifieds_focus_ab3e7m', hideFromModal: true },
@@ -1314,8 +1326,10 @@ export const projects = [
          'Webpack'
       ],
       codeLink: 'https://github.com/bensbits91/spfxContactSearch',
-      description: 'Fast and easy to use. Search by name, department, location, etc. Click to call, email, or chat. View org chart. Automatically syncs with existing data.',
-      motivation: 'Provide a more engaging way to access contact information. Provide a way to easily find and connect with coworkers.',
+      description:
+         'Fast and easy to use. Search by name, department, location, etc. Click to call, email, or chat. View org chart. Automatically syncs with existing data.',
+      motivation:
+         'Provide a more engaging way to access contact information. Provide a way to easily find and connect with coworkers.',
       outcome: 'Popular among clients. Easy to customize and use.',
       images: [
          { name: 'spfxContactSearch_focus_z4jkqy', hideFromModal: true },

@@ -5,6 +5,7 @@ import {
    Subheading,
    SubtleText
 } from '@/app/components/typography';
+import { CodeLink } from '@/app/components/common';
 
 // todo: typography and layout components; better classes/style
 
@@ -38,21 +39,7 @@ const ProjectGridModal = ({ modalData, closeModal }) => {
             )}
             <div className="flex flex-col gap-4">
                {codeLink && (
-                  <a
-                     href={codeLink}
-                     target="_blank"
-                     rel="noreferrer"
-                     className="hover-delay hover-brightness block w-36 rounded-sm border-2 border-bb-gray-500 p-4 text-center font-roboto-sans text-sm tracking-wide text-bb-gray">
-                     <div className="flex items-center gap-2">
-                        <CloudinaryImage
-                           cloudinaryId="github1_o1ok5i"
-                           alt="GitHub"
-                           width={30}
-                           height={30}
-                        />
-                        <SubtleText>View Code</SubtleText>
-                     </div>
-                  </a>
+                  <CodeLink codeLink={{ href: codeLink, text: 'View Code' }} />
                )}
                {description && <SubtleText>What: {description}</SubtleText>}
                {motivation && <SubtleText>Why: {motivation}</SubtleText>}
