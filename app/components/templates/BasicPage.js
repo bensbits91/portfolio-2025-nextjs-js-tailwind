@@ -1,4 +1,8 @@
-import { HeroSection, OneColumnSection } from '@/app/components/layout';
+import {
+   HeroSection,
+   OneColumnSection,
+   TwoColumnSection
+} from '@/app/components/layout';
 import {
    HeadingOne,
    HeadingTwo,
@@ -7,7 +11,7 @@ import {
    P,
    UL
 } from '@/app/components/typography';
-import { Cta } from '@/app/components/common';
+import { Cta, CodeLink } from '@/app/components/common';
 
 const BasicPage = ({ content }) => {
    const { heading, subheading, sections } = content;
@@ -16,11 +20,12 @@ const BasicPage = ({ content }) => {
       if (typeof item === 'string') {
          return <P>{item}</P>;
       }
+
       return <UL items={item} />;
    };
 
    return (
-      <>
+      <div key="basic-page">
          {heading && (
             <HeroSection>
                <HeadingOne>{heading}</HeadingOne>
@@ -34,11 +39,51 @@ const BasicPage = ({ content }) => {
                   layout = 'OneColumnSection',
                   heading,
                   content,
-                  subsections
+                  subsections,
+                  bigBottom
                } = section;
 
                if (layout === 'Cta') {
-                  return <Cta key={index} data={section} />;
+                  return (
+                     <Cta key={index} data={section} bigBottom={bigBottom} />
+                  );
+               }
+
+               if (layout === 'TwoColumnSection') {
+                  return (
+                     <TwoColumnSection
+                        key={index}
+                        bigBottom
+                        columns={subsections.map((section, SubsectionIndex) => {
+                           const { heading, stack, codeLink, content } =
+                              section;
+                           return {
+                              content: (
+                                 <div key={SubsectionIndex}>
+                                    <HeadingTwo>{heading}</HeadingTwo>
+                                    <div className="mb-8">
+                                       <UL items={stack} />
+                                       <CodeLink codeLink={codeLink} />
+                                    </div>
+                                    {content.map((section, contentIndex) => {
+                                       const { heading, subheading, list } =
+                                          section;
+                                       return (
+                                          <div key={contentIndex}>
+                                             <HeadingThree color="yellow">
+                                                {heading}
+                                             </HeadingThree>
+                                             {subheading && <P>{subheading}</P>}
+                                             <UL items={list} />
+                                          </div>
+                                       );
+                                    })}
+                                 </div>
+                              )
+                           };
+                        })}
+                     />
+                  );
                }
 
                return (
@@ -67,7 +112,7 @@ const BasicPage = ({ content }) => {
                   </OneColumnSection>
                );
             })}
-      </>
+      </div>
    );
 };
 
