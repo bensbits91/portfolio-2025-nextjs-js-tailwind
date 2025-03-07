@@ -11,7 +11,7 @@ import {
    P,
    UL
 } from '@/app/components/typography';
-import { Cta, CodeLink } from '@/app/components/common';
+import { Breadcrumb, Cta, CodeLink } from '@/app/components/common';
 
 const BasicPage = ({ content }) => {
    const { heading, subheading, sections } = content;
@@ -26,6 +26,8 @@ const BasicPage = ({ content }) => {
 
    return (
       <div key="basic-page">
+         <Breadcrumb />
+
          {heading && (
             <HeroSection>
                <HeadingOne>{heading}</HeadingOne>
