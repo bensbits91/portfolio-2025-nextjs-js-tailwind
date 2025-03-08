@@ -92,7 +92,7 @@ export const skills = [
       stackCategory: 'Framework',
       name: 'Next.js',
       icon: '/next.svg',
-      cloudinary: 'next_tpw7a4',
+      cloudinary: 'nextjs_jxdbqq',
       yearLearned: 2020,
       years: 2,
       rating: 9,
@@ -713,12 +713,41 @@ export const experience = [
          {
             name: 'Microservices & APIs',
             description:
-               'Built and maintained scalable microservices to enhance functionality and replace monolithic components. Leveraged technologies like Node.js, Fastify, JavaScript, JSON, XML, and Jest for development and testing. Integrated logging and monitoring in GCP to ensure system reliability. Led the development of a critical microservice that automated data submissions to a federal API. Developed robust solutions for data validation, format conversion (JSON to XML), and secure handling of Personally Identifiable Information (PII) using a proxy to process sensitive data.'
+               'Built and maintained scalable microservices to enhance functionality and replace monolithic components. Leveraged technologies like Node.js, Fastify, JavaScript, JSON, XML, and Jest for development and testing. Integrated logging and monitoring in GCP to ensure system reliability. Led the development of a critical microservice that automated data submissions to a federal API. Developed robust solutions for data validation, format conversion (JSON to XML), and secure handling of Personally Identifiable Information (PII) using a proxy to process sensitive data.',
+            skillNames: [
+               'JavaScript',
+               'NodeJS',
+               'Fastify',
+               'Python',
+               'Jest',
+               'A/B Testing',
+               'Multivariate Experimentation',
+               'LaunchDarkly',
+               'Microservices',
+               'GCP',
+               'Docker',
+               'Colima',
+               'Kubernetes',
+               'Terraform'
+            ]
          },
          {
             name: 'UI Development & Integration',
             description:
-               'Built and maintained UI features across various repositories, including React/Redux/Styled Components and Vue.js/Vuex/CSS Modules. Developed interactive components to facilitate seamless user data collection and request submission to backend services.'
+               'Built and maintained UI features across various repositories, including React/Redux/Styled Components and Vue.js/Vuex/CSS Modules. Developed interactive components to facilitate seamless user data collection and request submission to backend services.',
+            skillNames: [
+               'JavaScript',
+               'NodeJS',
+               'React.js',
+               'Vue.js',
+               'CSS',
+               'Styled Components',
+               'Jest',
+               'Cypress',
+               'A/B Testing',
+               'Multivariate Experimentation',
+               'LaunchDarkly'
+            ]
          },
          {
             name: 'Public Website',
@@ -727,12 +756,38 @@ export const experience = [
             moreInfoLink: {
                href: '/experience/zb-seo',
                text: 'Read more about optimizing the website...'
-            }
+            },
+            skillNames: [
+               'WordPress',
+               'PHP',
+               'CSS',
+               'Sass/SCSS',
+               'JavaScript',
+               'Responsive Design',
+               'SEO',
+               'Performance Optimization',
+               'A/B Testing',
+               'Multivariate Experimentation',
+               'LaunchDarkly'
+            ]
          },
          {
             name: 'Experimentation',
             description:
-               'Led planning, building, tracking, and reporting on A/B and multivariate tests. Collaborated with Design and Product teams to develop hypotheses, define metrics, and design variants. Built variants. Worked with Data teams to analyze and present results. Partnered with stakeholders to confirm winners, implement solutions, and plan follow-up tests. Mentored senior engineers on testing and coding practices. Facilitated the transition to LaunchDarkly as our needs became too complex for Google Optimize. Trained other teams and presented to stakeholders regarding experimentation and LaunchDarkly. Acquired LaunchDarkly Gold Certification and provided ongoing support.'
+               'Led planning, building, tracking, and reporting on A/B and multivariate tests. Collaborated with Design and Product teams to develop hypotheses, define metrics, and design variants. Built variants. Worked with Data teams to analyze and present results. Partnered with stakeholders to confirm winners, implement solutions, and plan follow-up tests. Mentored senior engineers on testing and coding practices. Facilitated the transition to LaunchDarkly as our needs became too complex for Google Optimize. Trained other teams and presented to stakeholders regarding experimentation and LaunchDarkly. Acquired LaunchDarkly Gold Certification and provided ongoing support.',
+            skillNames: [
+               'A/B Testing',
+               'Multivariate Experimentation',
+               'LaunchDarkly',
+               'JavaScript',
+               'React.js',
+               'Vue.js',
+               'PHP',
+               'CSS',
+               'Sass/SCSS',
+               'Styled Components',
+               'Responsive Design'
+            ]
          },
          {
             name: 'Mentoring & Leadership',
@@ -800,9 +855,35 @@ export const experience = [
       end: '2021-12',
       duties: [
          {
-            name: '',
+            name: 'App Development',
             description:
-               'Built and oversaw business operations and projects. Developed hundreds of custom SPAs using Node, JavaScript and React. Built a library of reusable components to speed delivery of custom applications. Designed and built our company website with WordPress, PHP, JavaScript including custom templates, menus, and widgets, to facilitate frequent updates. Led SEO, marketing and sales efforts. Established and maintained relationships with over 50 organizations including state and federal agencies, restaurants like Sizzler and Outback, universities, and large corporations like Unilever.'
+               'Built and oversaw business operations and projects. Developed hundreds of custom SPAs using Node, React, JavaScript and CSS. Built a library of reusable components to speed delivery of custom applications.',
+            skillNames: [
+               'JavaScript',
+               'NodeJS',
+               'React.js',
+               'CSS',
+               'CSS Modules',
+               'Styled Components',
+               'Responsive Design'
+            ]
+         },
+         {
+            name: 'Web Development, SEO & Optimization',
+            description:
+               'Designed and built our company website with WordPress, PHP, JavaScript including custom templates, menus, and widgets, to facilitate frequent updates. Led SEO, marketing and sales efforts.',
+            skillNames: [
+               'WordPress',
+               'PHP',
+               'JavaScript',
+               'SEO',
+               'Performance Optimization'
+            ]
+         },
+         {
+            name: 'Everything Else',
+            description:
+               'Established and maintained relationships with over 50 organizations including state and federal agencies, restaurants like Sizzler and Outback, universities, and large corporations like Unilever.'
          }
       ]
    },
@@ -846,8 +927,8 @@ export const projects = [
       year: '2025',
       tech: [
          'Next.js',
-         'Tailwind CSS',
-         'Node.js',
+         'Tailwind',
+         'NodeJS',
          'nodemailer',
          'dayjs',
          'Turbopack',
@@ -872,10 +953,9 @@ export const projects = [
       tech: [
          'React.js',
          'Redux',
-         'Thunk',
          'Styled Components',
          'Prime React',
-         'Node.js',
+         'NodeJS',
          'Fastify',
          'Mongoose',
          'MongoDB'
@@ -905,14 +985,14 @@ export const projects = [
       name: 'Dashboard Widgets',
       year: '2021',
       tech: [
-         'node.js',
+         'NodeJS',
          'React.js',
          'TypeScript',
          'React Simple Maps',
          'Recharts',
          'd3js',
          'Fabric UI',
-         'SCSS',
+         'Sass/SCSS',
          'Microsoft Graph API',
          'Gulp',
          'Webpack'
@@ -939,12 +1019,12 @@ export const projects = [
       name: 'Radial Progress Bar',
       year: '2020',
       tech: [
-         'node.js',
+         'NodeJS',
          'React.js',
          'TypeScript',
          'Recharts',
          'd3js',
-         'SCSS',
+         'Sass/SCSS',
          'Microsoft Graph API',
          'Gulp',
          'Webpack'
@@ -975,13 +1055,13 @@ export const projects = [
       name: 'Map-based data display',
       year: '2020',
       tech: [
-         'node.js',
+         'NodeJS',
          'React.js',
          'TypeScript',
          'React Simple Maps',
          'Recharts',
          'd3js',
-         'SCSS',
+         'Sass/SCSS',
          'Microsoft Graph API',
          'Gulp',
          'Webpack'
@@ -1006,12 +1086,12 @@ export const projects = [
       name: 'Weather Widget',
       year: '2020',
       tech: [
-         'node.js',
+         'NodeJS',
          'React.js',
          'TypeScript',
          'Fabric UI',
          'moment.js',
-         'SCSS',
+         'Sass/SCSS',
          'Gulp',
          'Webpack'
       ],
@@ -1054,12 +1134,12 @@ export const projects = [
       name: 'Org Chart',
       year: '2021',
       tech: [
-         'node.js',
+         'NodeJS',
          'React.js',
          'TypeScript',
          'React Org Chart',
          'React Treebeard',
-         'SCSS',
+         'Sass/SCSS',
          'Microsoft Graph API',
          'Gulp',
          'Webpack'
@@ -1088,12 +1168,12 @@ export const projects = [
       name: 'Org Directory',
       year: '2021',
       tech: [
-         'node.js',
+         'NodeJS',
          'React.js',
          'TypeScript',
          'Fabric UI',
          'React Treebeard',
-         'SCSS',
+         'Sass/SCSS',
          'Microsoft Graph API',
          'Gulp',
          'Webpack'
@@ -1122,11 +1202,11 @@ export const projects = [
       name: 'Form Builder',
       year: '2021',
       tech: [
-         'node.js',
+         'NodeJS',
          'React.js',
          'TypeScript',
          'Fabric UI',
-         'SCSS',
+         'Sass/SCSS',
          'Microsoft Graph API',
          'Gulp',
          'Webpack'
@@ -1158,12 +1238,12 @@ export const projects = [
       name: 'Team Site Directory',
       year: '2021',
       tech: [
-         'node.js',
+         'NodeJS',
          'React.js',
          'TypeScript',
          'React Treebeard',
          'Fabric UI',
-         'SCSS',
+         'Sass/SCSS',
          'Microsoft Graph API',
          'Gulp',
          'Webpack'
@@ -1188,13 +1268,13 @@ export const projects = [
       name: 'Stock Widget',
       year: '2020',
       tech: [
-         'node.js',
+         'NodeJS',
          'React.js',
          'TypeScript',
          'Recharts',
          'Fabric UI',
          'moment.js',
-         'SCSS',
+         'Sass/SCSS',
          'Gulp',
          'Webpack'
       ],
@@ -1222,14 +1302,14 @@ export const projects = [
       name: 'Agenda Builder',
       year: '2021',
       tech: [
-         'node.js',
+         'NodeJS',
          'React.js',
          'TypeScript',
          'React Beautiful DnD',
          'React Treebeard',
          'Fabric UI',
          'moment.js',
-         'SCSS',
+         'Sass/SCSS',
          'Gulp',
          'Webpack'
       ],
@@ -1257,12 +1337,12 @@ export const projects = [
       name: 'Assessment Checklist',
       year: '2021',
       tech: [
-         'node.js',
+         'NodeJS',
          'React.js',
          'TypeScript',
          'Fabric UI',
          'moment.js',
-         'SCSS',
+         'Sass/SCSS',
          'Microsoft Graph API',
          'Gulp',
          'Webpack'
@@ -1287,12 +1367,12 @@ export const projects = [
       name: 'Classifieds & Events',
       year: '2021',
       tech: [
-         'node.js',
+         'NodeJS',
          'React.js',
          'TypeScript',
          'Fabric UI',
          'dayjs',
-         'SCSS',
+         'Sass/SCSS',
          'Gulp',
          'Webpack'
       ],
@@ -1316,11 +1396,11 @@ export const projects = [
       name: 'Contact Directory',
       year: '2021',
       tech: [
-         'node.js',
+         'NodeJS',
          'React.js',
          'TypeScript',
          'Fabric UI',
-         'SCSS',
+         'Sass/SCSS',
          'Microsoft Graph',
          'Gulp',
          'Webpack'
@@ -1442,3 +1522,13 @@ const yearsSinceLearned = function () {
 skills.forEach(skill => {
    skill.yearsSinceLearned = yearsSinceLearned;
 });
+
+export const skillIcon = skills.map(skill => skill.cloudinary);
+export const skillIcons = (skillNames = []) => {
+   return skills
+      .filter(skill => skillNames.includes(skill.name))
+      .map(skill => ({
+         src: skill.cloudinary,
+         altText: skill.name
+      }));
+};

@@ -7,7 +7,8 @@ const JobHeader = ({ job }) => {
       <div className="mb-4">
          <HeadingTwo>{role}</HeadingTwo>
          <div className="text-lg font-semibold">
-            {company} in {location}
+            {company}
+            <span className="text-bb-gray-300"> in {location}</span>
          </div>
          <SubtleText>{duration(start, end)}</SubtleText>
       </div>

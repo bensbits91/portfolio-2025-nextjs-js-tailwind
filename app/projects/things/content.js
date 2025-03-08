@@ -1,6 +1,15 @@
 const content = {
    heading: 'Things App v2.0',
    subheading: 'Very much a WIP ;)',
+   skillNames: [
+      'NodeJS',
+      'Fastify',
+      'MongoDB',
+      'React.js',
+      'Next.js',
+      'CSS Modules',
+      'Responsive Design'
+   ],
    sections: [
       {
          heading: 'Overview',
@@ -39,7 +48,7 @@ const content = {
          ]
       },
       {
-         heading: 'Wanna chat?',
+         heading: 'Need help?',
          layout: 'Cta',
          bigBottom: true,
          content: [

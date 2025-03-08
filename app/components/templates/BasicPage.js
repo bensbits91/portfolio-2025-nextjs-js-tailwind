@@ -11,10 +11,11 @@ import {
    P,
    UL
 } from '@/app/components/typography';
-import { Breadcrumb, Cta, CodeLink } from '@/app/components/common';
+import { Breadcrumb, Cta, CodeLink, IconBar } from '@/app/components/common';
+import { skillIcons } from '@/app/data';
 
 const BasicPage = ({ content }) => {
-   const { heading, subheading, sections } = content;
+   const { heading, subheading, skillNames, sections } = content;
 
    const ContentItem = ({ item }) => {
       if (typeof item === 'string') {
@@ -32,6 +33,12 @@ const BasicPage = ({ content }) => {
             <HeroSection>
                <HeadingOne>{heading}</HeadingOne>
                <SubtleText textCenter>{subheading}</SubtleText>
+
+               {skillNames && (
+                  <div className="my-2">
+                     <IconBar icons={skillIcons(skillNames)} centered />
+                  </div>
+               )}
             </HeroSection>
          )}
 

@@ -5,6 +5,7 @@ import Link from 'next/link';
 const Breadcrumb = () => {
    const pathname = usePathname();
    const pathParts = pathname.split('/').filter(part => part); // removes empty strings
+
    return (
       <div className="absolute top-20 bg-background pl-4 text-xs">
          <span>

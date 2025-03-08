@@ -1,6 +1,18 @@
 const content = {
    heading: 'SEO & Web Optimization',
    subheading: 'Core Web Vitals, Performance, Accessibility, and more',
+   skillNames: [
+      'WordPress',
+      'PHP',
+      'JavaScript',
+      'CSS',
+      'Cloudinary',
+      'SEO',
+      'Web Optimization',
+      'Core Web Vitals',
+      'Performance',
+      'Accessibility'
+   ],
    sections: [
       {
          heading: 'Overview',
