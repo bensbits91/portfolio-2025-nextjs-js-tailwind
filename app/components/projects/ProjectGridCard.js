@@ -1,9 +1,9 @@
 import { CloudinaryImage } from '@/app/components/image';
 import { HeadingThree } from '@/app/components/typography';
+import { IconBar } from '@/app/components/common';
+import { skillIcons } from '@/app/data';
 
-const ProjectGridCard = (
-   { project, handleClick }
-) => {
+const ProjectGridCard = ({ project, handleClick }) => {
    const { name, tech } = project;
    const featuredImage = project.getFeaturedImage();
 
@@ -20,7 +20,7 @@ const ProjectGridCard = (
    const clickableImageElement = (
       <div
          onClick={handleClick}
-         className="mb-4 inline-block lg:cursor-pointer overflow-hidden rounded-sm border-2 border-bb-gray-900 hover-delay hover-brightness hover-scale">
+         className="hover-delay hover-brightness hover-scale mb-4 inline-block overflow-hidden rounded-sm border-2 border-bb-gray-900 lg:cursor-pointer">
          {imageElement}
       </div>
    );
@@ -32,18 +32,18 @@ const ProjectGridCard = (
       : nonClickableImageElement;
 
    return (
-      <div className="rounded-lg p-8 shadow-dark-card border-2 border-bb-gray-900">
+      <div className="rounded-lg border-2 border-bb-gray-900 p-8 shadow-dark-card">
          <HeadingThree>{name}</HeadingThree>
          {featuredImage && imageToDisplay}
          {tech.length > 0 && (
-            <p className="text-sm text-gray-500">
-               {(project?.tech).join('\xA0| ')}
-            </p>
+            <div className="my-2">
+               <IconBar icons={skillIcons(tech)} />
+            </div>
          )}
          {handleClick && (
             <button
                onClick={handleClick}
-               className="mt-12 rounded-sm bg-bb-teal p-4 text-center font-roboto-sans text-sm tracking-wide text-bb-gray hover-delay hover-brightness hover-scale">
+               className="hover-delay hover-brightness hover-scale mt-12 rounded-sm bg-bb-teal p-4 text-center font-roboto-sans text-sm tracking-wide text-bb-gray">
                View Project Details
             </button>
          )}

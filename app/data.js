@@ -92,7 +92,7 @@ export const skills = [
       stackCategory: 'Framework',
       name: 'Next.js',
       icon: '/next.svg',
-      cloudinary: 'next_tpw7a4',
+      cloudinary: 'nextjs_jxdbqq',
       yearLearned: 2020,
       years: 2,
       rating: 9,
@@ -713,22 +713,81 @@ export const experience = [
          {
             name: 'Microservices & APIs',
             description:
-               'Built and maintained scalable microservices to enhance functionality and replace monolithic components. Leveraged technologies like Node.js, Fastify, JavaScript, JSON, XML, and Jest for development and testing. Integrated logging and monitoring in GCP to ensure system reliability. Led the development of a critical microservice that automated data submissions to a federal API. Developed robust solutions for data validation, format conversion (JSON to XML), and secure handling of Personally Identifiable Information (PII) using a proxy to process sensitive data.'
+               'Built and maintained scalable microservices to enhance functionality and replace monolithic components. Leveraged technologies like Node.js, Fastify, JavaScript, JSON, XML, and Jest for development and testing. Integrated logging and monitoring in GCP to ensure system reliability. Led the development of a critical microservice that automated data submissions to a federal API. Developed robust solutions for data validation, format conversion (JSON to XML), and secure handling of Personally Identifiable Information (PII) using a proxy to process sensitive data.',
+            skillNames: [
+               'JavaScript',
+               'NodeJS',
+               'Fastify',
+               'Python',
+               'Jest',
+               'A/B Testing',
+               'Multivariate Experimentation',
+               'LaunchDarkly',
+               'Microservices',
+               'GCP',
+               'Docker',
+               'Colima',
+               'Kubernetes',
+               'Terraform'
+            ]
          },
          {
             name: 'UI Development & Integration',
             description:
-               'Built and maintained UI features across various repositories, including React/Redux/Styled Components and Vue.js/Vuex/CSS Modules. Developed interactive components to facilitate seamless user data collection and request submission to backend services.'
+               'Built and maintained UI features across various repositories, including React/Redux/Styled Components and Vue.js/Vuex/CSS Modules. Developed interactive components to facilitate seamless user data collection and request submission to backend services.',
+            skillNames: [
+               'JavaScript',
+               'NodeJS',
+               'React.js',
+               'Vue.js',
+               'CSS',
+               'Styled Components',
+               'Jest',
+               'Cypress',
+               'A/B Testing',
+               'Multivariate Experimentation',
+               'LaunchDarkly'
+            ]
          },
          {
             name: 'Public Website',
             description:
-               'Enhanced the company’s public website using WordPress, PHP, CSS/SASS, and JavaScript. Supported the shift to a page-speed-based SEO strategy, collaborating with the SEO Team to meet performance targets (e.g. TTFB, LCP, CLS). Vastly improved page speed. Optimized code organization and performance. Planned, implemented, documented and supported an atomic component structure, facilitating quick and consistent development.'
+               "Enhanced the company's public website using WordPress, PHP, CSS/SASS, and JavaScript. Supported the shift to a page-speed-based SEO strategy, collaborating with the SEO Team to meet performance targets (e.g. TTFB, LCP, CLS). Vastly improved page speed. Optimized code organization and performance. Planned, implemented, documented and supported an atomic component structure, facilitating quick and consistent development.",
+            moreInfoLink: {
+               href: '/experience/zb-seo',
+               text: 'Read more about optimizing the website...'
+            },
+            skillNames: [
+               'WordPress',
+               'PHP',
+               'CSS',
+               'Sass/SCSS',
+               'JavaScript',
+               'Responsive Design',
+               'SEO',
+               'Performance Optimization',
+               'A/B Testing',
+               'Multivariate Experimentation',
+               'LaunchDarkly'
+            ]
          },
          {
             name: 'Experimentation',
             description:
-               'Led planning, building, tracking, and reporting on A/B and multivariate tests. Collaborated with Design and Product teams to develop hypotheses, define metrics, and design variants. Built variants. Worked with Data teams to analyze and present results. Partnered with stakeholders to confirm winners, implement solutions, and plan follow-up tests. Mentored senior engineers on testing and coding practices. Facilitated the transition to LaunchDarkly as our needs became too complex for Google Optimize. Trained other teams and presented to stakeholders regarding experimentation and LaunchDarkly. Acquired LaunchDarkly Gold Certification and provided ongoing support.'
+               'Led planning, building, tracking, and reporting on A/B and multivariate tests. Collaborated with Design and Product teams to develop hypotheses, define metrics, and design variants. Built variants. Worked with Data teams to analyze and present results. Partnered with stakeholders to confirm winners, implement solutions, and plan follow-up tests. Mentored senior engineers on testing and coding practices. Facilitated the transition to LaunchDarkly as our needs became too complex for Google Optimize. Trained other teams and presented to stakeholders regarding experimentation and LaunchDarkly. Acquired LaunchDarkly Gold Certification and provided ongoing support.',
+            skillNames: [
+               'A/B Testing',
+               'Multivariate Experimentation',
+               'LaunchDarkly',
+               'JavaScript',
+               'React.js',
+               'Vue.js',
+               'PHP',
+               'CSS',
+               'Sass/SCSS',
+               'Styled Components',
+               'Responsive Design'
+            ]
          },
          {
             name: 'Mentoring & Leadership',
@@ -796,9 +855,35 @@ export const experience = [
       end: '2021-12',
       duties: [
          {
-            name: '',
+            name: 'App Development',
             description:
-               'Built and oversaw business operations and projects. Developed hundreds of custom SPAs using Node, JavaScript and React. Built a library of reusable components to speed delivery of custom applications. Designed and built our company website with WordPress, PHP, JavaScript including custom templates, menus, and widgets, to facilitate frequent updates. Led SEO, marketing and sales efforts. Established and maintained relationships with over 50 organizations including state and federal agencies, restaurants like Sizzler and Outback, universities, and large corporations like Unilever.'
+               'Built and oversaw business operations and projects. Developed hundreds of custom SPAs using Node, React, JavaScript and CSS. Built a library of reusable components to speed delivery of custom applications.',
+            skillNames: [
+               'JavaScript',
+               'NodeJS',
+               'React.js',
+               'CSS',
+               'CSS Modules',
+               'Styled Components',
+               'Responsive Design'
+            ]
+         },
+         {
+            name: 'Web Development, SEO & Optimization',
+            description:
+               'Designed and built our company website with WordPress, PHP, JavaScript including custom templates, menus, and widgets, to facilitate frequent updates. Led SEO, marketing and sales efforts.',
+            skillNames: [
+               'WordPress',
+               'PHP',
+               'JavaScript',
+               'SEO',
+               'Performance Optimization'
+            ]
+         },
+         {
+            name: 'Everything Else',
+            description:
+               'Established and maintained relationships with over 50 organizations including state and federal agencies, restaurants like Sizzler and Outback, universities, and large corporations like Unilever.'
          }
       ]
    },
@@ -842,8 +927,8 @@ export const projects = [
       year: '2025',
       tech: [
          'Next.js',
-         'Tailwind CSS',
-         'Node.js',
+         'Tailwind',
+         'NodeJS',
          'nodemailer',
          'dayjs',
          'Turbopack',
@@ -868,10 +953,9 @@ export const projects = [
       tech: [
          'React.js',
          'Redux',
-         'Thunk',
          'Styled Components',
          'Prime React',
-         'Node.js',
+         'NodeJS',
          'Fastify',
          'Mongoose',
          'MongoDB'
@@ -901,14 +985,14 @@ export const projects = [
       name: 'Dashboard Widgets',
       year: '2021',
       tech: [
-         'node.js',
+         'NodeJS',
          'React.js',
          'TypeScript',
          'React Simple Maps',
          'Recharts',
          'd3js',
          'Fabric UI',
-         'SCSS',
+         'Sass/SCSS',
          'Microsoft Graph API',
          'Gulp',
          'Webpack'
@@ -935,12 +1019,12 @@ export const projects = [
       name: 'Radial Progress Bar',
       year: '2020',
       tech: [
-         'node.js',
+         'NodeJS',
          'React.js',
          'TypeScript',
          'Recharts',
          'd3js',
-         'SCSS',
+         'Sass/SCSS',
          'Microsoft Graph API',
          'Gulp',
          'Webpack'
@@ -971,13 +1055,13 @@ export const projects = [
       name: 'Map-based data display',
       year: '2020',
       tech: [
-         'node.js',
+         'NodeJS',
          'React.js',
          'TypeScript',
          'React Simple Maps',
          'Recharts',
          'd3js',
-         'SCSS',
+         'Sass/SCSS',
          'Microsoft Graph API',
          'Gulp',
          'Webpack'
@@ -1002,12 +1086,12 @@ export const projects = [
       name: 'Weather Widget',
       year: '2020',
       tech: [
-         'node.js',
+         'NodeJS',
          'React.js',
          'TypeScript',
          'Fabric UI',
          'moment.js',
-         'SCSS',
+         'Sass/SCSS',
          'Gulp',
          'Webpack'
       ],
@@ -1050,12 +1134,12 @@ export const projects = [
       name: 'Org Chart',
       year: '2021',
       tech: [
-         'node.js',
+         'NodeJS',
          'React.js',
          'TypeScript',
          'React Org Chart',
          'React Treebeard',
-         'SCSS',
+         'Sass/SCSS',
          'Microsoft Graph API',
          'Gulp',
          'Webpack'
@@ -1084,12 +1168,12 @@ export const projects = [
       name: 'Org Directory',
       year: '2021',
       tech: [
-         'node.js',
+         'NodeJS',
          'React.js',
          'TypeScript',
          'Fabric UI',
          'React Treebeard',
-         'SCSS',
+         'Sass/SCSS',
          'Microsoft Graph API',
          'Gulp',
          'Webpack'
@@ -1118,11 +1202,11 @@ export const projects = [
       name: 'Form Builder',
       year: '2021',
       tech: [
-         'node.js',
+         'NodeJS',
          'React.js',
          'TypeScript',
          'Fabric UI',
-         'SCSS',
+         'Sass/SCSS',
          'Microsoft Graph API',
          'Gulp',
          'Webpack'
@@ -1130,7 +1214,8 @@ export const projects = [
       codeLink: 'https://github.com/bensbits91/vertical-growing-form',
       description:
          'Enables form admins to build different journeys for different types requests. Using intuitive tools, admins can add, remove, and rearrange steps, fields, sections and pages. Admins can also control branching and conditional logic, as well as choosing from different display styles.',
-      motivation: 'Provide clients an easy way to build and manage custom forms. Provide different presentation methods to help make filling out forms less mundane',
+      motivation:
+         'Provide clients an easy way to build and manage custom forms. Provide different presentation methods to help make filling out forms less mundane',
       outcome: 'Popular among clients. Easy to customize and use.',
       images: [
          {
@@ -1153,19 +1238,21 @@ export const projects = [
       name: 'Team Site Directory',
       year: '2021',
       tech: [
-         'node.js',
+         'NodeJS',
          'React.js',
          'TypeScript',
          'React Treebeard',
          'Fabric UI',
-         'SCSS',
+         'Sass/SCSS',
          'Microsoft Graph API',
          'Gulp',
          'Webpack'
       ],
       codeLink: 'https://github.com/bensbits91/site-directory',
-      description: 'Automatically detects sites and subsites in a site collection. Displays them in a visually-appealing way. Easy to customize and use.',
-      motivation: 'Provide clients with a no-config, visually-appealing way to display their site collections.',
+      description:
+         'Automatically detects sites and subsites in a site collection. Displays them in a visually-appealing way. Easy to customize and use.',
+      motivation:
+         'Provide clients with a no-config, visually-appealing way to display their site collections.',
       outcome: 'Popular among clients. Easy to customize and use.',
       images: [
          { name: 'spfxSiteExplorer_focus_bhu8j7', hideFromModal: true },
@@ -1181,19 +1268,21 @@ export const projects = [
       name: 'Stock Widget',
       year: '2020',
       tech: [
-         'node.js',
+         'NodeJS',
          'React.js',
          'TypeScript',
          'Recharts',
          'Fabric UI',
          'moment.js',
-         'SCSS',
+         'Sass/SCSS',
          'Gulp',
          'Webpack'
       ],
       codeLink: 'https://github.com/bensbits91/stock-widget',
-      description: 'Simple, animated stock widget. Composable to incorporate multiple stocks.',
-      motivation: 'Provide clients with a visually-appealing way to display stock data.',
+      description:
+         'Simple, animated stock widget. Composable to incorporate multiple stocks.',
+      motivation:
+         'Provide clients with a visually-appealing way to display stock data.',
       outcome: 'Moderately popular among clients. Easy to customize and use.',
       images: [
          { name: 'sharepoint-stocks-widget-dark_b7lzrd', hideFromModal: true },
@@ -1213,14 +1302,14 @@ export const projects = [
       name: 'Agenda Builder',
       year: '2021',
       tech: [
-         'node.js',
+         'NodeJS',
          'React.js',
          'TypeScript',
          'React Beautiful DnD',
          'React Treebeard',
          'Fabric UI',
          'moment.js',
-         'SCSS',
+         'Sass/SCSS',
          'Gulp',
          'Webpack'
       ],
@@ -1229,8 +1318,7 @@ export const projects = [
          'Drag and drop to change the order of items... Editable agenda item details... This demo has minimal styling to facilitate customer-specific branding and easy integration into other projects.',
       motivation:
          'To provide to multiple customers. To gain experience with drag and drop.',
-      outcome:
-         'Used by multiple customers. Easy to customize and use.',
+      outcome: 'Used by multiple customers. Easy to customize and use.',
       images: [
          {
             name: 'sharepoint-agenda-builder-dnd_vn1e8a',
@@ -1249,19 +1337,21 @@ export const projects = [
       name: 'Assessment Checklist',
       year: '2021',
       tech: [
-         'node.js',
+         'NodeJS',
          'React.js',
          'TypeScript',
          'Fabric UI',
          'moment.js',
-         'SCSS',
+         'Sass/SCSS',
          'Microsoft Graph API',
          'Gulp',
          'Webpack'
       ],
       codeLink: 'https://github.com/bensbits91/project-assessment-tool',
-      description: 'Powerful tool for tracking and assessing project progress. Colors change as progress is made. Permitted users can sign approval.',
-      motivation: 'Provide clients with an engaging and powerful tool for tracking and assessing project progress.',
+      description:
+         'Powerful tool for tracking and assessing project progress. Colors change as progress is made. Permitted users can sign approval.',
+      motivation:
+         'Provide clients with an engaging and powerful tool for tracking and assessing project progress.',
       outcome: 'Popular among clients. Easy to customize and use.',
       images: [
          { name: 'assessment-checklist_joi1zh', hideFromModal: true },
@@ -1277,18 +1367,20 @@ export const projects = [
       name: 'Classifieds & Events',
       year: '2021',
       tech: [
-         'node.js',
+         'NodeJS',
          'React.js',
          'TypeScript',
          'Fabric UI',
          'dayjs',
-         'SCSS',
+         'Sass/SCSS',
          'Gulp',
          'Webpack'
       ],
       codeLink: 'https://github.com/bensbits91/classifieds-2021',
-      description: 'Provide a social aspect for employees. Post, find and communicate about items and services. Announce and track events. Moderators can approve posts or request changes.',
-      motivation: 'Inject some fun into the workplace. Provide a way for employees to connect and share.',
+      description:
+         'Provide a social aspect for employees. Post, find and communicate about items and services. Announce and track events. Moderators can approve posts or request changes.',
+      motivation:
+         'Inject some fun into the workplace. Provide a way for employees to connect and share.',
       outcome: 'Very popular. Easy to customize and use.',
       images: [
          { name: 'spfxClassifieds_focus_ab3e7m', hideFromModal: true },
@@ -1304,18 +1396,20 @@ export const projects = [
       name: 'Contact Directory',
       year: '2021',
       tech: [
-         'node.js',
+         'NodeJS',
          'React.js',
          'TypeScript',
          'Fabric UI',
-         'SCSS',
+         'Sass/SCSS',
          'Microsoft Graph',
          'Gulp',
          'Webpack'
       ],
       codeLink: 'https://github.com/bensbits91/spfxContactSearch',
-      description: 'Fast and easy to use. Search by name, department, location, etc. Click to call, email, or chat. View org chart. Automatically syncs with existing data.',
-      motivation: 'Provide a more engaging way to access contact information. Provide a way to easily find and connect with coworkers.',
+      description:
+         'Fast and easy to use. Search by name, department, location, etc. Click to call, email, or chat. View org chart. Automatically syncs with existing data.',
+      motivation:
+         'Provide a more engaging way to access contact information. Provide a way to easily find and connect with coworkers.',
       outcome: 'Popular among clients. Easy to customize and use.',
       images: [
          { name: 'spfxContactSearch_focus_z4jkqy', hideFromModal: true },
@@ -1428,3 +1522,13 @@ const yearsSinceLearned = function () {
 skills.forEach(skill => {
    skill.yearsSinceLearned = yearsSinceLearned;
 });
+
+export const skillIcon = skills.map(skill => skill.cloudinary);
+export const skillIcons = (skillNames = []) => {
+   return skills
+      .filter(skill => skillNames.includes(skill.name))
+      .map(skill => ({
+         src: skill.cloudinary,
+         altText: skill.name
+      }));
+};
