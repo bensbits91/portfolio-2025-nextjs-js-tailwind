@@ -10,8 +10,16 @@ import { CodeLink } from '@/app/components/common';
 // todo: typography and layout components; better classes/style
 
 const ProjectGridModal = ({ modalData, closeModal }) => {
-   const { name, description, tech, codeLink, year, motivation, outcome } =
-      modalData || {};
+   const {
+      name,
+      description,
+      tech,
+      liveLink,
+      codeLink,
+      year,
+      motivation,
+      outcome
+   } = modalData || {};
    const images = modalData?.getMadalImages();
 
    const CloseButton = () => (
@@ -38,6 +46,11 @@ const ProjectGridModal = ({ modalData, closeModal }) => {
                </Subheading>
             )}
             <div className="flex flex-col gap-4">
+               {liveLink && (
+                  <a href={liveLink} target="_blank" rel="noopener noreferrer">
+                     View this project at: {liveLink}
+                  </a>
+               )}
                {codeLink && (
                   <CodeLink codeLink={{ href: codeLink, text: 'View Code' }} />
                )}

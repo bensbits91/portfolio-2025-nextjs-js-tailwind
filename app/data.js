@@ -920,10 +920,41 @@ export const experience = [
 ];
 export const projects = [
    {
+      name: 'My contracting website',
+      year: '2025',
+      tech: [
+         'Next.js',
+         'React.js',
+         'JavaScript',
+         'CSS Modules',
+         'NodeJS',
+         'nodemailer',
+         'Turbopack',
+         'Vercel',
+         'Cloudinary',
+         'Mongoose',
+         'MongoDB'
+      ],
+      liveLink: 'https://www.benbdev.com',
+      codeLink:
+         'https://github.com/bensbits91/contracts-website',
+      description:
+         "My website that helps find and manage my clients.",
+      motivation:
+         'To help my clients understand tech, plan projects and ask questions. To help me manage my clients and projects. To practice some skills.',
+      outcome:
+         'A clean, responsive, and accessible website that meets my needs and is easy to update and maintain. Hosted on Vercel with a custom domain benbdev.com. Static content stored as markdown (.md) files, rendered in server components using react-markdown and in client components using markdown-to-jsx. Dynamic content stored as JSON.',
+      images: [{ name: 'contracts-home_mpofmm' }, { name: 'contracts-quote_nfli3y' }, { name: 'contracts-faq_mya3pz' }],
+      showInProjectsGallery: true,
+      featureOnHome: true
+   },
+   {
       name: 'This website',
       year: '2025',
       tech: [
          'Next.js',
+         'React.js',
+         'JavaScript',
          'Tailwind',
          'NodeJS',
          'nodemailer',
@@ -935,7 +966,7 @@ export const projects = [
       codeLink:
          'https://github.com/bensbits91/portfolio-2025-nextjs-js-tailwind',
       description:
-         "My personal website, built in about a week... custom components and theme... atomic component structure, including custom typography and layout... minimal dependencies... content stored as JSON inside the project (simple but inconvenient, considering moving data to my mongodb atlas)... a few li'l custom animations and transitions... images stored in cloudinary and optimized using next/image... videos stored using Vercel Blob storage... contact form sends email using nodemailer... api routes for contact form and image/video storage... Turbopack for faster page loads... dayjs for date formatting... Tailwind CSS for styling... Next.js for SSR and SSG... Vercel for auto-deployment from GitHub...",
+         "My personal website, built in about a week... custom components and theme... atomic component structure, including custom typography and layout... minimal dependencies... content stored as JSON inside the project... a few li'l custom animations and transitions... images stored in cloudinary and optimized using next/image... videos stored using Vercel Blob storage... contact form sends email using nodemailer... api routes for contact form and image/video storage... Turbopack for faster page loads... dayjs for date formatting... Tailwind CSS for styling... Next.js for SSR and SSG... Vercel for auto-deployment from GitHub...",
       motivation:
          'To showcase my skills and experience. To brush the rust off some of my front-end skills.',
       outcome:
