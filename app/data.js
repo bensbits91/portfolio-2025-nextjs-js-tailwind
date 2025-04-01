@@ -920,7 +920,7 @@ export const experience = [
 ];
 export const projects = [
    {
-      name: 'My contracting website',
+      name: 'My Contracting Website',
       year: '2025',
       tech: [
          'Next.js',
@@ -949,7 +949,7 @@ export const projects = [
       featureOnHome: true
    },
    {
-      name: 'This website',
+      name: 'This Website',
       year: '2025',
       tech: [
          'Next.js',
@@ -1080,7 +1080,7 @@ export const projects = [
       featureOnHome: true
    },
    {
-      name: 'Map-based data display',
+      name: 'Geodata',
       year: '2020',
       tech: [
          'NodeJS',
