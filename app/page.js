@@ -21,7 +21,7 @@ const Home = () => {
             <HeadingOne>
                Bennett Brooks
             </HeadingOne>
-            <Subheading shrink color='yellow'>{about.summary}</Subheading>
+            <Subheading shrink color='white'>{about.summary}</Subheading>
             <Button link='/about'>About Ben</Button>
             {/* <WhisperText>{expertise.join(' | ')}</WhisperText> */}
          </HeroSection>
