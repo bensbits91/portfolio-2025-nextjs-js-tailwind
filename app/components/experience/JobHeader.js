@@ -6,11 +6,11 @@ const JobHeader = ({ job }) => {
    return (
       <div className="mb-8">
          <HeadingTwo>{role}</HeadingTwo>
-         <div className="pl-2 text-lg font-semibold">
+         <div className="md:pl-2 text-lg font-semibold">
             {company}
             <span className="text-bb-gray-300"> in {location}</span>
          </div>
-         <div className="pl-2">
+         <div className="md:pl-2">
             <SubtleText>{duration(start, end)}</SubtleText>
          </div>
       </div>
