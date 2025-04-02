@@ -7,18 +7,22 @@ import { maxWidthCode } from '@/app/utils';
 // maybe it should be the default layout (OneColumnSection by default doesn't have a bg)
 // which allows us to add bg to any section
 
-const Cta = ({ data, size = 'narrow', bigBottom = false }) => (
-   <section className='bg-bb-gray-800'>
-      <div className={`container mx-auto px-10 md:px-0 pt-10 md:pt-16 pb-20 md:pb-32 ${maxWidthCode(size)} ${
-               bigBottom ? 'mb-20 md:mb-32' : 'mb-0'
-            }`}>
-         <HeadingTwo>{data.heading}</HeadingTwo>
+const Cta = ({
+   data,
+   size = 'narrow',
+   bigBottom = false,
+   bg = 'transparent'
+}) => (
+   <section className={bg === 'teal' ? 'bg-bb-teal' : 'bg-transparent'}>
+      <div
+         className={`container mx-auto px-10 pb-20 pt-10 md:px-0 md:pb-32 md:pt-16 ${maxWidthCode(size)} ${
+            bigBottom ? 'mb-20 md:mb-32' : 'mb-0'
+         }`}>
+         <HeadingTwo color={bg === 'teal' ? 'gray' : ''}>{data.heading}</HeadingTwo>
          {data.content.map((text, index) => (
-            <P key={index}>
-               {text}
-            </P>
+            <P key={index} color='gray'>{text}</P>
          ))}
-         <Button link={data.link.href}>{data.link.text}</Button>
+         <Button inverted link={data.link.href}>{data.link.text}</Button>
       </div>
    </section>
 );

@@ -13,7 +13,7 @@ const TwoColumnSection = ({ heading = '', columns }) => {
                {columns.map((column, index) => (
                   <div
                      key={index}
-                     className={`px-10 mb-10 ${index % 2 === 0 ? 'md:pl-20' : 'md:pr-20'}`}>
+                     className={`px-6 mb-10 ${index % 2 === 0 ? 'md:pl-20' : 'md:pr-20'}`}>
                      {column.content}
                   </div>
                ))}

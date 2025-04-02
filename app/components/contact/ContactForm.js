@@ -205,7 +205,7 @@ const ContactForm = () => {
             <button
                type="submit"
                id="submitBtn"
-               className="mt-4 w-40 rounded-sm bg-bb-teal p-4 text-center font-roboto-sans text-sm tracking-wide text-bb-gray hover-delay hover-brightness">
+               className="hover-delay hover-brightness mt-4 w-full rounded-sm bg-bb-teal p-4 text-center font-roboto-sans text-sm tracking-wide text-bb-gray md:w-40">
                Send
             </button>
          </form>

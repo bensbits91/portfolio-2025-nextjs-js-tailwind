@@ -4,7 +4,7 @@ import { generateStars } from '@/app/utils';
 const SkillItem = ({ item }) => {
    const { name, cloudinary, rating, years } = item;
    return (
-      <li className="border-b border-bb-gray-800 py-2">
+      <li className="py-1">
          <div className="grid h-10 grid-cols-[1fr,3fr,3fr,3fr] items-center gap-4">
             {cloudinary && (
                <div className="mr-2 flex h-4 w-4">

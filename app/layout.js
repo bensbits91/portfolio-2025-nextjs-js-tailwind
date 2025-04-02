@@ -6,7 +6,7 @@ import { Footer } from './components/footer';
 import './globals.css';
 
 const robotoSans = Roboto({
-   weight: '700',
+   weight: '400',
    variable: '--font-roboto-sans',
    subsets: ['latin'],
    display: 'swap'
@@ -36,7 +36,7 @@ export default async function RootLayout({ children }) {
             />
          </Head>
          <body
-            className={`${robotoMono.variable} ${robotoSans.variable} antialiased`}>
+            className={`${robotoSans.variable} ${robotoMono.variable} antialiased`}>
             <Nav />
             <main>
                {children}

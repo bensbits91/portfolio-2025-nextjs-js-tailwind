@@ -91,6 +91,10 @@ export const getYearsSince = date => {
 // theme helpers
 export const colorCode = color => {
    switch (color) {
+      case 'white':
+         return 'text-foreground';
+      case 'gray':
+         return 'text-bb-gray';
       case 'blue':
          return 'text-bb-blue';
       case 'jade':

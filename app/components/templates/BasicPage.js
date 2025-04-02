@@ -32,11 +32,11 @@ const BasicPage = ({ content }) => {
          {heading && (
             <HeroSection>
                <HeadingOne>{heading}</HeadingOne>
-               <SubtleText textCenter>{subheading}</SubtleText>
+               <SubtleText>{subheading}</SubtleText>
 
                {skillNames && (
                   <div className="my-2">
-                     <IconBar icons={skillIcons(skillNames)} centered />
+                     <IconBar icons={skillIcons(skillNames)} />
                   </div>
                )}
             </HeroSection>
@@ -54,7 +54,7 @@ const BasicPage = ({ content }) => {
 
                if (layout === 'Cta') {
                   return (
-                     <Cta key={index} data={section} bigBottom={bigBottom} />
+                     <Cta key={index} data={section} bigBottom={bigBottom} bg='teal' />
                   );
                }
 

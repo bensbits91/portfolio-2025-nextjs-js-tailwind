@@ -711,24 +711,6 @@ export const experience = [
       end: '2024-12',
       duties: [
          {
-            name: 'Microservices & APIs',
-            description:
-               'Built and maintained scalable microservices to enhance functionality and replace monolithic components. Leveraged technologies like Node.js, Fastify, JavaScript, JSON, XML, and Jest for development and testing. Integrated logging and monitoring in GCP to ensure system reliability. Led the development of a critical microservice that automated data submissions to a federal API. Developed robust solutions for data validation, format conversion (JSON to XML), and secure handling of Personally Identifiable Information (PII) using a proxy to process sensitive data.',
-            skillNames: [
-               'JavaScript',
-               'NodeJS',
-               'Fastify',
-               'Python',
-               'Jest',
-               'Microservices',
-               'GCP',
-               'Docker',
-               'Colima',
-               'Kubernetes',
-               'Terraform'
-            ]
-         },
-         {
             name: 'UI Development & Integration',
             description:
                'Built and maintained UI features across various repositories, including React/Redux/Styled Components and Vue.js/Vuex/CSS Modules. Developed interactive components to facilitate seamless user data collection and request submission to backend services.',
@@ -766,6 +748,24 @@ export const experience = [
                'A/B Testing',
                'Multivariate Experimentation',
                'LaunchDarkly'
+            ]
+         },
+         {
+            name: 'Microservices & APIs',
+            description:
+               'Built and maintained scalable microservices to enhance functionality and replace monolithic components. Leveraged technologies like Node.js, Fastify, JavaScript, JSON, XML, and Jest for development and testing. Integrated logging and monitoring in GCP to ensure system reliability. Led the development of a critical microservice that automated data submissions to a federal API. Developed robust solutions for data validation, format conversion (JSON to XML), and secure handling of Personally Identifiable Information (PII) using a proxy to process sensitive data.',
+            skillNames: [
+               'JavaScript',
+               'NodeJS',
+               'Fastify',
+               'Python',
+               'Jest',
+               'Microservices',
+               'GCP',
+               'Docker',
+               'Colima',
+               'Kubernetes',
+               'Terraform'
             ]
          },
          {
