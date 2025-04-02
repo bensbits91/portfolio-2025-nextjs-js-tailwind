@@ -1,6 +1,6 @@
 import { HeadingTwo } from '@/app/components/typography';
 
-const TwoColumnSection = ({ heading = '', columns }) => {
+const ThreeColumnSection = ({ heading = '', columns }) => {
    return (
       <>
          <section className="container mx-auto max-w-[1200px] mb-20 md:mb-32">
@@ -31,4 +31,4 @@ const TwoColumnSection = ({ heading = '', columns }) => {
    );
 };
 
-export default TwoColumnSection;
+export default ThreeColumnSection;

@@ -1,15 +1,16 @@
 import Link from 'next/link';
 import { CloudinaryImage } from '@/app/components/image';
 
-const Icon = ({ src, altText, link }) => {
+const Icon = ({ src, altText, link, size = '32' }) => {
    const IconImage = () => (
-    <div title={altText}>
-      <CloudinaryImage
-         cloudinaryId={src}
-         alt={altText}
-         width={32}
-         height={32}
-      /></div>
+      <div title={altText} className='flex items-center'>
+         <CloudinaryImage
+            cloudinaryId={src}
+            alt={altText}
+            width={size}
+            height={size}
+         />
+      </div>
    );
 
    return (

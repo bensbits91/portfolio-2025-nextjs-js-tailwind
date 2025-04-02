@@ -1,13 +1,14 @@
 import { FeaturedProjectCard, ProjectGrid } from '@/app/components/projects';
 import { HeadingOne, SubtleText, P } from '@/app/components/typography';
 import { HeroSection } from '@/app/components/layout';
+import { Cta } from '@/app/components/common';
 
 const Projects = () => {
    return (
       <>
          <HeroSection bigBottom={false}>
             <HeadingOne>Sample Projects</HeadingOne>
-            <SubtleText textCenter>
+            <SubtleText>
                A couple of newer projects and a bunch of older work.
             </SubtleText>
          </HeroSection>
@@ -23,6 +24,18 @@ const Projects = () => {
             </P>
          </FeaturedProjectCard>
          <ProjectGrid />
+         <Cta
+            data={{
+               heading: 'Need help with a project?',
+               layout: 'Cta',
+               content: ["Let's chat and see if I can help."],
+               link: {
+                  href: '/contact',
+                  text: "Let's connect!"
+               }
+            }}
+            bg="teal"
+         />
       </>
    );
 };

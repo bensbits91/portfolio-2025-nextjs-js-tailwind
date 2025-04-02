@@ -30,8 +30,8 @@ export default {
             'bb-yellow': 'var(--bb-yellow)',
          },
          fontFamily: {
-            'roboto-sans': ['Roboto', 'sans-serif'],
-            'roboto-mono': ['RobotoRoboto_Mono', 'serif']
+            'roboto-sans': ['var(--font-roboto-sans)', 'sans-serif'],
+            'roboto-mono': ['var(--font-roboto-mono)', 'monospace']
          },
          animation: {
             'spin-slow': 'spin 120s linear infinite'

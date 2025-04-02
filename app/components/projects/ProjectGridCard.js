@@ -43,7 +43,7 @@ const ProjectGridCard = ({ project, handleClick }) => {
          {handleClick && (
             <button
                onClick={handleClick}
-               className="hover-delay hover-brightness hover-scale mt-12 rounded-sm bg-bb-teal p-4 text-center font-roboto-sans text-sm tracking-wide text-bb-gray">
+               className="hover-delay hover-brightness hover-scale mt-12 w-full rounded-sm bg-bb-teal p-4 text-center font-roboto-sans text-sm tracking-wide text-bb-gray md:w-max">
                View Project Details
             </button>
          )}

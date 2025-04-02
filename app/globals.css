@@ -50,7 +50,7 @@
 body {
    color: var(--foreground);
    background: var(--background);
-   font-family: var(--font-roboto-mono), var(--font-roboto-sans), Arial,
+   font-family: var(--font-roboto-sans), var(--font-roboto-mono), Arial,
       Helvetica, sans-serif;
 }
 

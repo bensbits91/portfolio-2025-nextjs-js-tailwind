@@ -2,6 +2,7 @@ import HomeCard from './components/home/HomeCard';
 import { ProjectGridCard } from './components/projects';
 import {
    HeroSection,
+   OneColumnSection,
    TwoColumnSection,
    ThreeColumnSection
 } from './components/layout';
@@ -13,14 +14,36 @@ const Home = () => {
    return (
       <>
          <HeroSection>
-            <HeadingOne>
+            {/* <HeadingOne>
                Hi <div className="inline-block animate-spin-slow">:)</div> I'm
                Ben
+            </HeadingOne> */}
+            <HeadingOne>
+               Bennett Brooks
             </HeadingOne>
-            <Subheading>{about.summary}</Subheading>
-            <WhisperText commentStyle>{expertise.join(' | ')}</WhisperText>
+            <Subheading shrink color='yellow'>{about.summary}</Subheading>
+            <Button link='/about'>About Ben</Button>
+            {/* <WhisperText>{expertise.join(' | ')}</WhisperText> */}
          </HeroSection>
-         <TwoColumnSection
+         <OneColumnSection bigBottom>
+            <HomeCard
+               items={homeSkills}
+               type="skill"
+               heading="Top skills"
+               buttonText="View all skills"
+               link="/skills"
+            />
+         </OneColumnSection>
+         <OneColumnSection bigBottom>
+            <HomeCard
+               items={experience}
+               type="experience"
+               heading="Experience"
+               buttonText="View detailed experience"
+               link="/experience"
+            />
+         </OneColumnSection>
+         {/* <TwoColumnSection
             columns={[
                {
                   content: (
@@ -54,7 +77,7 @@ const Home = () => {
                })),
                { content: <Button link="/projects">View more projects</Button> }
             ]}
-         />
+         /> */}
       </>
    );
 };

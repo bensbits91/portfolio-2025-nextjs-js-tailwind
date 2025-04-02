@@ -6,6 +6,7 @@ import {
    Subheading,
    SubtleText
 } from '@/app/components/typography';
+import { Cta } from '@/app/components/common';
 import { about, certifications, education, expertise } from '@/app/data.js';
 
 // todo: move to components Education, Certification, About (ish)
@@ -75,18 +76,18 @@ const About = () => {
    return (
       <div>
          <HeroSection bigBottom={false}>
-            <HeadingOne>About</HeadingOne>
-            <Subheading>
+            <HeadingOne>About Bennett</HeadingOne>
+            {/* <Subheading left>
                {firstName} {lastName}
-            </Subheading>
+            </Subheading> */}
          </HeroSection>
          <OneColumnSection>
             <p>{overview}</p>
          </OneColumnSection>
-         <OneColumnSection>
+         <OneColumnSection bigBottom>
             <SubtleText>{expertise.join(' | ')}</SubtleText>
          </OneColumnSection>
-         <OneColumnSection>
+         <OneColumnSection bigBottom>
             <HeadingTwo>Education</HeadingTwo>
             <Education education={education} />
          </OneColumnSection>
@@ -94,6 +95,18 @@ const About = () => {
             <HeadingTwo>Certifications & Training</HeadingTwo>
             <Certifications certifications={certifications} />
          </OneColumnSection>
+         <Cta
+            data={{
+               heading: 'Looking for a solid engineer?',
+               layout: 'Cta',
+               content: ["Let's chat and see if I can help."],
+               link: {
+                  href: '/contact',
+                  text: "Let's connect!"
+               }
+            }}
+            bg="teal"
+         />
       </div>
    );
 };

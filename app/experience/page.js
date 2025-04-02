@@ -15,20 +15,20 @@ const Experience = () => {
             <HeadingOne textCenter={false}>Experience</HeadingOne>
          </HeroSection>
          <OneColumnSection size="normal">
-            <div className="mb-4 lg:mb-12">
+            <div className="mb-8 lg:mb-12">
                <a
                   href="https://res.cloudinary.com/ddfrx5278/image/upload/v1739151148/Bennett_Brooks_Resume_2025_bdfmyv.pdf"
                   target="_blank"
                   rel="noreferrer"
-                  className="hover-delay hover-brightness block w-52 rounded-sm border-2 border-bb-gray-500 p-4 text-center font-roboto-sans text-sm tracking-wide text-bb-gray">
+                  className="hover-delay hover-brightness block w-52 rounded-sm border-2 border-transparent text-sm tracking-wide text-bb-teal">
                   <div className="flex items-center gap-2">
                      <CloudinaryImage
                         cloudinaryId="resume_o5rgfa"
                         alt="Resume"
-                        width={30}
-                        height={30}
+                        width={20}
+                        height={20}
                      />
-                     <SubtleText>Download R&eacute;sum&eacute;</SubtleText>
+                     <p>Download R&eacute;sum&eacute;</p>
                   </div>
                </a>
             </div>
@@ -40,14 +40,13 @@ const Experience = () => {
             data={{
                heading: 'Have a job that needs doing?',
                layout: 'Cta',
-               content: [
-                  "Let's chat and see if I can help."
-               ],
+               content: ["Let's chat and see if I can help."],
                link: {
                   href: '/contact',
                   text: "Let's connect!"
                }
             }}
+            bg="teal"
          />
       </>
    );
