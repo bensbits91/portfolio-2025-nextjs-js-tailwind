@@ -117,6 +117,34 @@ export const skills = [
       showInSkillsTable: true
    },
    {
+      type: 'Visualization',
+      stackArea: 'Frontend',
+      stackCategory: 'Library',
+      name: 'D3.js',
+      cloudinary: 'd3js_eakt6f',
+      yearLearned: 2013,
+      years: 8,
+      rating: 8,
+      haveUsedProfessionally: true,
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
+   },
+   {
+      type: 'Visualization',
+      stackArea: 'Frontend',
+      stackCategory: 'Library',
+      name: 'React Simple Maps',
+      cloudinary: 'react-simple-maps_xvvujp',
+      yearLearned: 2013,
+      years: 8,
+      rating: 8,
+      haveUsedProfessionally: true,
+      haveUsedForFun: true,
+      featureOnHome: false,
+      showInSkillsTable: true
+   },
+   {
       type: 'State Management',
       stackArea: 'Frontend',
       stackCategory: 'Library',
@@ -955,6 +983,7 @@ export const projects = [
          'Next.js',
          'React.js',
          'JavaScript',
+         'D3.js',
          'Tailwind',
          'NodeJS',
          'nodemailer',
@@ -980,6 +1009,7 @@ export const projects = [
       year: '2025',
       tech: [
          'React.js',
+         'JavaScript',
          'Redux',
          'Styled Components',
          'Prime React',
@@ -1015,10 +1045,11 @@ export const projects = [
       tech: [
          'NodeJS',
          'React.js',
+         'JavaScript',
          'TypeScript',
          'React Simple Maps',
          'Recharts',
-         'd3js',
+         'D3.js',
          'Fabric UI',
          'Sass/SCSS',
          'Microsoft Graph API',
@@ -1049,9 +1080,10 @@ export const projects = [
       tech: [
          'NodeJS',
          'React.js',
+         'JavaScript',
          'TypeScript',
          'Recharts',
-         'd3js',
+         'D3.js',
          'Sass/SCSS',
          'Microsoft Graph API',
          'Gulp',
@@ -1085,10 +1117,11 @@ export const projects = [
       tech: [
          'NodeJS',
          'React.js',
+         'JavaScript',
          'TypeScript',
          'React Simple Maps',
          'Recharts',
-         'd3js',
+         'D3.js',
          'Sass/SCSS',
          'Microsoft Graph API',
          'Gulp',
@@ -1116,6 +1149,7 @@ export const projects = [
       tech: [
          'NodeJS',
          'React.js',
+         'JavaScript',
          'TypeScript',
          'Fabric UI',
          'moment.js',
@@ -1164,6 +1198,7 @@ export const projects = [
       tech: [
          'NodeJS',
          'React.js',
+         'JavaScript',
          'TypeScript',
          'React Org Chart',
          'React Treebeard',
@@ -1198,6 +1233,7 @@ export const projects = [
       tech: [
          'NodeJS',
          'React.js',
+         'JavaScript',
          'TypeScript',
          'Fabric UI',
          'React Treebeard',
@@ -1232,6 +1268,7 @@ export const projects = [
       tech: [
          'NodeJS',
          'React.js',
+         'JavaScript',
          'TypeScript',
          'Fabric UI',
          'Sass/SCSS',
@@ -1268,6 +1305,7 @@ export const projects = [
       tech: [
          'NodeJS',
          'React.js',
+         'JavaScript',
          'TypeScript',
          'React Treebeard',
          'Fabric UI',
@@ -1298,6 +1336,7 @@ export const projects = [
       tech: [
          'NodeJS',
          'React.js',
+         'JavaScript',
          'TypeScript',
          'Recharts',
          'Fabric UI',
@@ -1332,6 +1371,7 @@ export const projects = [
       tech: [
          'NodeJS',
          'React.js',
+         'JavaScript',
          'TypeScript',
          'React Beautiful DnD',
          'React Treebeard',
@@ -1367,6 +1407,7 @@ export const projects = [
       tech: [
          'NodeJS',
          'React.js',
+         'JavaScript',
          'TypeScript',
          'Fabric UI',
          'moment.js',
@@ -1397,6 +1438,7 @@ export const projects = [
       tech: [
          'NodeJS',
          'React.js',
+         'JavaScript',
          'TypeScript',
          'Fabric UI',
          'dayjs',
@@ -1426,6 +1468,7 @@ export const projects = [
       tech: [
          'NodeJS',
          'React.js',
+         'JavaScript',
          'TypeScript',
          'Fabric UI',
          'Sass/SCSS',
