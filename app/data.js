@@ -887,7 +887,7 @@ export const experience = [
                'JavaScript',
                'NodeJS',
                'React.js',
-               'CSS',
+               'D3.js',
                'CSS Modules',
                'Styled Components',
                'Responsive Design'
