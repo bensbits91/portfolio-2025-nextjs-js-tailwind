@@ -29,6 +29,9 @@ export default {
             'bb-teal': 'var(--bb-teal)',
             'bb-yellow': 'var(--bb-yellow)',
          },
+         backgroundImage: {
+            'gradient': 'linear-gradient(45deg, var(--bb-gray-dark-100), var(--bb-gray-dark-300))'
+         },
          fontFamily: {
             'roboto-sans': ['var(--font-roboto-sans)', 'sans-serif'],
             'roboto-mono': ['var(--font-roboto-mono)', 'monospace']

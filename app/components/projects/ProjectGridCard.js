@@ -32,7 +32,7 @@ const ProjectGridCard = ({ project, handleClick }) => {
       : nonClickableImageElement;
 
    return (
-      <div className="rounded-lg border-2 border-bb-gray-900 p-8 shadow-dark-card">
+      <div className="rounded-lg border-2 border-bb-gray-900 p-8 shadow-dark-card bg-gradient">
          <HeadingThree>{name}</HeadingThree>
          {featuredImage && imageToDisplay}
          {tech.length > 0 && (
