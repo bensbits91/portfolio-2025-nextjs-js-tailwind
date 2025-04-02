@@ -17,7 +17,7 @@ const Experience = () => {
          <OneColumnSection size="normal">
             <div className="mb-8 lg:mb-12">
                <a
-                  href="https://res.cloudinary.com/ddfrx5278/image/upload/v1739151148/Bennett_Brooks_Resume_2025_bdfmyv.pdf"
+                  href="https://res.cloudinary.com/ddfrx5278/image/upload/v1739151148/Bennett_Brooks_Resume_2025_indhbu.pdf"
                   target="_blank"
                   rel="noreferrer"
                   className="hover-delay hover-brightness block w-52 rounded-sm border-2 border-transparent text-sm tracking-wide text-bb-teal">
