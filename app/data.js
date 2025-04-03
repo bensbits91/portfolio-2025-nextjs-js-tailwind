@@ -955,6 +955,7 @@ export const projects = [
          'React.js',
          'JavaScript',
          'CSS Modules',
+         'Responsive Design',
          'NodeJS',
          'nodemailer',
          'Turbopack',
@@ -987,6 +988,7 @@ export const projects = [
          'JavaScript',
          'D3.js',
          'Tailwind',
+         'Responsive Design',
          'NodeJS',
          'nodemailer',
          'dayjs',
@@ -1015,6 +1017,7 @@ export const projects = [
          'Redux',
          'Styled Components',
          'Prime React',
+         'Responsive Design',
          'NodeJS',
          'Fastify',
          'Mongoose',
@@ -1054,6 +1057,7 @@ export const projects = [
          'D3.js',
          'Fabric UI',
          'Sass/SCSS',
+         'Responsive Design',
          'Microsoft Graph API',
          'Gulp',
          'Webpack'
@@ -1087,6 +1091,7 @@ export const projects = [
          'Recharts',
          'D3.js',
          'Sass/SCSS',
+         'Responsive Design',
          'Microsoft Graph API',
          'Gulp',
          'Webpack'
@@ -1125,6 +1130,7 @@ export const projects = [
          'Recharts',
          'D3.js',
          'Sass/SCSS',
+         'Responsive Design',
          'Microsoft Graph API',
          'Gulp',
          'Webpack'
@@ -1156,6 +1162,7 @@ export const projects = [
          'Fabric UI',
          'moment.js',
          'Sass/SCSS',
+         'Responsive Design',
          'Gulp',
          'Webpack'
       ],
@@ -1205,6 +1212,7 @@ export const projects = [
          'React Org Chart',
          'React Treebeard',
          'Sass/SCSS',
+         'Responsive Design',
          'Microsoft Graph API',
          'Gulp',
          'Webpack'
@@ -1240,6 +1248,7 @@ export const projects = [
          'Fabric UI',
          'React Treebeard',
          'Sass/SCSS',
+         'Responsive Design',
          'Microsoft Graph API',
          'Gulp',
          'Webpack'
@@ -1274,6 +1283,7 @@ export const projects = [
          'TypeScript',
          'Fabric UI',
          'Sass/SCSS',
+         'Responsive Design',
          'Microsoft Graph API',
          'Gulp',
          'Webpack'
@@ -1312,6 +1322,7 @@ export const projects = [
          'React Treebeard',
          'Fabric UI',
          'Sass/SCSS',
+         'Responsive Design',
          'Microsoft Graph API',
          'Gulp',
          'Webpack'
@@ -1344,6 +1355,7 @@ export const projects = [
          'Fabric UI',
          'moment.js',
          'Sass/SCSS',
+         'Responsive Design',
          'Gulp',
          'Webpack'
       ],
@@ -1380,6 +1392,7 @@ export const projects = [
          'Fabric UI',
          'moment.js',
          'Sass/SCSS',
+         'Responsive Design',
          'Gulp',
          'Webpack'
       ],
@@ -1414,6 +1427,7 @@ export const projects = [
          'Fabric UI',
          'moment.js',
          'Sass/SCSS',
+         'Responsive Design',
          'Microsoft Graph API',
          'Gulp',
          'Webpack'
@@ -1445,6 +1459,7 @@ export const projects = [
          'Fabric UI',
          'dayjs',
          'Sass/SCSS',
+         'Responsive Design',
          'Gulp',
          'Webpack'
       ],
@@ -1474,6 +1489,7 @@ export const projects = [
          'TypeScript',
          'Fabric UI',
          'Sass/SCSS',
+         'Responsive Design',
          'Microsoft Graph',
          'Gulp',
          'Webpack'
