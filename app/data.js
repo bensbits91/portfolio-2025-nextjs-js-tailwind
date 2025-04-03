@@ -964,15 +964,17 @@ export const projects = [
          'MongoDB'
       ],
       liveLink: 'https://www.benbdev.com',
-      codeLink:
-         'https://github.com/bensbits91/contracts-website',
-      description:
-         "My website that helps find and manage my clients.",
+      codeLink: 'https://github.com/bensbits91/contracts-website',
+      description: 'My website that helps find and manage my clients.',
       motivation:
          'To help my clients understand tech, plan projects and ask questions. To help me manage my clients and projects. To practice some skills.',
       outcome:
          'A clean, responsive, and accessible website that meets my needs and is easy to update and maintain. Hosted on Vercel with a custom domain benbdev.com. Static content stored as markdown (.md) files, rendered in server components using react-markdown and in client components using markdown-to-jsx. Dynamic content stored as JSON.',
-      images: [{ name: 'contracts-home_mpofmm' }, { name: 'contracts-quote_nfli3y' }, { name: 'contracts-faq_mya3pz' }],
+      images: [
+         { name: 'contracts-quote_nfli3y' },
+         { name: 'contracts-faq_mya3pz' },
+         { name: 'contracts-home_mpofmm' }
+      ],
       showInProjectsGallery: true,
       featureOnHome: true
    },
