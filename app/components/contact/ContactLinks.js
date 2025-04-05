@@ -38,7 +38,7 @@ const ContactLinks = ({ isNavbar = false }) => {
          </li>
          <li>
             <a
-               href="https://res.cloudinary.com/ddfrx5278/image/upload/v1739151148/Bennett_Brooks_Resume_2025_btl4fj.pdf"
+               href="https://res.cloudinary.com/ddfrx5278/image/upload/v1739151148/Ben_Brooks_Resume_hoyh2i.pdf"
                target="_blank"
                title="Download PDF"
                className="inline-block hover-delay hover-brightness hover-scale">
