@@ -212,7 +212,7 @@ export const skills = [
       icon: '/tailwind.svg',
       cloudinary: 'tailwind_k9r34s',
       yearLearned: 2020,
-      years: 2,
+      years: 4,
       rating: 9,
       haveUsedProfessionally: false,
       haveUsedForFun: true,
