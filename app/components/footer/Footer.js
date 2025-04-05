@@ -14,7 +14,7 @@ const miscLinkDefs = [
       cloudinaryId: 'github1_o1ok5i'
    },
    {
-      link: 'https://res.cloudinary.com/ddfrx5278/image/upload/v1739151148/Ben_Brooks_Resume_hoyh2i.pdf',
+      link: 'https://res.cloudinary.com/ddfrx5278/image/upload/v1739151148/Ben_Brooks_Resume_jpx3wf.pdf',
       text: 'Résumé',
       cloudinaryId: 'resume_o5rgfa'
    }
