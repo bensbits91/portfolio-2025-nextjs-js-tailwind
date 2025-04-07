@@ -5,9 +5,9 @@ import { HeroSection, OneColumnSection } from '@/app/components/layout';
 const Contact = () => {
    return (
       <>
-         <HeroSection bigBottom={false}>
+         <HeroSection bigBottom={false} size='narrow'>
             <HeadingOne>Get in touch</HeadingOne>
-            <Subheading>
+            <Subheading shrink left color='white'>
                I'm always open to new opportunities and collaborations. Feel
                free to reach out!
             </Subheading>
