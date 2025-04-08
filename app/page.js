@@ -1,12 +1,7 @@
-import HomeCard from './components/home/HomeCard';
-import { ProjectGridCard } from './components/projects';
-import {
-   HeroSection,
-   OneColumnSection,
-   TwoColumnSection,
-   ThreeColumnSection
-} from './components/layout';
-import { HeadingOne, Subheading, WhisperText } from './components/typography';
+import { IconBar } from '@/app/components/common';
+import { skillIcons } from '@/app/data';
+import { HeroSection, OneColumnSection } from './components/layout';
+import { HeadingOne, HeadingTwo, Subheading } from './components/typography';
 import Button from '@/app/components/common/Button';
 import { about, expertise, experience, homeSkills, homeProjects } from './data';
 
@@ -14,62 +9,36 @@ const Home = () => {
    return (
       <>
          <HeroSection>
-            {/* <HeadingOne>
-               Hi <div className="inline-block animate-spin-slow">:)</div> I'm
-               Ben
-            </HeadingOne> */}
-            <HeadingOne>
-               Bennett Brooks
-            </HeadingOne>
-            <Subheading shrink color='white'>{about.summary}</Subheading>
-            <Button link='/about'>About Ben</Button>
-            {/* <WhisperText>{expertise.join(' | ')}</WhisperText> */}
+            <HeadingOne>Ben Brooks</HeadingOne>
+            <Subheading left color="white">
+               {about.summary}
+            </Subheading>
          </HeroSection>
          <OneColumnSection bigBottom>
-            <HomeCard
-               items={homeSkills}
-               type="skill"
-               heading="Top skills"
-               buttonText="View all skills"
-               link="/skills"
-            />
+            <HeadingTwo color="white">Frontend + Fullstack</HeadingTwo>
+            <div className="mb-8 max-w-[640px]">
+               <IconBar wrap icons={skillIcons(homeSkills)} />
+               <Button link="/skills">View all skills</Button>
+            </div>
          </OneColumnSection>
          <OneColumnSection bigBottom>
-            <HomeCard
-               items={experience}
-               type="experience"
-               heading="Experience"
-               buttonText="View detailed experience"
-               link="/experience"
-            />
+            <div className="mb-8 flex gap-12 md:gap-20">
+               <div>
+                  <div className="text-4xl md:text-5xl">23+</div> years in{' '}
+                  <div className="text-2xl">Tech</div>
+               </div>
+               <div>
+                  <div className="text-4xl md:text-5xl">12+</div> years in{' '}
+                  <div className="text-2xl">Frontend</div>
+               </div>
+               <div>
+                  <div className="text-4xl md:text-5xl">9+</div> years in{' '}
+                  <div className="text-2xl">Fullstack</div>
+               </div>
+            </div>
+            <Button link="/experience">View experience</Button>
          </OneColumnSection>
-         {/* <TwoColumnSection
-            columns={[
-               {
-                  content: (
-                     <HomeCard
-                        items={homeSkills}
-                        type="skill"
-                        heading="Top skills"
-                        buttonText="View all skills"
-                        link="/skills"
-                     />
-                  )
-               },
-               {
-                  content: (
-                     <HomeCard
-                        items={experience}
-                        type="experience"
-                        heading="Experience"
-                        buttonText="View detailed experience"
-                        link="/experience"
-                     />
-                  )
-               }
-            ]}
-         />
-         <ThreeColumnSection
+         {/* <ThreeColumnSection
             heading="Sample projects"
             columns={[
                ...homeProjects.map(project => ({
