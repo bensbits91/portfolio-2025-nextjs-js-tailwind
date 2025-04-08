@@ -4,9 +4,19 @@ import { TwoColumnSection } from '@/app/components/layout';
 import { ProjectGridCard, ProjectGridModal } from './index';
 import { projectsForGallery } from '@/app/data';
 
-const ProjectGrid = () => {
-   const projects = useMemo(() => projectsForGallery, []);
+const ProjectGrid = ({ before, onOrAfter }) => {
+   let projects = useMemo(() => projectsForGallery, []);
    const [modalData, setModalData] = useState(null);
+
+   if (before) {
+      projects = projects.filter(project => {
+         return project.year < before;
+      });
+   } else if (onOrAfter) {
+      projects = projects.filter(project => {
+         return project.year >= onOrAfter;
+      });
+   }
 
    return (
       <>

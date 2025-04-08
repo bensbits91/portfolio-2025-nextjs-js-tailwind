@@ -5,7 +5,7 @@ const TwoColumnSection = ({ heading = '', columns }) => {
       <>
          <section className="container mx-auto max-w-[1200px] mb-20 md:mb-32">
             {heading && (
-               <div className="pl-10 md:pl-20">
+               <div className="pl-5 md:pl-10">
                   <HeadingTwo>{heading}</HeadingTwo>
                </div>
             )}
@@ -13,7 +13,7 @@ const TwoColumnSection = ({ heading = '', columns }) => {
                {columns.map((column, index) => (
                   <div
                      key={index}
-                     className={`px-6 mb-10 ${index % 2 === 0 ? 'md:pl-20' : 'md:pr-20'}`}>
+                     className={`px-3 mb-10 ${index % 2 === 0 ? 'md:pl-10' : 'md:pr-10'}`}>
                      {column.content}
                   </div>
                ))}
