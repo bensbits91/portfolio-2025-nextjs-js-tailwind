@@ -980,6 +980,38 @@ export const projects = [
       featureOnHome: true
    },
    {
+      name: 'Things App v2.0',
+      year: '2025',
+      tech: [
+         'Next.js',
+         'React.js',
+         'JavaScript',
+         'CSS Modules',
+         'Responsive Design',
+         'NodeJS',
+         'Turbopack',
+         'Vercel',
+         'Mongoose',
+         'MongoDB'
+      ],
+      codeLink: 'https://github.com/bensbits91/things-client',
+      moreInfoLink: '/work/things',
+      description:
+         'The Things app is a personal tracker and rating system for all the things you do, watch, read, play, listen to, and so on.',
+      motivation:
+         "To practices some skills. To build something that I can use (an idea I've had for awhile). Hope to make an app available to others someday. Users will be able to log in (probably using auth0, including support for social auth), manage a profile and share their interests with others. Get recommendations on things you might like. Eventually find people with similar interests.",
+      outcome: 'Work in progress. Super fun so far!',
+      images: [
+         { name: 'things-wall_inauvg' },
+         { name: 'things-table_u14bsa' },
+         { name: 'things-list_rxpe8h' },
+         { name: 'things-grid_gwhwlk' },
+         { name: 'things-modal_sxlojd' }
+      ],
+      showInProjectsGallery: true,
+      featureOnHome: true
+   },
+   {
       name: 'This Website',
       year: '2025',
       tech: [
@@ -1028,7 +1060,7 @@ export const projects = [
          "Add, rate and track anything... Integrates with multiple third-party APIs to find and display information about supported types (currently books, TV shows, movies and video games)... I'll be adding more types soon... Ability to export your Things to CSV. Built entirely using free tech so far (third-party APIs, Mongo Atlas...)... Built in about two weeks so far. Still kinda ugly :/",
       motivation:
          "To practices some skills. To build something that I can use (an idea I've had for awhile). Hope to make an app available to others someday. Users will be able to log in (probably using auth0, including support for social auth), manage a profile and share their interests with others. Get recommendations on things you might like. Eventually find people with similar interests.",
-      outcome: 'WIP, super fun so far',
+      outcome: "Working prototype that I've been using to populate my Things.",
       images: [
          {
             name: 'things-app-search-save-3a4zDc6ssBNHkL9x1Q1Ee0MBBnIzHM.mp4',
