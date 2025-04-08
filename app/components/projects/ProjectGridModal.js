@@ -2,10 +2,10 @@ import { ImageGallery, CloudinaryImage } from '@/app/components/image';
 import {
    HeadingTwo,
    HeadingThree,
-   Subheading,
    SubtleText
 } from '@/app/components/typography';
-import { CodeLink } from '@/app/components/common';
+import { CodeLink, IconBar } from '@/app/components/common';
+import { skillIcons } from '@/app/data';
 
 // todo: typography and layout components; better classes/style
 
@@ -16,6 +16,7 @@ const ProjectGridModal = ({ modalData, closeModal }) => {
       tech,
       liveLink,
       codeLink,
+      moreInfoLink,
       year,
       motivation,
       outcome
@@ -41,22 +42,33 @@ const ProjectGridModal = ({ modalData, closeModal }) => {
          <>
             <p className="sm:hidden">{year}</p>
             {tech && tech.length > 0 && (
-               <Subheading left shrink color="jade-800">
-                  {tech.join(', ')}
-               </Subheading>
+               <div className="mb-8">
+                  <IconBar icons={skillIcons(tech)} />
+               </div>
             )}
             <div className="flex flex-col gap-4">
                {liveLink && (
-                  <a href={liveLink} target="_blank" rel="noopener noreferrer">
-                     View this project at: {liveLink}
+                  <a
+                     className="hover-delay hover-brightness inline text-sm text-bb-teal"
+                     href={liveLink}
+                     target="_blank"
+                     rel="noopener noreferrer">
+                     View this project live at: {liveLink}
+                  </a>
+               )}
+               {description && <SubtleText>What: {description}</SubtleText>}
+               {motivation && <SubtleText>Why: {motivation}</SubtleText>}
+               {outcome && <SubtleText>Outcome: {outcome}</SubtleText>}
+               {moreInfoLink && (
+                  <a
+                     href={moreInfoLink}
+                     className="hover-delay hover-brightness inline text-sm text-bb-teal">
+                     Read more about this project
                   </a>
                )}
                {codeLink && (
                   <CodeLink codeLink={{ href: codeLink, text: 'View Code' }} />
                )}
-               {description && <SubtleText>What: {description}</SubtleText>}
-               {motivation && <SubtleText>Why: {motivation}</SubtleText>}
-               {outcome && <SubtleText>Outcome: {outcome}</SubtleText>}
                {images && images.length > 0 && <ImageGallery images={images} />}
             </div>
          </>

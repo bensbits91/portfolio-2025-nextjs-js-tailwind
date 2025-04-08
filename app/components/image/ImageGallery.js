@@ -5,7 +5,7 @@ const ImageGallery = ({ images }) => {
       <div className="relative">
          {images.map((image, index) => (
             <div key={index} className="my-12">
-               <div className="md:px-12 max-w-[680px] mx-auto">
+               <div className="mx-auto">
                   {image.type === 'video' ? (
                      <VideoPlayer filename={image.name} />
                   ) : (
