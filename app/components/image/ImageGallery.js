@@ -5,15 +5,15 @@ const ImageGallery = ({ images }) => {
       <div className="relative">
          {images.map((image, index) => (
             <div key={index} className="my-12">
-               <div className="mx-auto">
+               <div className="max-w-[800px] border-2 border-bb-gray-900">
                   {image.type === 'video' ? (
                      <VideoPlayer filename={image.name} />
                   ) : (
                      <CloudinaryImage
                         cloudinaryId={image.name}
                         alt={`Image ${index + 1}`}
-                        width={600}
-                        height={600}
+                        width={800}
+                        height={800}
                         full={true}
                      />
                   )}
