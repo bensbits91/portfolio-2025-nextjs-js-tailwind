@@ -8,7 +8,7 @@ export const about = {
    otherTitles: ['Web Developer', 'Full-Stack Developer', 'Frontend Developer'],
    location: 'Portland, Oregon',
    summary:
-      'Experienced and versatile software engineer with a front-end leaning, full-stack background.',
+      'Experienced software engineer',
    overview:
       'Experienced and versatile software engineer with a front-end leaning, full-stack background and a passion for continuous improvement. Known for clear communication, empathy, and a big-picture mindset, I thrive as a dedicated team player and contributor. With leadership experience and a love for mentoring, I bring a growth-oriented approach to any engineering role, always eager to learn, support others, and deliver impactful solutions.'
 };
@@ -113,35 +113,7 @@ export const skills = [
       rating: 8,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
-      featureOnHome: false,
-      showInSkillsTable: true
-   },
-   {
-      type: 'Visualization',
-      stackArea: 'Frontend',
-      stackCategory: 'Library',
-      name: 'D3.js',
-      cloudinary: 'd3js_eakt6f',
-      yearLearned: 2013,
-      years: 8,
-      rating: 8,
-      haveUsedProfessionally: true,
-      haveUsedForFun: true,
-      featureOnHome: false,
-      showInSkillsTable: true
-   },
-   {
-      type: 'Visualization',
-      stackArea: 'Frontend',
-      stackCategory: 'Library',
-      name: 'React Simple Maps',
-      cloudinary: 'react-simple-maps_xvvujp',
-      yearLearned: 2013,
-      years: 8,
-      rating: 8,
-      haveUsedProfessionally: true,
-      haveUsedForFun: true,
-      featureOnHome: false,
+      featureOnHome: true,
       showInSkillsTable: true
    },
    {
@@ -155,6 +127,34 @@ export const skills = [
       years: 1,
       rating: 8,
       haveUsedProfessionally: false,
+      haveUsedForFun: true,
+      featureOnHome: true,
+      showInSkillsTable: true
+   },
+   {
+      type: 'Visualization',
+      stackArea: 'Frontend',
+      stackCategory: 'Library',
+      name: 'D3.js',
+      cloudinary: 'd3js_eakt6f',
+      yearLearned: 2013,
+      years: 8,
+      rating: 8,
+      haveUsedProfessionally: true,
+      haveUsedForFun: true,
+      featureOnHome: true,
+      showInSkillsTable: true
+   },
+   {
+      type: 'Visualization',
+      stackArea: 'Frontend',
+      stackCategory: 'Library',
+      name: 'React Simple Maps',
+      cloudinary: 'react-simple-maps_xvvujp',
+      yearLearned: 2013,
+      years: 8,
+      rating: 8,
+      haveUsedProfessionally: true,
       haveUsedForFun: true,
       featureOnHome: false,
       showInSkillsTable: true
@@ -201,7 +201,7 @@ export const skills = [
       rating: 9,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
-      featureOnHome: false,
+      featureOnHome: true,
       showInSkillsTable: true
    },
    {
@@ -246,7 +246,7 @@ export const skills = [
       rating: 9,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
-      featureOnHome: false,
+      featureOnHome: true,
       showInSkillsTable: true
    },
    {
@@ -276,7 +276,7 @@ export const skills = [
       rating: 9,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
-      featureOnHome: false,
+      featureOnHome: true,
       showInSkillsTable: true
    },
    {
@@ -291,7 +291,7 @@ export const skills = [
       rating: 7,
       haveUsedProfessionally: true,
       haveUsedForFun: false,
-      featureOnHome: false,
+      featureOnHome: true,
       showInSkillsTable: true
    },
    {
@@ -306,7 +306,7 @@ export const skills = [
       rating: 7,
       haveUsedProfessionally: true,
       haveUsedForFun: false,
-      featureOnHome: false,
+      featureOnHome: true,
       showInSkillsTable: true
    },
    {
@@ -321,7 +321,7 @@ export const skills = [
       rating: 7,
       haveUsedProfessionally: true,
       haveUsedForFun: false,
-      featureOnHome: false,
+      featureOnHome: true,
       showInSkillsTable: true
    },
    {
@@ -426,7 +426,7 @@ export const skills = [
       rating: 8,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
-      featureOnHome: false,
+      featureOnHome: true,
       showInSkillsTable: true
    },
    {
@@ -441,7 +441,7 @@ export const skills = [
       rating: 7,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
-      featureOnHome: false,
+      featureOnHome: true,
       showInSkillsTable: true
    },
    {
@@ -456,7 +456,7 @@ export const skills = [
       rating: 7,
       haveUsedProfessionally: true,
       haveUsedForFun: false,
-      featureOnHome: false,
+      featureOnHome: true,
       showInSkillsTable: true
    },
    {
@@ -471,7 +471,7 @@ export const skills = [
       rating: 8,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
-      featureOnHome: false,
+      featureOnHome: true,
       showInSkillsTable: true
    },
    {
@@ -486,7 +486,7 @@ export const skills = [
       rating: 8,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
-      featureOnHome: false,
+      featureOnHome: true,
       showInSkillsTable: true
    },
    {
@@ -516,7 +516,7 @@ export const skills = [
       rating: 9,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
-      featureOnHome: false,
+      featureOnHome: true,
       showInSkillsTable: true
    },
    {
@@ -531,7 +531,7 @@ export const skills = [
       rating: 8,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
-      featureOnHome: false,
+      featureOnHome: true,
       showInSkillsTable: true
    },
    {
@@ -561,7 +561,7 @@ export const skills = [
       rating: 8,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
-      featureOnHome: false,
+      featureOnHome: true,
       showInSkillsTable: true
    },
    {
@@ -576,7 +576,7 @@ export const skills = [
       rating: 8,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
-      featureOnHome: false,
+      featureOnHome: true,
       showInSkillsTable: true
    },
    {
@@ -591,7 +591,7 @@ export const skills = [
       rating: 8,
       haveUsedProfessionally: true,
       haveUsedForFun: false,
-      featureOnHome: false,
+      featureOnHome: true,
       showInSkillsTable: true
    },
    {
@@ -1596,8 +1596,8 @@ export const certifications = [
 // todo: attach as methods/properties to each data object
 
 export const homeSkills = skills
-   .filter(skill => skill.featureOnHome === true)
-   .sort((a, b) => b.rating - a.rating);
+   .filter(skill => skill.featureOnHome === true).map(skill => skill.name)
+   // .sort((a, b) => b.rating - a.rating);
 
 export const skillsForTable = skills.filter(
    skill => skill.showInSkillsTable === true
