@@ -13,7 +13,7 @@ const Cta = ({
    bigBottom = false,
    bg = 'transparent'
 }) => (
-   <section className={bg === 'teal' ? 'bg-bb-teal' : 'bg-transparent'}>
+   <section className={bg === 'teal' ? 'bg-gradient-teal' : 'bg-transparent'}>
       <div
          className={`container mx-auto px-10 pb-20 pt-10 md:px-0 md:pb-32 md:pt-16 ${maxWidthCode(size)} ${
             bigBottom ? 'mb-20 md:mb-32' : 'mb-0'

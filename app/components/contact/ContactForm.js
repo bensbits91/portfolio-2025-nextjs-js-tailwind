@@ -174,7 +174,7 @@ const ContactForm = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="h-9 rounded px-3 text-bb-gray"
+                  className="h-9 rounded px-3 text-bb-gray bg-[var(--bb-gray-800)]"
                />
             </div>
             <div className="form-group mb-4 flex flex-col gap-1">
@@ -187,7 +187,7 @@ const ContactForm = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="h-9 rounded px-3 text-bb-gray"
+                  className="h-9 rounded px-3 text-bb-gray bg-[var(--bb-gray-800)]"
                />
             </div>
             <div className="form-group mb-4 flex flex-col gap-1">
@@ -199,7 +199,7 @@ const ContactForm = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="h-24 rounded px-3 text-bb-gray"
+                  className="h-24 rounded px-3 text-bb-gray bg-[var(--bb-gray-800)]"
                />
             </div>
             <button

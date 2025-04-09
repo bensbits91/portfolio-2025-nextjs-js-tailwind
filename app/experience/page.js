@@ -3,7 +3,7 @@ import { Job } from '@/app/components/experience';
 import { CloudinaryImage } from '@/app/components/image';
 import { HeroSection, OneColumnSection } from '@/app/components/layout';
 import { HeadingOne, SubtleText } from '@/app/components/typography';
-import { Cta } from '@/app/components/common';
+import { PrimaryCta } from '@/app/components/common';
 import { experience } from '@/app/data.js';
 // todo: make this <a> a reusable button component (need component/button folder and index.js)
 // todo: icon library for common cloudinary images
@@ -36,18 +36,7 @@ const Experience = () => {
          {xp.map((job, index) => (
             <Job key={index} job={job} />
          ))}
-         <Cta
-            data={{
-               heading: 'Need help?',
-               layout: 'Cta',
-               content: ["Let's chat and see if I can help."],
-               link: {
-                  href: '/contact',
-                  text: "Let's connect!"
-               }
-            }}
-            bg="teal"
-         />
+         <PrimaryCta />
       </>
    );
 };
