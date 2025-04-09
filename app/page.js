@@ -41,15 +41,15 @@ const Home = () => {
             <div className="mb-8 flex gap-12 md:gap-20">
                <div>
                   <div className="text-4xl md:text-5xl">23+</div> years in
-                  <div className="text-2xl">Tech</div>
+                  <div className="text-xl md:text-2xl">Tech</div>
                </div>
                <div>
                   <div className="text-4xl md:text-5xl">12+</div> years in
-                  <div className="text-2xl">Frontend</div>
+                  <div className="text-xl md:text-2xl">Frontend</div>
                </div>
                <div>
                   <div className="text-4xl md:text-5xl">9+</div> years in
-                  <div className="text-2xl">Fullstack</div>
+                  <div className="text-xl md:text-2xl">Fullstack</div>
                </div>
             </div>
             <Button link="/experience">
@@ -77,9 +77,7 @@ const Home = () => {
             data={{
                heading: 'Open to work',
                layout: 'Cta',
-               content: [
-                  'Looking for a rock-solid software engineer?'
-               ],
+               content: ['Looking for a rock-solid software engineer?'],
                link: {
                   href: '/contact',
                   text: 'Contact me now'
