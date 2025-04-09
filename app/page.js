@@ -30,7 +30,7 @@ const Home = () => {
          </HeroSection>
          <OneColumnSection bigBottom>
             <HeadingTwo color="white">Frontend + Fullstack</HeadingTwo>
-            <div className="mb-8 max-w-[640px]">
+            <div className="mb-8 max-w-[560px]">
                <IconBar wrap icons={skillIcons(homeSkills)} />
                <Button link="/skills">
                   <div className="md:min-w-[400px]">View all skills</div>
