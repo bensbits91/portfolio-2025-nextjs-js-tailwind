@@ -28,15 +28,15 @@ const PrimaryCta = ({
                <div className="mb-8 flex gap-12 text-bb-gray md:gap-20">
                   <div>
                      <div className="text-4xl md:text-5xl">23+</div> years in{' '}
-                     <div className="text-2xl">Tech</div>
+                     <div className="text-xl md:text-2xl">Tech</div>
                   </div>
                   <div>
                      <div className="text-4xl md:text-5xl">12+</div> years in{' '}
-                     <div className="text-2xl">Frontend</div>
+                     <div className="text-xl md:text-2xl">Frontend</div>
                   </div>
                   <div>
                      <div className="text-4xl md:text-5xl">9+</div> years in{' '}
-                     <div className="text-2xl">Fullstack</div>
+                     <div className="text-xl md:text-2xl">Fullstack</div>
                   </div>
                </div>
 
@@ -46,7 +46,7 @@ const PrimaryCta = ({
                   </Button>
                </div>
             </div>
-            <div>
+            <div className='mx-auto md:mx-0'>
                <CloudinaryImage
                   cloudinaryId="ben-2024-a-circle_ra873b"
                   alt="Photo of Ben Brooks"
