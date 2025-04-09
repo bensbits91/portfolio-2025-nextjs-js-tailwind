@@ -30,7 +30,8 @@ export default {
             'bb-yellow': 'var(--bb-yellow)',
          },
          backgroundImage: {
-            'gradient': 'linear-gradient(45deg, var(--bb-gray-dark-100), var(--bb-gray-dark-300))'
+            'gradient-dark': 'linear-gradient(45deg, var(--bb-gray-dark-100), var(--bb-gray-dark-300))',
+            'gradient-teal': 'linear-gradient(45deg, var(--bb-teal), var(--bb-teal-dark-300))',
          },
          fontFamily: {
             'roboto-sans': ['var(--font-roboto-sans)', 'sans-serif'],

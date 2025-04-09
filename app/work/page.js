@@ -6,7 +6,7 @@ import {
    Subheading
 } from '@/app/components/typography';
 import { HeroSection } from '@/app/components/layout';
-import { Cta } from '@/app/components/common';
+import { Cta, PrimaryCta } from '@/app/components/common';
 
 const Work = () => {
    return (
@@ -43,18 +43,7 @@ const Work = () => {
             </Subheading>
          </HeroSection>
          <ProjectGrid before={[2025]} />
-         <Cta
-            data={{
-               heading: 'Need help with a project?',
-               layout: 'Cta',
-               content: ["Let's chat and see if I can help."],
-               link: {
-                  href: '/contact',
-                  text: "Let's connect!"
-               }
-            }}
-            bg="teal"
-         />
+         <PrimaryCta />
       </>
    );
 };

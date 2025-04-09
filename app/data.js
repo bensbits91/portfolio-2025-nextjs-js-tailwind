@@ -7,8 +7,7 @@ export const about = {
    title: 'Software Engineer',
    otherTitles: ['Web Developer', 'Full-Stack Developer', 'Frontend Developer'],
    location: 'Portland, Oregon',
-   summary:
-      'Experienced software engineer',
+   summary: 'Experienced software engineer',
    overview:
       'Experienced and versatile software engineer with a front-end leaning, full-stack background and a passion for continuous improvement. Known for clear communication, empathy, and a big-picture mindset, I thrive as a dedicated team player and contributor. With leadership experience and a love for mentoring, I bring a growth-oriented approach to any engineering role, always eager to learn, support others, and deliver impactful solutions.'
 };
@@ -33,28 +32,15 @@ export const skills = [
       name: 'JavaScript',
       icon: '/js.svg',
       cloudinary: 'js_au9kmj',
+      cloudinaryDark: 'javascript-dark-icon_diwklq',
       yearLearned: 2013,
       years: 12,
       rating: 9,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
       featureOnHome: true,
-      showInSkillsTable: true
-   },
-   {
-      type: 'Language',
-      stackArea: 'General',
-      stackCategory: 'Language',
-      name: 'TypeScript',
-      icon: '/ts1.svg',
-      cloudinary: 'ts1_nbdvxm',
-      yearLearned: 2015,
-      years: 8,
-      rating: 8,
-      haveUsedProfessionally: true,
-      haveUsedForFun: true,
-      featureOnHome: true,
-      showInSkillsTable: true
+      showInSkillsTable: true,
+      featureInCTAs: true
    },
    {
       type: 'Frontend Library',
@@ -63,28 +49,15 @@ export const skills = [
       name: 'React.js',
       icon: '/react.svg',
       cloudinary: 'react_g4rwdx',
+      cloudinaryDark: 'react-dark-icon_dibccl',
       yearLearned: 2015,
       years: 9,
       rating: 9,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
       featureOnHome: true,
-      showInSkillsTable: true
-   },
-   {
-      type: 'Frontend Framework',
-      stackArea: 'Frontend',
-      stackCategory: 'Framework',
-      name: 'Vue.js',
-      icon: '/vue.svg',
-      cloudinary: 'vue_thuhnk',
-      yearLearned: 2021,
-      years: 3,
-      rating: 8,
-      haveUsedProfessionally: true,
-      haveUsedForFun: false,
-      featureOnHome: true,
-      showInSkillsTable: true
+      showInSkillsTable: true,
+      featureInCTAs: true
    },
    {
       type: 'Frontend Framework',
@@ -93,13 +66,66 @@ export const skills = [
       name: 'Next.js',
       icon: '/next.svg',
       cloudinary: 'nextjs_jxdbqq',
+      cloudinaryDark: 'next-dark-icon_qfvtkk',
       yearLearned: 2020,
       years: 2,
       rating: 9,
       haveUsedProfessionally: false,
       haveUsedForFun: true,
       featureOnHome: true,
-      showInSkillsTable: true
+      showInSkillsTable: true,
+      featureInCTAs: true
+   },
+   {
+      type: 'Frontend Framework',
+      stackArea: 'Frontend',
+      stackCategory: 'Framework',
+      name: 'Vue.js',
+      icon: '/vue.svg',
+      cloudinary: 'vue_thuhnk',
+      cloudinaryDark: 'vue-dark-icon_xghpvp',
+      yearLearned: 2021,
+      years: 3,
+      rating: 8,
+      haveUsedProfessionally: true,
+      haveUsedForFun: false,
+      featureOnHome: true,
+      showInSkillsTable: true,
+      featureInCTAs: true
+   },
+   {
+      type: 'Backend Development',
+      stackArea: 'Backend',
+      stackCategory: 'Language',
+      name: 'NodeJS',
+      icon: '/node.svg',
+      cloudinary: 'node_hl58om',
+      cloudinaryDark: 'node-dark-icon_kl7oy6',
+      yearLearned: 2015,
+      years: 9,
+      rating: 9,
+      haveUsedProfessionally: true,
+      haveUsedForFun: true,
+      featureOnHome: true,
+      showInSkillsTable: true,
+      featureInCTAs: true
+   },
+   {
+      type: 'Language',
+      stackArea: 'General',
+      stackCategory: 'Language',
+      name: 'TypeScript',
+      icon: '/ts1.svg',
+      cloudinary: 'ts1_nbdvxm',
+      cloudinaryDark: 'typescript-dark-icon_mj51g8',
+      yearLearned: 2015,
+      years: 8,
+      rating: 8,
+      haveUsedProfessionally: true,
+      haveUsedForFun: true,
+      featureOnHome: true,
+      showInSkillsTable: true,
+      featureInCTAs: true
    },
    {
       type: 'State Management',
@@ -181,13 +207,15 @@ export const skills = [
       name: 'CSS Modules',
       icon: '/sass.svg',
       cloudinary: 'css3_mvgbbf',
+      cloudinaryDark: 'css3-dark-icon_xtdb3t',
       yearLearned: 2015,
       years: 8,
       rating: 9,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
       featureOnHome: true,
-      showInSkillsTable: true
+      showInSkillsTable: true,
+      featureInCTAs: true
    },
    {
       type: 'Styling',
@@ -196,13 +224,15 @@ export const skills = [
       name: 'Sass/SCSS',
       icon: '/sass.svg',
       cloudinary: 'sass_s3kz3x',
+      cloudinaryDark: 'sass-dark-icon_h3esvt',
       yearLearned: 2015,
       years: 8,
       rating: 9,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
       featureOnHome: true,
-      showInSkillsTable: true
+      showInSkillsTable: true,
+      featureInCTAs: true
    },
    {
       type: 'Styling',
@@ -211,13 +241,15 @@ export const skills = [
       name: 'Tailwind',
       icon: '/tailwind.svg',
       cloudinary: 'tailwind_k9r34s',
+      cloudinaryDark: 'tailwind-dark-icon_mbvvtr',
       yearLearned: 2020,
       years: 4,
       rating: 9,
       haveUsedProfessionally: false,
       haveUsedForFun: true,
       featureOnHome: true,
-      showInSkillsTable: true
+      showInSkillsTable: true,
+      featureInCTAs: true
    },
    {
       type: 'Styling',
@@ -241,13 +273,15 @@ export const skills = [
       name: 'Styled Components',
       icon: '/styled-components.svg',
       cloudinary: 'styled-components_fd8fvo',
+      cloudinaryDark: 'styled-components-dark-icon_fs0kmr',
       yearLearned: 2016,
       years: 8,
       rating: 9,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
       featureOnHome: true,
-      showInSkillsTable: true
+      showInSkillsTable: true,
+      featureInCTAs: true
    },
    {
       type: 'Styling',
@@ -403,31 +437,18 @@ export const skills = [
       type: 'Backend Development',
       stackArea: 'Backend',
       stackCategory: 'Language',
-      name: 'NodeJS',
-      icon: '/node.svg',
-      cloudinary: 'node_hl58om',
-      yearLearned: 2015,
-      years: 9,
-      rating: 9,
-      haveUsedProfessionally: true,
-      haveUsedForFun: true,
-      featureOnHome: true,
-      showInSkillsTable: true
-   },
-   {
-      type: 'Backend Development',
-      stackArea: 'Backend',
-      stackCategory: 'Language',
       name: 'PHP',
       icon: '/php.svg',
-      cloudinary: 'php_hylcjn',
+      cloudinary: 'php01-dark-icon_fzefry',
+      cloudinaryDark: 'javascript-dark-icon_diwklq',
       yearLearned: 2013,
       years: 9,
       rating: 8,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
       featureOnHome: true,
-      showInSkillsTable: true
+      showInSkillsTable: true,
+      featureInCTAs: true
    },
    {
       type: 'Backend Development',
@@ -436,13 +457,15 @@ export const skills = [
       name: 'WordPress',
       icon: '/wordpress.svg',
       cloudinary: 'wordpress_xkgfcd',
+      cloudinaryDark: 'wordpress-dark-icon_volzbh',
       yearLearned: 2013,
       years: 9,
       rating: 7,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
       featureOnHome: true,
-      showInSkillsTable: true
+      showInSkillsTable: true,
+      featureInCTAs: true
    },
    {
       type: 'Backend Development',
@@ -451,13 +474,15 @@ export const skills = [
       name: 'Python',
       icon: '/python.svg',
       cloudinary: 'python_g5utim',
+      cloudinaryDark: 'python-dark-icon_ogismc',
       yearLearned: 2021,
       years: 3,
       rating: 7,
       haveUsedProfessionally: true,
       haveUsedForFun: false,
       featureOnHome: true,
-      showInSkillsTable: true
+      showInSkillsTable: true,
+      featureInCTAs: true
    },
    {
       type: 'Backend Framework',
@@ -1596,8 +1621,13 @@ export const certifications = [
 // todo: attach as methods/properties to each data object
 
 export const homeSkills = skills
-   .filter(skill => skill.featureOnHome === true).map(skill => skill.name)
-   // .sort((a, b) => b.rating - a.rating);
+   .filter(skill => skill.featureOnHome === true)
+   .map(skill => skill.name);
+
+   export const ctaSkills = skills
+   .filter(skill => skill.featureInCTAs === true)
+   .map(skill => skill.name);
+// .sort((a, b) => b.rating - a.rating);
 
 export const skillsForTable = skills.filter(
    skill => skill.showInSkillsTable === true
@@ -1645,11 +1675,11 @@ skills.forEach(skill => {
 });
 
 export const skillIcon = skills.map(skill => skill.cloudinary);
-export const skillIcons = (skillNames = []) => {
+export const skillIcons = (skillNames = [], dark = false) => {
    return skills
       .filter(skill => skillNames.includes(skill.name))
       .map(skill => ({
-         src: skill.cloudinary,
+         src: dark ? skill.cloudinaryDark || skill.cloudinary : skill.cloudinary,
          altText: skill.name
       }));
 };

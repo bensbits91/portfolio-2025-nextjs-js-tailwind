@@ -4,7 +4,7 @@ import { HeroSection, OneColumnSection } from '@/app/components/layout';
 import { HeadingOne, SubtleText } from '@/app/components/typography';
 import { SkillList } from '@/app/components/skills';
 import { BarChart, AreaChart, RadarChart } from '@/app/components/charts';
-import { Cta } from '@/app/components/common';
+import { PrimaryCta } from '@/app/components/common';
 /** todo:
  * move and rename components
  * make reusable chart components?
@@ -55,18 +55,7 @@ const Skills = () => {
                {selectedView === 'stack' && <RadarChart />}
             </div>
          </OneColumnSection>
-         <Cta
-            data={{
-               heading: 'Looking for a skillful developer?',
-               layout: 'Cta',
-               content: ["Let's chat and see if I can help."],
-               link: {
-                  href: '/contact',
-                  text: "Let's connect!"
-               }
-            }}
-            bg="teal"
-         />
+         <PrimaryCta />
       </>
    );
 };

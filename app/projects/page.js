@@ -1,7 +1,7 @@
 import { FeaturedProjectCard, ProjectGrid } from '@/app/components/projects';
 import { HeadingOne, SubtleText, P } from '@/app/components/typography';
 import { HeroSection } from '@/app/components/layout';
-import { Cta } from '@/app/components/common';
+import { PrimaryCta } from '@/app/components/common';
 
 const Projects = () => {
    return (
@@ -20,18 +20,7 @@ const Projects = () => {
             </P>
          </FeaturedProjectCard>
          <ProjectGrid />
-         <Cta
-            data={{
-               heading: 'Need help with a project?',
-               layout: 'Cta',
-               content: ["Let's chat and see if I can help."],
-               link: {
-                  href: '/contact',
-                  text: "Let's connect!"
-               }
-            }}
-            bg="teal"
-         />
+         <PrimaryCta />
       </>
    );
 };

@@ -6,7 +6,7 @@ import { skillIcons } from '@/app/data';
 const FeaturedProjectCard = ({ children, skills }) => (
    <section className="container mx-auto mb-12 max-w-[1200px]">
       <div className="px-6 md:px-20">
-         <div className="bg-gradient rounded-lg border-2 border-bb-gray-900 p-8 shadow-dark-card">
+         <div className="bg-gradient-dark rounded-lg border-2 border-bb-gray-900 p-8 shadow-dark-card">
             <HeadingThree>Things App v2.0</HeadingThree>
             {children}
             {skills.length > 0 && (

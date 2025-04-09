@@ -6,7 +6,7 @@ import {
    Subheading,
    SubtleText
 } from '@/app/components/typography';
-import { Cta } from '@/app/components/common';
+import { PrimaryCta } from '@/app/components/common';
 import { about, certifications, education, expertise } from '@/app/data.js';
 
 // todo: move to components Education, Certification, About (ish)
@@ -95,18 +95,7 @@ const About = () => {
             <HeadingTwo>Certifications & Training</HeadingTwo>
             <Certifications certifications={certifications} />
          </OneColumnSection>
-         <Cta
-            data={{
-               heading: 'Looking for a solid engineer?',
-               layout: 'Cta',
-               content: ["Let's chat and see if I can help."],
-               link: {
-                  href: '/contact',
-                  text: "Let's connect!"
-               }
-            }}
-            bg="teal"
-         />
+         <PrimaryCta />
       </div>
    );
 };
