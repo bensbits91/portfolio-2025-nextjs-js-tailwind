@@ -5,6 +5,7 @@ export default {
       './components/**/*.{js,ts,jsx,tsx,mdx}',
       './app/**/*.{js,ts,jsx,tsx,mdx}'
    ],
+   safelist: ['bg-gradient-yellow', 'bg-gradient-teal'],
    theme: {
       extend: {
          boxShadow: {
@@ -27,11 +28,15 @@ export default {
             'bb-jade-600': 'var(--bb-jade-600)',
             'bb-red': 'var(--bb-red)',
             'bb-teal': 'var(--bb-teal)',
-            'bb-yellow': 'var(--bb-yellow)',
+            'bb-yellow': 'var(--bb-yellow)'
          },
          backgroundImage: {
-            'gradient-dark': 'linear-gradient(45deg, var(--bb-gray-dark-100), var(--bb-gray-dark-300))',
-            'gradient-teal': 'linear-gradient(45deg, var(--bb-teal), var(--bb-teal-dark-300))',
+            'gradient-dark':
+               'linear-gradient(45deg, var(--bb-gray-dark-100), var(--bb-gray-dark-300))',
+            'gradient-teal':
+               'linear-gradient(45deg, var(--bb-teal), var(--bb-teal-dark-300))',
+            'gradient-yellow':
+               'linear-gradient(45deg, var(--bb-yellow), var(--bb-yellow-dark-300))'
          },
          fontFamily: {
             'roboto-sans': ['var(--font-roboto-sans)', 'sans-serif'],

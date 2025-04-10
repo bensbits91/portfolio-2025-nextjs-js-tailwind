@@ -1,16 +1,15 @@
 import { CloudinaryImage } from '@/app/components/image';
 import { IconBar } from '@/app/components/common';
 import { skillIcons } from '@/app/data';
-import { HeroSection, OneColumnSection } from './components/layout';
+import { Section } from './components/layout';
 import { HeadingOne, HeadingTwo, Subheading } from './components/typography';
 import Button from '@/app/components/common/Button';
-import { Cta } from '@/app/components/common';
 import { about, expertise, experience, homeSkills, homeProjects } from './data';
 
 const Home = () => {
    return (
       <>
-         <HeroSection>
+         <Section fullheight width="sm" bg="transparent">
             <div className="flex items-start justify-between sm:justify-start sm:gap-12">
                <div>
                   <HeadingOne>Ben Brooks</HeadingOne>
@@ -27,8 +26,8 @@ const Home = () => {
                   />
                </div>
             </div>
-         </HeroSection>
-         <OneColumnSection bigBottom>
+            {/* </Section>
+         <Section height width="sm"> */}
             <HeadingTwo color="white">Frontend + Fullstack</HeadingTwo>
             <div className="mb-8 max-w-[560px]">
                <IconBar wrap icons={skillIcons(homeSkills)} />
@@ -36,9 +35,9 @@ const Home = () => {
                   <div className="md:min-w-[400px]">View all skills</div>
                </Button>
             </div>
-         </OneColumnSection>
-         <OneColumnSection bigBottom>
-            <div className="mb-8 flex gap-12 md:gap-20">
+         </Section>
+         <Section top="lg" bottom="lg" width="sm" bg="yellow">
+            <div className="mb-8 flex gap-12 text-bb-gray md:gap-20">
                <div>
                   <div className="text-4xl md:text-5xl">23+</div> years in
                   <div className="text-xl md:text-2xl">Tech</div>
@@ -52,11 +51,11 @@ const Home = () => {
                   <div className="text-xl md:text-2xl">Fullstack</div>
                </div>
             </div>
-            <Button link="/experience">
+            <Button inverted yellow link="/experience">
                <div className="md:min-w-[400px]">View experience</div>
             </Button>
-         </OneColumnSection>
-         <OneColumnSection bigBottom>
+         </Section>
+         <Section top="lg" bottom="lg" width="sm">
             <div className="mb-8 flex flex-col gap-12 md:flex-row md:gap-20">
                <div>
                   <div className="text-4xl md:text-5xl">100s</div>
@@ -72,19 +71,30 @@ const Home = () => {
             <Button link="/work">
                <div className="md:min-w-[400px]">View work samples</div>
             </Button>
-         </OneColumnSection>
-         <Cta
-            data={{
-               heading: 'Open to work',
-               layout: 'Cta',
-               content: ['Looking for a rock-solid software engineer?'],
-               link: {
-                  href: '/contact',
-                  text: 'Contact me now'
-               }
-            }}
-            bg="teal"
-         />
+         </Section>
+         <Section fullheight width="sm" bg="teal">
+            <div className="mb-8 text-bb-gray">
+               <div className="text-4xl md:text-5xl">Uniquely Valuable</div>
+               <div>
+                  Math/music/language --&gt; technical documentation --&gt;
+                  process engineering --&gt; team building --&gt; software
+                  customization --&gt; frontend development --&gt; fullstack
+                  software engineering
+               </div>
+            </div>
+            <Button inverted link="/story">
+               <div className="md:min-w-[400px]">Ready my story</div>
+            </Button>
+         </Section>
+         <Section top="lg" bottom="lg" width="sm">
+            <div className="mb-8">
+               <div className="text-4xl md:text-5xl">Open to Work</div>
+               <div>Looking for a rock-solid software engineer?</div>
+            </div>
+            <Button link="/contact">
+               <div className="md:min-w-[400px]">Contact me now</div>
+            </Button>
+         </Section>
       </>
    );
 };

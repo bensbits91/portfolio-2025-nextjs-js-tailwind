@@ -11,7 +11,7 @@ const PrimaryCta = ({
    bigBottom = false,
    bg = 'teal'
 }) => (
-   <section className={bg === 'teal' ? 'bg-gradient-teal' : 'bg-transparent'}>
+   <section className={`min-h-screen flex-col content-center ${bg === 'teal' ? 'bg-gradient-teal' : 'bg-transparent'}`}>
       <div
          className={`container mx-auto px-10 pb-20 pt-10 md:px-5 md:pb-32 md:pt-32 ${
             bigBottom ? 'mb-20 md:mb-32' : 'mb-0'

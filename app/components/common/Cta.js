@@ -13,16 +13,23 @@ const Cta = ({
    bigBottom = false,
    bg = 'transparent'
 }) => (
-   <section className={bg === 'teal' ? 'bg-gradient-teal' : 'bg-transparent'}>
+   <section
+      className={bg === 'transparent' ? 'bg-transparent' : `bg-gradient-${bg}`}>
       <div
          className={`container mx-auto px-10 pb-20 pt-10 md:px-0 md:pb-32 md:pt-16 ${maxWidthCode(size)} ${
             bigBottom ? 'mb-20 md:mb-32' : 'mb-0'
          }`}>
-         <HeadingTwo color={bg === 'teal' ? 'gray' : ''}>{data.heading}</HeadingTwo>
+         <HeadingTwo color={bg === 'transparent' ? '' : 'gray'}>
+            {data.heading}
+         </HeadingTwo>
          {data.content.map((text, index) => (
-            <P key={index} color='gray'>{text}</P>
+            <P key={index} color="gray">
+               {text}
+            </P>
          ))}
-         <Button inverted link={data.link.href}>{data.link.text}</Button>
+         <Button inverted link={data.link.href}>
+            {data.link.text}
+         </Button>
       </div>
    </section>
 );
