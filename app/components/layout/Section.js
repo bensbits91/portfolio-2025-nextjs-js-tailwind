@@ -8,7 +8,7 @@ const Section = ({
 }) => {
    return (
       <section
-         className={`px-8 md:px-5 ${
+         className={`px-5 ${
             bg === 'transparent' ? 'bg-transparent' : `bg-gradient-${bg}`
          } ${
             fullheight
@@ -17,7 +17,9 @@ const Section = ({
                  ? 'pt-1'
                  : top === 'lg'
                    ? 'pt-20 md:pt-32'
-                   : 'pt-4'
+                   : top === 'xl'
+                     ? 'pt-32 md:pt-48'
+                     : 'pt-4'
          } ${
             fullheight
                ? 'pb-0'
