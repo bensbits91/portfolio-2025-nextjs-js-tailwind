@@ -68,7 +68,7 @@ export const skills = [
       cloudinary: 'nextjs_jxdbqq',
       cloudinaryDark: 'next-dark-icon_qfvtkk',
       yearLearned: 2020,
-      years: 2,
+      years: 4,
       rating: 9,
       haveUsedProfessionally: false,
       haveUsedForFun: true,
@@ -583,7 +583,7 @@ export const skills = [
       cloudinary: 'rest_vt3dwy',
       yearLearned: 2007,
       years: 12,
-      rating: 8,
+      rating: 9,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
       featureOnHome: true,
@@ -597,7 +597,7 @@ export const skills = [
       icon: '/graphql.svg',
       cloudinary: 'graphql_ztconi',
       yearLearned: 2020,
-      years: 4,
+      years: 5,
       rating: 8,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
@@ -973,38 +973,6 @@ export const experience = [
 ];
 export const projects = [
    {
-      name: 'My Contracting Website',
-      year: '2025',
-      tech: [
-         'Next.js',
-         'React.js',
-         'JavaScript',
-         'CSS Modules',
-         'Responsive Design',
-         'NodeJS',
-         'nodemailer',
-         'Turbopack',
-         'Vercel',
-         'Cloudinary',
-         'Mongoose',
-         'MongoDB'
-      ],
-      liveLink: 'https://www.benbdev.com',
-      codeLink: 'https://github.com/bensbits91/contracts-website',
-      description: 'My website that helps find and manage my clients.',
-      motivation:
-         'To help my clients understand tech, plan projects and ask questions. To help me manage my clients and projects. To practice some skills.',
-      outcome:
-         'A clean, responsive, and accessible website that meets my needs and is easy to update and maintain. Hosted on Vercel with a custom domain benbdev.com. Static content stored as markdown (.md) files, rendered in server components using react-markdown and in client components using markdown-to-jsx. Dynamic content stored as JSON.',
-      images: [
-         { name: 'contracts-quote_nfli3y' },
-         { name: 'contracts-faq_mya3pz' },
-         { name: 'contracts-home_mpofmm' }
-      ],
-      showInProjectsGallery: true,
-      featureOnHome: true
-   },
-   {
       name: 'Things App v2.0',
       year: '2025',
       tech: [
@@ -1027,11 +995,71 @@ export const projects = [
          "To practices some skills. To build something that I can use (an idea I've had for awhile). Hope to make an app available to others someday. Users will be able to log in (probably using auth0, including support for social auth), manage a profile and share their interests with others. Get recommendations on things you might like. Eventually find people with similar interests.",
       outcome: 'Work in progress. Super fun so far!',
       images: [
-         { name: 'things-wall_inauvg' },
-         { name: 'things-table_u14bsa' },
-         { name: 'things-list_rxpe8h' },
-         { name: 'things-grid_gwhwlk' },
-         { name: 'things-modal_sxlojd' }
+         { name: 'things-wall_inauvg', caption: 'Image wall' },
+         { name: 'things-table_u14bsa', caption: 'Table with sorting' },
+         { name: 'things-list_rxpe8h', caption: 'List view' },
+         { name: 'things-grid_gwhwlk', caption: 'Grid with cards' },
+         { name: 'things-modal_sxlojd', caption: 'Modal with details' }
+      ],
+      showInProjectsGallery: true,
+      featureOnHome: true
+   },
+   {
+      name: 'Journey Builder',
+      year: '2025',
+      tech: [
+         'Next.js',
+         'React.js',
+         'JavaScript',
+         'CSS Modules',
+         'Responsive Design',
+         'NodeJS',
+         'nodemailer',
+         'Turbopack',
+         'Vercel',
+         'Cloudinary',
+         'Mongoose',
+         'MongoDB'
+      ],
+      liveLink: 'https://www.benbdev.com/quote',
+      codeLink: 'https://github.com/bensbits91/contracts-website',
+      description:
+         'Customizable "journey builder" for creating and managing journeys. Used to walk a user through a set of steps to gather information. Define steps and choices using simple JSON. Decide what happens after each step/choice to create a choose-your-own-adventure style story. I use this app to walk my clients through the steps needed for me to provide a quote for a project. Includes optional help for each step and each choice, which can be hidden or shown by the user, which also provides an opporunity to educate users. Steps can either include choices or forms. Responsive design ensures it looks good and works well on any device.',
+      images: [
+         {
+            name: 'contracts-quote_nfli3y',
+            caption: 'Project quote calculator'
+         }
+      ],
+      showInProjectsGallery: true,
+      featureOnHome: true
+   },
+   {
+      name: 'Accordion FAQ App',
+      year: '2025',
+      tech: [
+         'Next.js',
+         'React.js',
+         'JavaScript',
+         'CSS Modules',
+         'Responsive Design',
+         'NodeJS',
+         'nodemailer',
+         'Turbopack',
+         'Vercel',
+         'Cloudinary',
+         'Mongoose',
+         'MongoDB'
+      ],
+      liveLink: 'https://www.benbdev.com/faq',
+      codeLink: 'https://github.com/bensbits91/contracts-website',
+      description:
+         'A customizable accordion app. Define headings and content (e.g. questions and answers) using simple JSON. Toggle to show/hide all items. Search for items. Users can also use a built-in form to submit/request new items. I use this accordion app to build an FAQ on my contracting website to help my clients understand tech, plan projects and ask questions. Responsive design ensures it looks good and works well on any device.',
+      images: [
+         {
+            name: 'contracts-faq_mya3pz',
+            caption: 'FAQ accordion with form for asking new questions'
+         }
       ],
       showInProjectsGallery: true,
       featureOnHome: true
@@ -1061,9 +1089,37 @@ export const projects = [
          'To showcase my skills and experience. To brush the rust off some of my front-end skills.',
       outcome:
          'A clean, responsive, and accessible website that showcases my skills and experience. Fun excerise.',
-      images: [{ name: 'this-site_pyfjwv' }],
+      images: [{ name: 'this-site_cpaazg' }],
       showInProjectsGallery: true,
       featureOnHome: false
+   },
+   {
+      name: 'Contracting Website',
+      year: '2025',
+      tech: [
+         'Next.js',
+         'React.js',
+         'JavaScript',
+         'CSS Modules',
+         'Responsive Design',
+         'NodeJS',
+         'nodemailer',
+         'Turbopack',
+         'Vercel',
+         'Cloudinary',
+         'Mongoose',
+         'MongoDB'
+      ],
+      liveLink: 'https://www.benbdev.com',
+      codeLink: 'https://github.com/bensbits91/contracts-website',
+      description: 'My website that helps find, educate and manage my clients.',
+      motivation:
+         'To help my clients understand tech, plan projects and ask questions. To help me manage my clients and projects. To practice some skills.',
+      outcome:
+         'A clean, responsive, and accessible website that meets my needs and is easy to update and maintain. Hosted on Vercel with a custom domain benbdev.com. Static content stored as markdown (.md) files, rendered in server components using react-markdown and in client components using markdown-to-jsx. Dynamic content stored as JSON.',
+      images: [{ name: 'contracts-home_mpofmm', caption: 'Home page' }],
+      showInProjectsGallery: true,
+      featureOnHome: true
    },
    {
       name: 'Things App v1.0',
@@ -1089,21 +1145,521 @@ export const projects = [
       images: [
          {
             name: 'things-app-search-save-3a4zDc6ssBNHkL9x1Q1Ee0MBBnIzHM.mp4',
-            type: 'video'
+            type: 'video',
+            caption: 'Searching and saving'
          },
          {
             name: 'things-sort-export-trimmed-p3sKqPpzhmwOd18Nj7nizb6YfVBvTh.mp4',
-            type: 'video'
+            type: 'video',
+            caption: 'Sorting and exporting'
          },
          { name: 'things_w7q8lq', hideFromModal: true },
-         { name: 'things-detail_mqkcqy' }
+         { name: 'things-detail_mqkcqy', caption: 'Modal with details' }
       ],
       showInProjectsGallery: true,
       featureOnHome: true
    },
    {
-      name: 'Dashboard Widgets',
+      name: 'Central Oregon Community College',
       year: '2021',
+      type: 'client',
+      tech: [
+         'NodeJS',
+         'React.js',
+         'JavaScript',
+         'TypeScript',
+         'Fabric UI',
+         'Sass/SCSS',
+         'Responsive Design',
+         'Microsoft Graph',
+         'Gulp',
+         'Webpack'
+      ],
+      description:
+         'Website for admin, faculty and students to share information. Integrated social media feeds, CMS, document storage and management, calendars and more. Includes templates to enable authorized admins to create new sites. In addition to development, I provided consultation, requirements gathering, technical documentation, training, and ongoing support. I nurtured a solid relationship with this client, which lasted for more than 8 years.',
+      motivation:
+         'Provide an engaging platform for sharing information, filling out forms, and connecting with others.',
+      outcome:
+         'Well-received. High traffic, increased engagement and improved organization. Easy to customize and use.',
+      images: [
+         { name: 'coccHome_mpge7z', caption: 'Home page' },
+         { name: 'cocc-4-devices_o6vrnk', caption: 'Responsive web design' }
+      ],
+      showInProjectsGallery: true,
+      featureOnHome: false
+   },
+   {
+      name: 'Sizzler Restaurants',
+      year: '2021',
+      type: 'client',
+      tech: [
+         'NodeJS',
+         'React.js',
+         'JavaScript',
+         'TypeScript',
+         'Fabric UI',
+         'Sass/SCSS',
+         'Responsive Design',
+         'Microsoft Graph',
+         'Gulp',
+         'Webpack'
+      ],
+      description:
+         'Internal website for owners, managers and employees to share information and make requests.Integrated social media feeds, CMS, document storage and management, calendars and more. Includes templates to enable authorized admins to create new sites.  In addition to development, I provided consultation, requirements gathering, technical documentation, training, and ongoing support. I had a great relationship with this client, which lasted for more than 7 years.',
+      // motivation: 'Content in the works...',
+      // outcome: 'Content in the works...',
+      images: [
+         {
+            name: 'sizzler-home-gray_hdczb8',
+            caption: 'Corporate home page with news and top-level links'
+         },
+         {
+            name: 'sizzler-4-devices-1676_i1gcuf',
+            caption: 'Responsive web design'
+         },
+         {
+            name: 'sizzlerHome_iovkjp',
+            caption: 'Directory of departments and teams'
+         },
+         // { name: 'sizzlerExtranet_zlhpnh', caption: 'Team new page' },
+         { name: 'sizzlerMktg_jsfupy', caption: 'Team news page' },
+         { name: 'sizzlerNewsFormAni_lscbdk', caption: 'New announcement form' }
+         // { name: 'sizzler-home-tablet_mg2u5c' }
+      ],
+      showInProjectsGallery: true,
+      featureOnHome: false
+   },
+   {
+      name: 'Massage Envy',
+      year: '2021',
+      type: 'client',
+      tech: [
+         'NodeJS',
+         'React.js',
+         'JavaScript',
+         'TypeScript',
+         'Fabric UI',
+         'Sass/SCSS',
+         'Responsive Design',
+         'Microsoft Graph',
+         'Gulp',
+         'Webpack'
+      ],
+      description:
+         'An intranet template for franchises and corporate departments to share information and make requests. Used to build franchise and team sites that combined shared information with custom content. Integrated social media feeds, CMS, document storage and management, calendars and more. In addition to development, I provided consultation, requirements gathering, technical documentation, training, and ongoing support.',
+      // motivation: 'Content in the works...',
+      // outcome: 'Content in the works...',
+      images: [
+         {
+            name: 'massage-envy-4-devices_yhmqdl',
+            caption: 'Responsive web design'
+         }
+      ],
+      showInProjectsGallery: true,
+      featureOnHome: false
+   },
+   {
+      name: 'Reddaway & YRC Freight',
+      year: '2021',
+      type: 'client',
+      tech: [
+         'NodeJS',
+         'React.js',
+         'JavaScript',
+         'TypeScript',
+         'Fabric UI',
+         'Sass/SCSS',
+         'Responsive Design',
+         'Microsoft Graph',
+         'Gulp',
+         'Webpack'
+      ],
+      description:
+         'A large internal website for sharing knowledge, organizing deparments and teams, and making requests. Integrated social media feeds, CMS, document storage and management, calendars and more. Includes templates to enable authorized admins to create new sites. In addition to development, I provided consultation, requirements gathering, technical documentation, training, and ongoing support. I had a great relationship with this client, which lasted for more than 3 years.',
+      // motivation: 'Content in the works...',
+      // outcome: 'Content in the works...',
+      images: [
+         {
+            name: 'reddawayWiki_e8pkgf',
+            caption:
+               'Extensive wiki with roles for administering, authoring and viewing content.'
+         },
+         {
+            name: 'reddawayHome_xl7tmz',
+            caption: 'Directory of departments and teams, with aggregated info.'
+         },
+         {
+            name: 'reddawayIT_y495jq',
+            caption:
+               'Home page for a team or department, with easy-to-use apps.'
+         }
+      ],
+      showInProjectsGallery: true,
+      featureOnHome: false
+   },
+   {
+      name: 'USDA Forest Service',
+      year: '2021',
+      type: 'client',
+      tech: [
+         'NodeJS',
+         'React.js',
+         'JavaScript',
+         'TypeScript',
+         'Fabric UI',
+         'Sass/SCSS',
+         'Responsive Design',
+         'Microsoft Graph',
+         'Gulp',
+         'Webpack'
+      ],
+      description:
+         'Multiple websites, both internal and external. Integrated social media feeds, CMS, document storage and management, calendars and more. Includes templates to enable authorized admins to create new sites. In addition to development, I provided consultation, requirements gathering, technical documentation, training, and ongoing support. I nurtured a solid relationship with this client, which lasted for more than 8 years.',
+      // motivation: 'Content in the works...',
+      // outcome: 'Content in the works...',
+      images: [{ name: 'fsConnectBlur_rylwel' }],
+      showInProjectsGallery: true,
+      featureOnHome: false
+   },
+   {
+      name: 'Oregon Dept. of Land Conservation & Development',
+      year: '2021',
+      type: 'client',
+      tech: [
+         'NodeJS',
+         'React.js',
+         'JavaScript',
+         'TypeScript',
+         'Fabric UI',
+         'Sass/SCSS',
+         'Responsive Design',
+         'Microsoft Graph',
+         'Gulp',
+         'Webpack'
+      ],
+      description:
+         'Fast, secure, flexible intranets for a state agency. Integrated CMS, document storage and management, calendars and more. Includes templates to enable authorized admins to create new sites. In addition to development, I provided consultation, requirements gathering, technical documentation, training, and ongoing support. I nurtured a solid relationship with this client, which lasted for more than 3 years.',
+      // motivation: 'Content in the works...',
+      // outcome: 'Content in the works...',
+      images: [{ name: 'ordlcdMtgDash_vpjod8' }],
+      showInProjectsGallery: true,
+      featureOnHome: false
+   },
+   {
+      name: 'McLean & Sterling',
+      year: '2021',
+      type: 'client',
+      tech: [
+         'NodeJS',
+         'React.js',
+         'JavaScript',
+         'TypeScript',
+         'Fabric UI',
+         'Sass/SCSS',
+         'Responsive Design',
+         'Microsoft Graph',
+         'Gulp',
+         'Webpack'
+      ],
+      description:
+         'Website for a financial services company. Integrated social media feeds, CMS, document storage and management, calendars and more. Includes templates to enable authorized admins to create new sites. In addition to development, I provided consultation, requirements gathering, technical documentation, training, and ongoing support. I had a great relationship with this client, which lasted for more than 2 years.',
+      // motivation: 'Content in the works...',
+      // outcome: 'Content in the works...',
+      images: [
+         {
+            name: 'mclean-sterling-desktop_ty3mpq',
+            caption:
+               'Customizable home page with intuitve apps for content management.'
+         },
+         {
+            name: 'mclean-sterling-4-devices_ndwlvj',
+            caption: 'Responsive web design'
+         }
+      ],
+      showInProjectsGallery: true,
+      featureOnHome: false
+   },
+   {
+      name: 'Peak Health Services',
+      year: '2021',
+      type: 'client',
+      tech: [
+         'NodeJS',
+         'React.js',
+         'JavaScript',
+         'TypeScript',
+         'Fabric UI',
+         'Sass/SCSS',
+         'Responsive Design',
+         'Microsoft Graph',
+         'Gulp',
+         'Webpack'
+      ],
+      description:
+         'Custom, fast, secure websites for sharing information and making requests. Integrated social media feeds, CMS, document storage and management, calendars and more. Includes templates to enable authorized admins to create new sites. In addition to development, I provided consultation, requirements gathering, technical documentation, training, and ongoing support. I had a great relationship with this client, which lasted for more than 5 years.',
+      // motivation: 'Content in the works...',
+      // outcome: 'Content in the works...',
+      images: [
+         { name: 'peak-health-home_tivqng' },
+         { name: 'peak-health-education_p8xs9u' },
+         { name: 'peak-health-sales_teiy8b' }
+      ],
+      showInProjectsGallery: true,
+      featureOnHome: false
+   },
+   {
+      name: 'Peak Provider Services',
+      year: '2021',
+      type: 'client',
+      tech: [
+         'NodeJS',
+         'React.js',
+         'JavaScript',
+         'TypeScript',
+         'Fabric UI',
+         'Sass/SCSS',
+         'Responsive Design',
+         'Microsoft Graph',
+         'Gulp',
+         'Webpack'
+      ],
+      description:
+         'Custom, fast, secure websites for sharing information and making requests. Integrated social media feeds, CMS, document storage and management, calendars and more. Includes templates to enable authorized admins to create new sites. In addition to development, I provided consultation, requirements gathering, technical documentation, training, and ongoing support. I had a great relationship with this client, which lasted for more than 5 years.',
+      // motivation: 'Content in the works...',
+      // outcome: 'Content in the works...',
+      images: [
+         { name: 'peakras-welcome-desktop-wide-3_wbsxu4' },
+         { name: 'peakpayer-4-devices-lg_tjpgob' },
+         { name: 'peakras-depts_gekez2' }
+      ],
+      showInProjectsGallery: true,
+      featureOnHome: false
+   },
+   {
+      name: 'PROLIM PLM Solutions',
+      year: '2021',
+      type: 'client',
+      tech: [
+         'NodeJS',
+         'React.js',
+         'JavaScript',
+         'TypeScript',
+         'Fabric UI',
+         'Sass/SCSS',
+         'Responsive Design',
+         'Microsoft Graph',
+         'Gulp',
+         'Webpack'
+      ],
+      description:
+         'Custom, fast, secure websites for sharing information and making requests. Integrated social media feeds, CMS, document storage and management, calendars and more. Includes templates to enable authorized admins to create new sites. In addition to development, I provided consultation, requirements gathering, technical documentation, training, and ongoing support. I had a great relationship with this client, which lasted for more than 4 years.',
+      // motivation: 'Content in the works...',
+      // outcome: 'Content in the works...',
+      images: [
+         { name: 'prolim-home-desktop_a0lbtv' },
+         { name: 'prolim-4-devices-lg_lzi7fk' }
+      ],
+      showInProjectsGallery: true,
+      featureOnHome: false
+   },
+   {
+      name: 'Tastea',
+      year: '2021',
+      type: 'client',
+      tech: [
+         'NodeJS',
+         'React.js',
+         'JavaScript',
+         'TypeScript',
+         'Fabric UI',
+         'Sass/SCSS',
+         'Responsive Design',
+         'Microsoft Graph',
+         'Gulp',
+         'Webpack'
+      ],
+      description:
+         'Custom, fast, secure websites for sharing information and making requests. Integrated social media feeds, CMS, document storage and management, calendars and more. Includes templates to enable authorized admins to create new sites. In addition to development, I provided consultation, requirements gathering, technical documentation, training, and ongoing support. I had a great relationship with this client.',
+      // motivation: 'Content in the works...',
+      // outcome: 'Content in the works...',
+      images: [
+         { name: 'Tastea-desktop_yizqy4' },
+         { name: 'tastea-4-devices-lg_qtrski' }
+      ],
+      showInProjectsGallery: true,
+      featureOnHome: false
+   },
+   {
+      name: 'University of Montana Foundation',
+      year: '2021',
+      type: 'client',
+      tech: [
+         'NodeJS',
+         'React.js',
+         'JavaScript',
+         'TypeScript',
+         'Fabric UI',
+         'Sass/SCSS',
+         'Responsive Design',
+         'Microsoft Graph',
+         'Gulp',
+         'Webpack'
+      ],
+      description:
+         'Custom, fast, secure websites for sharing information and making requests. Integrated social media feeds, CMS, document storage and management, calendars and more. Includes templates to enable authorized admins to create new sites. In addition to development, I provided consultation, requirements gathering, technical documentation, training, and ongoing support. I had a great relationship with this client.',
+      // motivation: 'Content in the works...',
+      // outcome: 'Content in the works...',
+      images: [
+         { name: 'umf-desktop_nenuai' },
+         { name: 'umf-4-devices-lg_i4xzav' }
+      ],
+      showInProjectsGallery: true,
+      featureOnHome: false
+   },
+   {
+      name: 'Carroll University',
+      year: '2021',
+      type: 'client',
+      tech: [
+         'NodeJS',
+         'React.js',
+         'JavaScript',
+         'TypeScript',
+         'Fabric UI',
+         'Sass/SCSS',
+         'Responsive Design',
+         'Microsoft Graph',
+         'Gulp',
+         'Webpack'
+      ],
+      description:
+         'Custom forms and data management to enable faculty and admins to manage course information, which is accessible by students and staff.',
+      // motivation:
+      //    'To enable faculty and admin to manage course information, which is accessible by students and staff.',
+      // outcome: 'Content in the works...',
+      images: [
+         { name: 'carrolluNewCourseFormCrop_emwkps' },
+         { name: 'carrolluNewCourseForm_d7nncr' }
+      ],
+      showInProjectsGallery: true,
+      featureOnHome: false
+   },
+   // {
+   //    name: 'Richdale Apartments',
+   //    year: '2021',
+   //    type: 'client',
+   //    tech: [
+   //       'NodeJS',
+   //       'React.js',
+   //       'JavaScript',
+   //       'TypeScript',
+   //       'Fabric UI',
+   //       'Sass/SCSS',
+   //       'Responsive Design',
+   //       'Microsoft Graph',
+   //       'Gulp',
+   //       'Webpack'
+   //    ],
+   //    description: 'Content in the works...',
+   //    motivation: 'Content in the works...',
+   //    outcome: 'Content in the works...',
+   //    images: [
+   //       { name: 'richdaleSiteHome_ujkekf' },
+   //       { name: 'richdaleTabsAni_tjtvbb' },
+   //       { name: 'richdaleTabsAni_tjtvbb' },
+   //    ],
+   //    showInProjectsGallery: true,
+   //    featureOnHome: false
+   // },
+   {
+      name: 'Prarie Naturals',
+      year: '2021',
+      type: 'client',
+      tech: [
+         'NodeJS',
+         'React.js',
+         'JavaScript',
+         'TypeScript',
+         'Fabric UI',
+         'Sass/SCSS',
+         'Responsive Design',
+         'Microsoft Graph',
+         'Gulp',
+         'Webpack'
+      ],
+      description: 'Custom, fast, secure websites for sharing information. Integrated social media feeds, CMS, document storage and management, calendars and more. Includes templates to enable authorized admins to create new sites. In addition to development, I provided consultation, requirements gathering, technical documentation, training, and ongoing support. I had a great relationship with this client.',
+      // motivation: 'Content in the works...',
+      // outcome: 'Content in the works...',
+      images: [{ name: 'prairenaturals-4-devices-lg_fqodko' }],
+      showInProjectsGallery: true,
+      featureOnHome: false
+   },
+   {
+      name: 'EDG Partners',
+      year: '2021',
+      type: 'client',
+      tech: [
+         'NodeJS',
+         'React.js',
+         'JavaScript',
+         'TypeScript',
+         'Fabric UI',
+         'Sass/SCSS',
+         'Responsive Design',
+         'Microsoft Graph',
+         'Gulp',
+         'Webpack'
+      ],
+      description:
+         'Custom, fast, secure website for team planning, communication and collaboration. Integrated social media feeds, CMS, document storage and management, calendars and more. Includes templates to enable authorized admins to create new sites. In addition to development, I provided consultation, requirements gathering, technical documentation, training, and ongoing support. I had a great relationship with this client.',
+      // motivation:
+      //    'Provide an engaging platform for sharing information, filling out forms, storing documents with version history, and connecting with others.',
+      // outcome:
+      //    'Well-received. improved communication and organization. Easy to customize and use.',
+      images: [{ name: 'edg-4-devices_bxzzyu' }],
+      showInProjectsGallery: true,
+      featureOnHome: false
+   },
+   {
+      name: 'Classifieds & Events',
+      year: '2019',
+      type: 'app',
+      tech: [
+         'NodeJS',
+         'React.js',
+         'JavaScript',
+         'TypeScript',
+         'Fabric UI',
+         'dayjs',
+         'Sass/SCSS',
+         'Responsive Design',
+         'Gulp',
+         'Webpack'
+      ],
+      codeLink: 'https://github.com/bensbits91/classifieds-2021',
+      description:
+         'Provide a social aspect for employees. Post, find and communicate about items and services. Announce and track events. Moderators can approve posts or request changes.',
+      motivation:
+         'Inject some fun into the workplace. Provide a way for employees to connect and share.',
+      outcome: 'Very popular. Easy to customize and use.',
+      images: [
+         { name: 'classifieds_qwcjne' },
+         { name: 'classifiedsStyles_lmugkq' },
+         { name: 'classifiedsMore_cqbgxb' },
+         { name: 'classifiedsAggr_t8rcto' },
+         { name: 'spfxClassifieds_focus_ab3e7m', hideFromModal: true },
+         {
+            name: 'classifieds-events-PVIWwq4wEE0X3bubcTOYtmM2bYlXaz.mp4',
+            type: 'video'
+         }
+      ],
+      showInProjectsGallery: true,
+      featureOnHome: false
+   },
+   {
+      name: 'Dashboard Widgets',
+      year: '2018',
+      type: 'app',
       tech: [
          'NodeJS',
          'React.js',
@@ -1139,7 +1695,8 @@ export const projects = [
    },
    {
       name: 'Radial Progress Bar',
-      year: '2020',
+      year: '2018',
+      type: 'app',
       tech: [
          'NodeJS',
          'React.js',
@@ -1177,7 +1734,8 @@ export const projects = [
    },
    {
       name: 'Geodata',
-      year: '2020',
+      year: '2018',
+      type: 'app',
       tech: [
          'NodeJS',
          'React.js',
@@ -1210,7 +1768,8 @@ export const projects = [
    },
    {
       name: 'Weather Widget',
-      year: '2020',
+      year: '2018',
+      type: 'app',
       tech: [
          'NodeJS',
          'React.js',
@@ -1260,7 +1819,8 @@ export const projects = [
    },
    {
       name: 'Org Chart',
-      year: '2021',
+      year: '2018',
+      type: 'app',
       tech: [
          'NodeJS',
          'React.js',
@@ -1296,7 +1856,8 @@ export const projects = [
    },
    {
       name: 'Org Directory',
-      year: '2021',
+      year: '2018',
+      type: 'app',
       tech: [
          'NodeJS',
          'React.js',
@@ -1332,7 +1893,8 @@ export const projects = [
    },
    {
       name: 'Form Builder',
-      year: '2021',
+      year: '2018',
+      type: 'app',
       tech: [
          'NodeJS',
          'React.js',
@@ -1370,7 +1932,8 @@ export const projects = [
    },
    {
       name: 'Team Site Directory',
-      year: '2021',
+      year: '2018',
+      type: 'app',
       tech: [
          'NodeJS',
          'React.js',
@@ -1402,7 +1965,8 @@ export const projects = [
    },
    {
       name: 'Stock Widget',
-      year: '2020',
+      year: '2018',
+      type: 'app',
       tech: [
          'NodeJS',
          'React.js',
@@ -1438,7 +2002,8 @@ export const projects = [
    },
    {
       name: 'Agenda Builder',
-      year: '2021',
+      year: '2018',
+      type: 'app',
       tech: [
          'NodeJS',
          'React.js',
@@ -1475,7 +2040,8 @@ export const projects = [
    },
    {
       name: 'Assessment Checklist',
-      year: '2021',
+      year: '2018',
+      type: 'app',
       tech: [
          'NodeJS',
          'React.js',
@@ -1506,39 +2072,9 @@ export const projects = [
       featureOnHome: true
    },
    {
-      name: 'Classifieds & Events',
-      year: '2021',
-      tech: [
-         'NodeJS',
-         'React.js',
-         'JavaScript',
-         'TypeScript',
-         'Fabric UI',
-         'dayjs',
-         'Sass/SCSS',
-         'Responsive Design',
-         'Gulp',
-         'Webpack'
-      ],
-      codeLink: 'https://github.com/bensbits91/classifieds-2021',
-      description:
-         'Provide a social aspect for employees. Post, find and communicate about items and services. Announce and track events. Moderators can approve posts or request changes.',
-      motivation:
-         'Inject some fun into the workplace. Provide a way for employees to connect and share.',
-      outcome: 'Very popular. Easy to customize and use.',
-      images: [
-         { name: 'spfxClassifieds_focus_ab3e7m', hideFromModal: true },
-         {
-            name: 'classifieds-events-PVIWwq4wEE0X3bubcTOYtmM2bYlXaz.mp4',
-            type: 'video'
-         }
-      ],
-      showInProjectsGallery: true,
-      featureOnHome: false
-   },
-   {
       name: 'Contact Directory',
-      year: '2021',
+      year: '2018',
+      type: 'app',
       tech: [
          'NodeJS',
          'React.js',
@@ -1624,14 +2160,19 @@ export const homeSkills = skills
    .filter(skill => skill.featureOnHome === true)
    .map(skill => skill.name);
 
-   export const ctaSkills = skills
+export const ctaSkills = skills
    .filter(skill => skill.featureInCTAs === true)
    .map(skill => skill.name);
 // .sort((a, b) => b.rating - a.rating);
 
-export const skillsForTable = skills.filter(
-   skill => skill.showInSkillsTable === true
-);
+export const skillsForTable = skills
+   .filter(skill => skill.showInSkillsTable === true)
+   .sort((a, b) => {
+      if (b.rating !== a.rating) {
+         return b.rating - a.rating; // Sort by rating first
+      }
+      return b.years - a.years; // If ratings are equal, sort by years
+   });
 
 export const homeProjects = projects.filter(
    project => project.featureOnHome === true
@@ -1679,7 +2220,9 @@ export const skillIcons = (skillNames = [], dark = false) => {
    return skills
       .filter(skill => skillNames.includes(skill.name))
       .map(skill => ({
-         src: dark ? skill.cloudinaryDark || skill.cloudinary : skill.cloudinary,
+         src: dark
+            ? skill.cloudinaryDark || skill.cloudinary
+            : skill.cloudinary,
          altText: skill.name
       }));
 };

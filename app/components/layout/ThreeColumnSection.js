@@ -9,14 +9,14 @@ const ThreeColumnSection = ({ heading = '', columns }) => {
                   <HeadingTwo>{heading}</HeadingTwo>
                </div>
             )}
-            <div className="grid grid-cols-1 md:grid-cols-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                {columns.map((column, index) => {
                   const isFirstOfThree = index % 3 === 0;
                   const isLastOfThree = index % 3 === 2;
                   const outsidePadding = isFirstOfThree
-                     ? ' md:pl-10'
+                     ? ' lg:pl-10'
                      : isLastOfThree
-                       ? ' md:pr-10'
+                       ? ' lg:pr-10'
                        : '';
 
                   return (

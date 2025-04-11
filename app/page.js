@@ -72,7 +72,7 @@ const Home = () => {
                <div className="md:min-w-[400px]">View work samples</div>
             </Button>
          </Section>
-         <Section fullheight width="sm" bg="teal">
+         {/* <Section fullheight width="sm" bg="teal">
             <div className="mb-8 text-bb-gray">
                <div className="text-4xl md:text-5xl">Uniquely Valuable</div>
                <div>
@@ -85,13 +85,13 @@ const Home = () => {
             <Button inverted link="/story">
                <div className="md:min-w-[400px]">Ready my story</div>
             </Button>
-         </Section>
-         <Section top="lg" bottom="lg" width="sm">
-            <div className="mb-8">
+         </Section> */}
+         <Section top="lg" bottom="lg" width="sm" bg="teal">
+            <div className="mb-8 text-bb-gray">
                <div className="text-4xl md:text-5xl">Open to Work</div>
                <div>Looking for a rock-solid software engineer?</div>
             </div>
-            <Button link="/contact">
+            <Button inverted link="/contact">
                <div className="md:min-w-[400px]">Contact me now</div>
             </Button>
          </Section>

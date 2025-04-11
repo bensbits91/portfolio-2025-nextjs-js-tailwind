@@ -1,12 +1,13 @@
-import Link from 'next/link';
+import { CloudinaryImage } from '@/app/components/image';
 import { ProjectGrid } from '@/app/components/projects';
 import {
    HeadingOne,
    HeadingTwo,
+   HeadingThree,
    Subheading
 } from '@/app/components/typography';
-import { HeroSection } from '@/app/components/layout';
-import { Cta, PrimaryCta } from '@/app/components/common';
+import { Section, HeroSection } from '@/app/components/layout';
+import { PrimaryCta, Button } from '@/app/components/common';
 
 const Work = () => {
    return (
@@ -20,29 +21,53 @@ const Work = () => {
             </Subheading>
          </HeroSection>
          <ProjectGrid onOrAfter={[2025]} />
-         <Cta
-            data={{
-               heading: '2021 to 2024',
-               layout: 'Cta',
-               content: [
-                  'I spent almost four years at ZenBusiness working on the public website, customer-facing apps, internal tools, APIs, microservices, experiments and more.'
-               ],
-               link: {
-                  href: '/experience',
-                  text: 'Read more about my experience'
-               }
-            }}
-            bg="teal"
-         />
-         <HeroSection size="wide" bigBottom={false}>
+         <Section top="lg" bottom="lg" width="md" bg="teal">
+            <div className="flex flex-col md:flex-row gap-8">
+               <div className='max-w-[400px]'>
+                  <HeadingTwo color='gray'>2021 to 2024</HeadingTwo>
+                  <Subheading shrink left color="gray">
+                     I spent almost four years at ZenBusiness working on the
+                     public website, customer-facing apps, internal tools, APIs,
+                     microservices, experiments and more.
+                  </Subheading>
+                  <Button inverted link="/experience">
+                     Read more about my experience
+                  </Button>
+               </div>
+               <div>
+                  <CloudinaryImage
+                     cloudinaryId="zenbusiness_luktjt"
+                     alt="ZenBusiness website"
+                     width={750}
+                     height={750}
+                  />
+               </div>
+            </div>
+         </Section>
+         <Section top="lg" bottom="sm" width="lg">
             <HeadingTwo>2021 &amp; Earlier</HeadingTwo>
             <Subheading shrink left color="white">
                From 2013 to 2021, I built hundreds of websites and apps for all
-               kinds of clients. View some of reusalbe components below, or{' '}
-               <Link href="/experience">read more about my experience.</Link>
+               kinds of clients. To facilitate speedy development, I created a
+               library of reusable components.
             </Subheading>
-         </HeroSection>
-         <ProjectGrid before={[2025]} />
+         </Section>
+         <Section top="sm" bottom="sm" width="lg">
+            <HeadingThree>Clients</HeadingThree>
+            <Subheading shrink left color="white">
+               I've worked with a variety of clients, from small businesses to
+               large corporations. I built everything from simple websites to
+               complex web applications.
+            </Subheading>
+         </Section>
+         <ProjectGrid before={[2025]} type="client" />
+         <Section top="sm" bottom="sm" width="lg">
+            <HeadingThree>Apps, Widgets &amp; Components</HeadingThree>
+            <Subheading shrink left color="white">
+               I've built countless of components and widgets, including UI libraries and design systems. 
+            </Subheading>
+         </Section>
+         <ProjectGrid before={[2025]} type="app" />
          <PrimaryCta />
       </>
    );

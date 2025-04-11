@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { HeroSection, OneColumnSection } from '@/app/components/layout';
-import { HeadingOne, SubtleText } from '@/app/components/typography';
+import { HeadingOne, P } from '@/app/components/typography';
 import { SkillList } from '@/app/components/skills';
 import { BarChart, AreaChart, RadarChart } from '@/app/components/charts';
 import { PrimaryCta } from '@/app/components/common';
@@ -15,9 +15,9 @@ const Skills = () => {
 
    const navDefs = [
       { view: 'list', text: 'List' },
-      { view: 'rating', text: 'Rating & years' },
+      { view: 'stack', text: 'Stack coverage' },
       { view: 'growth', text: 'Growth by year' },
-      { view: 'stack', text: 'Stack coverage' }
+      { view: 'rating', text: 'Rating & years' },
    ];
 
    const Nav = () => (
@@ -42,9 +42,9 @@ const Skills = () => {
       <>
          <HeroSection bigBottom={false} size="narrow">
             <HeadingOne>Skills</HeadingOne>
-            <SubtleText>
+            <P>
                The different views are hydrated by the same JSON data
-            </SubtleText>
+            </P>
          </HeroSection>
          <OneColumnSection size="narrow" bigBottom>
             <Nav />
