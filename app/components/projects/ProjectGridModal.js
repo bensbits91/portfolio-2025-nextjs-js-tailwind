@@ -100,7 +100,7 @@ const ProjectGridModal = ({ modalData, closeModal }) => {
                   </div>
                   <CloseButton />
                </div>
-               <div className="h-[calc(100%-60px)] overflow-y-auto px-5">
+               <div className="h-[calc(100%-60px)] overflow-y-auto md:px-5">
                   <TempChildren data={modalData} />
                </div>
             </div>
