@@ -53,12 +53,12 @@ const MobileNav = () => {
             />
          )}
          <div
-            className={`fixed right-0 top-[60px] z-40 h-[500px] w-[300px] bg-bb-gray text-2xl ${
+            className={`fixed right-0 top-[60px] z-40 h-[calc(100vh-60px)] w-[300px] bg-bb-gray text-2xl ${
                isOpen
                   ? 'translate-x-0'
                   : 'translate-x-[100vh] md:translate-x-[130vh]'
             } transform transition-transform duration-500 ease-in-out`}>
-            <div className="flex items-start justify-between p-4">
+            <div className="flex items-start justify-between p-4 overflow-y-auto h-full">
                <ul>
                   {navLinkDefs.map(({ link, text }, index) => (
                      <NavLink
