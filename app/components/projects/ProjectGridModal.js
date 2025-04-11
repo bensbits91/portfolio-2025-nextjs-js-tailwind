@@ -2,7 +2,7 @@ import { ImageGallery, CloudinaryImage } from '@/app/components/image';
 import {
    HeadingTwo,
    HeadingThree,
-   SubtleText
+   P
 } from '@/app/components/typography';
 import { CodeLink, IconBar } from '@/app/components/common';
 import { skillIcons } from '@/app/data';
@@ -40,10 +40,15 @@ const ProjectGridModal = ({ modalData, closeModal }) => {
    const TempChildren = () => {
       return (
          <>
-            <p className="sm:hidden">{year}</p>
+            <p className="mb-4 sm:hidden">{year}</p>
             {tech && tech.length > 0 && (
-               <div className="mb-8">
+               <div className="mb-8 flex flex-col md:flex-row gap-4 justify-between">
                   <IconBar icons={skillIcons(tech)} />
+                  {codeLink && (
+                     <CodeLink
+                        codeLink={{ href: codeLink, text: 'View Code' }}
+                     />
+                  )}
                </div>
             )}
             <div className="flex flex-col gap-4">
@@ -56,18 +61,15 @@ const ProjectGridModal = ({ modalData, closeModal }) => {
                      View this project live at: {liveLink}
                   </a>
                )}
-               {description && <SubtleText>What: {description}</SubtleText>}
-               {motivation && <SubtleText>Why: {motivation}</SubtleText>}
-               {outcome && <SubtleText>Outcome: {outcome}</SubtleText>}
+               {description && <P size='md' bottom='none'>{description}</P>}
+               {motivation && <P bottom='none'>Motivation: {motivation}</P>}
+               {outcome && <P bottom='none'>Outcome: {outcome}</P>}
                {moreInfoLink && (
                   <a
                      href={moreInfoLink}
                      className="hover-delay hover-brightness inline text-sm text-bb-teal">
                      Read more about this project
                   </a>
-               )}
-               {codeLink && (
-                  <CodeLink codeLink={{ href: codeLink, text: 'View Code' }} />
                )}
                {images && images.length > 0 && <ImageGallery images={images} />}
             </div>

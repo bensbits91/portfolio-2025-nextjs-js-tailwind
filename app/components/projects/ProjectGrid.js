@@ -1,10 +1,10 @@
 'use client';
 import { useState, useMemo } from 'react';
-import { TwoColumnSection } from '@/app/components/layout';
+import { TwoColumnSection, ThreeColumnSection } from '@/app/components/layout';
 import { ProjectGridCard, ProjectGridModal } from './index';
 import { projectsForGallery } from '@/app/data';
 
-const ProjectGrid = ({ before, onOrAfter }) => {
+const ProjectGrid = ({ before, onOrAfter, type }) => {
    let projects = useMemo(() => projectsForGallery, []);
    const [modalData, setModalData] = useState(null);
 
@@ -18,9 +18,15 @@ const ProjectGrid = ({ before, onOrAfter }) => {
       });
    }
 
+   if (type) {
+      projects = projects.filter(project => {
+         return project.type === type;
+      });
+   }
+
    return (
       <>
-         <TwoColumnSection
+         <ThreeColumnSection
             columns={projects.map(project => ({
                content: (
                   <ProjectGridCard

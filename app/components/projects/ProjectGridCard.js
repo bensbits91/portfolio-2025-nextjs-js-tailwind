@@ -2,25 +2,28 @@ import { CloudinaryImage } from '@/app/components/image';
 import { HeadingThree } from '@/app/components/typography';
 import { IconBar } from '@/app/components/common';
 import { skillIcons } from '@/app/data';
+import { truncateString } from '@/utils/stringUtils';
 
 const ProjectGridCard = ({ project, handleClick }) => {
-   const { name, tech } = project;
+   const { name, tech, description, year } = project;
    const featuredImage = project.getFeaturedImage();
 
    const imageElement = (
       <CloudinaryImage
          cloudinaryId={featuredImage.name}
          alt={name}
-         width={200}
-         height={200}
+         width={300}
+         height={300}
          frame={featuredImage.frame}
+         full={true}
+         className="h-full w-full object-cover object-top"
       />
    );
 
    const clickableImageElement = (
       <div
          onClick={handleClick}
-         className="hover-delay hover-brightness hover-scale mb-4 inline-block overflow-hidden rounded-sm border-2 border-bb-gray-900 lg:cursor-pointer">
+         className="hover-delay hover-scale inline-block h-40 w-[100%] overflow-hidden rounded-sm border-2 border-l-0 border-r-0 border-t-0 border-b-bb-gray-900 lg:cursor-pointer">
          {imageElement}
       </div>
    );
@@ -31,22 +34,37 @@ const ProjectGridCard = ({ project, handleClick }) => {
       ? clickableImageElement
       : nonClickableImageElement;
 
+   const { newString: truncatedName } = name
+      ? truncateString(name, 20)
+      : {};
+
+   const { newString: truncatedDescription } = description
+      ? truncateString(description, 80)
+      : {};
+
    return (
-      <div className="rounded-lg border-2 border-bb-gray-900 p-8 shadow-dark-card bg-gradient-dark">
-         <HeadingThree>{name}</HeadingThree>
+      <div className="bg-gradient-dark overflow-hidden rounded-lg border-2 border-bb-gray-900 shadow-dark-card">
          {featuredImage && imageToDisplay}
-         {tech.length > 0 && (
-            <div className="my-2">
-               <IconBar icons={skillIcons(tech)} />
-            </div>
-         )}
-         {handleClick && (
-            <button
-               onClick={handleClick}
-               className="hover-delay hover-brightness hover-scale mt-12 w-full rounded-sm bg-bb-teal p-4 text-center font-roboto-sans text-sm tracking-wide text-bb-gray md:w-max">
-               View Project Details
-            </button>
-         )}
+         <div className="p-4">
+            <HeadingThree color='white'>{truncatedName}</HeadingThree>
+            {tech.length > 0 && (
+               <div className="mt-2 mb-4">
+                  <IconBar icons={skillIcons(tech)} />
+               </div>
+            )}
+            {description && (
+               <p className="mb-4 text-sm text-bb-gray-300">
+                  {truncatedDescription}
+               </p>
+            )}
+            {handleClick && (
+               <button
+                  onClick={handleClick}
+                  className="hover-delay hover-brightness w-full rounded-sm bg-bb-teal p-4 text-center font-roboto-sans text-sm tracking-wide text-bb-gray">
+                  View Project Details
+               </button>
+            )}
+         </div>
       </div>
    );
 };
