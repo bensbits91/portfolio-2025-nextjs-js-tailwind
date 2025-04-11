@@ -1,7 +1,8 @@
 import {
    HeroSection,
    OneColumnSection,
-   TwoColumnSection
+   TwoColumnSection,
+   Section
 } from '@/app/components/layout';
 import {
    HeadingOne,
@@ -30,7 +31,7 @@ const BasicPage = ({ content }) => {
          <Breadcrumb />
 
          {heading && (
-            <HeroSection>
+            <Section top='xl' bottom='lg' width="sm">
                <HeadingOne>{heading}</HeadingOne>
                <SubtleText>{subheading}</SubtleText>
 
@@ -39,7 +40,7 @@ const BasicPage = ({ content }) => {
                      <IconBar icons={skillIcons(skillNames)} />
                   </div>
                )}
-            </HeroSection>
+            </Section>
          )}
 
          {sections &&
@@ -54,7 +55,12 @@ const BasicPage = ({ content }) => {
 
                if (layout === 'Cta') {
                   return (
-                     <Cta key={index} data={section} bigBottom={bigBottom} bg='teal' />
+                     <Cta
+                        key={index}
+                        data={section}
+                        bigBottom={bigBottom}
+                        bg="teal"
+                     />
                   );
                }
 
@@ -96,7 +102,7 @@ const BasicPage = ({ content }) => {
                }
 
                return (
-                  <OneColumnSection key={index} bigBottom>
+                  <Section key={index}>
                      <HeadingTwo>{heading}</HeadingTwo>
 
                      {content &&
@@ -118,7 +124,7 @@ const BasicPage = ({ content }) => {
                               </div>
                            );
                         })}
-                  </OneColumnSection>
+                  </Section>
                );
             })}
       </div>

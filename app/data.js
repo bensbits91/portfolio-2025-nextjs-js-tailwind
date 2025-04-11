@@ -1035,7 +1035,7 @@ export const projects = [
       featureOnHome: true
    },
    {
-      name: 'Accordion FAQ App',
+      name: 'Accordion FAQ',
       year: '2025',
       tech: [
          'Next.js',
@@ -1400,9 +1400,12 @@ export const projects = [
       // motivation: 'Content in the works...',
       // outcome: 'Content in the works...',
       images: [
-         { name: 'peak-health-home_tivqng' },
-         { name: 'peak-health-education_p8xs9u' },
-         { name: 'peak-health-sales_teiy8b' }
+         { name: 'peak-health-home_tivqng', caption: 'Home page' },
+         { name: 'peak-health-education_p8xs9u', caption: 'Education site' },
+         {
+            name: 'peak-health-sales_teiy8b',
+            caption: 'Department site template'
+         }
       ],
       showInProjectsGallery: true,
       featureOnHome: false
@@ -1428,9 +1431,15 @@ export const projects = [
       // motivation: 'Content in the works...',
       // outcome: 'Content in the works...',
       images: [
-         { name: 'peakras-welcome-desktop-wide-3_wbsxu4' },
-         { name: 'peakpayer-4-devices-lg_tjpgob' },
-         { name: 'peakras-depts_gekez2' }
+         {
+            name: 'peakras-welcome-desktop-wide-3_wbsxu4',
+            caption: 'Home page'
+         },
+         {
+            name: 'peakpayer-4-devices-lg_tjpgob',
+            caption: 'Responsive web design'
+         },
+         { name: 'peakras-depts_gekez2', caption: 'Site templates' }
       ],
       showInProjectsGallery: true,
       featureOnHome: false
@@ -1456,8 +1465,11 @@ export const projects = [
       // motivation: 'Content in the works...',
       // outcome: 'Content in the works...',
       images: [
-         { name: 'prolim-home-desktop_a0lbtv' },
-         { name: 'prolim-4-devices-lg_lzi7fk' }
+         { name: 'prolim-home-desktop_a0lbtv', caption: 'Home page' },
+         {
+            name: 'prolim-4-devices-lg_lzi7fk',
+            caption: 'Responsive web design'
+         }
       ],
       showInProjectsGallery: true,
       featureOnHome: false
@@ -1483,8 +1495,11 @@ export const projects = [
       // motivation: 'Content in the works...',
       // outcome: 'Content in the works...',
       images: [
-         { name: 'Tastea-desktop_yizqy4' },
-         { name: 'tastea-4-devices-lg_qtrski' }
+         { name: 'Tastea-desktop_yizqy4', caption: 'Home page' },
+         {
+            name: 'tastea-4-devices-lg_qtrski',
+            caption: 'Responsive web design'
+         }
       ],
       showInProjectsGallery: true,
       featureOnHome: false
@@ -1510,8 +1525,8 @@ export const projects = [
       // motivation: 'Content in the works...',
       // outcome: 'Content in the works...',
       images: [
-         { name: 'umf-desktop_nenuai' },
-         { name: 'umf-4-devices-lg_i4xzav' }
+         { name: 'umf-desktop_nenuai', caption: 'Home page' },
+         { name: 'umf-4-devices-lg_i4xzav', caption: 'Responsive web design' }
       ],
       showInProjectsGallery: true,
       featureOnHome: false
@@ -1538,8 +1553,11 @@ export const projects = [
       //    'To enable faculty and admin to manage course information, which is accessible by students and staff.',
       // outcome: 'Content in the works...',
       images: [
-         { name: 'carrolluNewCourseFormCrop_emwkps' },
-         { name: 'carrolluNewCourseForm_d7nncr' }
+         {
+            name: 'carrolluNewCourseFormCrop_emwkps',
+            caption: 'Course addition form'
+         }
+         // { name: 'carrolluNewCourseForm_d7nncr', caption: '' }
       ],
       showInProjectsGallery: true,
       featureOnHome: false
@@ -1587,10 +1605,16 @@ export const projects = [
          'Gulp',
          'Webpack'
       ],
-      description: 'Custom, fast, secure websites for sharing information. Integrated social media feeds, CMS, document storage and management, calendars and more. Includes templates to enable authorized admins to create new sites. In addition to development, I provided consultation, requirements gathering, technical documentation, training, and ongoing support. I had a great relationship with this client.',
+      description:
+         'Custom, fast, secure websites for sharing information. Integrated social media feeds, CMS, document storage and management, calendars and more. Includes templates to enable authorized admins to create new sites. In addition to development, I provided consultation, requirements gathering, technical documentation, training, and ongoing support. I had a great relationship with this client.',
       // motivation: 'Content in the works...',
       // outcome: 'Content in the works...',
-      images: [{ name: 'prairenaturals-4-devices-lg_fqodko' }],
+      images: [
+         {
+            name: 'prairenaturals-4-devices-lg_fqodko',
+            caption: 'Responsive web design'
+         }
+      ],
       showInProjectsGallery: true,
       featureOnHome: false
    },
@@ -1616,7 +1640,9 @@ export const projects = [
       //    'Provide an engaging platform for sharing information, filling out forms, storing documents with version history, and connecting with others.',
       // outcome:
       //    'Well-received. improved communication and organization. Easy to customize and use.',
-      images: [{ name: 'edg-4-devices_bxzzyu' }],
+      images: [
+         { name: 'edg-4-devices_bxzzyu', caption: 'Responsive web design' }
+      ],
       showInProjectsGallery: true,
       featureOnHome: false
    },
@@ -1643,14 +1669,15 @@ export const projects = [
          'Inject some fun into the workplace. Provide a way for employees to connect and share.',
       outcome: 'Very popular. Easy to customize and use.',
       images: [
-         { name: 'classifieds_qwcjne' },
-         { name: 'classifiedsStyles_lmugkq' },
-         { name: 'classifiedsMore_cqbgxb' },
-         { name: 'classifiedsAggr_t8rcto' },
+         { name: 'classifieds_qwcjne', caption: 'Classifieds app' },
+         { name: 'classifiedsStyles_lmugkq', caption: 'Highly customizable' },
+         { name: 'classifiedsMore_cqbgxb', caption: 'More details' },
+         { name: 'classifiedsAggr_t8rcto', caption: 'Aggregated view' },
          { name: 'spfxClassifieds_focus_ab3e7m', hideFromModal: true },
          {
             name: 'classifieds-events-PVIWwq4wEE0X3bubcTOYtmM2bYlXaz.mp4',
-            type: 'video'
+            type: 'video',
+            caption: 'Searching categories and posts'
          }
       ],
       showInProjectsGallery: true,
@@ -1844,11 +1871,13 @@ export const projects = [
          { name: 'sharepoint-org-chart_full_ibyyjd', hideFromModal: true },
          {
             name: 'org-chart-expand-T2laSJesfK7meF6ltsM3L32nE71CpA.mp4',
-            type: 'video'
+            type: 'video',
+            caption: 'Expand and collapse'
          },
          {
             name: 'org-chart-pan-zoom-3Itkoe7jZQ8VvLuiOsVIhsJ2iOb4rw.mp4',
-            type: 'video'
+            type: 'video',
+            caption: 'Pan and zoom'
          }
       ],
       showInProjectsGallery: true,
@@ -1881,11 +1910,13 @@ export const projects = [
          { name: 'sharepoint-org-tree_focus_bdqjup', hideFromModal: true },
          {
             name: 'org-tree-expand-mUBZq1hSrbbQkoN8wuccNHU9liZHyI.mp4',
-            type: 'video'
+            type: 'video',
+            caption: 'Expand and collapse'
          },
          {
             name: 'org-tree-details-lKwZyG0zF3BiK8hBRHLFmpr33Qxzzd.mp4',
-            type: 'video'
+            type: 'video',
+            caption: 'View details'
          }
       ],
       showInProjectsGallery: true,
@@ -1920,11 +1951,13 @@ export const projects = [
          },
          {
             name: 'form-builder-A8W3CLnzDdvZH4fZ3Yod5M9uCM9p1Y.mp4',
-            type: 'video'
+            type: 'video',
+            caption: 'Vertically expanding form'
          },
          {
             name: 'form-builder-slider-8pfobRaCW9Y6q6LlAgAFnbm0Md9dIM.mp4',
-            type: 'video'
+            type: 'video',
+            caption: 'Rotating cubes'
          }
       ],
       showInProjectsGallery: true,

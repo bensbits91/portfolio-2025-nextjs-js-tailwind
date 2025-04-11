@@ -62,6 +62,10 @@
    }
 }
 
+html {
+   min-height: 100vh; /* fix mobile browser bottom menu pushing modal to top */
+}
+
 body {
    color: var(--foreground);
    background: var(--background);
