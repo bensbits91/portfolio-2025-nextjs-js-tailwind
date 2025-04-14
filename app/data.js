@@ -439,8 +439,8 @@ export const skills = [
       stackCategory: 'Language',
       name: 'PHP',
       icon: '/php.svg',
-      cloudinary: 'php01-dark-icon_fzefry',
-      cloudinaryDark: 'javascript-dark-icon_diwklq',
+      cloudinary: 'php-icon_apfbnf',
+      cloudinaryDark: 'php01-dark-icon_fzefry',
       yearLearned: 2013,
       years: 9,
       rating: 8,
@@ -757,7 +757,31 @@ export const skills = [
 ];
 export const experience = [
    {
-      role: 'Staff Full-Stack Engineer',
+      role: 'Contract Web Developer',
+      company: 'Self-Employed',
+      location: 'Portland, OR',
+      start: '2024-12',
+      end: '',
+      duties: [
+         {
+            name: '',
+            description: 'Building fast, beautiful websites and apps.',
+            skillNames: [
+               'JavaScript',
+               'NodeJS',
+               'React.js',
+               'Next.js',
+               'Vercel',
+               'CSS Modules',
+               'Tailwind',
+               'Fastify',
+               'MongoDB'
+            ]
+         }
+      ],
+   },
+   {
+      role: 'Staff Full-Stack Software Engineer',
       company: 'ZenBusiness',
       location: 'Austin, TX (Remote)',
       start: '2021-02',
@@ -861,8 +885,6 @@ export const experience = [
          'CSS',
          'SCSS',
          'Sass',
-         'Tailwind',
-         'JSS',
          'Styled Components',
          'Responsive Design',
          'A/B and multivariate testing',
@@ -2160,7 +2182,7 @@ export const education = [
       endYear: 2001,
       awards: [
          'Fully Paid PhD Fellowship',
-         'Exceled, tutored peers, led study groups',
+         'Excelled, tutored peers, led study groups',
          'Focused on fluid dynamics and differential equations',
          'Participated in sponsored workshops to optimize semiconductor performance',
          'Helped distinguished professors emeritus produce the second edition of their popular textbook on differential equations. Devised complex mathematical problems and authored solutions. Edited and proofread the text. Used LaTeX to typeset the book. Trained other students in LaTeX. Developed a love of tech. Also enhanced my life-long love of mentoring and teaching.',

@@ -2,7 +2,7 @@ import { CloudinaryImage } from '@/app/components/image';
 import { HeadingThree } from '@/app/components/typography';
 import { IconBar } from '@/app/components/common';
 import { skillIcons } from '@/app/data';
-import { truncateString } from '@/utils/stringUtils';
+import { truncateString } from '@/app/utils';
 
 const ProjectGridCard = ({ project, handleClick }) => {
    const { name, tech, description, year } = project;
