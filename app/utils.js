@@ -40,19 +40,6 @@ export const generateStars = rating => {
 
    return stars;
 };
-export const generateYearIcon = years => {
-   return (
-      <div className="row flex h-6 w-6 items-center">
-         <CloudinaryImage
-            cloudinaryId={`yrs-${years}`}
-            alt="Number of years icon"
-            width="24"
-            height="24"
-         />
-         <span className="text-teal-400">years</span>
-      </div>
-   );
-};
 
 // date helpers
 export const getYearsAndMonths = (start, end) => {
@@ -65,19 +52,21 @@ export const getYearsAndMonths = (start, end) => {
 export const getPrettyDate = date => dayjs(date).format('MMM YYYY');
 export const duration = (start, end, style) => {
    const { years, months } = getYearsAndMonths(start, end);
-   const pretty = `${getPrettyDate(start)} to ${getPrettyDate(end)}`;
-   const yoMo = `${years} years ${months} months`;
+   const prettyStart = getPrettyDate(start);
+   const prettyEnd = end ? getPrettyDate(end) : 'Present';
+   const prettyDate = `${prettyStart} to ${prettyEnd}`;
+   const yoMo = `${years ? `${years} years ` : ''}${months} months`;
    const approxYears = `~ ${Math.round(years + months / 12)} years`;
 
    switch (style) {
       case 'pretty':
-         return pretty;
+         return prettyDate;
       case 'yoMo':
          return yoMo;
       case 'approxYears':
          return approxYears;
       default:
-         return `${pretty} (${yoMo})`;
+         return `${prettyDate} (${yoMo})`;
    }
 };
 export const getYearsSince = date => {
@@ -127,4 +116,11 @@ export const maxWidthCode = size => {
       default:
          return 'max-w-[800px]';
    }
+};
+
+export const truncateString = (str, num) => {
+   if (str?.length <= num) {
+      return { newString: str, wasTruncated: false };
+   }
+   return { newString: str.slice(0, num) + '...', wasTruncated: true };
 };

@@ -1,4 +1,4 @@
-import { HeadingTwo, SubtleText } from '@/app/components/typography';
+import { HeadingTwo, P } from '@/app/components/typography';
 import { duration } from '@/app/utils.js';
 
 const JobHeader = ({ job }) => {
@@ -11,7 +11,7 @@ const JobHeader = ({ job }) => {
             <span className="text-bb-gray-300"> in {location}</span>
          </div>
          <div className="md:pl-2">
-            <SubtleText>{duration(start, end)}</SubtleText>
+            <P>{duration(start, end)}</P>
          </div>
       </div>
    );
