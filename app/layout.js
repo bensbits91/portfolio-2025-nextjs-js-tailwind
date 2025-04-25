@@ -1,8 +1,8 @@
 import Head from 'next/head';
 import { Analytics } from '@vercel/analytics/next';
 import { Roboto, Roboto_Mono } from 'next/font/google';
-import { Nav } from './components/navbar';
-import { Footer } from './components/footer';
+import { Nav } from '@/components/navbar';
+import { Footer } from '@/components/footer';
 import './globals.css';
 
 const robotoSans = Roboto({

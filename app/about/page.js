@@ -1,39 +1,24 @@
-import { Section } from '@/app/components/layout';
+import { Section } from '@/components/layout';
 import {
    HeadingOne,
    HeadingTwo,
    HeadingThree,
    Text
-} from '@/app/components/typography';
-import { PrimaryCta } from '@/app/components/common';
+} from '@/components/typography';
+import { PrimaryCta } from '@/components/common';
 import { about, certifications, education, expertise } from '@/app/data.js';
 
 // todo: move to components Education, Certification, About (ish)
 
 const About = () => {
-   const {
-      overview,
-      firstName,
-      lastName,
-      location,
-      preferredName,
-      title,
-      otherTitles
-   } = about;
+   const { overview } = about;
 
    const Education = ({ education }) => (
       <div>
          <div>
             {education.map((item, index) => {
-               const {
-                  degree,
-                  major,
-                  institution,
-                  location,
-                  startYear,
-                  endYear,
-                  awards
-               } = item;
+               const { degree, major, institution, location, endYear, awards } =
+                  item;
                return (
                   <div key={index} className="mb-10">
                      <HeadingThree color="white">

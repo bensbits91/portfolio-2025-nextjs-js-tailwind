@@ -1,9 +1,9 @@
-import { CloudinaryImage } from '@/app/components/image';
-import { IconBar } from '@/app/components/common';
+import { CloudinaryImage } from '@/components/image';
+import { IconBar } from '@/components/common';
 import { skillIcons } from '@/app/data';
-import { Section } from './components/layout';
-import { HeadingOne, HeadingTwo, Text } from './components/typography';
-import Button from '@/app/components/common/Button';
+import { Section } from '@/components/layout';
+import { HeadingOne, HeadingTwo, Text } from '@/components/typography';
+import Button from '@/components/common/Button';
 import { about, homeSkills } from './data';
 
 const Home = () => {

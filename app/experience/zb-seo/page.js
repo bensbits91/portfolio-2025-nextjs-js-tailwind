@@ -1,4 +1,4 @@
-import { BasicPage } from '@/app/components/templates';
+import { BasicPage } from '@/components/templates';
 import content from './content.js';
 
 const ZbSeo = () => <BasicPage content={content} />;

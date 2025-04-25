@@ -1,6 +1,6 @@
-import { ContactForm, ContactLinks } from '@/app/components/contact';
-import { HeadingOne, Text } from '@/app/components/typography';
-import { Section } from '@/app/components/layout';
+import { ContactForm, ContactLinks } from '@/components/contact';
+import { HeadingOne, Text } from '@/components/typography';
+import { Section } from '@/components/layout';
 
 const Contact = () => {
    return (

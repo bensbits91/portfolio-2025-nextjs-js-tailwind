@@ -1,7 +1,7 @@
-import { FeaturedProjectCard, ProjectGrid } from '@/app/components/projects';
-import { HeadingOne, Text } from '@/app/components/typography';
-import { Section } from '@/app/components/layout';
-import { PrimaryCta } from '@/app/components/common';
+import { FeaturedProjectCard, ProjectGrid } from '@/components/projects';
+import { HeadingOne, Text } from '@/components/typography';
+import { Section } from '@/components/layout';
+import { PrimaryCta } from '@/components/common';
 
 const Projects = () => {
    return (

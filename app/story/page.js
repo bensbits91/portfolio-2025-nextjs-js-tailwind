@@ -1,4 +1,4 @@
-import { Section } from '@/app/components/layout';
+import { Section } from '@/components/layout';
 
 const Story = () => {
    return (

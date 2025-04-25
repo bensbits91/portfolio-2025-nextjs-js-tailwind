@@ -1,10 +1,10 @@
 'use client';
 import { useState } from 'react';
-import { Section } from '@/app/components/layout';
-import { HeadingOne, Text } from '@/app/components/typography';
-import { SkillList } from '@/app/components/skills';
-import { BarChart, AreaChart, RadarChart } from '@/app/components/charts';
-import { PrimaryCta } from '@/app/components/common';
+import { Section } from '@/components/layout';
+import { HeadingOne, Text } from '@/components/typography';
+import { SkillList } from '@/components/skills';
+import { BarChart, AreaChart, RadarChart } from '@/components/charts';
+import { PrimaryCta } from '@/components/common';
 /** todo:
  * move and rename components
  * make reusable chart components?

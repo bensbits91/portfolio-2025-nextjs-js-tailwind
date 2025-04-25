@@ -1,13 +1,13 @@
-import { CloudinaryImage } from '@/app/components/image';
-import { ProjectGrid } from '@/app/components/projects';
+import { CloudinaryImage } from '@/components/image';
+import { ProjectGrid } from '@/components/projects';
 import {
    HeadingOne,
    HeadingTwo,
    HeadingThree,
    Text
-} from '@/app/components/typography';
-import { Section } from '@/app/components/layout';
-import { PrimaryCta, Button } from '@/app/components/common';
+} from '@/components/typography';
+import { Section } from '@/components/layout';
+import { PrimaryCta, Button } from '@/components/common';
 
 const Work = () => {
    return (

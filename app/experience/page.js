@@ -1,9 +1,9 @@
 import { useMemo } from 'react';
-import { Job } from '@/app/components/experience';
-import { CloudinaryImage } from '@/app/components/image';
-import { Section } from '@/app/components/layout';
-import { HeadingOne } from '@/app/components/typography';
-import { PrimaryCta } from '@/app/components/common';
+import { Job } from '@/components/experience';
+import { CloudinaryImage } from '@/components/image';
+import { Section } from '@/components/layout';
+import { HeadingOne } from '@/components/typography';
+import { PrimaryCta } from '@/components/common';
 import { experience } from '@/app/data.js';
 // todo: make this <a> a reusable button component (need component/button folder and index.js)
 
