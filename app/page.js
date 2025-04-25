@@ -26,8 +26,6 @@ const Home = () => {
                   />
                </div>
             </div>
-            {/* </Section>
-         <Section height width="sm"> */}
             <HeadingTwo color="white">Frontend + Fullstack</HeadingTwo>
             <div className="mb-8 max-w-[560px]">
                <IconBar wrap icons={skillIcons(homeSkills)} />
@@ -72,24 +70,12 @@ const Home = () => {
                <div className="md:min-w-[400px]">View work samples</div>
             </Button>
          </Section>
-         {/* <Section fullheight width="sm" bg="teal">
-            <div className="mb-8 text-bb-gray">
-               <div className="text-4xl md:text-5xl">Uniquely Valuable</div>
-               <div>
-                  Math/music/language --&gt; technical documentation --&gt;
-                  process engineering --&gt; team building --&gt; software
-                  customization --&gt; frontend development --&gt; fullstack
-                  software engineering
-               </div>
-            </div>
-            <Button inverted link="/story">
-               <div className="md:min-w-[400px]">Ready my story</div>
-            </Button>
-         </Section> */}
          <Section fullheight top="lg" bottom="lg" width="sm" bg="teal">
             <div className="mb-8 text-bb-gray">
                <div className="text-4xl md:text-5xl">Open to Work</div>
-               <div>Looking for a rock-solid software engineer?</div>
+               <Subheading left color='gray'>
+                  Looking for a rock-solid software engineer?
+               </Subheading>
             </div>
             <Button inverted link="/contact">
                <div className="md:min-w-[400px]">Let&apos;s connect</div>

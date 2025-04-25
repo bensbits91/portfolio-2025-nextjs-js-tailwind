@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { Section } from '@/app/components/layout';
-import { HeadingOne, P } from '@/app/components/typography';
+import { HeadingOne, Text } from '@/app/components/typography';
 import { SkillList } from '@/app/components/skills';
 import { BarChart, AreaChart, RadarChart } from '@/app/components/charts';
 import { PrimaryCta } from '@/app/components/common';
@@ -42,9 +42,9 @@ const Skills = () => {
       <>
          <Section top='xl' bottom='sm' width="sm">
             <HeadingOne>Skills</HeadingOne>
-            <P>
+            <Text>
                The different views are hydrated by the same JSON data
-            </P>
+            </Text>
          </Section>
          <Section width="sm" bottom='lg'>
             <Nav />

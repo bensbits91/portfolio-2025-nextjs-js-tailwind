@@ -3,8 +3,7 @@ import {
    HeadingOne,
    HeadingTwo,
    HeadingThree,
-   SubtleText,
-   P,
+   Text,
    UL
 } from '@/app/components/typography';
 import { Breadcrumb, Cta, CodeLink, IconBar } from '@/app/components/common';
@@ -15,7 +14,7 @@ const BasicPage = ({ content }) => {
 
    const ContentItem = ({ item }) => {
       if (typeof item === 'string') {
-         return <P>{item}</P>;
+         return <Text>{item}</Text>;
       }
 
       return <UL items={item} />;
@@ -28,7 +27,7 @@ const BasicPage = ({ content }) => {
          {heading && (
             <Section top="xl" bottom="lg" width="md">
                <HeadingOne>{heading}</HeadingOne>
-               <SubtleText>{subheading}</SubtleText>
+               <Text>{subheading}</Text>
 
                {skillNames && (
                   <div className="my-2">
@@ -83,7 +82,7 @@ const BasicPage = ({ content }) => {
                                              <HeadingThree color="yellow">
                                                 {heading}
                                              </HeadingThree>
-                                             {subheading && <P>{subheading}</P>}
+                                             {subheading && <Text>{subheading}</Text>}
                                              <UL items={list} />
                                           </div>
                                        );

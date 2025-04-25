@@ -1,4 +1,4 @@
-import { HeadingTwo, P } from '@/app/components/typography';
+import { HeadingTwo, Text } from '@/app/components/typography';
 import { Button } from '@/app/components/common';
 import { maxWidthCode } from '@/app/utils';
 
@@ -23,9 +23,9 @@ const Cta = ({
             {data.heading}
          </HeadingTwo>
          {data.content.map((text, index) => (
-            <P key={index} color="gray">
+            <Text key={index} color="gray">
                {text}
-            </P>
+            </Text>
          ))}
          <Button inverted link={data.link.href}>
             {data.link.text}

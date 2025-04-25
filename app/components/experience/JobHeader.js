@@ -1,4 +1,4 @@
-import { HeadingTwo, P } from '@/app/components/typography';
+import { HeadingTwo, Text } from '@/app/components/typography';
 import { duration } from '@/app/utils.js';
 
 const JobHeader = ({ job }) => {
@@ -11,7 +11,7 @@ const JobHeader = ({ job }) => {
             <span className="text-bb-gray-300"> in {location}</span>
          </div>
          <div className="md:pl-2">
-            <P>{duration(start, end)}</P>
+            <Text>{duration(start, end)}</Text>
          </div>
       </div>
    );

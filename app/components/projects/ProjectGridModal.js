@@ -2,7 +2,7 @@ import { ImageGallery, CloudinaryImage } from '@/app/components/image';
 import {
    HeadingTwo,
    HeadingThree,
-   P
+   Text
 } from '@/app/components/typography';
 import { CodeLink, IconBar } from '@/app/components/common';
 import { skillIcons } from '@/app/data';
@@ -61,9 +61,9 @@ const ProjectGridModal = ({ modalData, closeModal }) => {
                      View this project live at: {liveLink}
                   </a>
                )}
-               {description && <P size='md' bottom='none'>{description}</P>}
-               {motivation && <P bottom='none'>Motivation: {motivation}</P>}
-               {outcome && <P bottom='none'>Outcome: {outcome}</P>}
+               {description && <Text size='md' bottom='none'>{description}</Text>}
+               {motivation && <Text bottom='none'>Motivation: {motivation}</Text>}
+               {outcome && <Text bottom='none'>Outcome: {outcome}</Text>}
                {moreInfoLink && (
                   <a
                      href={moreInfoLink}

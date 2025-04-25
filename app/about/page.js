@@ -3,7 +3,7 @@ import {
    HeadingOne,
    HeadingTwo,
    HeadingThree,
-   P
+   Text
 } from '@/app/components/typography';
 import { PrimaryCta } from '@/app/components/common';
 import { about, certifications, education, expertise } from '@/app/data.js';
@@ -78,8 +78,8 @@ const About = () => {
       <div>
          <Section top="xl" bottom="lg" width="sm">
             <HeadingOne>About Bennett</HeadingOne>
-            <P>{overview}</P>
-            <P>{expertise.join(' | ')}</P>
+            <Text>{overview}</Text>
+            <Text>{expertise.join(' | ')}</Text>
          </Section>
          <Section bottom="lg" width="sm">
             <HeadingTwo>Education</HeadingTwo>

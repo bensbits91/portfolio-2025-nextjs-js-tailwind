@@ -1,5 +1,5 @@
 import { CloudinaryImage } from '@/app/components/image';
-import { SubtleText } from '@/app/components/typography';
+import { Text } from '@/app/components/typography';
 
 const CodeLink = ({ codeLink }) => {
    return (
@@ -16,7 +16,11 @@ const CodeLink = ({ codeLink }) => {
                width={30}
                height={30}
             />
-            {codeLink.text && <SubtleText>{codeLink.text}</SubtleText>}
+            {codeLink.text && (
+               <Text bottom="no" color="teal">
+                  {codeLink.text}
+               </Text>
+            )}
          </div>
       </a>
    );

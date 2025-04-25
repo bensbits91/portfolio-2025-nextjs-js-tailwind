@@ -5,7 +5,7 @@ import { CloudinaryImage } from '@/app/components/image';
 
 const ContactLinks = ({ isNavbar = false }) => {
    return (
-      <ul className="flex h-7 gap-4">
+      <ul className="flex h-5 gap-4">
          <li>
             <a
                href="https://www.linkedin.com/in/benbrooks/"
@@ -16,8 +16,8 @@ const ContactLinks = ({ isNavbar = false }) => {
                <CloudinaryImage
                   cloudinaryId="linkedin-white_t7tuve"
                   alt="LinkedIn"
-                  width={30}
-                  height={30}
+                  width={20}
+                  height={20}
                />
             </a>
          </li>
@@ -31,8 +31,8 @@ const ContactLinks = ({ isNavbar = false }) => {
                <CloudinaryImage
                   cloudinaryId="github1_o1ok5i"
                   alt="GitHub"
-                  width={30}
-                  height={30}
+                  width={20}
+                  height={20}
                />
             </a>
          </li>
@@ -45,8 +45,8 @@ const ContactLinks = ({ isNavbar = false }) => {
                <CloudinaryImage
                   cloudinaryId="resume_o5rgfa"
                   alt="Resume"
-                  width={30}
-                  height={30}
+                  width={20}
+                  height={20}
                />
             </a>
          </li>
@@ -59,8 +59,8 @@ const ContactLinks = ({ isNavbar = false }) => {
                   <CloudinaryImage
                      cloudinaryId="mail_snle7z"
                      alt="Envelope"
-                     width={30}
-                     height={30}
+                     width={20}
+                     height={20}
                   />
                </Link>
             </li>
