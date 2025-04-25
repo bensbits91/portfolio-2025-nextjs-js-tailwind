@@ -1,9 +1,4 @@
-import {
-   HeroSection,
-   OneColumnSection,
-   TwoColumnSection,
-   Section
-} from '@/app/components/layout';
+import { TwoColumnSection, Section } from '@/app/components/layout';
 import {
    HeadingOne,
    HeadingTwo,
@@ -31,7 +26,7 @@ const BasicPage = ({ content }) => {
          <Breadcrumb />
 
          {heading && (
-            <Section top='xl' bottom='lg' width="sm">
+            <Section top="xl" bottom="lg" width="md">
                <HeadingOne>{heading}</HeadingOne>
                <SubtleText>{subheading}</SubtleText>
 

@@ -51,8 +51,12 @@
    --bb-pink: #e370dc;
    --bb-purple: #9033d8;
 
+   /* todo: handle light mode
    --background: var(--bb-white);
-   --foreground: var(--bb-gray);
+   --foreground: var(--bb-gray); */
+
+   --background: var(--bb-gray);
+   --foreground: #a0b3c6;
 }
 
 @media (prefers-color-scheme: dark) {

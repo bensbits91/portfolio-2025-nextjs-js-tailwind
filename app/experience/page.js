@@ -1,20 +1,18 @@
 import { useMemo } from 'react';
 import { Job } from '@/app/components/experience';
 import { CloudinaryImage } from '@/app/components/image';
-import { HeroSection, OneColumnSection } from '@/app/components/layout';
-import { HeadingOne, SubtleText } from '@/app/components/typography';
+import { Section } from '@/app/components/layout';
+import { HeadingOne } from '@/app/components/typography';
 import { PrimaryCta } from '@/app/components/common';
 import { experience } from '@/app/data.js';
 // todo: make this <a> a reusable button component (need component/button folder and index.js)
-// todo: icon library for common cloudinary images
+
 const Experience = () => {
    const xp = useMemo(() => experience, []);
    return (
       <>
-         <HeroSection bigBottom={false} size="normal">
+         <Section top="xl" width="sm">
             <HeadingOne textCenter={false}>Experience</HeadingOne>
-         </HeroSection>
-         <OneColumnSection size="normal">
             <div className="mb-8 lg:mb-12">
                <a
                   href="https://res.cloudinary.com/ddfrx5278/image/upload/v1739151148/Ben_Brooks_Resume_vqqprw.pdf"
@@ -32,7 +30,7 @@ const Experience = () => {
                   </div>
                </a>
             </div>
-         </OneColumnSection>
+         </Section>
          {xp.map((job, index) => (
             <Job key={index} job={job} />
          ))}
