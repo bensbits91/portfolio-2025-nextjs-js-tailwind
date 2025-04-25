@@ -4,7 +4,7 @@ import { skillIcons } from '@/app/data';
 import { Section } from './components/layout';
 import { HeadingOne, HeadingTwo, Subheading } from './components/typography';
 import Button from '@/app/components/common/Button';
-import { about, expertise, experience, homeSkills, homeProjects } from './data';
+import { about, homeSkills } from './data';
 
 const Home = () => {
    return (
@@ -36,7 +36,7 @@ const Home = () => {
                </Button>
             </div>
          </Section>
-         <Section top="lg" bottom="lg" width="sm" bg="yellow">
+         <Section fullheight top="lg" bottom="lg" width="sm" bg="teal">
             <div className="mb-8 flex gap-12 text-bb-gray md:gap-20">
                <div>
                   <div className="text-4xl md:text-5xl">23+</div> years in
@@ -51,11 +51,11 @@ const Home = () => {
                   <div className="text-xl md:text-2xl">Fullstack</div>
                </div>
             </div>
-            <Button inverted yellow link="/experience">
+            <Button inverted link="/experience">
                <div className="md:min-w-[400px]">View experience</div>
             </Button>
          </Section>
-         <Section top="lg" bottom="lg" width="sm">
+         <Section fullheight top="lg" bottom="lg" width="sm">
             <div className="mb-8 flex flex-col gap-12 md:flex-row md:gap-20">
                <div>
                   <div className="text-4xl md:text-5xl">100s</div>
@@ -86,13 +86,13 @@ const Home = () => {
                <div className="md:min-w-[400px]">Ready my story</div>
             </Button>
          </Section> */}
-         <Section top="lg" bottom="lg" width="sm" bg="teal">
+         <Section fullheight top="lg" bottom="lg" width="sm" bg="teal">
             <div className="mb-8 text-bb-gray">
                <div className="text-4xl md:text-5xl">Open to Work</div>
                <div>Looking for a rock-solid software engineer?</div>
             </div>
             <Button inverted link="/contact">
-               <div className="md:min-w-[400px]">Contact me now</div>
+               <div className="md:min-w-[400px]">Let&apos;s connect</div>
             </Button>
          </Section>
       </>
