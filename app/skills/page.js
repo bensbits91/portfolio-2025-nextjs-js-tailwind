@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { HeroSection, OneColumnSection } from '@/app/components/layout';
+import { Section } from '@/app/components/layout';
 import { HeadingOne, P } from '@/app/components/typography';
 import { SkillList } from '@/app/components/skills';
 import { BarChart, AreaChart, RadarChart } from '@/app/components/charts';
@@ -40,13 +40,13 @@ const Skills = () => {
 
    return (
       <>
-         <HeroSection bigBottom={false} size="narrow">
+         <Section top='xl' bottom='sm' width="sm">
             <HeadingOne>Skills</HeadingOne>
             <P>
                The different views are hydrated by the same JSON data
             </P>
-         </HeroSection>
-         <OneColumnSection size="narrow" bigBottom>
+         </Section>
+         <Section width="sm" bottom='lg'>
             <Nav />
             <div className="pt-4">
                {selectedView === 'list' && <SkillList />}
@@ -54,7 +54,7 @@ const Skills = () => {
                {selectedView === 'growth' && <AreaChart />}
                {selectedView === 'stack' && <RadarChart />}
             </div>
-         </OneColumnSection>
+         </Section>
          <PrimaryCta />
       </>
    );

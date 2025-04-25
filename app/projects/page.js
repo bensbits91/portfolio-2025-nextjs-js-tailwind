@@ -1,17 +1,17 @@
 import { FeaturedProjectCard, ProjectGrid } from '@/app/components/projects';
 import { HeadingOne, SubtleText, P } from '@/app/components/typography';
-import { HeroSection } from '@/app/components/layout';
+import { Section } from '@/app/components/layout';
 import { PrimaryCta } from '@/app/components/common';
 
 const Projects = () => {
    return (
       <>
-         <HeroSection bigBottom={false}>
+         <Section top='xl'>
             <HeadingOne>Sample Projects</HeadingOne>
             <SubtleText>
                A couple of newer projects and a bunch of older work.
             </SubtleText>
-         </HeroSection>
+         </Section>
          <FeaturedProjectCard skills={['NodeJS', 'React.js', 'Next.js', 'MongoDB', 'Fastify', 'CSS Modules', 'Responsive Design', 'Turbopack']}>
             <P>
                A personal tracker and rating system for all the things you do,

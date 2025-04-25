@@ -6,20 +6,20 @@ import {
    HeadingThree,
    Subheading
 } from '@/app/components/typography';
-import { Section, HeroSection } from '@/app/components/layout';
+import { Section } from '@/app/components/layout';
 import { PrimaryCta, Button } from '@/app/components/common';
 
 const Work = () => {
    return (
       <>
-         <HeroSection size="wide" bigBottom={false}>
+         <Section top='xl' width="lg">
             <HeadingOne>Work Samples</HeadingOne>
             <HeadingTwo>Recent Projects</HeadingTwo>
             <Subheading shrink left color="white">
-               In 2025, I've been doing contract work, contributing to projects
+               In 2025, I&apos;ve been doing contract work, contributing to projects
                and expanding my skills through passion projects.
             </Subheading>
-         </HeroSection>
+         </Section>
          <ProjectGrid onOrAfter={[2025]} />
          <Section top="lg" bottom="lg" width="md" bg="teal">
             <div className="flex flex-col md:flex-row gap-8">
@@ -55,7 +55,7 @@ const Work = () => {
          <Section top="sm" bottom="sm" width="lg">
             <HeadingThree>Clients</HeadingThree>
             <Subheading shrink left color="white">
-               I've worked with a variety of clients, from small businesses to
+               I&apos;ve worked with a variety of clients, from small businesses to
                large corporations. I built everything from simple websites to
                complex web applications.
             </Subheading>
@@ -64,7 +64,7 @@ const Work = () => {
          <Section top="sm" bottom="sm" width="lg">
             <HeadingThree>Apps, Widgets &amp; Components</HeadingThree>
             <Subheading shrink left color="white">
-               I've built countless of components and widgets, including UI libraries and design systems. 
+               I&apos;ve built countless of components and widgets, including UI libraries and design systems. 
             </Subheading>
          </Section>
          <ProjectGrid before={[2025]} type="app" />

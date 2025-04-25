@@ -1,10 +1,9 @@
-import { HeroSection, OneColumnSection } from '@/app/components/layout';
+import { Section } from '@/app/components/layout';
 import {
    HeadingOne,
    HeadingTwo,
    HeadingThree,
-   Subheading,
-   SubtleText
+   P
 } from '@/app/components/typography';
 import { PrimaryCta } from '@/app/components/common';
 import { about, certifications, education, expertise } from '@/app/data.js';
@@ -37,18 +36,20 @@ const About = () => {
                } = item;
                return (
                   <div key={index} className="mb-10">
-                     <HeadingThree>
+                     <HeadingThree color="white">
                         {degree} in {major}
                      </HeadingThree>
-                     <h4>
-                        {institution}
-                     </h4>
-                     <p className='mb-4'>
+                     <h4>{institution}</h4>
+                     <p className="mb-4">
                         {location} {endYear}
                      </p>
                      <ul className="list-outisde list-disc pl-4">
                         {awards.map((award, index) => {
-                           return <li key={index} className="pl-2">{award}</li>;
+                           return (
+                              <li key={index} className="pl-2">
+                                 {award}
+                              </li>
+                           );
                         })}
                      </ul>
                   </div>
@@ -75,26 +76,19 @@ const About = () => {
 
    return (
       <div>
-         <HeroSection bigBottom={false}>
+         <Section top="xl" bottom="lg" width="sm">
             <HeadingOne>About Bennett</HeadingOne>
-            {/* <Subheading left>
-               {firstName} {lastName}
-            </Subheading> */}
-         </HeroSection>
-         <OneColumnSection>
-            <p>{overview}</p>
-         </OneColumnSection>
-         <OneColumnSection bigBottom>
-            <SubtleText>{expertise.join(' | ')}</SubtleText>
-         </OneColumnSection>
-         <OneColumnSection bigBottom>
+            <P>{overview}</P>
+            <P>{expertise.join(' | ')}</P>
+         </Section>
+         <Section bottom="lg" width="sm">
             <HeadingTwo>Education</HeadingTwo>
             <Education education={education} />
-         </OneColumnSection>
-         <OneColumnSection bigBottom>
+         </Section>
+         <Section bottom="lg" width="sm">
             <HeadingTwo>Certifications & Training</HeadingTwo>
             <Certifications certifications={certifications} />
-         </OneColumnSection>
+         </Section>
          <PrimaryCta />
       </div>
    );
