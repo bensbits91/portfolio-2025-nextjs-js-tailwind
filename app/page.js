@@ -2,7 +2,7 @@ import { CloudinaryImage } from '@/app/components/image';
 import { IconBar } from '@/app/components/common';
 import { skillIcons } from '@/app/data';
 import { Section } from './components/layout';
-import { HeadingOne, HeadingTwo, Subheading } from './components/typography';
+import { HeadingOne, HeadingTwo, Text } from './components/typography';
 import Button from '@/app/components/common/Button';
 import { about, homeSkills } from './data';
 
@@ -13,9 +13,9 @@ const Home = () => {
             <div className="flex items-start justify-between sm:justify-start sm:gap-12">
                <div>
                   <HeadingOne>Ben Brooks</HeadingOne>
-                  <Subheading left color="white">
+                  <Text color="white" size='lg'>
                      {about.summary}
-                  </Subheading>
+                  </Text>
                </div>
                <div className="w-[80px] md:w-[150px]">
                   <CloudinaryImage
@@ -73,9 +73,9 @@ const Home = () => {
          <Section fullheight top="lg" bottom="lg" width="sm" bg="teal">
             <div className="mb-8 text-bb-gray">
                <div className="text-4xl md:text-5xl">Open to Work</div>
-               <Subheading left color='gray'>
+               <Text color='gray' size='lg'>
                   Looking for a rock-solid software engineer?
-               </Subheading>
+               </Text>
             </div>
             <Button inverted link="/contact">
                <div className="md:min-w-[400px]">Let&apos;s connect</div>

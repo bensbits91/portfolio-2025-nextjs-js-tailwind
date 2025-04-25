@@ -1,5 +1,5 @@
 import { ContactForm, ContactLinks } from '@/app/components/contact';
-import { HeadingOne, Subheading } from '@/app/components/typography';
+import { HeadingOne, Text } from '@/app/components/typography';
 import { Section } from '@/app/components/layout';
 
 const Contact = () => {
@@ -7,10 +7,10 @@ const Contact = () => {
       <>
          <Section top='xl' bottom='sm' width='sm'>
             <HeadingOne>Get in touch</HeadingOne>
-            <Subheading shrink left color="white">
+            <Text color="white" size='lg'>
                I&apos;m always open to new opportunities and collaborations. Feel
                free to reach out!
-            </Subheading>
+            </Text>
          </Section>
          <Section width='sm' bottom='lg'>
             <div className="mb-12">

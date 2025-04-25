@@ -1,5 +1,4 @@
 import { Section } from '@/app/components/layout';
-// import { HeadingOne, HeadingTwo, Subheading } from '@/app/components/typography';
 
 const Story = () => {
    return (
