@@ -1,12 +1,12 @@
-import { NextResponse } from 'next/server';
+import { NextResponse, NextRequest } from 'next/server';
 import { list } from '@vercel/blob';
 
-const GET = async (request: NextResponse) => {
+const GET = async (request: NextRequest) => {
    try {
       const requestUrl = new URL(request.url);
       const filename = requestUrl.searchParams.get('filename') || '';
       if (!filename) {
-         return new Response(
+         return new NextResponse(
             JSON.stringify({ error: 'Filename is required' }),
             {
                status: 400,
@@ -23,7 +23,7 @@ const GET = async (request: NextResponse) => {
       });
       const { url } = blobs[0];
 
-      return new Response(
+      return new NextResponse(
          JSON.stringify({
             message: 'Video URL fetched successfully',
             videoUrl: url
@@ -35,7 +35,7 @@ const GET = async (request: NextResponse) => {
       );
    } catch (error) {
       console.log('bb ~ error:', error);
-      return new Response(
+      return new NextResponse(
          JSON.stringify({ error: 'Error fetching video URL' }),
          {
             status: 500,
