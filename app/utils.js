@@ -1,5 +1,5 @@
 import dayjs from 'dayjs';
-import { CloudinaryImage } from '@/app/components/image';
+import { CloudinaryImage } from '@/components/image';
 
 export const noop = () => {};
 

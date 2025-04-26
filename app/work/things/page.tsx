@@ -1,5 +1,5 @@
 import { BasicPage } from '@/components/templates';
-import content from './content.js';
+import content from './content';
 
 /*
  * todo:

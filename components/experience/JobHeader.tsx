@@ -1,0 +1,30 @@
+import { Heading, Text } from '@/components/typography';
+import { duration } from '@/app/utils.js';
+
+interface JobHeaderProps {
+   job: {
+      company: string;
+      role: string;
+      start: string;
+      end: string;
+      location: string;
+   };
+}
+
+const JobHeader = ({ job }: JobHeaderProps) => {
+   const { company, role, start, end, location } = job;
+   return (
+      <div className="mb-8">
+         <Heading level={2} appearance={2} bottom="md" color="jade">
+            {role}
+         </Heading>
+         <Heading level={3} appearance={4} color="white">
+            {company}
+            <span className="text-bb-gray-300"> in {location}</span>
+         </Heading>
+         <Text>{duration(start, end)}</Text>
+      </div>
+   );
+};
+
+export default JobHeader;

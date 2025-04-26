@@ -119,8 +119,8 @@ export const skills = [
       cloudinary: 'ts1_nbdvxm',
       cloudinaryDark: 'typescript-dark-icon_mj51g8',
       yearLearned: 2015,
-      years: 8,
-      rating: 8,
+      years: 9,
+      rating: 9,
       haveUsedProfessionally: true,
       haveUsedForFun: true,
       featureOnHome: true,
@@ -1165,6 +1165,7 @@ export const projects = [
          "To practices some skills. To build something that I can use (an idea I've had for awhile). Hope to make an app available to others someday. Users will be able to log in (probably using auth0, including support for social auth), manage a profile and share their interests with others. Get recommendations on things you might like. Eventually find people with similar interests.",
       outcome: "Working prototype that I've been using to populate my Things.",
       images: [
+         { name: 'things-detail_mqkcqy', caption: 'Modal with details' },
          {
             name: 'things-app-search-save-3a4zDc6ssBNHkL9x1Q1Ee0MBBnIzHM.mp4',
             type: 'video',
@@ -1175,8 +1176,7 @@ export const projects = [
             type: 'video',
             caption: 'Sorting and exporting'
          },
-         { name: 'things_w7q8lq', hideFromModal: true },
-         { name: 'things-detail_mqkcqy', caption: 'Modal with details' }
+         // { name: 'things_w7q8lq', hideFromModal: true },
       ],
       showInProjectsGallery: true,
       featureOnHome: true
