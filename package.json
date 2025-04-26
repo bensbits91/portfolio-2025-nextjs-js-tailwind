@@ -1,44 +1,63 @@
 {
-  "name": "portfolio-2025-nextjs-js-tailwind",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@vercel/analytics": "^1.5.0",
-    "@vercel/blob": "^0.27.1",
-    "clsx": "^2.1.1",
-    "dayjs": "^1.11.13",
-    "dotenv": "^16.4.7",
-    "next": "15.1.6",
-    "nodemailer": "^6.10.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "recharts": "^2.15.1",
-    "validator": "^13.12.0"
-  },
-  "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "autoprefixer": "^10.4.20",
-    "eslint": "^9",
-    "eslint-config-next": "15.1.6",
-    "postcss": "^8",
-    "prettier": "^3.4.2",
-    "prettier-plugin-tailwindcss": "^0.6.11",
-    "tailwindcss": "^3.4.1"
-  },
-  "prettier": {
-    "plugins": [
-      "prettier-plugin-tailwindcss"
-    ],
-    "singleQuote": true,
-    "trailingComma": "none",
-    "tabWidth": 3,
-    "arrowParens": "avoid",
-    "bracketSameLine": true
-  }
+   "name": "portfolio-2025-nextjs-js-tailwind",
+   "version": "0.1.0",
+   "private": true,
+   "scripts": {
+      "dev": "next dev --turbopack",
+      "build": "next build",
+      "start": "next start",
+      "lint": "next lint && tsc --noEmit"
+   },
+   "dependencies": {
+      "@vercel/analytics": "^1.5.0",
+      "@vercel/blob": "^0.27.1",
+      "clsx": "^2.1.1",
+      "dayjs": "^1.11.13",
+      "dotenv": "^16.4.7",
+      "next": "15.1.6",
+      "nodemailer": "^6.10.0",
+      "react": "^19.0.0",
+      "react-dom": "^19.0.0",
+      "recharts": "^2.15.1",
+      "validator": "^13.12.0"
+   },
+   "devDependencies": {
+      "@eslint/eslintrc": "^3",
+      "@types/node": "^22.15.2",
+      "@types/nodemailer": "^6.4.17",
+      "@types/react": "^19.1.2",
+      "@types/react-dom": "^19.1.2",
+      "@types/validator": "^13.15.0",
+      "@typescript-eslint/eslint-plugin": "^8.31.0",
+      "@typescript-eslint/parser": "^8.31.0",
+      "autoprefixer": "^10.4.20",
+      "eslint": "^9",
+      "eslint-config-next": "15.1.6",
+      "eslint-config-prettier": "^10.1.2",
+      "eslint-plugin-import": "^2.31.0",
+      "eslint-plugin-jsx-a11y": "^6.10.2",
+      "eslint-plugin-prettier": "^5.2.6",
+      "eslint-plugin-react": "^7.37.5",
+      "postcss": "^8",
+      "prettier": "^3.4.2",
+      "prettier-plugin-tailwindcss": "^0.6.11",
+      "tailwindcss": "^3.4.1",
+      "typescript": "^5.8.3"
+   },
+   "prettier": {
+      "plugins": [
+         "prettier-plugin-tailwindcss"
+      ],
+      "singleQuote": true,
+      "trailingComma": "none",
+      "tabWidth": 3,
+      "arrowParens": "avoid",
+      "bracketSameLine": true
+   },
+   "eslintIgnore": [
+      ".next/",
+      "node_modules/",
+      "dist/",
+      "public/"
+   ]
 }
