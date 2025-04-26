@@ -43,8 +43,33 @@ const config = {
             'roboto-mono': ['var(--font-roboto-mono)', 'monospace']
          },
          animation: {
-            'spin-slow': 'spin 120s linear infinite'
-         } /* ,
+            'spin-slow': 'spin 120s linear infinite',
+            'slide-down': 'slideDown 300ms ease-out',
+            'slide-up': 'slideUp 300ms ease-out'
+         },
+         keyframes: {
+            slideDown: {
+               from: {
+                  height: '0',
+                  opacity: '0'
+               },
+               to: {
+                  height: 'var(--radix-collapsible-content-height)',
+                  opacity: '1'
+               }
+            },
+            slideUp: {
+               from: {
+                  height: 'var(--radix-collapsible-content-height)',
+                  opacity: '1'
+               },
+               to: {
+                  height: '0',
+                  opacity: '0'
+               }
+            }
+         }
+         /* ,
          keyframes: {
             fadeIn: {
                '0%': { opacity: '0' },
