@@ -1117,7 +1117,7 @@ export const experience = [
                   'Provided ongoing technical support.'
                ]
             ],
-            skillNames: ['Accessibilty (WCAG)']
+            skillNames: ['Accessibility (WCAG)']
          }
       ]
    },
