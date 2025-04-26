@@ -186,7 +186,7 @@ const BasicPage = ({ content }: BasicPageProps) => {
                            const { heading, content } = section;
                            return (
                               <div key={index} className="mb-8 md:ml-4">
-                                 <Heading level={3} appearance={4} color='yellow' color="yellow">
+                                 <Heading level={3} appearance={4} color='yellow'>
                                     {heading}
                                  </Heading>
                                  {content &&
