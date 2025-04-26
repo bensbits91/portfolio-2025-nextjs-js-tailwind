@@ -1,13 +1,13 @@
 import nodemailer from 'nodemailer';
 import validator from 'validator';
-import { NextResponse } from 'next/server';
+import { NextResponse, NextRequest } from 'next/server';
 
-const POST = async (request: NextResponse) => {
+const POST = async (request: NextRequest) => {
    try {
       const { name, email, message } = await request.json();
 
       if (!name || !email || !message) {
-         return new Response(
+         return new NextResponse(
             JSON.stringify({ error: 'All fields are required' }),
             {
                status: 400,
@@ -18,7 +18,7 @@ const POST = async (request: NextResponse) => {
 
       // Validate email
       if (!validator.isEmail(email)) {
-         return new Response(
+         return new NextResponse(
             JSON.stringify({ error: 'Invalid email address' }),
             {
                status: 400,
@@ -50,7 +50,7 @@ const POST = async (request: NextResponse) => {
       };
 
       await transporter.sendMail(mailOptions);
-      return new Response(
+      return new NextResponse(
          JSON.stringify({ message: 'Email sent successfully' }),
          {
             status: 200,
@@ -59,10 +59,13 @@ const POST = async (request: NextResponse) => {
       );
    } catch (error) {
       console.log('bb ~ error:', error);
-      return new Response(JSON.stringify({ error: 'Error sending email' }), {
-         status: 500,
-         headers: { 'Content-Type': 'application/json' }
-      });
+      return new NextResponse(
+         JSON.stringify({ error: 'Error sending email' }),
+         {
+            status: 500,
+            headers: { 'Content-Type': 'application/json' }
+         }
+      );
    }
 };
 
