@@ -1,6 +1,6 @@
-import { HeadingTwo } from '@/components/typography';
+import { Heading } from '@/components/typography';
 
-interface TwoColumnSectionProps {
+interface ThreeColumnSectionProps {
    heading?: string;
    columns: {
       content: React.ReactNode;
@@ -10,13 +10,13 @@ interface TwoColumnSectionProps {
 const ThreeColumnSection = ({
    heading = '',
    columns
-}: TwoColumnSectionProps) => {
+}: ThreeColumnSectionProps) => {
    return (
       <>
          <section className="container mx-auto mb-20 max-w-[1200px] md:mb-32">
             {heading && (
                <div className="pl-10 md:pl-20">
-                  <HeadingTwo>{heading}</HeadingTwo>
+                  <Heading level={2} appearance={2}>{heading}</Heading>
                </div>
             )}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">

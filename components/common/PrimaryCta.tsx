@@ -1,5 +1,5 @@
 import { CloudinaryImage } from '@/components/image';
-import { HeadingTwo } from '@/components/typography';
+import { Heading } from '@/components/typography';
 import { Button } from '@/components/common';
 import { IconBar } from '@/components/common';
 import { ctaSkills, skillIcons } from '@/app/data';
@@ -19,11 +19,12 @@ const PrimaryCta = ({
          }`}>
          <div className="flex flex-col items-start justify-around md:flex-row">
             <div>
-               <HeadingTwo color="gray">Frontend + Fullstack</HeadingTwo>
+               <Heading level={2} appearance={2} color="gray" bottom="md">
+                  Frontend + Fullstack
+               </Heading>
 
                <div className="mb-12 md:max-w-[640px]">
                   <IconBar wrap icons={skillIcons(ctaSkills, true)} />
-                  {/* <Button link="/skills">View all skills</Button> */}
                </div>
 
                <div className="mb-8 flex gap-12 text-bb-gray md:gap-20">

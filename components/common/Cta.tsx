@@ -1,4 +1,4 @@
-import { HeadingTwo, Text } from '@/components/typography';
+import { Heading, Text } from '@/components/typography';
 import { Button } from '@/components/common';
 import { maxWidthCode } from '@/app/utils';
 import clsx from 'clsx';
@@ -36,9 +36,9 @@ const Cta = ({
             maxWidthCode(size),
             bigBottom ? 'mb-20 md:mb-32' : 'mb-0'
          )}>
-         <HeadingTwo color={bg === 'transparent' ? '' : 'gray'}>
+         <Heading level={2} appearance={2} color={bg === 'transparent' ? 'white' : 'gray'}>
             {data.heading}
-         </HeadingTwo>
+         </Heading>
          {data.content && data.content.map((text, index) => (
             <Text key={index} color="gray">
                {text}

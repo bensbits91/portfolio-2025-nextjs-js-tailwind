@@ -2,7 +2,7 @@ import { CloudinaryImage } from '@/components/image';
 import { IconBar } from '@/components/common';
 import { skillIcons } from '@/app/data';
 import { Section } from '@/components/layout';
-import { HeadingOne, HeadingTwo, Text } from '@/components/typography';
+import { Heading, Text } from '@/components/typography';
 import Button from '@/components/common/Button';
 import { about, homeSkills } from './data';
 
@@ -12,7 +12,7 @@ const Home = () => {
          <Section fullheight width="sm" bg="transparent">
             <div className="flex items-start justify-between sm:justify-start sm:gap-12">
                <div>
-                  <HeadingOne>Ben Brooks</HeadingOne>
+                  <Heading>Ben Brooks</Heading>
                   <Text color="white" size='lg'>
                      {about.summary}
                   </Text>
@@ -26,7 +26,7 @@ const Home = () => {
                   />
                </div>
             </div>
-            <HeadingTwo color="white">Frontend + Fullstack</HeadingTwo>
+            <Heading level={2} appearance={2} bottom='md' color="white">Frontend + Fullstack</Heading>
             <div className="mb-8 max-w-[560px]">
                <IconBar wrap icons={skillIcons(homeSkills)} />
                <Button link="/skills">
@@ -72,7 +72,7 @@ const Home = () => {
          </Section>
          <Section fullheight top="lg" bottom="lg" width="sm" bg="teal">
             <div className="mb-8 text-bb-gray">
-               <div className="text-4xl md:text-5xl">Open to Work</div>
+               <Heading level={2} appearance={2} color='gray'>Open to Work</Heading>
                <Text color='gray' size='lg'>
                   Looking for a rock-solid software engineer?
                </Text>

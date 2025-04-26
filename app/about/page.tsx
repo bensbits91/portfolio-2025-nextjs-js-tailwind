@@ -1,10 +1,5 @@
 import { Section } from '@/components/layout';
-import {
-   HeadingOne,
-   HeadingTwo,
-   HeadingThree,
-   Text
-} from '@/components/typography';
+import { Heading, Text } from '@/components/typography';
 import { PrimaryCta } from '@/components/common';
 import { about, certifications, education, expertise } from '@/app/data.js';
 
@@ -32,9 +27,9 @@ const About = () => {
                   item;
                return (
                   <div key={index} className="mb-10">
-                     <HeadingThree color="white">
+                     <Heading level={3} appearance={4} color="white">
                         {degree} in {major}
-                     </HeadingThree>
+                     </Heading>
                      <h4>{institution}</h4>
                      <p className="mb-4">
                         {location} {endYear}
@@ -80,16 +75,20 @@ const About = () => {
    return (
       <div>
          <Section top="xl" bottom="lg" width="sm">
-            <HeadingOne>About Bennett</HeadingOne>
+            <Heading bottom="md">About Bennett</Heading>
             <Text>{overview}</Text>
             <Text>{expertise.join(' | ')}</Text>
          </Section>
          <Section bottom="lg" width="sm">
-            <HeadingTwo>Education</HeadingTwo>
+            <Heading level={2} appearance={2} color="jade" bottom="md" b>
+               Education
+            </Heading>
             <Education education={education} />
          </Section>
          <Section bottom="lg" width="sm">
-            <HeadingTwo>Certifications & Training</HeadingTwo>
+            <Heading level={2} appearance={2} color="jade" bottom="md" b>
+               Certifications & Training
+            </Heading>
             <Certifications certifications={certifications} />
          </Section>
          <PrimaryCta />

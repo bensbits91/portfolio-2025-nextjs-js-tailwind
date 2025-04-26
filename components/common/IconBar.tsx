@@ -20,12 +20,10 @@ const IconBar = ({
 }: IconBarProps) => (
    <div
       className={clsx(
-         'flex items-center',
+         'flex items-center gap-2',
          { 'justify-center': centered },
-         { 'flex-wrap gap-2': wrap }
-      )}
-      // className={`flex items-center${centered ? 'justify-center' : ''}${wrap ? 'flex-wrap gap-2' : ''}`}
-   >
+         { 'flex-wrap': wrap }
+      )}>
       {icons.map((icon, index) => (
          <Icon key={index} src={icon.src} altText={icon.altText} size={size} />
       ))}

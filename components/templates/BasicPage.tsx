@@ -1,8 +1,6 @@
 import { TwoColumnSection, Section } from '@/components/layout';
 import {
-   HeadingOne,
-   HeadingTwo,
-   HeadingThree,
+   Heading,
    Text,
    List
 } from '@/components/typography';
@@ -68,7 +66,7 @@ const BasicPage = ({ content }: BasicPageProps) => {
 
       return (
          <div>
-            <HeadingThree>{item.heading}</HeadingThree>
+            <Heading level={3} appearance={4} color='yellow'>{item.heading}</Heading>
             <Text>{item.subheading}</Text>
             <List items={item.list} />
          </div>
@@ -81,7 +79,7 @@ const BasicPage = ({ content }: BasicPageProps) => {
 
          {heading && (
             <Section top="xl" bottom="lg" width="md">
-               <HeadingOne>{heading}</HeadingOne>
+               <Heading>{heading}</Heading>
                <Text>{subheading}</Text>
 
                {skillNames && (
@@ -138,7 +136,7 @@ const BasicPage = ({ content }: BasicPageProps) => {
                               return {
                                  content: (
                                     <div key={SubsectionIndex}>
-                                       <HeadingTwo>{heading}</HeadingTwo>
+                                       <Heading level={2} appearance={2} color='jade'>{heading}</Heading>
                                        <div className="mb-8">
                                           {stack && <List items={stack} />}
                                           {codeLink && (
@@ -176,7 +174,7 @@ const BasicPage = ({ content }: BasicPageProps) => {
 
                return (
                   <Section key={index}>
-                     <HeadingTwo>{heading}</HeadingTwo>
+                     <Heading level={2} appearance={2} color='jade' bottom='md'>{heading}</Heading>
 
                      {content &&
                         content.map((item, index) => (
@@ -188,9 +186,9 @@ const BasicPage = ({ content }: BasicPageProps) => {
                            const { heading, content } = section;
                            return (
                               <div key={index} className="mb-8 md:ml-4">
-                                 <HeadingThree color="yellow">
+                                 <Heading level={3} appearance={4} color='yellow' color="yellow">
                                     {heading}
-                                 </HeadingThree>
+                                 </Heading>
                                  {content &&
                                     content.map((item, index) => (
                                        <ContentItem key={index} item={item} />

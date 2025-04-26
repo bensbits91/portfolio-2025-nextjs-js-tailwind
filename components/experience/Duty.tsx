@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { IconBar } from '@/components/common';
+import { Heading, Text } from '@/components/typography';
 import { skillIcons } from '@/app/data';
 
 interface DutyProps {
@@ -19,13 +20,17 @@ const Duty = ({ duty }: DutyProps) => {
 
    return (
       <li className="mb-6">
-         <div className="font-bold text-bb-jade">{name && `${name}`}</div>
+         {name && (
+            <Heading level={4} appearance={5} color="jade">
+               {name}
+            </Heading>
+         )}
          {skillNames && (
             <div className="my-2">
-               <IconBar icons={skillIcons(skillNames)} size="18" />
+               <IconBar icons={skillIcons(skillNames)} size={18} />
             </div>
          )}
-         <div className="text-sm">{description}</div>
+         <Text>{description}</Text>
          {moreInfoLink && (
             <Link
                className="inline text-sm text-bb-teal"

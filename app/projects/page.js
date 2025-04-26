@@ -1,5 +1,5 @@
 import { FeaturedProjectCard, ProjectGrid } from '@/components/projects';
-import { HeadingOne, Text } from '@/components/typography';
+import { Heading, Text } from '@/components/typography';
 import { Section } from '@/components/layout';
 import { PrimaryCta } from '@/components/common';
 
@@ -7,7 +7,7 @@ const Projects = () => {
    return (
       <>
          <Section top="xl">
-            <HeadingOne>Sample Projects</HeadingOne>
+            <Heading>Sample Projects</Heading>
             <Text>A couple of newer projects and a bunch of older work.</Text>
          </Section>
          <FeaturedProjectCard

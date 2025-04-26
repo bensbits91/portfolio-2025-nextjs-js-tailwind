@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import { HeadingTwo, HeadingThree } from '@/components/typography';
+import { Heading } from '@/components/typography';
 import ContactLinks from './ContactLinks';
 import { CloudinaryImage } from '../image';
 import { noop } from '@/app/utils';
@@ -158,10 +158,14 @@ const ContactForm = () => {
                <div className="relative h-full text-bb-gray-200 md:p-4">
                   <div className="flex h-16 w-full items-start justify-between">
                      <div className="hidden items-baseline gap-4 sm:flex">
-                        <HeadingTwo>{heading}</HeadingTwo>
+                        <Heading level={2} appearance={2}>
+                           {heading}
+                        </Heading>
                      </div>
                      <div className="flex items-baseline gap-4 sm:hidden">
-                        <HeadingThree>{heading}</HeadingThree>
+                        <Heading level={2} appearance={3}>
+                           {heading}
+                        </Heading>
                      </div>
                      {!isSending && <CloseButton />}
                   </div>

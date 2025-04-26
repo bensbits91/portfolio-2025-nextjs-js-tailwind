@@ -1,5 +1,5 @@
 import { CloudinaryImage } from '@/components/image';
-import { HeadingThree } from '@/components/typography';
+import { Heading } from '@/components/typography';
 import { IconBar } from '@/components/common';
 import { skillIcons } from '@/app/data';
 import { truncateString } from '@/app/utils';
@@ -15,7 +15,6 @@ interface Project {
 const ProjectGridCard: React.FC<{ project: Project; handleClick?: () => void }> = ({ project, handleClick }) => {
    const { name, tech, description } = project;
    const featuredImage = project.getFeaturedImage();
-   console.log('bb ~ ProjectGridCard.tsx:18 ~ featuredImage:', featuredImage);
 
    const imageElement = (
       <CloudinaryImage
@@ -55,7 +54,7 @@ const ProjectGridCard: React.FC<{ project: Project; handleClick?: () => void }> 
       <div className="bg-gradient-dark overflow-hidden rounded-lg border-2 border-bb-gray-900 shadow-dark-card">
          {featuredImage && imageToDisplay}
          <div className="p-4">
-            <HeadingThree color='white'>{truncatedName}</HeadingThree>
+            <Heading level={3} appearance={4} color='white'>{truncatedName}</Heading>
             {tech.length > 0 && (
                <div className="mt-2 mb-4">
                   <IconBar icons={skillIcons(tech)} />

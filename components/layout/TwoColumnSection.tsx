@@ -1,4 +1,4 @@
-import { HeadingTwo } from '@/components/typography';
+import { Heading } from '@/components/typography';
 
 interface TwoColumnSectionProps {
    heading?: string;
@@ -13,7 +13,7 @@ const TwoColumnSection = ({ heading = '', columns }: TwoColumnSectionProps) => {
          <section className="container mx-auto max-w-[1200px] mb-20 md:mb-32">
             {heading && (
                <div className="pl-5 md:pl-10">
-                  <HeadingTwo>{heading}</HeadingTwo>
+                  <Heading level={2} appearance={2}>{heading}</Heading>
                </div>
             )}
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">

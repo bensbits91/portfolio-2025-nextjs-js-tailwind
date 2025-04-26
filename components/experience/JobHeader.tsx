@@ -1,4 +1,4 @@
-import { HeadingTwo, Text } from '@/components/typography';
+import { Heading, Text } from '@/components/typography';
 import { duration } from '@/app/utils.js';
 
 interface JobHeaderProps {
@@ -15,14 +15,14 @@ const JobHeader = ({ job }: JobHeaderProps) => {
    const { company, role, start, end, location } = job;
    return (
       <div className="mb-8">
-         <HeadingTwo>{role}</HeadingTwo>
-         <div className="text-lg font-semibold md:pl-2">
+         <Heading level={2} appearance={2} bottom="md" color="jade">
+            {role}
+         </Heading>
+         <Heading level={3} appearance={4} color="white">
             {company}
             <span className="text-bb-gray-300"> in {location}</span>
-         </div>
-         <div className="md:pl-2">
-            <Text>{duration(start, end)}</Text>
-         </div>
+         </Heading>
+         <Text>{duration(start, end)}</Text>
       </div>
    );
 };

@@ -1,9 +1,7 @@
 import { ImageGallery, CloudinaryImage } from '@/components/image';
-import { HeadingTwo, HeadingThree, Text } from '@/components/typography';
+import { Heading, Text } from '@/components/typography';
 import { CodeLink, IconBar } from '@/components/common';
 import { skillIcons } from '@/app/data';
-
-// todo: typography and layout components; better classes/style
 
 interface ModalData {
    name: string;
@@ -15,7 +13,11 @@ interface ModalData {
    year?: string;
    motivation?: string;
    outcome?: string;
-   getMadalImages?: () => Array<{ cloudinaryId: string; alt: string }>;
+   getMadalImages?: () => Array<{
+      name: string;
+      caption: string;
+      type: 'image' | 'video';
+   }>;
 }
 
 interface ProjectGridModalProps {
@@ -36,12 +38,12 @@ const ProjectGridModal = ({ modalData, closeModal }: ProjectGridModalProps) => {
       outcome
    } = modalData || {};
    const images = modalData?.getMadalImages
-         ? modalData.getMadalImages().map((image) => ({
-              type: 'image' as const,
-              name: image.cloudinaryId || '',
-              caption: image.alt || '',
-           }))
-         : [];
+      ? modalData.getMadalImages().map(image => ({
+           type: image.type || ('image' as const),
+           name: image.name || '',
+           caption: image.caption || ''
+        }))
+      : [];
 
    const CloseButton = () => (
       <button
@@ -86,9 +88,7 @@ const ProjectGridModal = ({ modalData, closeModal }: ProjectGridModalProps) => {
                      {description}
                   </Text>
                )}
-               {motivation && (
-                  <Text bottom="no">Motivation: {motivation}</Text>
-               )}
+               {motivation && <Text bottom="no">Motivation: {motivation}</Text>}
                {outcome && <Text bottom="no">Outcome: {outcome}</Text>}
                {moreInfoLink && (
                   <a
@@ -118,11 +118,15 @@ const ProjectGridModal = ({ modalData, closeModal }: ProjectGridModalProps) => {
             <div className="relative h-full text-bb-gray-200 md:p-4">
                <div className="flex h-16 w-full items-start justify-between">
                   <div className="hidden items-baseline gap-4 sm:flex">
-                     <HeadingTwo>{name}</HeadingTwo>
+                     <Heading level={2} appearance={2} color="jade">
+                        {name}
+                     </Heading>
                      <p>{year}</p>
                   </div>
                   <div className="flex items-baseline gap-4 sm:hidden">
-                     <HeadingThree>{name}</HeadingThree>
+                     <Heading level={2} appearance={3} color="jade">
+                        {name}
+                     </Heading>
                   </div>
                   <CloseButton />
                </div>

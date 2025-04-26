@@ -17,7 +17,7 @@ const Duties = ({ duties }: DutiesProps) => {
       return null;
    }
    return (
-      <div className="md:ml-8">
+      <div>
          <ul>
             {duties.map((duty, index) => (
                <Duty key={index} duty={duty} />
