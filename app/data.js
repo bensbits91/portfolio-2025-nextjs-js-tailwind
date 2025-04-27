@@ -1162,7 +1162,7 @@ export const experience = [
          {
             name: '',
             description:
-               'Produced technical documentation for end users and internal users, including user guides, in-app help systems, and hundreds of technical articles. Interviewed developers and other stakeholders. Contributed to cryptographic patent applications with research, mathematical consultation, and diagrams.',
+               'Produced technical documentation for end users and internal users. Contributed to cryptographic patent applications.',
             moreInfo: [
                [
                   'Produced user guides, in-app help systems, and technical articles related to software integrations with biometric security devices (e.g. fingerprint, retina, iris, voice, face, and keystroke).',
