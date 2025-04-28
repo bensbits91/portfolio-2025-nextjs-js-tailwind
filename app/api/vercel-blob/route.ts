@@ -34,7 +34,7 @@ const GET = async (request: NextRequest) => {
          }
       );
    } catch (error) {
-      console.log('bb ~ error:', error);
+      console.error('bb ~ error:', error);
       return new NextResponse(
          JSON.stringify({ error: 'Error fetching video URL' }),
          {

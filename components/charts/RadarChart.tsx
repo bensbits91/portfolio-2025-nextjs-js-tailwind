@@ -31,36 +31,11 @@ const stackAreaRatingsArray = Object.keys(sumRatingsByStackArea).map(
    })
 );
 
-// const tickFormatter = (value, entry) => {
-//    console.log('bb ~ entry:', entry);
-//    console.log('bb ~ value:', value);
-//    return value;
-// };
-
-// const CustomizedTick = ({ x, y, stroke, payload }) => {
-//    console.log('bb ~ payload:', payload);
-//    console.log('bb ~ y:', y);
-//    console.log('bb ~ x:', x);
-//    return (
-//       <text
-//          x={x}
-//          y={y}
-//         //  dy={-8}
-//          fill="white"
-//          fontSize={10}
-//          textAnchor={x > 180 ? "end" : "start"}
-
-//          width={100}>
-//          {payload.value.split(' ').map((word, index) => <tspan key={index} x={x} dy={index * 10}>{word}</tspan>)}
-//       </text>
-//    );
-// };
-
 const MyRadarChart = () => (
-   <ResponsiveContainer width="100%" height={350}>
+   <ResponsiveContainer width="100%" height="100%" minWidth={300} minHeight={300}>
       <RadarChart
          outerRadius={90}
-         width={730}
+         // width={730}
          data={stackAreaRatingsArray}>
          <PolarGrid />
          <PolarAngleAxis dataKey="stackArea" tick={{ fontSize: 12 }} />

@@ -1,3 +1,4 @@
+export { default as CloseIcon } from './CloseIcon';
 export { default as ChevronIcon } from './ChevronIcon';
 
 export { default as TableIcon } from './TableIcon';

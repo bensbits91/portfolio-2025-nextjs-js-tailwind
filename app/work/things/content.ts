@@ -2,7 +2,7 @@ const content = {
    heading: 'Things App v2.0',
    subheading: 'Very much a WIP ;)',
    skillNames: [
-      'NodeJS',
+      'Node.js',
       'Fastify',
       'MongoDB',
       'React.js',

@@ -12,7 +12,7 @@ const Projects = () => {
          </Section>
          <FeaturedProjectCard
             skills={[
-               'NodeJS',
+               'Node.js',
                'React.js',
                'Next.js',
                'MongoDB',

@@ -1,7 +1,7 @@
 import {
    Toolbar,
    Button,
-   Separator,
+   //    Separator,
    ToggleGroup,
    ToggleItem
 } from '@radix-ui/react-toolbar';
@@ -25,64 +25,76 @@ export default function ThingsViewToolbar({
    return (
       <Toolbar
          orientation="horizontal"
-         className="flex w-full min-w-max items-center gap-4 rounded-md bg-bb-gray-800 p-2.5 shadow-[-1px_4px_8px_0] shadow-black/70">
-         View
+         className="flex w-full min-w-max items-center gap-4 rounded-md bg-bb-gray-800 px-2 py-3 shadow-[-1px_4px_8px_0] shadow-black/70 sm:gap-8 sm:px-8">
+         <div className="hidden sm:block">View</div>
          <ToggleGroup
             type="single"
             defaultValue={'table'}
-            className="flex gap-2">
+            className="mx-auto flex items-center gap-4 sm:mx-0 md:gap-8">
             <ToggleItem asChild value="table" aria-label="Table view">
                <Button
                   onClick={() => handleViewClick('table')}
                   className={clsx(
-                     'h-4 w-4 cursor-pointer rounded-md hover:text-bb-yellow',
+                     'flex cursor-pointer items-center gap-2 rounded-md hover:text-bb-yellow',
                      selectedView === 'table'
                         ? 'text-bb-yellow'
                         : 'text-bb-teal'
                   )}
                   title="Table view">
-                  <TableIcon />
+                  <div className="h-4 w-4">
+                     <TableIcon />
+                  </div>
+                  <div>Table</div>
                </Button>
             </ToggleItem>
             <ToggleItem asChild value="grid" aria-label="Grid view">
                <Button
                   onClick={() => handleViewClick('grid')}
                   className={clsx(
-                     'h-4 w-4 cursor-pointer rounded-md hover:text-bb-yellow',
+                     'flex cursor-pointer items-center gap-2 rounded-md hover:text-bb-yellow',
                      selectedView === 'grid' ? 'text-bb-yellow' : 'text-bb-teal'
                   )}
                   title="Grid view">
-                  <GridIcon />
+                  <div className="h-4 w-4">
+                     <GridIcon />
+                  </div>
+                  <div>Grid</div>
                </Button>
             </ToggleItem>
             <ToggleItem asChild value="growth" aria-label="Growth by year view">
                <Button
                   onClick={() => handleViewClick('growth')}
                   className={clsx(
-                     'h-4 w-4 cursor-pointer rounded-md hover:text-bb-yellow',
+                     'flex cursor-pointer items-center gap-2 rounded-md hover:text-bb-yellow',
                      selectedView === 'growth'
                         ? 'text-bb-yellow'
                         : 'text-bb-teal'
                   )}
                   title="Growth by year view">
-                  <LineChartIcon />
+                  <div className="h-4 w-4">
+                     <LineChartIcon />
+                  </div>
+                  <div>Growth</div>
                </Button>
             </ToggleItem>
             <ToggleItem asChild value="stack" aria-label="Stack coverage view">
                <Button
                   onClick={() => handleViewClick('stack')}
                   className={clsx(
-                     'h-4 w-4 cursor-pointer rounded-md hover:text-bb-yellow',
+                     'flex cursor-pointer items-center gap-2 rounded-md hover:text-bb-yellow',
                      selectedView === 'stack'
                         ? 'text-bb-yellow'
                         : 'text-bb-teal'
                   )}
                   title="Stack coverage view">
-                  <RadarChartIcon />
+                  <div className="h-4 w-4">
+                     <RadarChartIcon />
+                  </div>
+                  <div>Stack</div>
                </Button>
             </ToggleItem>
          </ToggleGroup>
-         <Separator className="mx-8 h-6 w-px bg-bb-gray-200" />
+         {/* <Separator className="mx-8 h-6 w-px bg-bb-gray-200" /> */}
       </Toolbar>
    );
 }

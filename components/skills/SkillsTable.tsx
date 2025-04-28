@@ -10,7 +10,6 @@ import {
 import { CloudinaryImage } from '@/components/image';
 import SkillsTableHeader from './SkillsTableHeader';
 import SkillsTableCell from './SkillsTableCell';
-import { skillsForTable } from '@/app/data.js';
 import { generateStars } from '@/app/utils';
 
 interface Skill {
@@ -18,7 +17,6 @@ interface Skill {
    stackArea?: string;
    stackCategory?: string;
    name: string;
-   // icon: string;
    cloudinary?: string;
    cloudinaryDark?: string;
    yearLearned?: number;
@@ -32,14 +30,14 @@ interface Skill {
 }
 
 interface SkillsTableProps {
-   skills?: Skill[];
+   skills: Skill[];
    handleItemClick: (thingId: string) => void;
 }
 
 const colsToHideOnMobile = null;
 
 export default function SkillsTable({
-   skills = skillsForTable,
+   skills = [],
    handleItemClick
 }: SkillsTableProps) {
    const columns: ColumnDef<

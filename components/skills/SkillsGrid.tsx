@@ -1,5 +1,4 @@
 import { CloudinaryImage } from '@/components/image';
-import { skillsForTable } from '@/app/data.js';
 import { generateStars, truncateString } from '@/app/utils';
 
 interface Skill {
@@ -20,11 +19,11 @@ interface Skill {
 }
 
 interface SkillsGridProps {
-   skills?: Skill[];
+   skills: Skill[];
    handleItemClick: (thingId: string) => void;
 }
 export default function SkillsGrid({
-   skills = skillsForTable,
+   skills = [],
    handleItemClick
 }: SkillsGridProps) {
    if (!skills || skills.length === 0) {

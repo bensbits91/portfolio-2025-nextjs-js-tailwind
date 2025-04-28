@@ -67,7 +67,7 @@ export const skills = [
       icon: '/next.svg',
       cloudinary: 'nextjs_jxdbqq',
       cloudinaryDark: 'next-dark-icon_qfvtkk',
-      yearLearned: 2020,
+      yearLearned: 2019,
       years: 4,
       rating: 9,
       haveUsedProfessionally: false,
@@ -97,7 +97,7 @@ export const skills = [
       type: 'Backend Development',
       stackArea: 'Backend',
       stackCategory: 'Language',
-      name: 'NodeJS',
+      name: 'Node.js',
       icon: '/node.svg',
       cloudinary: 'node_hl58om',
       cloudinaryDark: 'node-dark-icon_kl7oy6',
@@ -242,7 +242,7 @@ export const skills = [
       icon: '/tailwind.svg',
       cloudinary: 'tailwind_k9r34s',
       cloudinaryDark: 'tailwind-dark-icon_mbvvtr',
-      yearLearned: 2020,
+      yearLearned: 2019,
       years: 4,
       rating: 9,
       haveUsedProfessionally: false,
@@ -296,7 +296,7 @@ export const skills = [
       haveUsedProfessionally: false,
       haveUsedForFun: true,
       featureOnHome: false,
-      showInSkillsTable: true
+      showInSkillsTable: false
    },
    {
       type: 'UI/UX',
@@ -401,7 +401,7 @@ export const skills = [
       haveUsedProfessionally: false,
       haveUsedForFun: true,
       featureOnHome: false,
-      showInSkillsTable: true
+      showInSkillsTable: false
    },
    {
       type: 'Testing',
@@ -551,7 +551,7 @@ export const skills = [
       name: 'PostgreSQL',
       icon: '/postgresql.svg',
       cloudinary: 'postgresql_dx4o4h',
-      yearLearned: 2020,
+      yearLearned: 2019,
       years: 5,
       rating: 8,
       haveUsedProfessionally: true,
@@ -596,7 +596,7 @@ export const skills = [
       name: 'GraphQL',
       icon: '/graphql.svg',
       cloudinary: 'graphql_ztconi',
-      yearLearned: 2020,
+      yearLearned: 2019,
       years: 5,
       rating: 8,
       haveUsedProfessionally: true,
@@ -707,7 +707,7 @@ export const skills = [
       haveUsedProfessionally: true,
       haveUsedForFun: false,
       featureOnHome: false,
-      showInSkillsTable: true
+      showInSkillsTable: false
    },
    {
       type: 'Infrastructure Orchestration',
@@ -769,14 +769,19 @@ export const experience = [
                'Building fast, beautiful websites and apps using JavaScript, React, Next.js, Vercel, MongoDB, Node, CSS Modules, and Tailwind CSS. Focused on clean architecture, maintainable code, performance, usability, and accessibility.',
             skillNames: [
                'JavaScript',
-               'NodeJS',
+               'TypeScript',
+               'Node.js',
                'React.js',
                'Next.js',
+               'Redux',
                'Vercel',
                'CSS Modules',
+               'CSS',
                'Tailwind',
+               'RESTful APIs',
                'Fastify',
-               'MongoDB'
+               'MongoDB',
+               'Zustand'
             ]
          }
       ]
@@ -814,16 +819,25 @@ export const experience = [
             ],
             skillNames: [
                'JavaScript',
-               'NodeJS',
+               'TypeScript',
+               'Node.js',
                'React.js',
                'Vue.js',
+               'Redux',
                'CSS',
+               'Sass/SCSS',
+               'CSS Modules',
                'Styled Components',
                'Jest',
                'Cypress',
+               'RESTful APIs',
                'A/B Testing',
                'Multivariate Experimentation',
-               'LaunchDarkly'
+               'LaunchDarkly',
+               'PostgreSQL',
+               'MongoDB',
+               'GraphQL',
+               'Micro-frontends',
             ]
          },
          {
@@ -848,8 +862,9 @@ export const experience = [
             skillNames: [
                'WordPress',
                'PHP',
-               'CSS',
                'Sass/SCSS',
+               'CSS Modules',
+               'CSS',
                'JavaScript',
                'Responsive Design',
                'SEO',
@@ -884,16 +899,21 @@ export const experience = [
             ],
             skillNames: [
                'JavaScript',
-               'NodeJS',
+               'Node.js',
                'Fastify',
                'Python',
                'Jest',
                'Microservices',
+               'RESTful APIs',
                'GCP',
+               'GKE',
+               'AWS',
                'Docker',
                'Colima',
                'Kubernetes',
-               'Terraform'
+               'Terraform',
+               'Django',
+               'Micro-frontends',
             ]
          },
          {
@@ -950,7 +970,8 @@ export const experience = [
                'Twilio',
                'Mailchimp',
                'JavaScript',
-               'NodeJS',
+               'Node.js',
+               'RESTful APIs',
                'Docker',
                'Colima',
                'Helm',
@@ -979,7 +1000,7 @@ export const experience = [
          'Parcel',
          'Jest',
          'Cypress',
-         'NodeJS',
+         'Node.js',
          'PHP',
          'WordPress',
          'Python',
@@ -1022,13 +1043,21 @@ export const experience = [
             ],
             skillNames: [
                'JavaScript',
-               'NodeJS',
+               'TypeScript',
+               'Node.js',
                'React.js',
+               'Redux',
                'D3.js',
+               'Sass/SCSS',
                'CSS Modules',
                'Styled Components',
                'Tailwind',
-               'Responsive Design'
+               'CSS',
+               'Responsive Design',
+               'RESTful APIs',
+               'GraphQL',
+               'PostgreSQL',
+               'AWS',
             ]
          },
          {
@@ -1044,10 +1073,12 @@ export const experience = [
                ]
             ],
             skillNames: [
+               'Next.js',
                'WordPress',
                'PHP',
                'JavaScript',
                'CSS Modules',
+               'CSS',
                'SEO',
                'Performance Optimization',
                'Responsive Design'
@@ -1094,14 +1125,15 @@ export const experience = [
             ],
             skillNames: [
                'JavaScript',
-               'NodeJS',
+               'Node.js',
                'PHP',
                'SQLite',
-               'D3.js',
+               'SQL',
                'CSS',
                'CSS3',
                'Responsive Design',
-               'Performance Optimization'
+               'Performance Optimization',
+               'RESTful APIs'
             ]
          },
          {
@@ -1148,6 +1180,17 @@ export const experience = [
                   'Wrote detailed responses to government RFPs, RFQs and RFIs. Maintained an in-depth library of content for use in formal responses. Responded to questions and provided support to sales to close deals and transition new customers.',
                   'Conducted stakeholder and SME interviews, documented requirements, and produced software specifications. Authored and maintained technical content, and improved documentation standards.'
                ]
+            ],
+            skillNames: [
+               'SQL',
+               'CSS',
+               'HTML5',
+               'Responsive Design',
+               'Usability Testing',
+               'User Experience (UX)',
+               'User Interface (UI)',
+               'Agile Development',
+               'Scrum'
             ]
          }
       ]
@@ -1169,7 +1212,8 @@ export const experience = [
                   'Interviewed developers and other stakeholders.',
                   'Contributed to cryptographic patent applications related to security algorithms and biometric data mappings, including research, mathematical consultation and diagrams.'
                ]
-            ]
+            ],
+            skillNames: ['CSS', 'HTML5']
          }
       ]
    }
@@ -1183,8 +1227,10 @@ export const projects = [
          'React.js',
          'JavaScript',
          'CSS Modules',
+         'CSS',
          'Responsive Design',
-         'NodeJS',
+         'Node.js',
+         'RESTful APIs',
          'Turbopack',
          'Vercel',
          'Mongoose',
@@ -1215,14 +1261,17 @@ export const projects = [
          'React.js',
          'JavaScript',
          'CSS Modules',
+         'CSS',
          'Responsive Design',
-         'NodeJS',
+         'Node.js',
+         'RESTful APIs',
          'nodemailer',
          'Turbopack',
          'Vercel',
          'Cloudinary',
          'Mongoose',
-         'MongoDB'
+         'MongoDB',
+         'Zustand'
       ],
       liveLink: 'https://www.benbdev.com/quote',
       codeLink: 'https://github.com/bensbits91/contracts-website',
@@ -1245,14 +1294,17 @@ export const projects = [
          'React.js',
          'JavaScript',
          'CSS Modules',
+         'CSS',
          'Responsive Design',
-         'NodeJS',
+         'Node.js',
+         'RESTful APIs',
          'nodemailer',
          'Turbopack',
          'Vercel',
          'Cloudinary',
          'Mongoose',
-         'MongoDB'
+         'MongoDB',
+         'Zustand'
       ],
       liveLink: 'https://www.benbdev.com/faq',
       codeLink: 'https://github.com/bensbits91/contracts-website',
@@ -1276,8 +1328,10 @@ export const projects = [
          'JavaScript',
          'D3.js',
          'Tailwind',
+         'CSS',
          'Responsive Design',
-         'NodeJS',
+         'Node.js',
+         'RESTful APIs',
          'nodemailer',
          'dayjs',
          'Turbopack',
@@ -1304,14 +1358,17 @@ export const projects = [
          'React.js',
          'JavaScript',
          'CSS Modules',
+         'CSS',
          'Responsive Design',
-         'NodeJS',
+         'Node.js',
+         'RESTful APIs',
          'nodemailer',
          'Turbopack',
          'Vercel',
          'Cloudinary',
          'Mongoose',
-         'MongoDB'
+         'MongoDB',
+         'Zustand'
       ],
       liveLink: 'https://www.benbdev.com',
       codeLink: 'https://github.com/bensbits91/contracts-website',
@@ -1332,9 +1389,11 @@ export const projects = [
          'JavaScript',
          'Redux',
          'Styled Components',
+         'CSS',
          'Prime React',
          'Responsive Design',
-         'NodeJS',
+         'Node.js',
+         'RESTful APIs',
          'Fastify',
          'Mongoose',
          'MongoDB'
@@ -1367,14 +1426,17 @@ export const projects = [
       year: '2021',
       type: 'client',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
          'Fabric UI',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
          'Microsoft Graph',
+         'RESTful APIs',
          'Gulp',
          'Webpack'
       ],
@@ -1396,13 +1458,16 @@ export const projects = [
       year: '2021',
       type: 'client',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
          'Fabric UI',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
+         'RESTful APIs',
          'Microsoft Graph',
          'Gulp',
          'Webpack'
@@ -1437,14 +1502,17 @@ export const projects = [
       year: '2021',
       type: 'client',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
          'Fabric UI',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
          'Microsoft Graph',
+         'RESTful APIs',
          'Gulp',
          'Webpack'
       ],
@@ -1466,14 +1534,17 @@ export const projects = [
       year: '2021',
       type: 'client',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
          'Fabric UI',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
          'Microsoft Graph',
+         'RESTful APIs',
          'Gulp',
          'Webpack'
       ],
@@ -1505,14 +1576,17 @@ export const projects = [
       year: '2021',
       type: 'client',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
          'Fabric UI',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
          'Microsoft Graph',
+         'RESTful APIs',
          'Gulp',
          'Webpack'
       ],
@@ -1529,14 +1603,17 @@ export const projects = [
       year: '2021',
       type: 'client',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
          'Fabric UI',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
          'Microsoft Graph',
+         'RESTful APIs',
          'Gulp',
          'Webpack'
       ],
@@ -1553,14 +1630,17 @@ export const projects = [
       year: '2021',
       type: 'client',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
          'Fabric UI',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
          'Microsoft Graph',
+         'RESTful APIs',
          'Gulp',
          'Webpack'
       ],
@@ -1587,14 +1667,17 @@ export const projects = [
       year: '2021',
       type: 'client',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
          'Fabric UI',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
          'Microsoft Graph',
+         'RESTful APIs',
          'Gulp',
          'Webpack'
       ],
@@ -1618,14 +1701,17 @@ export const projects = [
       year: '2021',
       type: 'client',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
          'Fabric UI',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
          'Microsoft Graph',
+         'RESTful APIs',
          'Gulp',
          'Webpack'
       ],
@@ -1652,14 +1738,17 @@ export const projects = [
       year: '2021',
       type: 'client',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
          'Fabric UI',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
          'Microsoft Graph',
+         'RESTful APIs',
          'Gulp',
          'Webpack'
       ],
@@ -1682,14 +1771,17 @@ export const projects = [
       year: '2021',
       type: 'client',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
          'Fabric UI',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
          'Microsoft Graph',
+         'RESTful APIs',
          'Gulp',
          'Webpack'
       ],
@@ -1712,14 +1804,17 @@ export const projects = [
       year: '2021',
       type: 'client',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
          'Fabric UI',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
          'Microsoft Graph',
+         'RESTful APIs',
          'Gulp',
          'Webpack'
       ],
@@ -1739,14 +1834,17 @@ export const projects = [
       year: '2021',
       type: 'client',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
          'Fabric UI',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
          'Microsoft Graph',
+         'RESTful APIs',
          'Gulp',
          'Webpack'
       ],
@@ -1770,12 +1868,13 @@ export const projects = [
    //    year: '2021',
    //    type: 'client',
    //    tech: [
-   //       'NodeJS',
+   //       'Node.js',
    //       'React.js',
    //       'JavaScript',
    //       'TypeScript',
    //       'Fabric UI',
    //       'Sass/SCSS',
+   //       'CSS Modules',
    //       'Responsive Design',
    //       'Microsoft Graph',
    //       'Gulp',
@@ -1797,14 +1896,17 @@ export const projects = [
       year: '2021',
       type: 'client',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
          'Fabric UI',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
          'Microsoft Graph',
+         'RESTful APIs',
          'Gulp',
          'Webpack'
       ],
@@ -1826,14 +1928,17 @@ export const projects = [
       year: '2021',
       type: 'client',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
          'Fabric UI',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
          'Microsoft Graph',
+         'RESTful APIs',
          'Gulp',
          'Webpack'
       ],
@@ -1854,14 +1959,17 @@ export const projects = [
       year: '2019',
       type: 'app',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
          'Fabric UI',
          'dayjs',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
+         'RESTful APIs',
          'Gulp',
          'Webpack'
       ],
@@ -1891,7 +1999,7 @@ export const projects = [
       year: '2018',
       type: 'app',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
@@ -1900,8 +2008,11 @@ export const projects = [
          'D3.js',
          'Fabric UI',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
          'Microsoft Graph API',
+         'RESTful APIs',
          'Gulp',
          'Webpack'
       ],
@@ -1928,15 +2039,18 @@ export const projects = [
       year: '2018',
       type: 'app',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
          'Recharts',
          'D3.js',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
          'Microsoft Graph API',
+         'RESTful APIs',
          'Gulp',
          'Webpack'
       ],
@@ -1967,7 +2081,7 @@ export const projects = [
       year: '2018',
       type: 'app',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
@@ -1975,8 +2089,11 @@ export const projects = [
          'Recharts',
          'D3.js',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
          'Microsoft Graph API',
+         'RESTful APIs',
          'Gulp',
          'Webpack'
       ],
@@ -2001,14 +2118,17 @@ export const projects = [
       year: '2018',
       type: 'app',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
          'Fabric UI',
          'moment.js',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
+         'RESTful APIs',
          'Gulp',
          'Webpack'
       ],
@@ -2052,15 +2172,18 @@ export const projects = [
       year: '2018',
       type: 'app',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
          'React Org Chart',
          'React Treebeard',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
          'Microsoft Graph API',
+         'RESTful APIs',
          'Gulp',
          'Webpack'
       ],
@@ -2091,15 +2214,18 @@ export const projects = [
       year: '2018',
       type: 'app',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
          'Fabric UI',
          'React Treebeard',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
          'Microsoft Graph API',
+         'RESTful APIs',
          'Gulp',
          'Webpack'
       ],
@@ -2130,14 +2256,17 @@ export const projects = [
       year: '2018',
       type: 'app',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
          'Fabric UI',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
          'Microsoft Graph API',
+         'RESTful APIs',
          'Gulp',
          'Webpack'
       ],
@@ -2171,15 +2300,18 @@ export const projects = [
       year: '2018',
       type: 'app',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
          'React Treebeard',
          'Fabric UI',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
          'Microsoft Graph API',
+         'RESTful APIs',
          'Gulp',
          'Webpack'
       ],
@@ -2204,7 +2336,7 @@ export const projects = [
       year: '2018',
       type: 'app',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
@@ -2212,7 +2344,10 @@ export const projects = [
          'Fabric UI',
          'moment.js',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
+         'RESTful APIs',
          'Gulp',
          'Webpack'
       ],
@@ -2241,7 +2376,7 @@ export const projects = [
       year: '2018',
       type: 'app',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
@@ -2250,7 +2385,10 @@ export const projects = [
          'Fabric UI',
          'moment.js',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
+         'RESTful APIs',
          'Gulp',
          'Webpack'
       ],
@@ -2279,15 +2417,18 @@ export const projects = [
       year: '2018',
       type: 'app',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
          'Fabric UI',
          'moment.js',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
          'Microsoft Graph API',
+         'RESTful APIs',
          'Gulp',
          'Webpack'
       ],
@@ -2312,14 +2453,17 @@ export const projects = [
       year: '2018',
       type: 'app',
       tech: [
-         'NodeJS',
+         'Node.js',
          'React.js',
          'JavaScript',
          'TypeScript',
          'Fabric UI',
          'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
          'Responsive Design',
          'Microsoft Graph',
+         'RESTful APIs',
          'Gulp',
          'Webpack'
       ],
@@ -2447,8 +2591,20 @@ const yearsSinceLearned = function () {
    return getYearsSince(yearWithMonth);
 };
 
+function getJobsWithSkill(skillName) {
+   return experience.filter(job =>
+      job.duties.some(duty => duty.skillNames?.includes(skillName))
+   );
+}
+
+function getProjectsWithSkill(skillName) {
+   return projects.filter(project => project.tech?.includes(skillName));
+}
+
 skills.forEach(skill => {
    skill.yearsSinceLearned = yearsSinceLearned;
+   skill.getJobsWithSkill = () => getJobsWithSkill(skill.name); // Use as a shared function
+   skill.getProjectsWithSkill = () => getProjectsWithSkill(skill.name);
 });
 
 export const skillIcon = skills.map(skill => skill.cloudinary);
