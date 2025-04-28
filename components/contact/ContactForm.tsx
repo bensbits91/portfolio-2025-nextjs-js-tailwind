@@ -72,14 +72,14 @@ const ContactForm = () => {
          if (response.ok) {
             handleSuccess();
          } else {
-            console.log('bb ~ response:', response);
+            console.info('bb ~ response:', response);
             const errorData: FetchErrorData = {
                message: await response.text()
             };
             handleError(errorData);
          }
       } catch (error) {
-         console.log('bb ~ error:', error);
+         console.error('bb ~ error:', error);
          handleError(error as ErrorData);
       }
    };

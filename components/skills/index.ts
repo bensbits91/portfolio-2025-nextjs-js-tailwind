@@ -1,2 +1,4 @@
-export { default as SkillList } from './SkillList';
-export { default as SkillItem } from './SkillItem';
+export { default as SkillsGrid } from './SkillsGrid';
+export { default as SkillsTable } from './SkillsTable';
+export { default as SkillsToolbar } from './SkillsToolbar';
+export { default as SkillModal } from './SkillModal';
