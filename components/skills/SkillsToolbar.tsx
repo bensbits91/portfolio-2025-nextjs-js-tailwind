@@ -31,6 +31,20 @@ export default function ThingsViewToolbar({
             type="single"
             defaultValue={'table'}
             className="mx-auto flex items-center gap-4 sm:mx-0 md:gap-8">
+            <ToggleItem asChild value="grid" aria-label="Grid view">
+               <Button
+                  onClick={() => handleViewClick('grid')}
+                  className={clsx(
+                     'flex cursor-pointer items-center gap-2 rounded-md hover:text-bb-yellow',
+                     selectedView === 'grid' ? 'text-bb-yellow' : 'text-bb-teal'
+                  )}
+                  title="Grid view">
+                  <div className="h-4 w-4">
+                     <GridIcon />
+                  </div>
+                  <div>Grid</div>
+               </Button>
+            </ToggleItem>
             <ToggleItem asChild value="table" aria-label="Table view">
                <Button
                   onClick={() => handleViewClick('table')}
@@ -45,20 +59,6 @@ export default function ThingsViewToolbar({
                      <TableIcon />
                   </div>
                   <div>Table</div>
-               </Button>
-            </ToggleItem>
-            <ToggleItem asChild value="grid" aria-label="Grid view">
-               <Button
-                  onClick={() => handleViewClick('grid')}
-                  className={clsx(
-                     'flex cursor-pointer items-center gap-2 rounded-md hover:text-bb-yellow',
-                     selectedView === 'grid' ? 'text-bb-yellow' : 'text-bb-teal'
-                  )}
-                  title="Grid view">
-                  <div className="h-4 w-4">
-                     <GridIcon />
-                  </div>
-                  <div>Grid</div>
                </Button>
             </ToggleItem>
             <ToggleItem asChild value="growth" aria-label="Growth by year view">
