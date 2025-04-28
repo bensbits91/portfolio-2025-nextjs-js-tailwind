@@ -76,7 +76,7 @@ export default function SkillsTable({
             const years = info.getValue() as number;
             return (
                <div className="min-w-24 whitespace-nowrap text-[0.7rem] md:text-sm">
-                  ~ {years} years
+                  {years}+ years
                </div>
             );
          }

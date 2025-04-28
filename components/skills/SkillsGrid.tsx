@@ -51,7 +51,7 @@ export default function SkillsGrid({
                      <div>{truncateString(name, 15).newString}</div>
                      <div className="flex h-4">{generateStars(rating)}</div>
                      <div className="min-w-24 whitespace-nowrap text-[0.7rem] md:text-sm">
-                        ~ {years} years
+                        {years}+ years
                      </div>
                   </div>
                </div>

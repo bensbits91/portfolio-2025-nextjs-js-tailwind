@@ -1326,6 +1326,7 @@ export const projects = [
          'Next.js',
          'React.js',
          'JavaScript',
+         'TypeScript',
          'D3.js',
          'Tailwind',
          'CSS',

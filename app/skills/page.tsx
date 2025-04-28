@@ -15,7 +15,7 @@ import { skillsForTable } from '@/app/data.js';
 const Skills = () => {
    const [selectedView, setSelectedView] = useState<
       'table' | 'grid' | 'growth' | 'stack'
-   >('table');
+   >('grid');
    const handleViewClick = useCallback(
       (newView: 'table' | 'grid' | 'growth' | 'stack') => {
          setSelectedView(newView);

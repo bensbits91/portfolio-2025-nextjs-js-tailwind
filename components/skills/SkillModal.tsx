@@ -64,7 +64,7 @@ export default function SkillModal({
    return (
       <Dialog open={isOpen} onOpenChange={onOpenChange}>
          <Overlay className="fixed inset-0 bg-black/30" />
-         <Content className="fixed bottom-6 left-6 right-6 top-20 z-20 overflow-scroll rounded-lg bg-bb-gray-900 p-6 shadow-lg md:bottom-20 md:left-20 md:right-20 md:top-20">
+         <Content className="fixed bottom-6 left-6 right-6 top-20 z-20 overflow-scroll rounded-lg bg-bb-gray-900 p-6 shadow-lg md:bottom-6 md:left-12 md:right-12 md:top-20">
             <Close
                className="absolute right-4 top-4 h-4 w-4 cursor-pointer transition duration-500 ease-in-out hover:text-[yellow]"
                aria-label="Close"
@@ -80,17 +80,14 @@ export default function SkillModal({
                      height={208}
                   />
                </div>
-               <div>
+               <div className='sm:pt-6 md:pt-12'>
                   <Title className="text-4xl">{name}</Title>
                   <Description className="hidden">{name}</Description>
-                  <div className="flex flex-col md:flex-row md:items-center gap-4 p-4">
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-4 p-4">
                      <div className="flex h-4">{generateStars(rating)}</div>
                      <Text top="no" bottom="no">
-                        ~ {years} years
+                        {years}+ years
                      </Text>
-                     {/* <Text top="no" bottom="no">
-                        First used in {yearLearned}
-                     </Text> */}
                   </div>
                </div>
             </div>
