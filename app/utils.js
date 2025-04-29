@@ -1,45 +1,9 @@
 import dayjs from 'dayjs';
-import { CloudinaryImage } from '@/components/image';
 
 export const noop = () => {};
 
 // string helpers
 export const makeKey = str => str.replace(/ /g, '-').toLowerCase();
-
-// ui helpers
-export const generateStars = rating => {
-   const fullStars = Math.floor(rating / 2);
-   const halfStar = rating % 2 === 1;
-   const stars = [];
-   for (let i = 0; i < fullStars; i++) {
-      stars.push(
-         <div key={`full-${i}`} className="h-3 w-3">
-            <CloudinaryImage
-               cloudinaryId="star-white_ehbqmh"
-               alt="Star"
-               width="16"
-               height="16"
-            />
-         </div>
-      );
-   }
-
-   if (halfStar) {
-      // todo: better half-star implementation
-      stars.push(
-         <div key="half" className="ml-[-4px] h-3 w-3">
-            <CloudinaryImage
-               cloudinaryId="star-white-half_bfoszw"
-               alt="Half star"
-               width="16"
-               height="16"
-            />
-         </div>
-      );
-   }
-
-   return stars;
-};
 
 // date helpers
 export const getYearsAndMonths = (start, end) => {

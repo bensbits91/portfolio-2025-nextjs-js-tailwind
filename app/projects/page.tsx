@@ -12,10 +12,6 @@ const Work = () => {
             <Heading level={2} appearance={2} color="jade">
                Recent Projects
             </Heading>
-            {/* <Text color="white" size="lg">
-               In 2025, I&apos;ve been doing contract work, contributing to
-               projects and expanding my skills through passion projects.
-            </Text> */}
          </Section>
          <ProjectGrid onOrAfter={2025} />
          <Section top="lg" bottom="lg" width="md" bg="teal">

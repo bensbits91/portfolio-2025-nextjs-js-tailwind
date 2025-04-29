@@ -5,3 +5,4 @@ export { default as CodeLink } from './CodeLink';
 export { default as Breadcrumb } from './Breadcrumb';
 export { default as Icon } from './Icon';
 export { default as IconBar } from './IconBar';
+export { default as Rating } from './Rating';

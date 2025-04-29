@@ -8,9 +8,9 @@ import {
 } from '@radix-ui/react-dialog';
 import Link from 'next/link';
 import { Heading, Text, List } from '@/components/typography';
+import { Rating } from '@/components/common';
 import { CloseIcon } from '@/components/icons';
 import { CloudinaryImage } from '@/components/image';
-import { generateStars } from '@/app/utils';
 import { ModalSkill } from '@/types/Skill';
 
 interface SkillModalProps {
@@ -62,7 +62,11 @@ export default function SkillModal({
                   <Title className="text-4xl">{name}</Title>
                   <Description className="hidden">{name}</Description>
                   <div className="flex flex-col gap-4 p-4 sm:flex-row sm:items-center">
-                     <div className="flex h-4">{generateStars(rating)}</div>
+                     {rating && (
+                        <div className="flex h-4">
+                           <Rating rating={rating} />
+                        </div>
+                     )}
                      <Text top="no" bottom="no">
                         {years}+ years
                      </Text>
