@@ -8,7 +8,7 @@ const Work = () => {
    return (
       <>
          <Section top="xl" width="lg">
-            <Heading bottom="lg">Work Samples</Heading>
+            <Heading bottom="lg">Sample Projects</Heading>
             <Heading level={2} appearance={2} color="jade">
                Recent Projects
             </Heading>
