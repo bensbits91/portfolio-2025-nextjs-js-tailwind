@@ -22,11 +22,11 @@ const ProjectGridModal = ({ modalData, closeModal }: ProjectGridModalProps) => {
       outcome
    } = modalData || {};
    const images = modalData?.getModalImages
-      ? modalData.getModalImages().map(image => ({
+      ? modalData.getModalImages()?.map(image => ({
            type: image.type || ('image' as const),
            name: image.name || '',
            caption: image.caption || ''
-        }))
+        })) || [] // Fallback to an empty array if getModalImages() returns undefined
       : [];
 
    const CloseButton = () => (
