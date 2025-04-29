@@ -85,7 +85,12 @@ const BasicPage = ({ content }: BasicPageProps) => {
 
                {skillNames && (
                   <div className="my-2">
-                     <IconBar icons={skillIcons(skillNames)} />
+                     <IconBar
+                        icons={skillIcons(skillNames).filter(
+                           (icon): icon is { src: string; altText: string } =>
+                              icon.src !== undefined
+                        )}
+                     />
                   </div>
                )}
             </Section>

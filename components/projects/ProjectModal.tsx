@@ -49,7 +49,12 @@ const ProjectGridModal = ({ modalData, closeModal }: ProjectGridModalProps) => {
             <p className="mb-4 sm:hidden">{year}</p>
             {tech && tech.length > 0 && (
                <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row">
-                  <IconBar icons={skillIcons(tech)} />
+                  <IconBar
+                     icons={skillIcons(tech).filter(
+                        (icon): icon is { src: string; altText: string } =>
+                           icon.src !== undefined
+                     )}
+                  />
                   {codeLink && (
                      <CodeLink
                         codeLink={{ href: codeLink, text: 'View Code' }}

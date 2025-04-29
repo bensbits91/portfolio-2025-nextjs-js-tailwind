@@ -3,7 +3,7 @@ import { Heading } from '@/components/typography';
 
 interface ImageGalleryProps {
    images: {
-      type?: 'image' | 'video';
+      type?: string;
       name: string;
       caption?: string;
    }[];
@@ -17,7 +17,9 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
             return (
                <div key={index} className="my-12">
                   {caption && (
-                     <Heading level={3} appearance={3} color="white">{caption}</Heading>
+                     <Heading level={3} appearance={3} color="white">
+                        {caption}
+                     </Heading>
                   )}
                   <div className="max-w-[800px] border-2 border-bb-gray-900">
                      {type === 'video' ? (
