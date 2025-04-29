@@ -3,18 +3,11 @@ import { Heading } from '@/components/typography';
 import { IconBar } from '@/components/common';
 import { skillIcons } from '@/data/skills';
 import { truncateString } from '@/utils/string';
-
-interface Project {
-   name: string;
-   tech: string[];
-   description: string;
-   year: string;
-   getFeaturedImage: () => { name: string; frame: string };
-}
+import { GridProject } from '@/types/Project';
 
 const ProjectGridCard: React.FC<{
-   project: Project;
-   handleClick?: () => void;
+   project: GridProject;
+   handleClick?: (projectName: string) => void;
 }> = ({ project, handleClick }) => {
    const { name, tech, description } = project;
    const featuredImage = project.getFeaturedImage();
@@ -33,7 +26,7 @@ const ProjectGridCard: React.FC<{
 
    const clickableImageElement = (
       <div
-         onClick={handleClick}
+         onClick={() => handleClick && handleClick(name)}
          className="hover-delay hover-scale inline-block h-40 w-[100%] overflow-hidden rounded-sm border-2 border-l-0 border-r-0 border-t-0 border-b-bb-gray-900 lg:cursor-pointer">
          {imageElement}
       </div>
@@ -75,7 +68,7 @@ const ProjectGridCard: React.FC<{
             )}
             {handleClick && (
                <button
-                  onClick={handleClick}
+                  onClick={() => handleClick && handleClick(name)}
                   className="hover-delay hover-brightness w-full rounded-sm bg-bb-teal p-4 text-center font-roboto-sans text-sm tracking-wide text-bb-gray">
                   View Project Details
                </button>

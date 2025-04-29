@@ -12,6 +12,13 @@ export interface ProjectImage {
    frame?: number;
 }
 
+export interface GridProject extends BaseProject {
+   tech: string[];
+   description: string;
+   images: ProjectImage[];
+   getFeaturedImage: () => { name: string; frame: string };
+}
+
 export interface ModalProject extends BaseProject {
    description?: string;
    tech?: string[];

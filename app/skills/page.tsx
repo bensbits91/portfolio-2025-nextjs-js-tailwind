@@ -33,12 +33,12 @@ const Skills = () => {
       <>
          <Section top="xl" bottom="sm" width="md">
             <Heading bottom="lg">Skills</Heading>
-         </Section>
-         <Section bottom="lg" width="md">
             <SkillsToolbar
                handleViewClick={handleViewClick}
                selectedView={selectedView}
             />
+         </Section>
+         <Section bottom="lg" width="md">
             <div className="pt-4">
                {selectedView === 'table' && (
                   <SkillsTable
