@@ -1,4 +1,3 @@
-import { colorCode } from '@/utils/theme';
 import clsx from 'clsx';
 
 interface TextProps {
@@ -32,7 +31,7 @@ const Text = ({
          { 'text-base tracking-wide': size === 'md' },
          { 'text-lg/6 tracking-wide': size === 'lg' },
          { 'text-lg/8 tracking-wide': size === 'xl' },
-         colorCode(color)
+         `text-bb-${color}`
       )}>
       {children}
    </p>

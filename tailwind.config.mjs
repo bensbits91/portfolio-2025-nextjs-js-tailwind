@@ -5,7 +5,7 @@ const config = {
       './components/**/*.{js,ts,jsx,tsx,mdx}',
       './app/**/*.{js,ts,jsx,tsx,mdx}'
    ],
-   safelist: ['bg-gradient-yellow', 'bg-gradient-teal'],
+   safelist: ['bg-gradient-yellow', 'bg-gradient-teal', 'text-bb-jade'],
    theme: {
       extend: {
          boxShadow: {
