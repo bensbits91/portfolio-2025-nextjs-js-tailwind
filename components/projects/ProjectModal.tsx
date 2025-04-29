@@ -1,7 +1,7 @@
 import { ImageGallery, CloudinaryImage } from '@/components/image';
 import { Heading, Text } from '@/components/typography';
 import { CodeLink, IconBar } from '@/components/common';
-import { skillIcons } from '@/app/data';
+import { skillIcons } from '@/data/skills';
 import { ModalProject } from '@/types/Project';
 
 interface ProjectGridModalProps {

@@ -10,7 +10,7 @@ import {
    SkillsToolbar,
    SkillModal
 } from '@/components/skills';
-import { skillsForTable } from '@/app/data.js';
+import { skillsForTable } from '@/data/skills';
 
 const Skills = () => {
    const [selectedView, setSelectedView] = useState<

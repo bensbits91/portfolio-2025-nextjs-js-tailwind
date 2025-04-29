@@ -3,7 +3,7 @@ import { Heading } from '@/components/typography';
 
 interface ImageGalleryProps {
    images: {
-      type: 'image' | 'video';
+      type?: 'image' | 'video';
       name: string;
       caption?: string;
    }[];

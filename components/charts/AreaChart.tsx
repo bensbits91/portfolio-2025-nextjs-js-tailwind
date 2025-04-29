@@ -17,11 +17,13 @@ const AreaChart = dynamic(
    { ssr: false }
 );
 
-import { skills } from '@/app/data';
+import { skills } from '@/data/skills';
 
 const skillsPerYear = skills.reduce(
    (acc: Record<number, { count: number; skills: string[] }>, skill) => {
       const { yearLearned } = skill;
+      if (yearLearned === undefined) return acc;
+
       if (acc[yearLearned]) {
          acc[yearLearned].count++;
          acc[yearLearned].skills.push(skill.name);

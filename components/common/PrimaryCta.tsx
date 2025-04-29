@@ -2,7 +2,7 @@ import { CloudinaryImage } from '@/components/image';
 import { Heading } from '@/components/typography';
 import { Button } from '@/components/common';
 import { IconBar } from '@/components/common';
-import { ctaSkills, skillIcons } from '@/app/data';
+import { ctaSkills, skillIcons } from '@/data/skills';
 
 const PrimaryCta = ({
    //    data,
@@ -24,7 +24,13 @@ const PrimaryCta = ({
                </Heading>
 
                <div className="mb-12 md:max-w-[640px]">
-                  <IconBar wrap icons={skillIcons(ctaSkills, true)} />
+                  <IconBar
+                     wrap
+                     icons={skillIcons(ctaSkills, true).filter(
+                        (icon): icon is { src: string; altText: string } =>
+                           icon.src !== undefined
+                     )}
+                  />
                </div>
 
                <div className="mb-8 flex gap-12 text-bb-gray md:gap-20">

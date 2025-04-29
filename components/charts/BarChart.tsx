@@ -13,7 +13,7 @@ const BarChart = dynamic(
    { ssr: false }
 );
 
-import { skills } from '@/app/data';
+import { skills } from '@/data/skills';
 
 const CustomizedTooltip = ({
    active,

@@ -1,7 +1,7 @@
 import { CloudinaryImage } from '@/components/image';
 import { Heading } from '@/components/typography';
 import { IconBar } from '@/components/common';
-import { skillIcons } from '@/app/data';
+import { skillIcons } from '@/data/skills';
 import { truncateString } from '@/utils/string';
 
 interface Project {
@@ -60,7 +60,12 @@ const ProjectGridCard: React.FC<{
             </Heading>
             {tech.length > 0 && (
                <div className="mb-4 mt-2">
-                  <IconBar icons={skillIcons(tech)} />
+                  <IconBar
+                     icons={skillIcons(tech).filter(
+                        (icon): icon is { src: string; altText: string } =>
+                           icon.src !== undefined
+                     )}
+                  />
                </div>
             )}
             {description && (

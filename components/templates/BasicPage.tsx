@@ -1,7 +1,7 @@
 import { TwoColumnSection, Section } from '@/components/layout';
 import { Heading, Text, List } from '@/components/typography';
 import { Breadcrumb, PrimaryCta, CodeLink, IconBar } from '@/components/common';
-import { skillIcons } from '@/app/data';
+import { skillIcons } from '@/data/skills';
 
 interface SectionProps {
    layout?: string;

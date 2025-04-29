@@ -1,10 +1,10 @@
 import { CloudinaryImage } from '@/components/image';
 import { IconBar } from '@/components/common';
-import { skillIcons } from '@/app/data';
 import { Section } from '@/components/layout';
 import { Heading, Text } from '@/components/typography';
 import Button from '@/components/common/Button';
-import { about, homeSkills } from './data';
+import { about } from '@/data/about';
+import { skillIcons, homeSkills } from '@/data/skills';
 
 const Home = () => {
    return (
@@ -13,7 +13,7 @@ const Home = () => {
             <div className="flex items-start justify-between sm:justify-start sm:gap-12">
                <div>
                   <Heading>Ben Brooks</Heading>
-                  <Text color="white" size='lg'>
+                  <Text color="white" size="lg">
                      {about.summary}
                   </Text>
                </div>
@@ -26,9 +26,17 @@ const Home = () => {
                   />
                </div>
             </div>
-            <Heading level={2} appearance={2} bottom='md' color="white">Frontend + Fullstack</Heading>
+            <Heading level={2} appearance={2} bottom="md" color="white">
+               Frontend + Fullstack
+            </Heading>
             <div className="mb-8 max-w-[560px]">
-               <IconBar wrap icons={skillIcons(homeSkills)} />
+               <IconBar
+                  wrap
+                  icons={skillIcons(homeSkills).filter(
+                     (icon): icon is { src: string; altText: string } =>
+                        icon.src !== undefined
+                  )}
+               />
                <Button link="/skills">
                   <div className="md:min-w-[400px]">View all skills</div>
                </Button>
@@ -72,8 +80,10 @@ const Home = () => {
          </Section>
          <Section fullheight top="lg" bottom="lg" width="sm" bg="teal">
             <div className="mb-8 text-bb-gray">
-               <Heading level={2} appearance={2} color='gray'>Open to Work</Heading>
-               <Text color='gray' size='lg'>
+               <Heading level={2} appearance={2} color="gray">
+                  Open to Work
+               </Heading>
+               <Text color="gray" size="lg">
                   Looking for a rock-solid software engineer?
                </Text>
             </div>

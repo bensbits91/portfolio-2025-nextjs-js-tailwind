@@ -2,7 +2,7 @@
 import { useState, useMemo } from 'react';
 import { ThreeColumnSection } from '@/components/layout';
 import { ProjectGridCard, ProjectModal } from './index';
-import { projectsForGallery } from '@/app/data';
+import { projectsForGallery } from '@/data/projects';
 
 interface ProjectGridProps {
    before?: number;
