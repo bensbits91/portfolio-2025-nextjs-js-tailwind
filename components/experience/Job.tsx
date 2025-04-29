@@ -1,23 +1,9 @@
 import { Section } from '@/components/layout';
 import { Duties, JobHeader } from './index';
+import { DetailsJob } from '@/types/Job';
 
 interface JobProps {
-   job: {
-      company: string;
-      role: string;
-      location: string;
-      start: string;
-      end: string;
-      duties: {
-         name: string;
-         skillNames?: string[];
-         description: string;
-         moreInfoLink?: {
-            text: string;
-            href: string;
-         };
-      }[];
-   };
+   job: DetailsJob;
 }
 
 const Job = ({ job }: JobProps) => (

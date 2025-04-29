@@ -7,18 +7,10 @@ import { Heading, Text, List } from '@/components/typography';
 import { ChevronIcon } from '@/components/icons';
 import { skillIcons } from '@/app/data';
 import clsx from 'clsx';
+import { BaseDuty } from '@/types/Job';
 
 interface DutyProps {
-   duty: {
-      name: string;
-      skillNames?: string[];
-      description: string;
-      moreInfo?: (string | string[])[]; // Allow the array to contain strings and arrays of strings
-      moreInfoLink?: {
-         text: string;
-         href: string;
-      };
-   };
+   duty: BaseDuty;
 }
 
 const Duty = ({ duty }: DutyProps) => {

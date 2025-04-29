@@ -2,26 +2,10 @@ import { ImageGallery, CloudinaryImage } from '@/components/image';
 import { Heading, Text } from '@/components/typography';
 import { CodeLink, IconBar } from '@/components/common';
 import { skillIcons } from '@/app/data';
-
-interface ModalData {
-   name: string;
-   description?: string;
-   tech?: string[];
-   liveLink?: string;
-   codeLink?: string;
-   moreInfoLink?: string;
-   year?: string;
-   motivation?: string;
-   outcome?: string;
-   getMadalImages?: () => Array<{
-      name: string;
-      caption: string;
-      type: 'image' | 'video';
-   }>;
-}
+import { ModalProject } from '@/types/Project';
 
 interface ProjectGridModalProps {
-   modalData: ModalData | null;
+   modalData: ModalProject | null;
    closeModal: () => void;
 }
 
@@ -37,8 +21,8 @@ const ProjectGridModal = ({ modalData, closeModal }: ProjectGridModalProps) => {
       motivation,
       outcome
    } = modalData || {};
-   const images = modalData?.getMadalImages
-      ? modalData.getMadalImages().map(image => ({
+   const images = modalData?.getModalImages
+      ? modalData.getModalImages().map(image => ({
            type: image.type || ('image' as const),
            name: image.name || '',
            caption: image.caption || ''

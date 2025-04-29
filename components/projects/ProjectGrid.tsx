@@ -1,7 +1,7 @@
 'use client';
 import { useState, useMemo } from 'react';
 import { ThreeColumnSection } from '@/components/layout';
-import { ProjectGridCard, ProjectGridModal } from './index';
+import { ProjectGridCard, ProjectModal } from './index';
 import { projectsForGallery } from '@/app/data';
 
 interface ProjectGridProps {
@@ -15,7 +15,6 @@ const ProjectGrid = ({ before, onOrAfter, type }: ProjectGridProps) => {
       () =>
          projectsForGallery.map(project => ({
             ...project,
-            year: Number(project.year),
             getFeaturedImage: () => ({
                name: project.images[0]?.name || 'default',
                frame: 'default-frame'
@@ -53,14 +52,14 @@ const ProjectGrid = ({ before, onOrAfter, type }: ProjectGridProps) => {
                      handleClick={() =>
                         setModalData({
                            ...project,
-                           year: project.year.toString() // Convert year to string to match the expected type
+                           year: project.year
                         })
                      }
                   />
                )
             }))}
          />
-         <ProjectGridModal
+         <ProjectModal
             modalData={modalData}
             closeModal={() => setModalData(null)}
          />

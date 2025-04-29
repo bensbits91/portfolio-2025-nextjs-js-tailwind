@@ -1,14 +1,9 @@
 import { Heading, Text } from '@/components/typography';
 import { duration } from '@/app/utils.js';
+import { HeaderJob } from '@/types/Job';
 
 interface JobHeaderProps {
-   job: {
-      company: string;
-      role: string;
-      start: string;
-      end: string;
-      location: string;
-   };
+   job: HeaderJob;
 }
 
 const JobHeader = ({ job }: JobHeaderProps) => {

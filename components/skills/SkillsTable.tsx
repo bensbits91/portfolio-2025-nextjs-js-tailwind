@@ -11,26 +11,10 @@ import { CloudinaryImage } from '@/components/image';
 import SkillsTableHeader from './SkillsTableHeader';
 import SkillsTableCell from './SkillsTableCell';
 import { generateStars } from '@/app/utils';
-
-interface Skill {
-   type: string;
-   stackArea?: string;
-   stackCategory?: string;
-   name: string;
-   cloudinary?: string;
-   cloudinaryDark?: string;
-   yearLearned?: number;
-   years?: number;
-   rating?: number;
-   haveUsedProfessionally?: boolean;
-   haveUsedForFun?: boolean;
-   featureOnHome?: boolean;
-   showInSkillsTable?: boolean;
-   featureInCTAs?: boolean;
-}
+import { BaseSkill } from '@/types/Skill';
 
 interface SkillsTableProps {
-   skills: Skill[];
+   skills: BaseSkill[];
    handleItemClick: (thingId: string) => void;
 }
 
@@ -41,7 +25,7 @@ export default function SkillsTable({
    handleItemClick
 }: SkillsTableProps) {
    const columns: ColumnDef<
-      Skill,
+      BaseSkill,
       string | unknown | number | Date | ReactNode
    >[] = [
       {
@@ -49,7 +33,7 @@ export default function SkillsTable({
          header: '',
          enableSorting: false,
          enableColumnFilter: false,
-         cell: (info: CellContext<Skill, unknown>) => {
+         cell: (info: CellContext<BaseSkill, unknown>) => {
             const imageUrl = info.getValue() as string;
             return (
                <div className="mr-2 flex h-4 w-4">
@@ -72,7 +56,7 @@ export default function SkillsTable({
          accessorKey: 'years',
          header: 'Years',
          enableColumnFilter: false,
-         cell: (info: CellContext<Skill, unknown>) => {
+         cell: (info: CellContext<BaseSkill, unknown>) => {
             const years = info.getValue() as number;
             return (
                <div className="min-w-24 whitespace-nowrap text-[0.7rem] md:text-sm">
@@ -85,7 +69,7 @@ export default function SkillsTable({
          accessorKey: 'rating',
          header: 'Rating',
          enableColumnFilter: false,
-         cell: (info: CellContext<Skill, unknown>) => {
+         cell: (info: CellContext<BaseSkill, unknown>) => {
             const rating = info.getValue() as number;
             return <div className="flex h-4">{generateStars(rating)}</div>;
          }
