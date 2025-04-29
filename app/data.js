@@ -1205,7 +1205,7 @@ export const experience = [
          {
             name: '',
             description:
-               'Produced technical documentation for end users and internal users. Contributed to cryptographic patent applications.',
+               'Produced technical documentation for end users and internal users. Contributed to patent applications related to cryptographic security.',
             moreInfo: [
                [
                   'Produced user guides, in-app help systems, and technical articles related to software integrations with biometric security devices (e.g. fingerprint, retina, iris, voice, face, and keystroke).',
@@ -2578,13 +2578,13 @@ const getFeaturedImage = function () {
    return this.images.find(image => image.type !== 'video');
 };
 
-const getMadalImages = function () {
+const getModalImages = function () {
    return this.images.filter(image => !image.hideFromModal);
 };
 
 projects.forEach(project => {
    project.getFeaturedImage = getFeaturedImage;
-   project.getMadalImages = getMadalImages;
+   project.getModalImages = getModalImages;
 });
 
 const yearsSinceLearned = function () {

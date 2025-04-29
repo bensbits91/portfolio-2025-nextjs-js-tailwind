@@ -11,32 +11,10 @@ import { Heading, Text, List } from '@/components/typography';
 import { CloseIcon } from '@/components/icons';
 import { CloudinaryImage } from '@/components/image';
 import { generateStars } from '@/app/utils';
-
-interface Job {
-   role: string;
-   company: string;
-   start: string;
-   end: string;
-}
-
-interface Project {
-   name: string;
-   year: number;
-   type: string;
-}
-
-interface Skill {
-   type: string;
-   name: string;
-   cloudinary?: string;
-   years?: number;
-   rating?: number;
-   getProjectsWithSkill?: () => Project[];
-   getJobsWithSkill?: () => Job[];
-}
+import { ModalSkill } from '@/types/Skill';
 
 interface SkillModalProps {
-   skill: Skill | null | undefined;
+   skill: ModalSkill | null | undefined;
    isOpen: boolean;
    onOpenChange: (open: boolean) => void;
 }
@@ -80,10 +58,10 @@ export default function SkillModal({
                      height={208}
                   />
                </div>
-               <div className='sm:pt-6 md:pt-12'>
+               <div className="sm:pt-6 md:pt-12">
                   <Title className="text-4xl">{name}</Title>
                   <Description className="hidden">{name}</Description>
-                  <div className="flex flex-col sm:flex-row sm:items-center gap-4 p-4">
+                  <div className="flex flex-col gap-4 p-4 sm:flex-row sm:items-center">
                      <div className="flex h-4">{generateStars(rating)}</div>
                      <Text top="no" bottom="no">
                         {years}+ years

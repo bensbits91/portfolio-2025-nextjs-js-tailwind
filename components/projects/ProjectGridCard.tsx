@@ -8,7 +8,7 @@ interface Project {
    name: string;
    tech: string[];
    description: string;
-   year: number;
+   year: string;
    getFeaturedImage: () => { name: string; frame: string };
 }
 

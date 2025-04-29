@@ -13,15 +13,15 @@ import {
 } from '@/components/icons';
 import clsx from 'clsx';
 
-interface ThingsViewToolbarProps {
+interface SkillsViewToolbarProps {
    handleViewClick: (newView: 'table' | 'grid' | 'growth' | 'stack') => void;
    selectedView: 'table' | 'grid' | 'growth' | 'stack';
 }
 
-export default function ThingsViewToolbar({
+export default function SkillsViewToolbar({
    handleViewClick,
    selectedView
-}: ThingsViewToolbarProps) {
+}: SkillsViewToolbarProps) {
    return (
       <Toolbar
          orientation="horizontal"

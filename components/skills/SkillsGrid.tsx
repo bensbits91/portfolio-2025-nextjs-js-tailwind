@@ -1,25 +1,9 @@
 import { CloudinaryImage } from '@/components/image';
 import { generateStars, truncateString } from '@/app/utils';
-
-interface Skill {
-   type: string;
-   stackArea?: string;
-   stackCategory?: string;
-   name: string;
-   cloudinary?: string;
-   cloudinaryDark?: string;
-   yearLearned?: number;
-   years?: number;
-   rating?: number;
-   haveUsedProfessionally?: boolean;
-   haveUsedForFun?: boolean;
-   featureOnHome?: boolean;
-   showInSkillsTable?: boolean;
-   featureInCTAs?: boolean;
-}
+import { BaseSkill } from '@/types/Skill';
 
 interface SkillsGridProps {
-   skills: Skill[];
+   skills: BaseSkill[];
    handleItemClick: (thingId: string) => void;
 }
 export default function SkillsGrid({
@@ -30,7 +14,7 @@ export default function SkillsGrid({
       return <div>No skills available</div>;
    }
    return (
-      <div className="grid sm:grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
          {skills.map((skill, index) => {
             const { cloudinary, name, rating, years } = skill;
 

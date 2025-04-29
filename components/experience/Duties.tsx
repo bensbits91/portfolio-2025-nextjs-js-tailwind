@@ -1,15 +1,8 @@
 import Duty from './Duty';
+import { BaseDuty } from '@/types/Job';
 
 interface DutiesProps {
-   duties: {
-      name: string;
-      skillNames?: string[];
-      description: string;
-      moreInfoLink?: {
-         text: string;
-         href: string;
-      };
-   }[];
+   duties: BaseDuty[];
 }
 
 const Duties = ({ duties }: DutiesProps) => {
