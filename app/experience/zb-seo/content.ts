@@ -86,16 +86,16 @@ const content = {
                ]
             }
          ]
-      },
-      {
-         heading: 'Need help with Web Optimization?',
-         layout: 'Cta',
-         content: ["Let's chat and see if I can help you with your project."],
-         link: {
-            href: '/contact',
-            text: "Let's connect!"
-         }
       }
+      // {
+      //    heading: 'Need help with Web Optimization?',
+      //    layout: 'Cta',
+      //    content: ["Let's chat and see if I can help you with your project."],
+      //    link: {
+      //       href: '/contact',
+      //       text: "Let's connect!"
+      //    }
+      // }
    ]
 };
 

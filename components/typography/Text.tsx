@@ -1,4 +1,4 @@
-import { colorCode } from '@/app/utils';
+import { colorCode } from '@/utils/theme';
 import clsx from 'clsx';
 
 interface TextProps {

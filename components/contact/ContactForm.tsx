@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Heading } from '@/components/typography';
 import ContactLinks from './ContactLinks';
 import { CloudinaryImage } from '../image';
-import { noop } from '@/app/utils';
+import { noop } from '@/utils/misc';
 
 // todo: break into smaller components
 

@@ -1,10 +1,6 @@
 import { TwoColumnSection, Section } from '@/components/layout';
-import {
-   Heading,
-   Text,
-   List
-} from '@/components/typography';
-import { Breadcrumb, Cta, CodeLink, IconBar } from '@/components/common';
+import { Heading, Text, List } from '@/components/typography';
+import { Breadcrumb, PrimaryCta, CodeLink, IconBar } from '@/components/common';
 import { skillIcons } from '@/app/data';
 
 interface SectionProps {
@@ -49,7 +45,10 @@ interface BasicPageProps {
 }
 
 interface ContentItemProps {
-   item: string | string[] | { heading: string; subheading: string; list: string[] };
+   item:
+      | string
+      | string[]
+      | { heading: string; subheading: string; list: string[] };
 }
 
 const BasicPage = ({ content }: BasicPageProps) => {
@@ -66,7 +65,9 @@ const BasicPage = ({ content }: BasicPageProps) => {
 
       return (
          <div>
-            <Heading level={3} appearance={4} color='yellow'>{item.heading}</Heading>
+            <Heading level={3} appearance={4} color="yellow">
+               {item.heading}
+            </Heading>
             <Text>{item.subheading}</Text>
             <List items={item.list} />
          </div>
@@ -96,29 +97,29 @@ const BasicPage = ({ content }: BasicPageProps) => {
                   layout = 'OneColumnSection',
                   heading,
                   content,
-                  subsections,
-                  bigBottom
+                  subsections
+                  // bigBottom
                } = section;
 
-               if (layout === 'Cta') {
-                  return (
-                     <Cta
-                        key={index}
-                        data={{
-                           ...section,
-                           content: section.content?.flatMap(item =>
-                              typeof item === 'string'
-                                 ? [item]
-                                 : Array.isArray(item)
-                                 ? item
-                                 : item.list
-                           )
-                        }}
-                        bigBottom={bigBottom}
-                        bg="teal"
-                     />
-                  );
-               }
+               // if (layout === 'Primary') {
+               //    return (
+               //       <Cta
+               //          key={index}
+               //          data={{
+               //             ...section,
+               //             content: section.content?.flatMap(item =>
+               //                typeof item === 'string'
+               //                   ? [item]
+               //                   : Array.isArray(item)
+               //                   ? item
+               //                   : item.list
+               //             )
+               //          }}
+               //          bigBottom={bigBottom}
+               //          bg="teal"
+               //       />
+               //    );
+               // }
 
                if (layout === 'TwoColumnSection') {
                   if (!subsections || subsections.length === 0) return null;
@@ -136,7 +137,12 @@ const BasicPage = ({ content }: BasicPageProps) => {
                               return {
                                  content: (
                                     <div key={SubsectionIndex}>
-                                       <Heading level={2} appearance={2} color='jade'>{heading}</Heading>
+                                       <Heading
+                                          level={2}
+                                          appearance={2}
+                                          color="jade">
+                                          {heading}
+                                       </Heading>
                                        <div className="mb-8">
                                           {stack && <List items={stack} />}
                                           {codeLink && (
@@ -174,7 +180,9 @@ const BasicPage = ({ content }: BasicPageProps) => {
 
                return (
                   <Section key={index}>
-                     <Heading level={2} appearance={2} color='jade' bottom='md'>{heading}</Heading>
+                     <Heading level={2} appearance={2} color="jade" bottom="md">
+                        {heading}
+                     </Heading>
 
                      {content &&
                         content.map((item, index) => (
@@ -186,7 +194,10 @@ const BasicPage = ({ content }: BasicPageProps) => {
                            const { heading, content } = section;
                            return (
                               <div key={index} className="mb-8 md:ml-4">
-                                 <Heading level={3} appearance={4} color='yellow'>
+                                 <Heading
+                                    level={3}
+                                    appearance={4}
+                                    color="yellow">
                                     {heading}
                                  </Heading>
                                  {content &&
@@ -199,6 +210,7 @@ const BasicPage = ({ content }: BasicPageProps) => {
                   </Section>
                );
             })}
+         <PrimaryCta />
       </div>
    );
 };

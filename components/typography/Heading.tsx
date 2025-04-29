@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { JSX } from 'react';
-import { colorCode } from '@/app/utils';
+import { colorCode } from '@/utils/theme';
 
 interface HeadingProps {
    className?: string;

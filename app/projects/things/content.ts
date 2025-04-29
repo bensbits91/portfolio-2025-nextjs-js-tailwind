@@ -47,116 +47,116 @@ const content = {
             'I also wanted to rebuild the frontend from scratch to make it faster, lighter, more accessible, and more customizable. No need for a UI library, I like building custom components. No need for a CSS framework. No need for Redux or Zustand for state management (yet).'
          ]
       },
+      // {
+      //    heading: 'Need help?',
+      //    layout: 'Cta',
+      //    bigBottom: true,
+      //    content: [
+      //       "Let me know if you have any ideas or suggestions. Or let's build something else!"
+      //    ],
+      //    link: {
+      //       href: '/contact',
+      //       text: "Let's connect!"
+      //    }
+      // },
+      // {
+      // heading: '',
+      // layout: 'TwoColumnSection',
+      // subsections: [
       {
-         heading: 'Need help?',
-         layout: 'Cta',
-         bigBottom: true,
-         content: [
-            "Let me know if you have any ideas or suggestions. Or let's build something else!"
+         heading: 'Frontend',
+         stack: [
+            'Node',
+            'React',
+            'Next',
+            'CSS Modules',
+            'Tanstack React-Query'
          ],
-         link: {
-            href: '/contact',
-            text: "Let's connect!"
-         }
-      },
-      {
-         heading: '',
-         layout: 'TwoColumnSection',
-         subsections: [
+         codeLink: {
+            href: 'https://github.com/bensbits91/things-client',
+            text: 'View Frontend Code'
+         },
+         content: [
             {
-               heading: 'Frontend',
-               stack: [
-                  'Node',
-                  'React',
-                  'Next',
-                  'CSS Modules',
-                  'Tanstack React-Query'
-               ],
-               codeLink: {
-                  href: 'https://github.com/bensbits91/things-client',
-                  text: 'View Frontend Code'
-               },
-               content: [
-                  {
-                     heading: 'Custom Components',
-                     subheading:
-                        '100% custom components, no third-party UI library. Faster, lighter and easier to customize.',
-                     list: [
-                        'Layout (boxes, responsive sections and such)',
-                        'Typography (headings and other types of text)',
-                        'Inputs including pretty dropdowns, buttons & ratings',
-                        'Image component to help optimize images for different devices',
-                        'Iconography (SVGs wrapped in components, can be modified with CSS)',
-                        'View selector for lists of things and search sorting, filtering and more.',
-                        'Modal with thing-specific controls and subtle animation',
-                        'Toast for messages and user-facing errors, with subtle animation'
-                     ]
-                  },
-                  {
-                     heading: 'Style',
-                     subheading: '',
-                     list: [
-                        'Custom style using CSS Modules',
-                        'Responsive layouts & grids',
-                        'Palete & theming'
-                     ]
-                  },
-                  {
-                     heading: 'Logic',
-                     subheading: '',
-                     list: [
-                        'Custom hooks (controllers) to encapsulate logic',
-                        'Tanstack React-Query to handle fetching and caching data',
-                        'Services & Routes to handle communications with the backend'
-                     ]
-                  }
+               heading: 'Custom Components',
+               subheading:
+                  '100% custom components, no third-party UI library. Faster, lighter and easier to customize.',
+               list: [
+                  'Layout (boxes, responsive sections and such)',
+                  'Typography (headings and other types of text)',
+                  'Inputs including pretty dropdowns, buttons & ratings',
+                  'Image component to help optimize images for different devices',
+                  'Iconography (SVGs wrapped in components, can be modified with CSS)',
+                  'View selector for lists of things and search sorting, filtering and more.',
+                  'Modal with thing-specific controls and subtle animation',
+                  'Toast for messages and user-facing errors, with subtle animation'
                ]
             },
             {
-               heading: 'Backend',
-               stack: [
-                  'Node',
-                  'Fastify',
-                  'MongoDB, hosted on Atlas, managed with Mongoose',
-                  'Caching -- in-memory caching for now; will replace with Redis soon'
-               ],
-               codeLink: {
-                  href: 'https://github.com/bensbits91/things-server',
-                  text: 'View Backend Code'
-               },
-               content: [
-                  {
-                     heading: 'Handling Requests & Data',
-                     subheading: '',
-                     list: [
-                        'Routes to handle incoming requests',
-                        'Controllers to handle logic',
-                        'Services to handle communications and aggregate data',
-                        'Models to define schemas and validate data'
-                     ]
-                  },
-                  {
-                     heading: 'Logic & Authorization',
-                     subheading: 'Custom plugins and middleware to facilitate:',
-                     list: [
-                        'request authorization',
-                        'caching',
-                        'data normalization',
-                        'error handling',
-                        'logging'
-                     ]
-                  },
-                  {
-                     heading: 'Scripting & Maintenance',
-                     subheading: '',
-                     list: [
-                        'Custom scripts to seed the database and run maintenance tasks',
-                        'Cron jobs to refresh stats and clear cache (in the works...)'
-                     ]
-                  }
+               heading: 'Style',
+               subheading: '',
+               list: [
+                  'Custom style using CSS Modules',
+                  'Responsive layouts & grids',
+                  'Palete & theming'
+               ]
+            },
+            {
+               heading: 'Logic',
+               subheading: '',
+               list: [
+                  'Custom hooks (controllers) to encapsulate logic',
+                  'Tanstack React-Query to handle fetching and caching data',
+                  'Services & Routes to handle communications with the backend'
                ]
             }
          ]
+      },
+      {
+         heading: 'Backend',
+         stack: [
+            'Node',
+            'Fastify',
+            'MongoDB, hosted on Atlas, managed with Mongoose',
+            'Caching -- in-memory caching for now; will replace with Redis soon'
+         ],
+         codeLink: {
+            href: 'https://github.com/bensbits91/things-server',
+            text: 'View Backend Code'
+         },
+         content: [
+            {
+               heading: 'Handling Requests & Data',
+               subheading: '',
+               list: [
+                  'Routes to handle incoming requests',
+                  'Controllers to handle logic',
+                  'Services to handle communications and aggregate data',
+                  'Models to define schemas and validate data'
+               ]
+            },
+            {
+               heading: 'Logic & Authorization',
+               subheading: 'Custom plugins and middleware to facilitate:',
+               list: [
+                  'request authorization',
+                  'caching',
+                  'data normalization',
+                  'error handling',
+                  'logging'
+               ]
+            },
+            {
+               heading: 'Scripting & Maintenance',
+               subheading: '',
+               list: [
+                  'Custom scripts to seed the database and run maintenance tasks',
+                  'Cron jobs to refresh stats and clear cache (in the works...)'
+               ]
+            }
+         ]
+         //    }
+         // ]
       },
       {
          heading: 'More Key Features',
@@ -273,19 +273,19 @@ const content = {
                ]
             }
          ]
-      },
-      {
-         heading: 'Still with Me?',
-         layout: 'Cta',
-         content: [
-            'Thanks for reading all of that! This is a fun passion project.',
-            "Let me know if you have any ideas or suggestions. Or let's build another app together!"
-         ],
-         link: {
-            href: '/contact',
-            text: "Let's connect!"
-         }
       }
+      // {
+      //    heading: 'Still with Me?',
+      //    layout: 'Cta',
+      //    content: [
+      //       'Thanks for reading all of that! This is a fun passion project.',
+      //       "Let me know if you have any ideas or suggestions. Or let's build another app together!"
+      //    ],
+      //    link: {
+      //       href: '/contact',
+      //       text: "Let's connect!"
+      //    }
+      // }
    ]
 };
 

@@ -1,4 +1,4 @@
-import { getYearsSince } from './utils';
+import { getYearsSince } from '@/utils/date';
 
 export const about = {
    firstName: 'Bennett',
@@ -1237,7 +1237,7 @@ export const projects = [
          'MongoDB'
       ],
       codeLink: 'https://github.com/bensbits91/things-client',
-      moreInfoLink: '/work/things',
+      moreInfoLink: '/projects/things',
       description:
          'The Things app is a personal tracker and rating system for all the things you do, watch, read, play, listen to, and so on.',
       motivation:

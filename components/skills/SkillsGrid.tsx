@@ -1,7 +1,7 @@
 import { CloudinaryImage } from '@/components/image';
 import { Rating } from '@/components/common';
 import { BaseSkill } from '@/types/Skill';
-import { truncateString } from '@/app/utils';
+import { truncateString } from '@/utils/string';
 
 interface SkillsGridProps {
    skills: BaseSkill[];

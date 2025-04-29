@@ -2,7 +2,7 @@ import { CloudinaryImage } from '@/components/image';
 import { Heading } from '@/components/typography';
 import { IconBar } from '@/components/common';
 import { skillIcons } from '@/app/data';
-import { truncateString } from '@/app/utils';
+import { truncateString } from '@/utils/string';
 
 interface Project {
    name: string;
@@ -12,7 +12,10 @@ interface Project {
    getFeaturedImage: () => { name: string; frame: string };
 }
 
-const ProjectGridCard: React.FC<{ project: Project; handleClick?: () => void }> = ({ project, handleClick }) => {
+const ProjectGridCard: React.FC<{
+   project: Project;
+   handleClick?: () => void;
+}> = ({ project, handleClick }) => {
    const { name, tech, description } = project;
    const featuredImage = project.getFeaturedImage();
 
@@ -42,21 +45,21 @@ const ProjectGridCard: React.FC<{ project: Project; handleClick?: () => void }> 
       ? clickableImageElement
       : nonClickableImageElement;
 
-   const { newString: truncatedName } = name
-      ? truncateString(name, 20)
-      : {};
+   const { newString: truncatedName } = name ? truncateString(name, 20) : {};
 
    const { newString: truncatedDescription } = description
       ? truncateString(description, 80)
       : {};
 
    return (
-      <div className="bg-gradient-dark overflow-hidden rounded-lg border-2 border-bb-gray-900 shadow-dark-card">
+      <div className="overflow-hidden rounded-lg border-2 border-bb-gray-900 bg-gradient-dark shadow-dark-card">
          {featuredImage && imageToDisplay}
          <div className="p-4">
-            <Heading level={3} appearance={4} color='white'>{truncatedName}</Heading>
+            <Heading level={3} appearance={4} color="white">
+               {truncatedName}
+            </Heading>
             {tech.length > 0 && (
-               <div className="mt-2 mb-4">
+               <div className="mb-4 mt-2">
                   <IconBar icons={skillIcons(tech)} />
                </div>
             )}
