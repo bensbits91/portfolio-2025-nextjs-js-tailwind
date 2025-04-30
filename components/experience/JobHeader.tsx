@@ -1,5 +1,5 @@
 import { Heading, Text } from '@/components/typography';
-import { duration } from '@/app/utils.js';
+import { duration } from '@/utils/date';
 import { HeaderJob } from '@/types/Job';
 
 interface JobHeaderProps {

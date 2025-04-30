@@ -1,76 +1,82 @@
+'use client';
+import { useState } from 'react';
 import { CloudinaryImage } from '@/components/image';
 import { Heading } from '@/components/typography';
 import { IconBar } from '@/components/common';
-import { skillIcons } from '@/app/data';
-import { truncateString } from '@/app/utils';
+import { skillIcons } from '@/data/skills';
+import { truncateString } from '@/utils/string';
+import { GridProject } from '@/types/Project';
+import clsx from 'clsx';
 
-interface Project {
-   name: string;
-   tech: string[];
-   description: string;
-   year: string;
-   getFeaturedImage: () => { name: string; frame: string };
-}
+const ProjectGridCard: React.FC<{
+   project: GridProject;
+   inverted?: boolean;
+   handleClick?: (projectName: string) => void;
+}> = ({ project, inverted, handleClick }) => {
+   const [isHovered, setIsHovered] = useState(false);
+   const handleMouseEnter = () => {
+      setIsHovered(true);
+   };
+   const handleMouseLeave = () => {
+      setIsHovered(false);
+   };
 
-const ProjectGridCard: React.FC<{ project: Project; handleClick?: () => void }> = ({ project, handleClick }) => {
    const { name, tech, description } = project;
    const featuredImage = project.getFeaturedImage();
-
-   const imageElement = (
-      <CloudinaryImage
-         cloudinaryId={featuredImage.name}
-         alt={name}
-         width={300}
-         height={300}
-         // frame={featuredImage.frame}
-         full={true}
-         // className="h-full w-full object-cover object-top"
-      />
-   );
-
-   const clickableImageElement = (
-      <div
-         onClick={handleClick}
-         className="hover-delay hover-scale inline-block h-40 w-[100%] overflow-hidden rounded-sm border-2 border-l-0 border-r-0 border-t-0 border-b-bb-gray-900 lg:cursor-pointer">
-         {imageElement}
-      </div>
-   );
-
-   const nonClickableImageElement = <div className="mb-4">{imageElement}</div>;
-
-   const imageToDisplay = handleClick
-      ? clickableImageElement
-      : nonClickableImageElement;
-
-   const { newString: truncatedName } = name
-      ? truncateString(name, 20)
-      : {};
-
+   const { newString: truncatedName } = name ? truncateString(name, 25) : {};
    const { newString: truncatedDescription } = description
-      ? truncateString(description, 80)
+      ? truncateString(description, 70)
       : {};
 
    return (
-      <div className="bg-gradient-dark overflow-hidden rounded-lg border-2 border-bb-gray-900 shadow-dark-card">
-         {featuredImage && imageToDisplay}
+      <div
+         onMouseEnter={handleMouseEnter}
+         onMouseLeave={handleMouseLeave}
+         onClick={() => handleClick && handleClick(name)}
+         className={clsx(
+            'hover-delay overflow-hidden rounded-lg border border-bb-gray-300 shadow-dark-card md:cursor-pointer',
+            {
+               'bg-bb-gray md:hover:border-white': inverted
+            },
+            { 'hover:border-bb-teal md:hover:bg-bb-gray-800': !inverted }
+         )}>
+         {featuredImage &&
+            featuredImage.name &&
+            featuredImage.name !== 'default' &&
+            !featuredImage.hideFromGridCard === true && (
+               <div
+                  className={clsx(
+                     'hover-delay mb-4 inline-block h-40 w-full overflow-hidden rounded-sm border border-l-0 border-r-0 border-t-0 border-b-bb-gray-900',
+                     { 'md:scale-110': isHovered }
+                  )}>
+                  <CloudinaryImage
+                     cloudinaryId={featuredImage.name}
+                     alt={name}
+                     width={300}
+                     height={300}
+                     full={true}
+                  />
+               </div>
+            )}
          <div className="p-4">
-            <Heading level={3} appearance={4} color='white'>{truncatedName}</Heading>
+            <Heading level={3} appearance={4} color="white">
+               {truncatedName}
+            </Heading>
             {tech.length > 0 && (
-               <div className="mt-2 mb-4">
-                  <IconBar icons={skillIcons(tech)} />
+               <div className="mb-4 mt-2">
+                  <IconBar
+                     size={16}
+                     icons={skillIcons(tech).filter(
+                        (icon): icon is { src: string; altText: string } =>
+                           icon.src !== undefined
+                     )}
+                  />
                </div>
             )}
             {description && (
                <p className="mb-4 text-sm text-bb-gray-300">
                   {truncatedDescription}
                </p>
-            )}
-            {handleClick && (
-               <button
-                  onClick={handleClick}
-                  className="hover-delay hover-brightness w-full rounded-sm bg-bb-teal p-4 text-center font-roboto-sans text-sm tracking-wide text-bb-gray">
-                  View Project Details
-               </button>
             )}
          </div>
       </div>

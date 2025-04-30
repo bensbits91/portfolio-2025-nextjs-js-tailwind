@@ -10,7 +10,7 @@ import {
    SkillsToolbar,
    SkillModal
 } from '@/components/skills';
-import { skillsForTable } from '@/app/data.js';
+import { skillsForTable } from '@/data/skills';
 
 const Skills = () => {
    const [selectedView, setSelectedView] = useState<
@@ -33,12 +33,12 @@ const Skills = () => {
       <>
          <Section top="xl" bottom="sm" width="md">
             <Heading bottom="lg">Skills</Heading>
-         </Section>
-         <Section bottom="lg" width="md">
             <SkillsToolbar
                handleViewClick={handleViewClick}
                selectedView={selectedView}
             />
+         </Section>
+         <Section bottom="lg" width="md">
             <div className="pt-4">
                {selectedView === 'table' && (
                   <SkillsTable

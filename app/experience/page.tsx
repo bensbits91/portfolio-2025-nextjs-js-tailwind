@@ -4,7 +4,7 @@ import { CloudinaryImage } from '@/components/image';
 import { Section } from '@/components/layout';
 import { Heading } from '@/components/typography';
 import { PrimaryCta } from '@/components/common';
-import { experience } from '@/app/data.js';
+import { experience } from '@/data/experience';
 // todo: make this <a> a reusable button component (need component/button folder and index.js)
 
 const Experience = () => {
@@ -12,7 +12,9 @@ const Experience = () => {
    return (
       <>
          <Section top="xl" width="sm">
-            <Heading level={1} appearance={1} bottom='lg'>Experience</Heading>
+            <Heading level={1} appearance={1} bottom="lg">
+               Experience
+            </Heading>
             <div className="mb-8 lg:mb-12">
                <a
                   href="https://res.cloudinary.com/ddfrx5278/image/upload/v1739151148/Ben_Brooks_Resume_vqqprw.pdf"

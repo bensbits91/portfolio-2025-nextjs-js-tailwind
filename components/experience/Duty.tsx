@@ -5,7 +5,7 @@ import { Collapsible, Trigger, Content } from '@radix-ui/react-collapsible';
 import { IconBar } from '@/components/common';
 import { Heading, Text, List } from '@/components/typography';
 import { ChevronIcon } from '@/components/icons';
-import { skillIcons } from '@/app/data';
+import { skillIcons } from '@/data/skills';
 import clsx from 'clsx';
 import { BaseDuty } from '@/types/Job';
 
@@ -31,7 +31,14 @@ const Duty = ({ duty }: DutyProps) => {
             )}
             {skillNames && (
                <div className="my-2">
-                  <IconBar icons={skillIcons(skillNames)} size={18} />
+                  <IconBar
+                     wrap
+                     icons={skillIcons(skillNames).filter(
+                        (icon): icon is { src: string; altText: string } =>
+                           icon.src !== undefined
+                     )}
+                     size={18}
+                  />
                </div>
             )}
             <span>

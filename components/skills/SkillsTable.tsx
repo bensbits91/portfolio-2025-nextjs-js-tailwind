@@ -10,7 +10,7 @@ import {
 import { CloudinaryImage } from '@/components/image';
 import SkillsTableHeader from './SkillsTableHeader';
 import SkillsTableCell from './SkillsTableCell';
-import { generateStars } from '@/app/utils';
+import { Rating } from '@/components/common';
 import { BaseSkill } from '@/types/Skill';
 
 interface SkillsTableProps {
@@ -71,7 +71,11 @@ export default function SkillsTable({
          enableColumnFilter: false,
          cell: (info: CellContext<BaseSkill, unknown>) => {
             const rating = info.getValue() as number;
-            return <div className="flex h-4">{generateStars(rating)}</div>;
+            return (
+               <div className="flex h-4">
+                  <Rating rating={rating} />
+               </div>
+            );
          }
       }
    ];
@@ -79,6 +83,14 @@ export default function SkillsTable({
    const table = useReactTable({
       data: skills,
       columns,
+      initialState: {
+         sorting: [
+            {
+               id: 'rating', // The column ID to sort by
+               desc: true // Set to `true` for descending, `false` for ascending
+            }
+         ]
+      },
       getCoreRowModel: getCoreRowModel(),
       getSortedRowModel: getSortedRowModel(),
       getFilteredRowModel: getFilteredRowModel() // needed for client-side filtering

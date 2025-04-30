@@ -1,7 +1,7 @@
 import { Section } from '@/components/layout';
 import { Heading, Text } from '@/components/typography';
 import { PrimaryCta } from '@/components/common';
-import { about, certifications, education, expertise } from '@/app/data.js';
+import { about, certifications, education, expertise } from '@/data/about';
 
 // todo: move to components Education, Certification, About (ish)
 

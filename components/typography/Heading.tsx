@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import { JSX } from 'react';
-import { colorCode } from '@/app/utils';
 
 interface HeadingProps {
    className?: string;
@@ -27,7 +26,6 @@ const Heading = ({
    return (
       <Tag
          className={clsx(
-            // `h${appearance}`,
             { 'mt-0': top === 'no' },
             { 'mt-2': top === 'sm' },
             { 'mt-4': top === 'md' },
@@ -36,7 +34,7 @@ const Heading = ({
             { 'mb-2': bottom === 'sm' },
             { 'mb-4': bottom === 'md' },
             { 'mb-8': bottom === 'lg' },
-            colorCode(color),
+            `text-bb-${color}`,
             `font-${weight}`,
             {
                'font-roboto-mono text-4xl/[50px] tracking-tight md:text-6xl/[50px]':
