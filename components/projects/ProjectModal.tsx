@@ -83,7 +83,7 @@ export default function ProjectModal({
                   />
                )}
             </div>
-            <div className="relative max-h-full overflow-y-auto pb-48 pt-4 md:p-8 md:pt-8">
+            <div className="relative max-h-full overflow-y-auto pb-48 pt-4 md:px-8 md:pt-8">
                {description && (
                   <Text top="md" bottom="no">
                      {description}
