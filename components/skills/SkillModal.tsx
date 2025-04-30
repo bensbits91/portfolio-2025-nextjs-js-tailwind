@@ -44,7 +44,7 @@ export default function SkillModal({
          <Overlay className="fixed inset-0 bg-black/30" />
          <Content className="fixed bottom-6 left-6 right-6 top-20 z-20 overflow-scroll rounded-lg bg-bb-gray-900 p-6 shadow-lg md:bottom-6 md:left-12 md:right-12 md:top-20">
             <Close
-               className="absolute right-4 top-4 h-4 w-4 cursor-pointer transition duration-500 ease-in-out hover:text-[yellow]"
+               className="fixed right-6 top-20 md:right-16 md:top-24 h-6 w-6 cursor-pointer transition duration-500 ease-in-out hover:text-[yellow]"
                aria-label="Close"
                onClick={() => onOpenChange(false)}>
                <CloseIcon />

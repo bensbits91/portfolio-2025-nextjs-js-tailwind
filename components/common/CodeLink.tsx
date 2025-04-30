@@ -1,5 +1,5 @@
-import { CloudinaryImage } from '@/components/image';
 import { Text } from '@/components/typography';
+import { NewTabIcon, GithubIcon } from '@/components/icons';
 
 interface CodeLinkProps {
    codeLink: {
@@ -17,17 +17,13 @@ const CodeLink = ({ codeLink }: CodeLinkProps) => {
          target="_blank"
          rel="noreferrer">
          <div className="flex items-center gap-2">
-            <CloudinaryImage
-               cloudinaryId="github1_o1ok5i"
-               alt="GitHub"
-               width={30}
-               height={30}
-            />
-            {codeLink.text && (
-               <Text color="teal">
-                  {codeLink.text}
-               </Text>
-            )}
+            <div className="h-4 w-4">
+               <GithubIcon />
+            </div>
+            {codeLink.text && <Text color="teal">{codeLink.text}</Text>}
+            <div className="h-4 w-4">
+               <NewTabIcon />
+            </div>
          </div>
       </a>
    );

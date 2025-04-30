@@ -83,13 +83,13 @@ body:has(.translate-x-0) {
 }
 
 .hover-delay {
-   @apply lg:transition-all lg:duration-500 lg:ease-in-out;
+   @apply md:transition-all md:duration-500 md:ease-in-out;
 }
 
 .hover-brightness {
-   @apply lg:hover:brightness-125;
+   @apply md:hover:brightness-125;
 }
 
 .hover-scale {
-   @apply lg:hover:scale-110;
+   @apply md:hover:scale-110;
 }

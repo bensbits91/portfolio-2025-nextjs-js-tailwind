@@ -46,7 +46,7 @@ const Projects = () => {
          </Section>
          {selectedView === 'grid' && (
             <>
-               <Section top="lg" bottom="sm" width="lg">
+               <Section top="md" bottom="sm" width="lg">
                   <Heading level={2} appearance={2} color="jade">
                      Recent Projects
                   </Heading>
@@ -81,19 +81,19 @@ const Projects = () => {
                      </div>
                   </div>
                </Section>
-               <Section top="lg" bottom="sm" width="lg">
+               {/* <Section top="lg" bottom="sm" width="lg">
                   <Heading level={2} appearance={2} color="jade">
-                     2021 &amp; Earlier
+                     Clients (2021 &amp; Earlier)
                   </Heading>
                   <Text color="white" size="lg">
                      From 2013 to 2021, I built hundreds of websites and apps
                      for all kinds of clients. To facilitate speedy development,
                      I created a library of reusable components.
                   </Text>
-               </Section>
-               <Section top="sm" bottom="sm" width="lg">
-                  <Heading level={3} appearance={3}>
-                     Clients
+               </Section> */}
+               <Section top="lg" bottom="sm" width="lg">
+                  <Heading level={2} appearance={2} color="jade">
+                     Clients (2021 &amp; Earlier)
                   </Heading>
                   <Text color="white" size="lg">
                      I&apos;ve worked with a variety of clients, from small
@@ -108,7 +108,7 @@ const Projects = () => {
                   handleItemClick={handleItemClick}
                />
                <Section top="sm" bottom="sm" width="lg">
-                  <Heading level={3} appearance={3}>
+                  <Heading level={2} appearance={2} color="jade">
                      Apps, Widgets &amp; Components
                   </Heading>
                   <Text color="white" size="lg">

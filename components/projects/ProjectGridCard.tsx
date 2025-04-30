@@ -1,42 +1,51 @@
+'use client';
+import { useState } from 'react';
 import { CloudinaryImage } from '@/components/image';
 import { Heading } from '@/components/typography';
 import { IconBar } from '@/components/common';
 import { skillIcons } from '@/data/skills';
 import { truncateString } from '@/utils/string';
 import { GridProject } from '@/types/Project';
+import clsx from 'clsx';
 
 const ProjectGridCard: React.FC<{
    project: GridProject;
    handleClick?: (projectName: string) => void;
 }> = ({ project, handleClick }) => {
+   const [isHovered, setIsHovered] = useState(false);
+   const handleMouseEnter = () => {
+      setIsHovered(true);
+   };
+   const handleMouseLeave = () => {
+      setIsHovered(false);
+   };
+
    const { name, tech, description } = project;
    const featuredImage = project.getFeaturedImage();
 
-   const imageElement = (
-      <CloudinaryImage
-         cloudinaryId={featuredImage.name}
-         alt={name}
-         width={300}
-         height={300}
-         // frame={featuredImage.frame}
-         full={true}
-         // className="h-full w-full object-cover object-top"
-      />
-   );
+   // const imageElement = (
+   //    <CloudinaryImage
+   //       cloudinaryId={featuredImage.name}
+   //       alt={name}
+   //       width={300}
+   //       height={300}
+   //       full={true}
+   //    />
+   // );
 
-   const clickableImageElement = (
-      <div
-         onClick={() => handleClick && handleClick(name)}
-         className="hover-delay hover-scale inline-block h-40 w-[100%] overflow-hidden rounded-sm border-2 border-l-0 border-r-0 border-t-0 border-b-bb-gray-900 lg:cursor-pointer">
-         {imageElement}
-      </div>
-   );
+   // const clickableImageElement = (
+   //    <div
+   //       onClick={() => handleClick && handleClick(name)}
+   //       className="hover-delay hover-scale inline-block h-40 w-[100%] overflow-hidden rounded-sm border-2 border-l-0 border-r-0 border-t-0 border-b-bb-gray-900 lg:cursor-pointer">
+   //       {imageElement}
+   //    </div>
+   // );
 
-   const nonClickableImageElement = <div className="mb-4">{imageElement}</div>;
+   // const nonClickableImageElement = <div className="mb-4">{imageElement}</div>;
 
-   const imageToDisplay = handleClick
-      ? clickableImageElement
-      : nonClickableImageElement;
+   // const imageToDisplay = handleClick
+   //    ? clickableImageElement
+   //    : nonClickableImageElement;
 
    const { newString: truncatedName } = name ? truncateString(name, 20) : {};
 
@@ -45,8 +54,26 @@ const ProjectGridCard: React.FC<{
       : {};
 
    return (
-      <div className="overflow-hidden rounded-lg border-2 border-bb-gray-900 bg-gradient-dark shadow-dark-card">
-         {featuredImage && imageToDisplay}
+      <div
+         onMouseEnter={handleMouseEnter}
+         onMouseLeave={handleMouseLeave}
+         onClick={() => handleClick && handleClick(name)}
+         className="hover-delay overflow-hidden rounded-lg border shadow-dark-card hover:border-bb-teal md:cursor-pointer md:hover:bg-bb-gray-800">
+         {featuredImage && (
+            <div
+               className={clsx(
+                  'hover-delay mb-4 inline-block h-40 w-full overflow-hidden rounded-sm border border-l-0 border-r-0 border-t-0 border-b-bb-gray-900',
+                  { 'md:scale-110': isHovered }
+               )}>
+               <CloudinaryImage
+                  cloudinaryId={featuredImage.name}
+                  alt={name}
+                  width={300}
+                  height={300}
+                  full={true}
+               />
+            </div>
+         )}
          <div className="p-4">
             <Heading level={3} appearance={4} color="white">
                {truncatedName}
@@ -54,6 +81,7 @@ const ProjectGridCard: React.FC<{
             {tech.length > 0 && (
                <div className="mb-4 mt-2">
                   <IconBar
+                     size={16}
                      icons={skillIcons(tech).filter(
                         (icon): icon is { src: string; altText: string } =>
                            icon.src !== undefined
@@ -66,13 +94,13 @@ const ProjectGridCard: React.FC<{
                   {truncatedDescription}
                </p>
             )}
-            {handleClick && (
+            {/* {handleClick && (
                <button
                   onClick={() => handleClick && handleClick(name)}
                   className="hover-delay hover-brightness w-full rounded-sm bg-bb-teal p-4 text-center font-roboto-sans text-sm tracking-wide text-bb-gray">
                   View Project Details
                </button>
-            )}
+            )} */}
          </div>
       </div>
    );

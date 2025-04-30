@@ -8,7 +8,7 @@ import {
 } from '@radix-ui/react-dialog';
 import Link from 'next/link';
 import { Text } from '@/components/typography';
-import { CloseIcon } from '@/components/icons';
+import { CloseIcon, NewTabIcon } from '@/components/icons';
 import { ImageGallery } from '@/components/image';
 import { skillIcons } from '@/data/skills';
 import { CodeLink, IconBar } from '@/components/common';
@@ -51,7 +51,7 @@ export default function SkillModal({
          <Overlay className="fixed inset-0 bg-black/30" />
          <Content className="fixed bottom-6 left-6 right-6 top-20 z-20 overflow-scroll rounded-lg bg-bb-gray-900 p-6 shadow-lg md:bottom-6 md:left-12 md:right-12 md:top-20">
             <Close
-               className="absolute right-4 top-4 h-4 w-4 cursor-pointer transition duration-500 ease-in-out hover:text-[yellow]"
+               className="fixed right-6 top-20 h-6 w-6 cursor-pointer transition duration-500 ease-in-out hover:text-[yellow] md:right-16 md:top-24"
                aria-label="Close"
                onClick={() => onOpenChange(false)}>
                <CloseIcon />
@@ -60,13 +60,8 @@ export default function SkillModal({
                <div>
                   <Title className="text-4xl">{name}</Title>
                   <Description className="hidden">{name}</Description>
-                  {description && (
-                     <Text top="no" bottom="no">
-                        {description}
-                     </Text>
-                  )}
                   {tech && tech.length > 0 && (
-                     <div className="mb-8 flex flex-col justify-between gap-4 md:flex-row">
+                     <div className="mb-8 mt-2 flex flex-col justify-between gap-4 md:flex-row md:items-center">
                         <IconBar
                            icons={skillIcons(tech).filter(
                               (
@@ -79,16 +74,29 @@ export default function SkillModal({
                            <CodeLink
                               codeLink={{
                                  href: codeLink,
-                                 text: 'View Code'
+                                 text: 'View code'
                               }}
                            />
                         )}
+                        {liveLink && (
+                           <Link
+                              href={liveLink}
+                              className="text-bb-teal"
+                              target="_blank">
+                              <div className="flex items-center gap-2">
+                                 <div>View live</div>
+                                 <div className="h-4 w-4">
+                                    <NewTabIcon />
+                                 </div>
+                              </div>
+                           </Link>
+                        )}
                      </div>
                   )}
-                  {liveLink && (
-                     <Link href={liveLink} className="text-bb-teal">
-                        {liveLink}
-                     </Link>
+                  {description && (
+                     <Text top="no" bottom="no">
+                        {description}
+                     </Text>
                   )}
                   {/* {codeLink && (
                         <Text top="no" bottom="no">

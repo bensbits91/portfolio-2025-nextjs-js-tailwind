@@ -1,6 +1,6 @@
 'use client';
 import { useMemo } from 'react';
-import { ThreeColumnSection } from '@/components/layout';
+import { Section } from '@/components/layout';
 import ProjectGridCard from './ProjectGridCard';
 import { GridProject } from '@/types/Project';
 
@@ -12,7 +12,13 @@ interface ProjectGridProps {
    handleItemClick?: (projectName: string) => void;
 }
 
-const ProjectGrid = ({projects, before, onOrAfter, type, handleItemClick }: ProjectGridProps) => {
+const ProjectGrid = ({
+   projects,
+   before,
+   onOrAfter,
+   type,
+   handleItemClick
+}: ProjectGridProps) => {
    let projectsToShow = useMemo(
       () =>
          projects.map(project => ({
@@ -42,24 +48,22 @@ const ProjectGrid = ({projects, before, onOrAfter, type, handleItemClick }: Proj
    }
 
    return (
-      <>
-         <ThreeColumnSection
-            columns={projectsToShow.map(project => ({
-               content: (
+      <Section top="md" bottom="lg" width="lg">
+         <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+            {projectsToShow.map((project, index) => (
+               <div
+                  key={index}
+                  onClick={() =>
+                     handleItemClick && handleItemClick(project.name)
+                  }>
                   <ProjectGridCard
                      project={project}
                      handleClick={handleItemClick}
-                     // handleClick={() =>
-                     //    setModalData({
-                     //       ...project,
-                     //       year: project.year
-                     //    })
-                     // }
                   />
-               )
-            }))}
-         />
-      </>
+               </div>
+            ))}
+         </div>
+      </Section>
    );
 };
 
