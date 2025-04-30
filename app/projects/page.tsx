@@ -52,16 +52,21 @@ const Projects = () => {
                      Recent Projects
                   </Heading>
                </Section>
-               <ProjectGrid
-                  onOrAfter={2025}
-                  projects={projectsToPass}
-                  handleItemClick={handleItemClick}
-               />
-               <Section top="lg" bottom="lg" width="md" bg="teal">
-                  <div className="flex flex-col gap-8 md:flex-row">
+               <Section top="md" bottom="lg" width="lg">
+                  <ProjectGrid
+                     onOrAfter={2025}
+                     projects={projectsToPass}
+                     handleItemClick={handleItemClick}
+                  />
+               </Section>
+               <Section top="lg" bottom="lg" width="lg" bg="teal">
+                  <div className="mb-20 flex max-w-[960px] mx-auto flex-col gap-8 md:flex-row">
                      <div className="max-w-[400px]">
                         <Heading level={2} appearance={2} color="gray">
-                           2021 to 2024
+                           ZenBusiness
+                        </Heading>
+                        <Heading level={3} appearance={4} color="gray">
+                           (2021 to 2024)
                         </Heading>
                         <Text color="gray" size="lg">
                            I spent almost four years at ZenBusiness working on
@@ -81,10 +86,17 @@ const Projects = () => {
                         />
                      </div>
                   </div>
+                  <ProjectGrid
+                     before={2025}
+                     onOrAfter={2021}
+                     projects={projectsToPass}
+                     inverted
+                     handleItemClick={handleItemClick}
+                  />
                </Section>
                <Section top="lg" bottom="sm" width="lg">
                   <Heading level={2} appearance={2} color="jade">
-                     Clients (2021 &amp; Earlier)
+                     Clients (2020 &amp; Earlier)
                   </Heading>
                   <Text color="white" size="lg">
                      I&apos;ve worked with a variety of clients, from small
@@ -92,31 +104,35 @@ const Projects = () => {
                      simple websites to complex web applications.
                   </Text>
                </Section>
-               <ProjectGrid
-                  before={2025}
-                  type="client"
-                  projects={projectsToPass}
-                  handleItemClick={handleItemClick}
-               />
+               <Section top="md" bottom="lg" width="lg">
+                  <ProjectGrid
+                     before={2021}
+                     type="client"
+                     projects={projectsToPass}
+                     handleItemClick={handleItemClick}
+                  />
+               </Section>
                <Section top="sm" bottom="sm" width="lg">
                   <Heading level={2} appearance={2} color="jade">
-                     Apps, Widgets &amp; Components (2021 &amp; Earlier)
+                     Apps, Widgets &amp; Components (2020 &amp; Earlier)
                   </Heading>
                   <Text color="white" size="lg">
                      I&apos;ve built countless of components and widgets,
                      including UI libraries and design systems.
                   </Text>
                </Section>
-               <ProjectGrid
-                  before={2025}
-                  type="app"
-                  projects={projectsToPass}
-                  handleItemClick={handleItemClick}
-               />
+               <Section top="md" bottom="lg" width="lg">
+                  <ProjectGrid
+                     before={2021}
+                     type="app"
+                     projects={projectsToPass}
+                     handleItemClick={handleItemClick}
+                  />
+               </Section>
             </>
          )}
          {selectedView === 'table' && (
-            <Section>
+            <Section width='lg' bottom='lg'>
                <ProjectsTable
                   projects={projectsToPass}
                   handleItemClick={handleItemClick}

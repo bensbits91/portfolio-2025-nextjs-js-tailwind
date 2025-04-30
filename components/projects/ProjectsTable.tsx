@@ -10,7 +10,7 @@ import {
 import { CloudinaryImage } from '@/components/image';
 import ProjectsTableHeader from './ProjectsTableHeader';
 import ProjectsTableCell from './ProjectsTableCell';
-import { CodeLink, LiveLink, IconBar } from '@/components/common';
+import { /* CodeLink, LiveLink,  */ IconBar } from '@/components/common';
 import { GridProject } from '@/types/Project';
 import { truncateString } from '@/utils/string';
 import { skillIcons } from '@/data/skills';
@@ -37,6 +37,7 @@ export default function ProjectsTable({
          enableColumnFilter: false,
          cell: (info: CellContext<GridProject, unknown>) => {
             const imageUrl = info.row.original.getFeaturedImage().name;
+            if (!imageUrl || imageUrl === 'default') return null;
             return (
                <div className="mr-2 flex h-8 w-8">
                   <CloudinaryImage
@@ -87,34 +88,34 @@ export default function ProjectsTable({
             );
          }
       },
-      {
-         accessorKey: 'liveLink',
-         header: 'Live',
-         enableColumnFilter: false,
-         cell: (info: CellContext<GridProject, unknown>) => {
-            const liveLink = { href: info.getValue() as string, text: 'Live' };
-            return <LiveLink liveLink={liveLink} />;
-         }
-      },
-      {
-         accessorKey: 'codeLink',
-         header: 'Code',
-         enableColumnFilter: false,
-         cell: (info: CellContext<GridProject, unknown>) => {
-            const codeLink = { href: info.getValue() as string, text: 'Code' };
-            return <CodeLink codeLink={codeLink} />;
-         }
-      },
+      // {
+      //    accessorKey: 'liveLink',
+      //    header: 'Live',
+      //    enableColumnFilter: false,
+      //    cell: (info: CellContext<GridProject, unknown>) => {
+      //       const liveLink = { href: info.getValue() as string, text: 'Live' };
+      //       return <LiveLink liveLink={liveLink} />;
+      //    }
+      // },
+      // {
+      //    accessorKey: 'codeLink',
+      //    header: 'Code',
+      //    enableColumnFilter: false,
+      //    cell: (info: CellContext<GridProject, unknown>) => {
+      //       const codeLink = { href: info.getValue() as string, text: 'Code' };
+      //       return <CodeLink codeLink={codeLink} />;
+      //    }
+      // },
       {
          accessorKey: 'description',
          header: 'Description',
+         enableSorting: false,
          enableColumnFilter: false,
          cell: (info: CellContext<GridProject, unknown>) => {
             const description = info.getValue() as string;
             const { newString: truncatedDescription } = description
-               ? truncateString(description, 30)
+               ? truncateString(description, 40)
                : {};
-
             return truncatedDescription;
          }
       }
@@ -141,40 +142,38 @@ export default function ProjectsTable({
    }
 
    return (
-      <div>
-         <table>
-            <thead>
-               {table.getHeaderGroups().map(headerGroup => (
-                  <tr key={headerGroup.id}>
-                     {headerGroup.headers.map(header => (
-                        <ProjectsTableHeader
-                           key={header.id}
-                           header={header}
-                           colsToHideOnMobile={colsToHideOnMobile}
-                        />
-                     ))}
-                  </tr>
-               ))}
-            </thead>
-            <tbody>
-               {table.getRowModel().rows.map(row => (
-                  <tr
-                     key={row.id}
-                     className="border-y-solid cursor-pointer border-b-0 border-t border-transparent odd:bg-[var(--bb-surface-a10)] hover:border-b hover:border-y-yellow-200"
-                     onClick={() => {
-                        handleItemClick(row.original.name);
-                     }}>
-                     {row.getVisibleCells().map(cell => (
-                        <ProjectsTableCell
-                           key={cell.id}
-                           cell={cell}
-                           colsToHideOnMobile={colsToHideOnMobile}
-                        />
-                     ))}
-                  </tr>
-               ))}
-            </tbody>
-         </table>
-      </div>
+      <table className="mx-auto">
+         <thead>
+            {table.getHeaderGroups().map(headerGroup => (
+               <tr key={headerGroup.id}>
+                  {headerGroup.headers.map(header => (
+                     <ProjectsTableHeader
+                        key={header.id}
+                        header={header}
+                        colsToHideOnMobile={colsToHideOnMobile}
+                     />
+                  ))}
+               </tr>
+            ))}
+         </thead>
+         <tbody>
+            {table.getRowModel().rows.map(row => (
+               <tr
+                  key={row.id}
+                  className="border-y-solid cursor-pointer border-b-0 border-t border-transparent odd:bg-bb-gray-900 hover:border-b hover:border-y-yellow-200"
+                  onClick={() => {
+                     handleItemClick(row.original.name);
+                  }}>
+                  {row.getVisibleCells().map(cell => (
+                     <ProjectsTableCell
+                        key={cell.id}
+                        cell={cell}
+                        colsToHideOnMobile={colsToHideOnMobile}
+                     />
+                  ))}
+               </tr>
+            ))}
+         </tbody>
+      </table>
    );
 }

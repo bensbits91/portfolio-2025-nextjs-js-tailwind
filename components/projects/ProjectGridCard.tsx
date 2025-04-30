@@ -10,8 +10,9 @@ import clsx from 'clsx';
 
 const ProjectGridCard: React.FC<{
    project: GridProject;
+   inverted?: boolean;
    handleClick?: (projectName: string) => void;
-}> = ({ project, handleClick }) => {
+}> = ({ project, inverted, handleClick }) => {
    const [isHovered, setIsHovered] = useState(false);
    const handleMouseEnter = () => {
       setIsHovered(true);
@@ -22,7 +23,8 @@ const ProjectGridCard: React.FC<{
 
    const { name, tech, description } = project;
    const featuredImage = project.getFeaturedImage();
-   const { newString: truncatedName } = name ? truncateString(name, 20) : {};
+   console.log('bb ~ ProjectGridCard.tsx:26 ~ featuredImage:', featuredImage);
+   const { newString: truncatedName } = name ? truncateString(name, 25) : {};
    const { newString: truncatedDescription } = description
       ? truncateString(description, 70)
       : {};
@@ -32,22 +34,31 @@ const ProjectGridCard: React.FC<{
          onMouseEnter={handleMouseEnter}
          onMouseLeave={handleMouseLeave}
          onClick={() => handleClick && handleClick(name)}
-         className="hover-delay overflow-hidden rounded-lg border shadow-dark-card hover:border-bb-teal md:cursor-pointer md:hover:bg-bb-gray-800">
-         {featuredImage && (
-            <div
-               className={clsx(
-                  'hover-delay mb-4 inline-block h-40 w-full overflow-hidden rounded-sm border border-l-0 border-r-0 border-t-0 border-b-bb-gray-900',
-                  { 'md:scale-110': isHovered }
-               )}>
-               <CloudinaryImage
-                  cloudinaryId={featuredImage.name}
-                  alt={name}
-                  width={300}
-                  height={300}
-                  full={true}
-               />
-            </div>
-         )}
+         className={clsx(
+            'hover-delay overflow-hidden rounded-lg border border-bb-gray-300 shadow-dark-card md:cursor-pointer',
+            {
+               'bg-bb-gray md:hover:border-white': inverted
+            },
+            { 'hover:border-bb-teal md:hover:bg-bb-gray-800': !inverted }
+         )}>
+         {featuredImage &&
+            featuredImage.name &&
+            featuredImage.name !== 'default' &&
+            !featuredImage.hideFromGridCard === true && (
+               <div
+                  className={clsx(
+                     'hover-delay mb-4 inline-block h-40 w-full overflow-hidden rounded-sm border border-l-0 border-r-0 border-t-0 border-b-bb-gray-900',
+                     { 'md:scale-110': isHovered }
+                  )}>
+                  <CloudinaryImage
+                     cloudinaryId={featuredImage.name}
+                     alt={name}
+                     width={300}
+                     height={300}
+                     full={true}
+                  />
+               </div>
+            )}
          <div className="p-4">
             <Heading level={3} appearance={4} color="white">
                {truncatedName}

@@ -206,8 +206,148 @@ export const projects = [
       featureOnHome: true
    },
    {
-      name: 'Central Oregon Community College',
+      name: 'Public Website',
       year: '2021',
+      liveLink: 'https://www.zenbusiness.com/',
+      tech: [
+         'JavaScript',
+         'Sass/SCSS',
+         'CSS Modules',
+         'CSS',
+         'Responsive Design',
+         'RESTful APIs',
+         'WordPress',
+         'PHP',
+         'SEO',
+         'Performance Optimization',
+         'A/B Testing',
+         'Multivariate Experimentation',
+         'LaunchDarkly'
+      ],
+      description:
+         'Developed, implemented and documented a component library for consistent UI across the site. Supported the shift to a page-speed-based SEO strategy, collaborating with the SEO Team to meet performance targets (e.g. TTFB, LCP, CLS). Vastly improved core web vitals and coding standards by making systematic optimization and recording performance metrics. Provided documentation, training and support related to maintaining performance and coding best practices. Planned, implemented, documented and supported an atomic component structure, facilitating quick and consistent development. Mentored junior and senior engineers and provided technical guidance. Built automated tests using Cypress.',
+      images: [{ name: 'zenbusiness_luktjt', hideFromGridCard: true }],
+      showInProjectsGallery: true,
+      featureOnHome: true
+   },
+   {
+      name: 'Onboarding Funnel',
+      year: '2022',
+      tech: [
+         'React.js',
+         'JavaScript',
+         'TypeScript',
+         'Redux',
+         'Styled Components',
+         'CSS',
+         'Responsive Design',
+         'Node.js',
+         'RESTful APIs',
+         'A/B Testing',
+         'Multivariate Experimentation',
+         'LaunchDarkly'
+      ],
+      description:
+         'I led the front-end development of a customer onboarding funnel that bridged the gap between website conversions and successful signups—a business-critical project focused on improving user experience and driving growth. Built with React, TypeScript, and Redux, the system featured complex state management, responsive design, and performance optimizations to ensure a smooth and scalable experience. I integrated pricing and other dynamic data via RESTful APIs, implemented tracking to support analytics and continuous improvements, and collaborated closely with designers, product managers, and cross-functional teams. The project included A/B testing and experimentation using LaunchDarkly, and I contributed through code reviews, mentoring, and providing technical leadership within an agile environment.',
+      images: [],
+      showInProjectsGallery: true,
+      featureOnHome: true
+   },
+   {
+      name: 'Post-Purchase Funnel',
+      year: '2022',
+      tech: [
+         'React.js',
+         'JavaScript',
+         'TypeScript',
+         'Redux',
+         'Styled Components',
+         'CSS',
+         'Responsive Design',
+         'Node.js',
+         'RESTful APIs',
+         'A/B Testing',
+         'Multivariate Experimentation',
+         'LaunchDarkly'
+      ],
+      description:
+         'I worked on a post-purchase flow designed to help existing customers seamlessly add products and services, driving retention and upsell opportunities. This project involved building flexible, high-performing React components with TypeScript and Redux to manage complex state across varied user journeys. I integrated both pricing and customer-specific data through RESTful APIs and contributed to a custom journey builder that enabled dynamic, personalized post-purchase experiences. The flow was responsive, performance-optimized, and tested with Jest to ensure reliability. I collaborated with designers, product managers, and engineers in an agile environment, led code reviews, mentored teammates, and supported experimentation efforts using LaunchDarkly.',
+      images: [],
+      showInProjectsGallery: true,
+      featureOnHome: true
+   },
+   {
+      name: 'Customer Dashboard',
+      year: '2022',
+      tech: [
+         'React.js',
+         'JavaScript',
+         'TypeScript',
+         'Redux',
+         'Styled Components',
+         'CSS',
+         'Responsive Design',
+         'Node.js',
+         'RESTful APIs',
+         'A/B Testing',
+         'Multivariate Experimentation',
+         'LaunchDarkly'
+      ],
+      description:
+         'I helped build and evolve a complex customer dashboard that surfaced a wide range of aggregated data and integrations from multiple systems. The dashboard served as a central hub for users, featuring dynamic menus, personalized insights, and deep linking into related services. I used React, TypeScript, Redux, and Styled Components to manage the front end, focusing on performance optimization, responsive design, and scalability. As the application grew, I contributed to breaking apart the monolithic codebase into micro-frontends to enable faster development and deployment across teams. I collaborated closely with designers, product managers, and engineers in an agile environment, provided technical leadership, mentored teammates, and supported experimentation and A/B testing using LaunchDarkly.',
+      images: [],
+      showInProjectsGallery: true,
+      featureOnHome: true
+   },
+   {
+      name: 'Account Management System',
+      year: '2022',
+      tech: [
+         'Vue.js',
+         'React.js',
+         'JavaScript',
+         'CSS',
+         'Responsive Design',
+         'Node.js',
+         'RESTful APIs',
+         'SQL'
+      ],
+      description:
+         'I contributed to a dynamic internal system built with Vue.js and Vuex that enabled employees to manage key customer data, including accounts, orders, and more. The app handled extensive data CRUD operations through RESTful APIs and evolved continuously through a steady stream of incremental improvements to keep pace with shifting business needs. We used LaunchDarkly feature flags to progressively roll out major updates, ensuring a smooth transition for users and minimizing risk. I focused on responsive UI development, performance, and usability, and collaborated regularly with cross-functional teams including product, design, and backend engineering. I also mentored teammates and supported ongoing improvements to code quality and team workflows.',
+      images: [],
+      showInProjectsGallery: true,
+      featureOnHome: true
+   },
+   {
+      name: 'Microservice for Federal Government API Integration',
+      year: '2024',
+      tech: [
+         'JavaScript',
+         'Node.js',
+         'Fastify',
+         'Python',
+         'Jest',
+         'Microservices',
+         'RESTful APIs',
+         'GCP',
+         // 'GKE',
+         // 'AWS',
+         // 'Docker',
+         // 'Colima',
+         // 'Kubernetes',
+         // 'Terraform',
+         // 'Django',
+         'Micro-frontends'
+      ],
+      description:
+         'I was part of a backend-focused team dedicated to improving the developer experience by building and maintaining scalable Node.js and Fastify microservices in a GCP environment. Our work helped decommission a legacy monolithic API and replace it with modern, maintainable services. I led development on a high-impact microservice that automated the end-to-end process of gathering, validating, transforming, and submitting complex data to a federal API—streamlining operations, enhancing reliability, and increasing revenue. I collaborated closely with stakeholders to define requirements and led story mapping and development efforts. Along the way, I implemented secure handling of sensitive data (PII), set up robust logging and monitoring, and championed better standards for code quality and observability. I also provided technical mentorship across the team and supported multiple codebases, balancing hands-on development with project leadership and cross-functional collaboration.',
+      images: [],
+      showInProjectsGallery: true,
+      featureOnHome: true
+   },
+   {
+      name: 'Central Oregon Community College',
+      year: '2020',
       type: 'client',
       tech: [
          'Node.js',
@@ -239,7 +379,7 @@ export const projects = [
    },
    {
       name: 'Sizzler Restaurants',
-      year: '2021',
+      year: '2020',
       type: 'client',
       tech: [
          'Node.js',
@@ -283,7 +423,7 @@ export const projects = [
    },
    {
       name: 'Massage Envy',
-      year: '2021',
+      year: '2020',
       type: 'client',
       tech: [
          'Node.js',
@@ -315,7 +455,7 @@ export const projects = [
    },
    {
       name: 'Reddaway & YRC Freight',
-      year: '2021',
+      year: '2020',
       type: 'client',
       tech: [
          'Node.js',
@@ -357,7 +497,7 @@ export const projects = [
    },
    {
       name: 'USDA Forest Service',
-      year: '2021',
+      year: '2020',
       type: 'client',
       tech: [
          'Node.js',
@@ -384,7 +524,7 @@ export const projects = [
    },
    {
       name: 'Oregon Dept. of Land Conservation & Development',
-      year: '2021',
+      year: '2020',
       type: 'client',
       tech: [
          'Node.js',
@@ -411,7 +551,7 @@ export const projects = [
    },
    {
       name: 'McLean & Sterling',
-      year: '2021',
+      year: '2020',
       type: 'client',
       tech: [
          'Node.js',
@@ -448,7 +588,7 @@ export const projects = [
    },
    {
       name: 'Peak Health Services',
-      year: '2021',
+      year: '2020',
       type: 'client',
       tech: [
          'Node.js',
@@ -482,7 +622,7 @@ export const projects = [
    },
    {
       name: 'Peak Provider Services',
-      year: '2021',
+      year: '2020',
       type: 'client',
       tech: [
          'Node.js',
@@ -519,7 +659,7 @@ export const projects = [
    },
    {
       name: 'PROLIM PLM Solutions',
-      year: '2021',
+      year: '2020',
       type: 'client',
       tech: [
          'Node.js',
@@ -552,7 +692,7 @@ export const projects = [
    },
    {
       name: 'Tastea',
-      year: '2021',
+      year: '2020',
       type: 'client',
       tech: [
          'Node.js',
@@ -585,7 +725,7 @@ export const projects = [
    },
    {
       name: 'University of Montana Foundation',
-      year: '2021',
+      year: '2020',
       type: 'client',
       tech: [
          'Node.js',
@@ -615,7 +755,7 @@ export const projects = [
    },
    {
       name: 'Carroll University',
-      year: '2021',
+      year: '2020',
       type: 'client',
       tech: [
          'Node.js',
@@ -649,7 +789,7 @@ export const projects = [
    },
    // {
    //    name: 'Richdale Apartments',
-   //    year: '2021',
+   //    year: '2020',
    //    type: 'client',
    //    tech: [
    //       'Node.js',
@@ -677,7 +817,7 @@ export const projects = [
    // },
    {
       name: 'Prarie Naturals',
-      year: '2021',
+      year: '2020',
       type: 'client',
       tech: [
          'Node.js',
@@ -709,7 +849,7 @@ export const projects = [
    },
    {
       name: 'EDG Partners',
-      year: '2021',
+      year: '2020',
       type: 'client',
       tech: [
          'Node.js',

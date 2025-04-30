@@ -1,6 +1,5 @@
 'use client';
 import { useMemo } from 'react';
-import { Section } from '@/components/layout';
 import ProjectGridCard from './ProjectGridCard';
 import { GridProject } from '@/types/Project';
 
@@ -9,6 +8,7 @@ interface ProjectGridProps {
    before?: number;
    onOrAfter?: number;
    type?: string;
+   inverted?: boolean;
    handleItemClick?: (projectName: string) => void;
 }
 
@@ -17,6 +17,7 @@ const ProjectGrid = ({
    before,
    onOrAfter,
    type,
+   inverted = false,
    handleItemClick
 }: ProjectGridProps) => {
    let projectsToShow = useMemo(
@@ -25,45 +26,47 @@ const ProjectGrid = ({
             ...project,
             getFeaturedImage: () => ({
                name: project.images[0]?.name || 'default',
-               frame: 'default-frame'
+               frame: 'default-frame',
+               hideFromGridCard: project.images[0]?.hideFromGridCard
+                  ? project.images[0]?.hideFromGridCard
+                  : false
             })
          })),
       [projects]
    );
 
-   if (before) {
-      projectsToShow = projects.filter(project => {
-         return Number(project.year) < before;
-      });
-   } else if (onOrAfter) {
-      projectsToShow = projects.filter(project => {
+   if (onOrAfter) {
+      projectsToShow = projectsToShow.filter(project => {
          return Number(project.year) >= onOrAfter;
       });
    }
 
+   if (before) {
+      projectsToShow = projectsToShow.filter(project => {
+         return Number(project.year) < before;
+      });
+   }
+
    if (type) {
-      projectsToShow = projects.filter(project => {
+      projectsToShow = projectsToShow.filter(project => {
          return project.type === type;
       });
    }
 
    return (
-      <Section top="md" bottom="lg" width="lg">
-         <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-            {projectsToShow.map((project, index) => (
-               <div
-                  key={index}
-                  onClick={() =>
-                     handleItemClick && handleItemClick(project.name)
-                  }>
-                  <ProjectGridCard
-                     project={project}
-                     handleClick={handleItemClick}
-                  />
-               </div>
-            ))}
-         </div>
-      </Section>
+      <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+         {projectsToShow.map((project, index) => (
+            <div
+               key={index}
+               onClick={() => handleItemClick && handleItemClick(project.name)}>
+               <ProjectGridCard
+                  project={project}
+                  inverted={inverted}
+                  handleClick={handleItemClick}
+               />
+            </div>
+         ))}
+      </div>
    );
 };
 

@@ -9,6 +9,7 @@ export interface ProjectImage {
    caption?: string;
    type?: string;
    hideFromModal?: boolean;
+   hideFromGridCard?: boolean;
    frame?: number;
 }
 
@@ -16,7 +17,11 @@ export interface GridProject extends BaseProject {
    tech: string[];
    description: string;
    images: ProjectImage[];
-   getFeaturedImage: () => { name: string; frame: string };
+   getFeaturedImage: () => {
+      name: string;
+      frame: string;
+      hideFromGridCard?: boolean;
+   };
 }
 
 export interface ModalProject extends BaseProject {
