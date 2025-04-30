@@ -50,9 +50,9 @@ export default function ProjectModal({
 
    return (
       <Dialog open={isOpen} onOpenChange={onOpenChange}>
-         <Overlay className="fixed inset-0 bg-black/30" />
-         <Content className="fixed bottom-2 left-2 right-2 top-20 z-20 overflow-hidden rounded-lg bg-bb-gray-900 p-6 shadow-lg md:bottom-6 md:left-12 md:right-12 md:top-20">
-            <div className="flex h-48 flex-col gap-2 border-b border-bb-gray-500 md:gap-4 md:p-4">
+         <Overlay className="fixed inset-0 bg-black/70" />
+         <Content className="fixed left-2 right-2 top-20 z-20 h-[calc(100vh-100px)] overflow-hidden rounded-lg bg-bb-gray-900 p-6 shadow-lg md:left-12 md:right-12 md:top-20">
+            <div className="flex h-40 flex-col gap-4 border-b border-bb-gray-500 md:h-48 md:p-4">
                <Close
                   className="fixed right-6 top-24 h-6 w-6 cursor-pointer transition duration-500 ease-in-out hover:text-bb-yellow md:right-16 md:top-24"
                   aria-label="Close"
@@ -83,7 +83,7 @@ export default function ProjectModal({
                   />
                )}
             </div>
-            <div className="relative max-h-full overflow-y-auto pb-48 pt-4 md:px-8 md:pt-8">
+            <div className="relative h-[calc(100%-140px)] overflow-hidden overflow-y-auto pt-4 md:h-[calc(100%-170px)] md:px-8 md:pt-8">
                {description && (
                   <Text top="md" bottom="no">
                      {description}
