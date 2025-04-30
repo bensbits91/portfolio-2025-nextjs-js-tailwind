@@ -7,25 +7,27 @@ import {
    Close
 } from '@radix-ui/react-dialog';
 import Link from 'next/link';
-import { Text } from '@/components/typography';
-import { CloseIcon, NewTabIcon } from '@/components/icons';
+import ProjectModalToolbar from './ProjectModalToolbar';
 import { ImageGallery } from '@/components/image';
+import { Text } from '@/components/typography';
+import { CloseIcon } from '@/components/icons';
+import { IconBar } from '@/components/common';
 import { skillIcons } from '@/data/skills';
-import { CodeLink, IconBar } from '@/components/common';
-
 import { ModalProject } from '@/types/Project';
 
-interface SkillModalProps {
+// todo: height and padding of modal content is hacky; implement better solution
+
+interface ProjectModalProps {
    project: ModalProject | null | undefined;
    isOpen: boolean;
    onOpenChange: (open: boolean) => void;
 }
 
-export default function SkillModal({
+export default function ProjectModal({
    project,
    isOpen,
    onOpenChange
-}: SkillModalProps) {
+}: ProjectModalProps) {
    if (!project) return null;
    const {
       name,
@@ -49,82 +51,62 @@ export default function SkillModal({
    return (
       <Dialog open={isOpen} onOpenChange={onOpenChange}>
          <Overlay className="fixed inset-0 bg-black/30" />
-         <Content className="fixed bottom-6 left-6 right-6 top-20 z-20 overflow-scroll rounded-lg bg-bb-gray-900 p-6 shadow-lg md:bottom-6 md:left-12 md:right-12 md:top-20">
-            <Close
-               className="fixed right-6 top-20 h-6 w-6 cursor-pointer transition duration-500 ease-in-out hover:text-[yellow] md:right-16 md:top-24"
-               aria-label="Close"
-               onClick={() => onOpenChange(false)}>
-               <CloseIcon />
-            </Close>
-            <div className="flex flex-col gap-2 pt-8 md:gap-4 md:p-4">
-               <div>
-                  <Title className="text-4xl">{name}</Title>
-                  <Description className="hidden">{name}</Description>
+         <Content className="fixed bottom-2 left-2 right-2 top-20 z-20 overflow-hidden rounded-lg bg-bb-gray-900 p-6 shadow-lg md:bottom-6 md:left-12 md:right-12 md:top-20">
+            <div className="flex h-40 flex-col gap-2 border-b border-bb-gray-500 md:h-48 md:gap-4 md:p-4">
+               <Close
+                  className="fixed right-10 top-24 h-6 w-6 cursor-pointer transition duration-500 ease-in-out hover:text-bb-yellow md:right-16 md:top-24"
+                  aria-label="Close"
+                  onClick={() => onOpenChange(false)}>
+                  <CloseIcon />
+               </Close>
+               <Title className="text-4xl">{name}</Title>
+               <Description className="hidden">{name}</Description>
+               <div className="flex items-center gap-8">
                   {tech && tech.length > 0 && (
-                     <div className="mb-8 mt-2 flex flex-col justify-between gap-4 md:flex-row md:items-center">
-                        <IconBar
-                           icons={skillIcons(tech).filter(
-                              (
-                                 icon
-                              ): icon is { src: string; altText: string } =>
-                                 icon.src !== undefined
-                           )}
-                        />
-                        {codeLink && (
-                           <CodeLink
-                              codeLink={{
-                                 href: codeLink,
-                                 text: 'View code'
-                              }}
-                           />
+                     <IconBar
+                        icons={skillIcons(tech).filter(
+                           (icon): icon is { src: string; altText: string } =>
+                              icon.src !== undefined
                         )}
-                        {liveLink && (
-                           <Link
-                              href={liveLink}
-                              className="text-bb-teal"
-                              target="_blank">
-                              <div className="flex items-center gap-2">
-                                 <div>View live</div>
-                                 <div className="h-4 w-4">
-                                    <NewTabIcon />
-                                 </div>
-                              </div>
-                           </Link>
-                        )}
-                     </div>
-                  )}
-                  {description && (
-                     <Text top="no" bottom="no">
-                        {description}
-                     </Text>
-                  )}
-                  {/* {codeLink && (
-                        <Text top="no" bottom="no">
-                           {codeLink}
-                        </Text>
-                     )} */}
-                  {moreInfoLink && (
-                     <Link href={moreInfoLink} className="text-bb-teal">
-                        Read more about this project
-                     </Link>
-                  )}
-                  {motivation && (
-                     <Text top="no" bottom="no">
-                        {motivation}
-                     </Text>
-                  )}
-                  {outcome && (
-                     <Text top="no" bottom="no">
-                        {outcome}
-                     </Text>
+                     />
                   )}
                   {year && (
                      <Text top="no" bottom="no">
                         {year}
                      </Text>
                   )}
-                  {images.length > 0 && <ImageGallery images={images} />}
                </div>
+               {(codeLink || liveLink) && (
+                  <ProjectModalToolbar
+                     codeLink={codeLink}
+                     liveLink={liveLink}
+                  />
+               )}
+            </div>
+            <div className="relative max-h-full overflow-y-auto pb-40 pt-4 md:p-8 md:pb-48 md:pt-8">
+               {description && (
+                  <Text top="md" bottom="no">
+                     {description}
+                  </Text>
+               )}
+               {motivation && (
+                  <Text top="md" bottom="no">
+                     Motivation: {motivation}
+                  </Text>
+               )}
+               {outcome && (
+                  <Text top="md" bottom="no">
+                     Outcome: {outcome}
+                  </Text>
+               )}
+               {moreInfoLink && (
+                  <div className="mt-4">
+                     <Link href={moreInfoLink} className="text-bb-teal">
+                        Read more about this project
+                     </Link>
+                  </div>
+               )}
+               {images.length > 0 && <ImageGallery images={images} />}
             </div>
          </Content>
       </Dialog>

@@ -5,6 +5,7 @@ import { Heading, Text } from '@/components/typography';
 import { CloudinaryImage } from '@/components/image';
 import {
    ProjectGrid,
+   ProjectsTable,
    ProjectsToolbar,
    ProjectModal
 } from '@/components/projects';
@@ -46,7 +47,7 @@ const Projects = () => {
          </Section>
          {selectedView === 'grid' && (
             <>
-               <Section top="md" bottom="sm" width="lg">
+               <Section top="md" bottom="md" width="lg">
                   <Heading level={2} appearance={2} color="jade">
                      Recent Projects
                   </Heading>
@@ -81,16 +82,6 @@ const Projects = () => {
                      </div>
                   </div>
                </Section>
-               {/* <Section top="lg" bottom="sm" width="lg">
-                  <Heading level={2} appearance={2} color="jade">
-                     Clients (2021 &amp; Earlier)
-                  </Heading>
-                  <Text color="white" size="lg">
-                     From 2013 to 2021, I built hundreds of websites and apps
-                     for all kinds of clients. To facilitate speedy development,
-                     I created a library of reusable components.
-                  </Text>
-               </Section> */}
                <Section top="lg" bottom="sm" width="lg">
                   <Heading level={2} appearance={2} color="jade">
                      Clients (2021 &amp; Earlier)
@@ -109,7 +100,7 @@ const Projects = () => {
                />
                <Section top="sm" bottom="sm" width="lg">
                   <Heading level={2} appearance={2} color="jade">
-                     Apps, Widgets &amp; Components
+                     Apps, Widgets &amp; Components (2021 &amp; Earlier)
                   </Heading>
                   <Text color="white" size="lg">
                      I&apos;ve built countless of components and widgets,
@@ -123,6 +114,14 @@ const Projects = () => {
                   handleItemClick={handleItemClick}
                />
             </>
+         )}
+         {selectedView === 'table' && (
+            <Section>
+               <ProjectsTable
+                  projects={projectsToPass}
+                  handleItemClick={handleItemClick}
+               />
+            </Section>
          )}
          <PrimaryCta />
          <ProjectModal

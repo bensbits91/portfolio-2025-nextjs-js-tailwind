@@ -1,27 +1,24 @@
 import Link from 'next/link';
-import { NewTabIcon, GithubIcon } from '@/components/icons';
+import { NewTabIcon } from '@/components/icons';
 
-interface CodeLinkProps {
-   codeLink: {
+interface LiveLinkProps {
+   liveLink: {
       href: string;
       text?: string;
    };
 }
 
-const CodeLink = ({ codeLink }: CodeLinkProps) => {
-   if (!codeLink || !codeLink.href) {
+const LiveLink = ({ liveLink }: LiveLinkProps) => {
+   if (!liveLink || !liveLink.href) {
       return null;
    }
-   const { href, text } = codeLink;
+   const { href, text } = liveLink;
    return (
       <Link
          href={href}
          className="hover-delay hover-brightness text-bb-teal"
          target="_blank">
          <div className="flex items-center gap-2">
-            <div className="h-4 w-4">
-               <GithubIcon />
-            </div>
             <div>{text}</div>
             <div className="h-4 w-4">
                <NewTabIcon />
@@ -31,4 +28,4 @@ const CodeLink = ({ codeLink }: CodeLinkProps) => {
    );
 };
 
-export default CodeLink;
+export default LiveLink;

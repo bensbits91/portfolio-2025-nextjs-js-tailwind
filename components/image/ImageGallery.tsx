@@ -17,11 +17,11 @@ const ImageGallery = ({ images }: ImageGalleryProps) => {
             return (
                <div key={index} className="my-12">
                   {caption && (
-                     <Heading level={3} appearance={3} color="white">
+                     <Heading level={3} appearance={3} color="white" bottom='md'>
                         {caption}
                      </Heading>
                   )}
-                  <div className="max-w-[800px] border-2 border-bb-gray-900">
+                  <div className="max-w-[800px] border-2 border-bb-gray-500 rounded-lg overflow-hidden">
                      {type === 'video' ? (
                         <VideoPlayer filename={name} />
                      ) : (
