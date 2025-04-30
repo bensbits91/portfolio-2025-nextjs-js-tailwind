@@ -109,7 +109,7 @@ export default function SkillModal({
                               )}
                            />
                            <div>
-                              <Link className="text-bb-teal" href="/work">
+                              <Link className="text-bb-teal" href="/projects">
                                  View all projects
                               </Link>
                            </div>
@@ -124,7 +124,7 @@ export default function SkillModal({
                               items={appProjects.map(project => project.name)}
                            />
                            <div>
-                              <Link className="text-bb-teal" href="/work">
+                              <Link className="text-bb-teal" href="/projects">
                                  View all projects
                               </Link>
                            </div>

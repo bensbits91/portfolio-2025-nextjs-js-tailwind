@@ -74,7 +74,7 @@ const Home = () => {
                   <div className="text-2xl">Component Libraries</div>
                </div>
             </div>
-            <Button link="/work">
+            <Button link="/projects">
                <div className="md:min-w-[400px]">View work samples</div>
             </Button>
          </Section>
