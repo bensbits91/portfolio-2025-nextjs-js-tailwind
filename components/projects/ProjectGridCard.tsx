@@ -23,7 +23,6 @@ const ProjectGridCard: React.FC<{
 
    const { name, tech, description } = project;
    const featuredImage = project.getFeaturedImage();
-   console.log('bb ~ ProjectGridCard.tsx:26 ~ featuredImage:', featuredImage);
    const { newString: truncatedName } = name ? truncateString(name, 25) : {};
    const { newString: truncatedDescription } = description
       ? truncateString(description, 70)
