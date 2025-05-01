@@ -21,7 +21,6 @@ const IconBar = ({
    wrap = false,
    pop = false
 }: IconBarProps) => {
-   console.log('bb ~ IconBar.tsx:24 ~ icons:', icons);
    return (
       <div
          className={clsx(
