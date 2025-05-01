@@ -84,7 +84,7 @@ export default function SkillModal({
                      {jobs && jobs.length > 0 && (
                         <div className="flex-1">
                            <Heading level={4} appearance={6}>
-                              Jobs
+                              Full-Time Roles
                            </Heading>
                            <List
                               items={jobs.map(
@@ -101,7 +101,7 @@ export default function SkillModal({
                      {clientProjects && clientProjects.length > 0 && (
                         <div className="flex-1">
                            <Heading level={4} appearance={6}>
-                              Clients
+                              Contracts
                            </Heading>
                            <List
                               items={clientProjects.map(
@@ -118,7 +118,7 @@ export default function SkillModal({
                      {appProjects && appProjects.length > 0 && (
                         <div className="flex-1">
                            <Heading level={4} appearance={6}>
-                              Apps
+                              Apps & Components
                            </Heading>
                            <List
                               items={appProjects.map(project => project.name)}
