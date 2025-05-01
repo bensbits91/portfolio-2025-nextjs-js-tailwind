@@ -32,6 +32,7 @@ const Home = () => {
             <div className="mb-8 max-w-[560px]">
                <IconBar
                   wrap
+                  pop
                   icons={skillIcons(homeSkills).filter(
                      (icon): icon is { src: string; altText: string } =>
                         icon.src !== undefined

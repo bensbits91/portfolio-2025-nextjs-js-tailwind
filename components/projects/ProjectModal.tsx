@@ -64,6 +64,7 @@ export default function ProjectModal({
                <div className="flex items-center gap-8">
                   {tech && tech.length > 0 && (
                      <IconBar
+                        pop
                         icons={skillIcons(tech).filter(
                            (icon): icon is { src: string; altText: string } =>
                               icon.src !== undefined

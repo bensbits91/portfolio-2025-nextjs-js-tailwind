@@ -21,7 +21,7 @@ const Duty = ({ duty }: DutyProps) => {
       setOpen(prev => !prev);
    };
 
-   const DutyMain = () => {
+   const DutyHeader = () => {
       return (
          <>
             {name && (
@@ -33,6 +33,7 @@ const Duty = ({ duty }: DutyProps) => {
                <div className="my-2">
                   <IconBar
                      wrap
+                     pop
                      icons={skillIcons(skillNames).filter(
                         (icon): icon is { src: string; altText: string } =>
                            icon.src !== undefined
@@ -41,6 +42,13 @@ const Duty = ({ duty }: DutyProps) => {
                   />
                </div>
             )}
+         </>
+      );
+   };
+
+   const DutyMain = () => {
+      return (
+         <>
             <span>
                {description}
                {moreInfo && (
@@ -65,6 +73,7 @@ const Duty = ({ duty }: DutyProps) => {
 
    return (
       <li className="mb-6">
+         <DutyHeader />
          {moreInfo && moreInfo.length > 0 ? (
             <Collapsible onOpenChange={handleToggle} className="mt-2">
                <Trigger className="text-left">
