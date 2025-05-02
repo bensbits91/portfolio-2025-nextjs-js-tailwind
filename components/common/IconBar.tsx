@@ -30,7 +30,7 @@ const IconBar = ({
          )}>
          {icons.map((icon, index) =>
             pop ? (
-               <SkillPopper key={index} skillName={icon.altText} />
+               <SkillPopper key={index} skillName={icon.altText} size={size} />
             ) : (
                <Icon
                   key={index}

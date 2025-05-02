@@ -11,11 +11,11 @@ interface ImageGalleryProps {
 
 const ImageGallery = ({ images }: ImageGalleryProps) => {
    return (
-      <div className="relative">
+      <div className="relative mb-4">
          {images.map((image, index) => {
             const { type, name, caption } = image;
             return (
-               <div key={index} className="my-12">
+               <div key={index} className="mt-8">
                   {caption && (
                      <Heading level={3} appearance={3} color="white" bottom='md'>
                         {caption}

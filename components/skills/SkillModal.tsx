@@ -39,19 +39,29 @@ export default function SkillModal({
    const appProjects = projects.filter(project => project.type !== 'client');
    const clientProjects = projects.filter(project => project.type === 'client');
 
+   const nameLength = name.length;
+   const titleSize =
+      nameLength > 30
+         ? 'text-xl md:text-2xl lg:text-4xl'
+         : nameLength > 12
+           ? 'text-xl md:text-4xl'
+           : nameLength > 8
+             ? 'text-3xl md:text-4xl'
+             : 'text-4xl';
+
    return (
       <Dialog open={isOpen} onOpenChange={onOpenChange}>
          <Overlay className="fixed inset-0 bg-black/70" />
-         <Content className="fixed left-2 right-2 top-20 z-20 h-[calc(100vh-100px)] overflow-hidden rounded-lg bg-bb-gray-900 p-6 shadow-lg md:left-12 md:right-12 md:top-20">
-            <div className="flex h-52 flex-col gap-2 pt-8 md:gap-4 md:p-4">
+         <Content className="fixed left-2 right-2 top-20 z-20 h-[calc(100vh-100px)] overflow-hidden rounded-lg bg-bb-gray-900 p-2 md:p-4 shadow-lg md:left-12 md:right-12 md:top-20">
+            <div className="flex h-36 md:h-48 flex-col gap-2 pt-8 md:gap-4 md:p-4">
                <Close
                   className="fixed right-6 top-24 h-6 w-6 cursor-pointer transition duration-500 ease-in-out hover:text-[yellow] md:right-16 md:top-24"
                   aria-label="Close"
                   onClick={() => onOpenChange(false)}>
                   <CloseIcon />
                </Close>
-               <div className="flex gap-8 border-b border-bb-gray-500 md:gap-12 md:p-4">
-                  <div className="relative h-32 w-32 md:h-40 md:w-40">
+               <div className="flex items-center gap-6 px-4 md:gap-12 md:p-4">
+                  <div className="relative h-24 w-24 md:h-32 md:w-32">
                      <CloudinaryImage
                         cloudinaryId={cloudinary as string}
                         alt={name}
@@ -59,10 +69,10 @@ export default function SkillModal({
                         height={208}
                      />
                   </div>
-                  <div className="sm:pt-6 md:pt-12">
-                     <Title className="text-4xl">{name}</Title>
+                  <div>
+                     <Title className={titleSize}>{name}</Title>
                      <Description className="hidden">{name}</Description>
-                     <div className="flex flex-col gap-4 p-4 sm:flex-row sm:items-center">
+                     <div className="flex flex-col sm:flex-row sm:items-center md:gap-4">
                         {rating && (
                            <div className="flex h-4">
                               <Rating rating={rating} />
@@ -75,14 +85,14 @@ export default function SkillModal({
                   </div>
                </div>
             </div>
-            <div className="relative h-[calc(100%-184px)] overflow-y-auto pb-12 md:pb-8">
-               <div className="pt-8 md:p-8">
+            <div className="relative h-[calc(100%-148px)] md:h-[calc(100%-196px)] overflow-y-auto rounded-md bg-[var(--bb-gray-dark-100)] p-4">
+               <div className="pt-4 md:px-8 md:pb-4">
                   <Heading level={3} appearance={4}>
                      My experience with {name}
                   </Heading>
                   <div className="flex flex-col gap-4 pt-4 md:flex-row md:gap-12 md:px-4">
                      {jobs && jobs.length > 0 && (
-                        <div className="flex-1">
+                        <div className="mb-4 flex-1 border-t border-bb-gray-500 pt-8 md:mb-0 md:border-t-0 md:pt-0">
                            <Heading level={4} appearance={6}>
                               Full-Time Roles
                            </Heading>
@@ -99,7 +109,7 @@ export default function SkillModal({
                         </div>
                      )}
                      {clientProjects && clientProjects.length > 0 && (
-                        <div className="flex-1">
+                        <div className="mb-4 flex-1 border-t border-bb-gray-500 pt-8 md:mb-0 md:border-t-0 md:pt-0">
                            <Heading level={4} appearance={6}>
                               Contracts
                            </Heading>
@@ -116,7 +126,7 @@ export default function SkillModal({
                         </div>
                      )}
                      {appProjects && appProjects.length > 0 && (
-                        <div className="flex-1">
+                        <div className="mb-4 flex-1 border-t border-bb-gray-500 pt-8 md:mb-0 md:border-t-0 md:pt-0">
                            <Heading level={4} appearance={6}>
                               Apps & Components
                            </Heading>
