@@ -14,7 +14,7 @@ export default function ProjectsModalToolbar({
    return (
       <Toolbar
          orientation="horizontal"
-         className="flex w-full min-w-max items-center gap-4 rounded-md bg-bb-gray-800 px-2 py-3 shadow-[-1px_4px_8px_0] shadow-black/70 sm:gap-8 sm:px-8">
+         className="flex w-full min-w-max items-center gap-4 rounded-md bg-bb-gray-800 px-6 py-3 shadow-[-1px_4px_8px_0] shadow-black/70 sm:gap-8 sm:px-8">
          {codeLink && (
             <Button asChild title="View code">
                <StyledLink href={codeLink} icon="GitHub" newTab text="Code" />
