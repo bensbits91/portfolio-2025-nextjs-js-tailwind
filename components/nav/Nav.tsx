@@ -1,5 +1,5 @@
 import MobileNav from './MobileNav';
-import NavBar from './NavBar';
+import NavBar from './Navbar';
 
 const Nav = () => (
    <>
