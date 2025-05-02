@@ -3,7 +3,10 @@ export { default as ChevronIcon } from './ChevronIcon';
 export { default as DoubleChevronIcon } from './DoubleChevronIcon';
 export { default as NewTabIcon } from './NewTabIcon';
 export { default as PlayIcon } from './PlayIcon';
+
 export { default as GithubIcon } from './GithubIcon';
+export { default as LinkedInIcon } from './LinkedInIcon';
+export { default as ResumeIcon } from './ResumeIcon';
 
 export { default as TableIcon } from './TableIcon';
 export { default as GridIcon } from './GridIcon';

@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import ContactLinks from '@/components/contact/ContactLinks';
-import { navLinkDefs } from '@/app/constants';
+import { navLinkDefs } from '@/data/nav';
 
 interface NavLinkProps {
    text: string;
@@ -35,7 +35,7 @@ const MobileNav = () => {
       <nav className="fixed left-0 right-0 top-0 z-40 bg-background p-4 text-[#A0AFBE] lg:hidden">
          <div className="container z-50 mx-auto flex items-center justify-between">
             <div className="text-lg font-bold">
-               <ContactLinks isNavbar />
+               <ContactLinks />
             </div>
             <button onClick={toggleMenu} className="focus:outline-none">
                <svg
