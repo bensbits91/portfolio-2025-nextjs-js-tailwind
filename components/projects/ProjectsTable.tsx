@@ -10,7 +10,7 @@ import {
 import { CloudinaryImage } from '@/components/image';
 import ProjectsTableHeader from './ProjectsTableHeader';
 import ProjectsTableCell from './ProjectsTableCell';
-import { /* CodeLink, LiveLink,  */ IconBar } from '@/components/common';
+import { IconBar } from '@/components/common';
 import { GridProject } from '@/types/Project';
 import { truncateString } from '@/utils/string';
 import { skillIcons } from '@/data/skills';
@@ -88,24 +88,6 @@ export default function ProjectsTable({
             );
          }
       },
-      // {
-      //    accessorKey: 'liveLink',
-      //    header: 'Live',
-      //    enableColumnFilter: false,
-      //    cell: (info: CellContext<GridProject, unknown>) => {
-      //       const liveLink = { href: info.getValue() as string, text: 'Live' };
-      //       return <LiveLink liveLink={liveLink} />;
-      //    }
-      // },
-      // {
-      //    accessorKey: 'codeLink',
-      //    header: 'Code',
-      //    enableColumnFilter: false,
-      //    cell: (info: CellContext<GridProject, unknown>) => {
-      //       const codeLink = { href: info.getValue() as string, text: 'Code' };
-      //       return <CodeLink codeLink={codeLink} />;
-      //    }
-      // },
       {
          accessorKey: 'description',
          header: 'Description',
