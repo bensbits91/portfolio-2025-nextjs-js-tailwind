@@ -40,7 +40,6 @@ export default function SkillModal({
    const clientProjects = projects.filter(project => project.type === 'client');
 
    const nameLength = name.length;
-   console.log('bb ~ SkillModal.tsx:43 ~ nameLength:', nameLength);
    const titleSize =
       nameLength > 30
          ? 'text-xl md:text-2xl lg:text-4xl'
