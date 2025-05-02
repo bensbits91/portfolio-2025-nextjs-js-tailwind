@@ -1,6 +1,11 @@
 import { TwoColumnSection, Section } from '@/components/layout';
 import { Heading, Text, List } from '@/components/typography';
-import { Breadcrumb, PrimaryCta, CodeLink, IconBar } from '@/components/common';
+import {
+   Breadcrumb,
+   PrimaryCta,
+   StyledLink,
+   IconBar
+} from '@/components/common';
 import { skillIcons } from '@/data/skills';
 
 interface SectionProps {
@@ -151,7 +156,12 @@ const BasicPage = ({ content }: BasicPageProps) => {
                                        <div className="mb-8">
                                           {stack && <List items={stack} />}
                                           {codeLink && (
-                                             <CodeLink codeLink={codeLink} />
+                                             <StyledLink
+                                                href={codeLink.href}
+                                                icon="GitHub"
+                                                newTab
+                                                text={codeLink.text}
+                                             />
                                           )}
                                        </div>
                                        {content.map((item, contentIndex) => {
