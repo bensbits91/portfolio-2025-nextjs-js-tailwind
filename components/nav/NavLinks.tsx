@@ -1,15 +1,20 @@
 import NavLink from './NavLink';
-import { navLinkDefs } from '@/app/constants';
+import { navLinkDefs } from '@/data/nav';
+import clsx from 'clsx';
 
-const NavLinks = () => (
-   <ul className="flex h-7 justify-end space-x-6 font-roboto-sans">
+interface NavLinksProps {
+   vertical?: boolean;
+}
+
+const NavLinks = ({ vertical = false }: NavLinksProps) => (
+   <ul
+      className={clsx(
+         'flex text-sm',
+         vertical ? 'flex-col justify-start gap-2' : 'h-5 gap-4'
+      )}>
       {navLinkDefs.map(def => {
          const { text, link } = def;
-         return <NavLink
-         key={text}
-         text={text}
-         link={link}
-         />;
+         return <NavLink key={text} text={text} link={link} />;
       })}
    </ul>
 );
