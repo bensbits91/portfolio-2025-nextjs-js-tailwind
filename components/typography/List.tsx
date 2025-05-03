@@ -3,13 +3,15 @@ import clsx from 'clsx';
 interface ListProps {
    items: string[];
    bottom?: 'no' | 'sm' | 'md' | 'lg' | 'xl';
+   size?: 'sm' | 'md';
 }
 
-const List = ({ items, bottom = 'md' }: ListProps) => {
+const List = ({ items, bottom = 'md', size = 'md' }: ListProps) => {
    return (
       <ul
          className={clsx(
-            'ml-6 list-outside list-disc text-sm',
+            'ml-6 list-outside list-disc',
+            { 'text-sm': size === 'sm' },
             { 'mb-0': bottom === 'no' },
             { 'mb-2': bottom === 'sm' },
             { 'mb-4': bottom === 'md' },

@@ -29,28 +29,25 @@ export default function SkillsTable({
       string | unknown | number | Date | ReactNode
    >[] = [
       {
-         accessorKey: 'cloudinary',
-         header: '',
-         enableSorting: false,
+         accessorKey: 'name',
+         header: 'Name',
          enableColumnFilter: false,
          cell: (info: CellContext<BaseSkill, unknown>) => {
-            const imageUrl = info.getValue() as string;
+            const imageUrl = info.row.original.cloudinary as string;
             return (
-               <div className="mr-2 flex h-4 w-4">
-                  <CloudinaryImage
-                     cloudinaryId={imageUrl}
-                     alt={getCoreRowModel.name}
-                     width={32}
-                     height={32}
-                  />
+               <div className="mr-2 flex items-center gap-2">
+                  <div className="mr-2 flex h-4 w-4">
+                     <CloudinaryImage
+                        cloudinaryId={imageUrl}
+                        alt={info.row.original.name}
+                        width={32}
+                        height={32}
+                     />
+                  </div>
+                  <div>{info.getValue() as string}</div>
                </div>
             );
          }
-      },
-      {
-         accessorKey: 'name',
-         header: 'Name',
-         enableColumnFilter: false
       },
       {
          accessorKey: 'years',
@@ -120,7 +117,7 @@ export default function SkillsTable({
                {table.getRowModel().rows.map(row => (
                   <tr
                      key={row.id}
-                     className="border-y-solid cursor-pointer border-b-0 border-t border-transparent odd:bg-[var(--bb-surface-a10)] hover:border-b hover:border-y-yellow-200"
+                     className="table-row"
                      onClick={() => {
                         handleItemClick(row.original.name);
                      }}>

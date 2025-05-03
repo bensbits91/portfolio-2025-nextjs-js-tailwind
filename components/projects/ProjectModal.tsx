@@ -16,8 +16,6 @@ import { skillIcons } from '@/data/skills';
 import { ModalProject } from '@/types/Project';
 import clsx from 'clsx';
 
-// todo: height and padding of modal content is hacky; implement better solution
-
 interface ProjectModalProps {
    project: ModalProject | null | undefined;
    isOpen: boolean;
@@ -67,10 +65,10 @@ export default function ProjectModal({
    return (
       <Dialog open={isOpen} onOpenChange={onOpenChange}>
          <Overlay className="fixed inset-0 bg-black/70" />
-         <Content className="fixed left-2 right-2 top-20 z-20 h-[calc(100vh-100px)] overflow-hidden rounded-lg bg-bb-gray-900 p-2 shadow-lg md:left-12 md:right-12 md:top-20">
+         <Content className="bg-elevation-1 fixed left-2 right-2 top-20 z-20 h-[calc(100vh-100px)] overflow-hidden rounded-lg p-2 shadow-lg md:left-12 md:right-12 md:top-20">
             <div className={clsx('flex flex-col gap-4', headerHeight)}>
                <Close
-                  className="fixed right-6 top-24 h-6 w-6 cursor-pointer transition duration-500 ease-in-out hover:text-bb-yellow md:right-16 md:top-24"
+                  className="link fixed right-6 top-24 h-6 w-6 md:right-16 md:top-24"
                   aria-label="Close"
                   onClick={() => onOpenChange(false)}>
                   <CloseIcon />
@@ -108,7 +106,7 @@ export default function ProjectModal({
             </div>
             <div
                className={clsx(
-                  'relative mx-2 mt-8 overflow-hidden overflow-y-auto rounded-md bg-[var(--bb-gray-dark-100)] px-2',
+                  'relative mx-2 mt-8 overflow-hidden overflow-y-auto rounded-md asdf-well px-2',
                   'md:px-8 md:pt-8',
                   scrollableHeight
                )}>
@@ -129,7 +127,7 @@ export default function ProjectModal({
                )}
                {moreInfoLink && (
                   <div className="mt-4">
-                     <Link href={moreInfoLink} className="text-bb-teal">
+                     <Link href={moreInfoLink} className="link">
                         Read more about this project
                      </Link>
                   </div>

@@ -22,6 +22,7 @@ const config = {
             'bb-gray-500': 'var(--bb-gray-500)',
             'bb-gray-300': 'var(--bb-gray-300)',
             'bb-gray-200': 'var(--bb-gray-200)',
+            'bb-gray-100': 'var(--bb-gray-100)',
             'bb-jade': 'var(--bb-jade)',
             'bb-jade-800': 'var(--bb-jade-800)',
             'bb-jade-700': 'var(--bb-jade-700)',
@@ -90,7 +91,12 @@ const config = {
          } */
       }
    },
-   plugins: []
+   plugins: [
+      function ({ addVariant }) {
+         addVariant('light', '&:where(.light, .light *)');
+      }
+   ],
+   darkMode: 'selector'
 };
 
 export default config;

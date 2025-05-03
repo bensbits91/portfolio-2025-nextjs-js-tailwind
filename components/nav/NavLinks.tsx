@@ -1,5 +1,6 @@
 import NavLink from './NavLink';
 import { navLinkDefs } from '@/data/nav';
+import ThemeChanger from '@/components/ThemeChanger';
 import clsx from 'clsx';
 
 interface NavLinksProps {
@@ -16,6 +17,11 @@ const NavLinks = ({ vertical = false }: NavLinksProps) => (
          const { text, link } = def;
          return <NavLink key={text} text={text} link={link} />;
       })}
+      {!vertical && (
+         <li>
+            <ThemeChanger />
+         </li>
+      )}
    </ul>
 );
 

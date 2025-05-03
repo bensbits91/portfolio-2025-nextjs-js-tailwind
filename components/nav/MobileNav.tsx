@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import ContactLinks from '@/components/contact/ContactLinks';
+import ThemeChanger from '@/components/ThemeChanger';
+import { HamburgerIcon, CloseIcon } from '@/components/icons';
 import { navLinkDefs } from '@/data/nav';
 
 interface NavLinkProps {
@@ -32,25 +34,19 @@ const MobileNav = () => {
    // todo: move svgs to public folder?
 
    return (
-      <nav className="fixed left-0 right-0 top-0 z-40 bg-background p-4 text-[#A0AFBE] lg:hidden">
+      <nav className="light:border-b-gray-300 bg-bg fixed left-0 right-0 top-0 z-40 border-b-2 border-b-gray-800 p-4 text-[#A0AFBE] lg:hidden">
          <div className="container z-50 mx-auto flex items-center justify-between">
             <div className="text-lg font-bold">
                <ContactLinks />
             </div>
-            <button onClick={toggleMenu} className="focus:outline-none">
-               <svg
-                  className="h-6 w-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                     strokeLinecap="round"
-                     strokeLinejoin="round"
-                     strokeWidth="2"
-                     d="M4 6h16M4 12h16m-7 6h7"></path>
-               </svg>
-            </button>
+            <div className="flex items-center gap-4">
+               <ThemeChanger />
+               <button onClick={toggleMenu} className="focus:outline-none">
+                  <div className="link h-6 w-6">
+                     <HamburgerIcon />
+                  </div>
+               </button>
+            </div>
          </div>
          {isOpen && (
             <div
@@ -76,18 +72,9 @@ const MobileNav = () => {
                   ))}
                </ul>
                <button onClick={toggleMenu} className="p-1 focus:outline-none">
-                  <svg
-                     className="h-6 w-6"
-                     fill="none"
-                     stroke="currentColor"
-                     viewBox="0 0 24 24"
-                     xmlns="http://www.w3.org/2000/svg">
-                     <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M6 18L18 6M6 6l12 12"></path>
-                  </svg>
+                  <div className="h-6 w-6">
+                     <CloseIcon />
+                  </div>
                </button>
             </div>
          </div>

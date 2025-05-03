@@ -34,11 +34,11 @@ const ProjectGridCard: React.FC<{
          onMouseLeave={handleMouseLeave}
          onClick={() => handleClick && handleClick(name)}
          className={clsx(
-            'hover-delay overflow-hidden rounded-lg border border-bb-gray-300 shadow-dark-card md:cursor-pointer',
+            'overflow-hidden',
             {
-               'bg-bb-gray md:hover:border-white': inverted
+               'card-elevated-force-dark card-clickable-force-dark': inverted
             },
-            { 'hover:border-bb-teal md:hover:bg-bb-gray-800': !inverted }
+            { 'card-clickable': !inverted },
          )}>
          {featuredImage &&
             featuredImage.name &&
@@ -74,7 +74,7 @@ const ProjectGridCard: React.FC<{
                </div>
             )}
             {description && (
-               <p className="mb-4 text-sm text-bb-gray-300">
+               <p className="mb-4 text-sm">
                   {truncatedDescription}
                </p>
             )}

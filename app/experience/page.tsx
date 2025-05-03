@@ -20,7 +20,7 @@ const Experience = () => {
                   href="https://res.cloudinary.com/ddfrx5278/image/upload/v1739151148/Ben_Brooks_Resume_vqqprw.pdf"
                   target="_blank"
                   title="Download Resume"
-                  className="hover-delay flex w-max items-center gap-2 text-bb-teal lg:hover:text-bb-yellow">
+                  className="flex w-max items-center gap-2 link">
                   <div className="h-5 w-5">
                      <ResumeIcon />
                   </div>

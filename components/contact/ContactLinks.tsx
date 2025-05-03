@@ -24,7 +24,7 @@ const ContactLinks = ({
                title="LinkedIn"
                rel="noreferrer"
                className={clsx(
-                  'hover-delay text-bb-teal lg:hover:text-bb-yellow',
+                  'link',
                   vertical && 'flex items-center gap-2'
                )}>
                <div className="h-5 w-5">
@@ -40,7 +40,7 @@ const ContactLinks = ({
                title="GitHub"
                rel="noreferrer"
                className={clsx(
-                  'hover-delay text-bb-teal lg:hover:text-bb-yellow',
+                  'link',
                   vertical && 'flex items-center gap-2'
                )}>
                <div className="h-5 w-5">
@@ -55,7 +55,7 @@ const ContactLinks = ({
                target="_blank"
                title="Download Resume"
                className={clsx(
-                  'hover-delay text-bb-teal lg:hover:text-bb-yellow',
+                  'link',
                   vertical && 'flex items-center gap-2'
                )}>
                <div className="h-5 w-5">

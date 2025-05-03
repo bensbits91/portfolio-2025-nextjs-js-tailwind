@@ -1,7 +1,6 @@
 import {
    Toolbar,
    Button,
-   //    Separator,
    ToggleGroup,
    ToggleItem
 } from '@radix-ui/react-toolbar';
@@ -25,18 +24,20 @@ export default function SkillsViewToolbar({
    return (
       <Toolbar
          orientation="horizontal"
-         className="flex w-full min-w-max items-center gap-4 rounded-md bg-bb-gray-800 px-2 py-3 shadow-[-1px_4px_8px_0] shadow-black/70 sm:gap-8 sm:px-8">
+         className="bg-elevation-2 flex w-full min-w-max items-center gap-4 rounded-md px-2 py-3 shadow-[-1px_4px_8px_0] sm:gap-8 sm:px-8">
          <div className="hidden sm:block">View</div>
          <ToggleGroup
             type="single"
             defaultValue={'table'}
-            className="mx-auto flex items-center gap-4 sm:mx-0 md:gap-8">
+            className="flex items-center gap-4 mx-2 md:gap-8">
             <ToggleItem asChild value="grid" aria-label="Grid view">
                <Button
                   onClick={() => handleViewClick('grid')}
                   className={clsx(
-                     'flex cursor-pointer items-center gap-2 rounded-md hover:text-bb-yellow',
-                     selectedView === 'grid' ? 'text-bb-yellow' : 'text-bb-teal'
+                     'flex items-center gap-2 rounded-md',
+                     selectedView === 'grid'
+                        ? 'link-active'
+                        : 'link'
                   )}
                   title="Grid view">
                   <div className="h-4 w-4">
@@ -49,10 +50,10 @@ export default function SkillsViewToolbar({
                <Button
                   onClick={() => handleViewClick('table')}
                   className={clsx(
-                     'flex cursor-pointer items-center gap-2 rounded-md hover:text-bb-yellow',
+                     'flex items-center gap-2 rounded-md',
                      selectedView === 'table'
-                        ? 'text-bb-yellow'
-                        : 'text-bb-teal'
+                        ? 'link-active'
+                        : 'link'
                   )}
                   title="Table view">
                   <div className="h-4 w-4">
@@ -65,10 +66,10 @@ export default function SkillsViewToolbar({
                <Button
                   onClick={() => handleViewClick('growth')}
                   className={clsx(
-                     'flex cursor-pointer items-center gap-2 rounded-md hover:text-bb-yellow',
+                     'flex items-center gap-2 rounded-md',
                      selectedView === 'growth'
-                        ? 'text-bb-yellow'
-                        : 'text-bb-teal'
+                        ? 'link-active'
+                        : 'link'
                   )}
                   title="Growth by year view">
                   <div className="h-4 w-4">
@@ -81,10 +82,10 @@ export default function SkillsViewToolbar({
                <Button
                   onClick={() => handleViewClick('stack')}
                   className={clsx(
-                     'flex cursor-pointer items-center gap-2 rounded-md hover:text-bb-yellow',
+                     'flex items-center gap-2 rounded-md',
                      selectedView === 'stack'
-                        ? 'text-bb-yellow'
-                        : 'text-bb-teal'
+                        ? 'link-active'
+                        : 'link'
                   )}
                   title="Stack coverage view">
                   <div className="h-4 w-4">
@@ -94,7 +95,6 @@ export default function SkillsViewToolbar({
                </Button>
             </ToggleItem>
          </ToggleGroup>
-         {/* <Separator className="mx-8 h-6 w-px bg-bb-gray-200" /> */}
       </Toolbar>
    );
 }

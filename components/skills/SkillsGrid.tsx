@@ -23,7 +23,7 @@ export default function SkillsGrid({
             return (
                <div
                   key={index}
-                  className="flex items-center justify-start gap-4 rounded-lg border p-4 shadow-md hover:border-bb-teal hover:bg-bb-gray-800 md:cursor-pointer md:justify-center"
+                  className="card-elevated card-clickable p-4 flex items-center justify-start gap-4 md:justify-center"
                   onClick={() => handleItemClick(name)}>
                   {cloudinary && (
                      <div className="relative h-12 w-12">

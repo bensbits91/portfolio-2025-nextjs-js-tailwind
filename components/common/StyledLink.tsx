@@ -33,7 +33,7 @@ export default function StyledLink({
    return (
       <Link
          href={href}
-         className="hover-delay hover-brightness text-bb-teal"
+         className="link"
          target={newTab ? '_blank' : '_self'}>
          <div className="flex items-center gap-1">
             {icon && (

@@ -1,4 +1,4 @@
-import { CloudinaryImage } from '@/components/image';
+import { StarIcon, StarHalfIcon } from '@/components/icons';
 interface RatingProps {
    rating: number;
 }
@@ -10,26 +10,15 @@ export default function Rating({ rating }: RatingProps) {
    for (let i = 0; i < fullStars; i++) {
       stars.push(
          <div key={`full-${i}`} className="h-3 w-3">
-            <CloudinaryImage
-               cloudinaryId="star-white_ehbqmh"
-               alt="Star"
-               width={16}
-               height={16}
-            />
+            <StarIcon />
          </div>
       );
    }
 
    if (halfStar) {
-      // todo: better half-star implementation
       stars.push(
-         <div key="half" className="ml-[-4px] h-3 w-3">
-            <CloudinaryImage
-               cloudinaryId="star-white-half_bfoszw"
-               alt="Half star"
-               width={16}
-               height={16}
-            />
+         <div key="half" className="h-3 w-3">
+            <StarHalfIcon />
          </div>
       );
    }

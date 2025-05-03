@@ -142,7 +142,7 @@ export default function ProjectsTable({
             {table.getRowModel().rows.map(row => (
                <tr
                   key={row.id}
-                  className="border-y-solid cursor-pointer border-b-0 border-t border-transparent odd:bg-bb-gray-900 hover:border-b hover:border-y-yellow-200"
+                  className="table-row"
                   onClick={() => {
                      handleItemClick(row.original.name);
                   }}>

@@ -15,9 +15,10 @@ const NavBar = ({
 }: NavBarProps) => (
    <div
       className={clsx(
+         'bg-bg',
          top
-            ? 'fixed left-0 right-0 top-0 z-10 hidden border-b-2 border-b-gray-800 bg-background md:block'
-            : 'border-t-2 border-t-gray-800 py-10'
+            ? 'light:border-b-gray-300 fixed left-0 right-0 top-0 z-10 hidden border-b-2 border-b-gray-800 md:block'
+            : 'light:border-t-gray-300 border-t-2 border-t-gray-800 py-10'
       )}>
       <nav
          className={clsx(
@@ -28,7 +29,7 @@ const NavBar = ({
          )}>
          <ContactLinks vertical={vertical} showText={showText} />
          <NavLinks vertical={vertical} />
-      </nav>
+         </nav>
    </div>
 );
 
