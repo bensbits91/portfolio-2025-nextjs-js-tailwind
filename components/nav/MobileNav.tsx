@@ -30,11 +30,8 @@ const MobileNav = () => {
       </li>
    );
 
-   // todo: add #A0AFBE to var (or replace with existing var)
-   // todo: move svgs to public folder?
-
    return (
-      <nav className="light:border-b-gray-300 bg-bg fixed left-0 right-0 top-0 z-40 border-b-2 border-b-gray-800 p-4 text-[#A0AFBE] lg:hidden">
+      <nav className="light:border-b-gray-300 bg-bg fixed left-0 right-0 top-0 z-40 border-b-2 border-b-gray-800 p-4 lg:hidden">
          <div className="container z-50 mx-auto flex items-center justify-between">
             <div className="text-lg font-bold">
                <ContactLinks />
@@ -55,7 +52,7 @@ const MobileNav = () => {
             />
          )}
          <div
-            className={`fixed right-0 top-[60px] z-40 h-[calc(100vh-60px)] w-[300px] bg-bb-gray text-2xl ${
+            className={`fixed right-0 top-[60px] z-40 h-[calc(100vh-60px)] w-[300px] bg-bg text-2xl ${
                isOpen
                   ? 'translate-x-0'
                   : 'translate-x-[100vh] md:translate-x-[130vh]'
