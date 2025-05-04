@@ -80,6 +80,7 @@ export default function ProjectModal({
                      {tech && tech.length > 0 && (
                         <IconBar
                            pop
+                           size={18}
                            icons={skillIcons(tech).filter(
                               (
                                  icon
@@ -92,9 +93,11 @@ export default function ProjectModal({
                         />
                      )}
                      {year && (
-                        <Text top="no" bottom="no">
-                           {year}
-                        </Text>
+                        <div className="hidden sm:block">
+                           <Text top="no" bottom="no">
+                              {year}
+                           </Text>
+                        </div>
                      )}
                   </div>
                   {hasToolbar && (
