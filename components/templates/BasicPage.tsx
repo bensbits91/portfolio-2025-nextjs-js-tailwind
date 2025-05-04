@@ -70,7 +70,7 @@ const BasicPage = ({ content }: BasicPageProps) => {
 
       return (
          <div>
-            <Heading level={3} appearance={4} color="yellow">
+            <Heading level={3} appearance={4} color="tertiary">
                {item.heading}
             </Heading>
             <Text>{item.subheading}</Text>
@@ -155,7 +155,7 @@ const BasicPage = ({ content }: BasicPageProps) => {
                                        <Heading
                                           level={2}
                                           appearance={2}
-                                          color="jade">
+                                          color="secondary">
                                           {heading}
                                        </Heading>
                                        <div className="mb-8">
@@ -200,7 +200,7 @@ const BasicPage = ({ content }: BasicPageProps) => {
 
                return (
                   <Section key={index}>
-                     <Heading level={2} appearance={2} color="jade" bottom="md">
+                     <Heading level={2} appearance={2} color="secondary" bottom="md">
                         {heading}
                      </Heading>
 
@@ -217,7 +217,7 @@ const BasicPage = ({ content }: BasicPageProps) => {
                                  <Heading
                                     level={3}
                                     appearance={4}
-                                    color="yellow">
+                                    color="tertiary">
                                     {heading}
                                  </Heading>
                                  {content &&

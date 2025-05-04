@@ -2,7 +2,7 @@ import clsx from 'clsx';
 
 interface TextProps {
    children: React.ReactNode;
-   color?: 'white' | 'jade' | 'gray' | 'red' | 'teal' | 'blue' | 'yellow';
+   color?: 'white' | 'jade' | 'gray' | 'teal' | 'yellow';
    top?: 'no' | 'sm' | 'md' | 'lg' | 'xl';
    bottom?: 'no' | 'sm' | 'md' | 'lg' | 'xl';
    size?: 'sm' | 'md' | 'lg' | 'xl';

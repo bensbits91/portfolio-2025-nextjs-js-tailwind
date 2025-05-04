@@ -6,7 +6,7 @@ interface HeadingProps {
    children: React.ReactNode;
    level?: 1 | 2 | 3 | 4 | 5 | 6;
    appearance?: 1 | 2 | 3 | 4 | 5 | 6;
-   color?: 'white' | 'black' | 'gray' | 'blue' | 'red' | 'jade' | 'yellow';
+   color?: 'white' | 'gray' | 'jade' | 'yellow' | 'secondary' | 'tertiary' | 'dark';
    weight?: 'normal' | 'bold' | 'light';
    top?: 'sm' | 'md' | 'lg' | 'no';
    bottom?: 'sm' | 'md' | 'lg' | 'no';
@@ -34,7 +34,7 @@ const Heading = ({
             { 'mb-2': bottom === 'sm' },
             { 'mb-4': bottom === 'md' },
             { 'mb-8': bottom === 'lg' },
-            `text-bb-${color}`,
+            `${color}-text`,
             `font-${weight}`,
             {
                'font-roboto-mono text-4xl/[50px] tracking-tight md:text-6xl/[50px]':

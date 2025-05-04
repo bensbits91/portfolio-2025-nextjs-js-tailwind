@@ -19,7 +19,7 @@ const PrimaryCta = ({
          }`}>
          <div className="flex flex-col items-start justify-around md:flex-row">
             <div>
-               <Heading level={2} appearance={2} color="gray" bottom="md">
+               <Heading level={2} appearance={2} color="dark" bottom="md">
                   Frontend + Fullstack
                </Heading>
 

@@ -80,13 +80,13 @@ const About = () => {
             <Text>{expertise.join(' | ')}</Text>
          </Section>
          <Section bottom="lg" width="sm">
-            <Heading level={2} appearance={2} color="jade" bottom="md">
+            <Heading level={2} appearance={2} color="secondary" bottom="md">
                Education
             </Heading>
             <Education education={education} />
          </Section>
          <Section bottom="lg" width="sm">
-            <Heading level={2} appearance={2} color="jade" bottom="md">
+            <Heading level={2} appearance={2} color="secondary" bottom="md">
                Certifications & Training
             </Heading>
             <Certifications certifications={certifications} />
