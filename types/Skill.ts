@@ -4,6 +4,7 @@ import { BaseJob as Job } from './Job';
 export interface BaseSkill {
    type: string;
    name: string;
+   iconName?: string;
    cloudinary?: string;
    years?: number;
    rating?: number;
@@ -17,7 +18,6 @@ export interface ModalSkill extends BaseSkill {
 export interface DefinitionSkill extends BaseSkill {
    stackArea?: string;
    stackCategory?: string;
-   icon?: string;
    cloudinaryDark?: string;
    yearLearned?: number;
    haveUsedProfessionally: boolean;

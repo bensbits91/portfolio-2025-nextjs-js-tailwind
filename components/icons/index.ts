@@ -1,3 +1,5 @@
+export { default as Icon } from './Icon';
+
 export { default as CloseIcon } from './CloseIcon';
 export { default as HamburgerIcon } from './HamburgerIcon';
 export { default as ChevronIcon } from './ChevronIcon';
@@ -7,6 +9,20 @@ export { default as PlayIcon } from './PlayIcon';
 
 export { default as MoonIcon } from './MoonIcon';
 export { default as SunIcon } from './SunIcon';
+
+export { default as AwsIcon } from './AwsIcon';
+export { default as CssIcon } from './CssIcon';
+export { default as CypressIcon } from './CypressIcon';
+export { default as BeakerIcon } from './BeakerIcon';
+export { default as ExperimentIcon } from './ExperimentIcon';
+export { default as ExpressIcon } from './ExpressIcon';
+export { default as FastifyIcon } from './FastifyIcon';
+export { default as LaunchDarklyIcon } from './LaunchDarklyIcon';
+export { default as NextJsIcon } from './NextJsIcon';
+export { default as ResponsiveDesignIcon } from './ResponsiveDesignIcon';
+export { default as RestApiIcon } from './RestApiIcon';
+export { default as StyledComponentsIcon } from './StyledComponentsIcon';
+export { default as WordpressIcon } from './WordpressIcon';
 
 export { default as GithubIcon } from './GithubIcon';
 export { default as LinkedInIcon } from './LinkedInIcon';

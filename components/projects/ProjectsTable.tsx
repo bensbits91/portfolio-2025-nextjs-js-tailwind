@@ -80,8 +80,13 @@ export default function ProjectsTable({
                      size={16}
                      wrap
                      icons={skillIcons(info.getValue() as string[]).filter(
-                        (icon): icon is { src: string; altText: string } =>
-                           icon.src !== undefined
+                        (
+                           icon
+                        ): icon is {
+                           src: string;
+                           altText: string;
+                           iconName: string;
+                        } => icon.src !== undefined
                      )}
                   />
                </div>

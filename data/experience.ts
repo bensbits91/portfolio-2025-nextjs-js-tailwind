@@ -76,7 +76,7 @@ export const experience = [
                'Cypress',
                'RESTful APIs',
                'A/B Testing',
-               'Multivariate Experimentation',
+               'Experimentation',
                'LaunchDarkly',
                'PostgreSQL',
                'MongoDB',
@@ -115,7 +115,7 @@ export const experience = [
                'SEO',
                'Performance Optimization',
                'A/B Testing',
-               'Multivariate Experimentation',
+               'Experimentation',
                'LaunchDarkly'
             ]
          },
@@ -183,7 +183,7 @@ export const experience = [
             ],
             skillNames: [
                'A/B Testing',
-               'Multivariate Experimentation',
+               'Experimentation',
                'LaunchDarkly',
                'JavaScript',
                'React.js',
@@ -301,6 +301,7 @@ export const experience = [
                'Styled Components',
                'Tailwind',
                'CSS',
+               'Express',
                'Responsive Design',
                'RESTful APIs',
                'GraphQL',

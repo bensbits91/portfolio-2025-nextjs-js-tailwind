@@ -9,7 +9,7 @@ import {
 import Link from 'next/link';
 import { Heading, Text, List } from '@/components/typography';
 import { Rating } from '@/components/common';
-import { CloseIcon } from '@/components/icons';
+import { CloseIcon, Icon } from '@/components/icons';
 import { CloudinaryImage } from '@/components/image';
 import { ModalSkill } from '@/types/Skill';
 
@@ -28,6 +28,7 @@ export default function SkillModal({
    const {
       name,
       cloudinary,
+      iconName,
       years,
       rating,
       getJobsWithSkill,
@@ -62,12 +63,16 @@ export default function SkillModal({
                </Close>
                <div className="flex items-center gap-6 px-4 md:gap-12 md:p-4">
                   <div className="relative h-24 w-24 md:h-32 md:w-32">
-                     <CloudinaryImage
-                        cloudinaryId={cloudinary as string}
-                        alt={name}
-                        width={208}
-                        height={208}
-                     />
+                     {iconName ? (
+                        <Icon name={iconName} />
+                     ) : (
+                        <CloudinaryImage
+                           cloudinaryId={cloudinary as string}
+                           alt={name}
+                           width={208}
+                           height={208}
+                        />
+                     )}
                   </div>
                   <div className="flex flex-col gap-2">
                      <Title className={titleSize}>{name}</Title>
@@ -101,9 +106,7 @@ export default function SkillModal({
                               )}
                            />
                            <div>
-                              <Link
-                                 className="link"
-                                 href="/experience">
+                              <Link className="link" href="/experience">
                                  View all experience
                               </Link>
                            </div>
@@ -121,9 +124,7 @@ export default function SkillModal({
                               )}
                            />
                            <div>
-                              <Link
-                                 className="link"
-                                 href="/projects">
+                              <Link className="link" href="/projects">
                                  View all projects
                               </Link>
                            </div>
@@ -139,9 +140,7 @@ export default function SkillModal({
                               items={appProjects.map(project => project.name)}
                            />
                            <div>
-                              <Link
-                                 className="link"
-                                 href="/projects">
+                              <Link className="link" href="/projects">
                                  View all projects
                               </Link>
                            </div>

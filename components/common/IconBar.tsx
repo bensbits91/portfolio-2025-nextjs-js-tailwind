@@ -7,6 +7,7 @@ interface IconBarProps {
       src: string;
       altText: string;
       link?: string;
+      iconName?: string;
    }[];
    centered?: boolean;
    size?: number;
@@ -35,6 +36,7 @@ const IconBar = ({
                <Icon
                   key={index}
                   src={icon.src}
+                  iconName={icon.iconName}
                   altText={icon.altText}
                   size={size}
                />

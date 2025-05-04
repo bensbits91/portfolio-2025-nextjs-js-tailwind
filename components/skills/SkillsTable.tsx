@@ -8,6 +8,7 @@ import {
    CellContext
 } from '@tanstack/react-table';
 import { CloudinaryImage } from '@/components/image';
+import { Icon } from '@/components/icons';
 import SkillsTableHeader from './SkillsTableHeader';
 import SkillsTableCell from './SkillsTableCell';
 import { Rating } from '@/components/common';
@@ -33,16 +34,20 @@ export default function SkillsTable({
          header: 'Name',
          enableColumnFilter: false,
          cell: (info: CellContext<BaseSkill, unknown>) => {
-            const imageUrl = info.row.original.cloudinary as string;
+            const iconName = info.row.original.iconName;
             return (
                <div className="mr-2 flex items-center gap-2">
                   <div className="mr-2 flex h-4 w-4">
-                     <CloudinaryImage
-                        cloudinaryId={imageUrl}
-                        alt={info.row.original.name}
-                        width={32}
-                        height={32}
-                     />
+                     {iconName ? (
+                        <Icon name={iconName} />
+                     ) : (
+                        <CloudinaryImage
+                           cloudinaryId={info.row.original.cloudinary as string}
+                           alt={info.row.original.name}
+                           width={32}
+                           height={32}
+                        />
+                     )}
                   </div>
                   <div>{info.getValue() as string}</div>
                </div>

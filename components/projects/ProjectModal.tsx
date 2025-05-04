@@ -83,8 +83,11 @@ export default function ProjectModal({
                            icons={skillIcons(tech).filter(
                               (
                                  icon
-                              ): icon is { src: string; altText: string } =>
-                                 icon.src !== undefined
+                              ): icon is {
+                                 src: string;
+                                 altText: string;
+                                 iconName: string;
+                              } => icon.src !== undefined
                            )}
                         />
                      )}
@@ -106,7 +109,7 @@ export default function ProjectModal({
             </div>
             <div
                className={clsx(
-                  'relative mx-2 mt-8 overflow-hidden overflow-y-auto rounded-md asdf-well px-2',
+                  'asdf-well relative mx-2 mt-8 overflow-hidden overflow-y-auto rounded-md px-2',
                   'md:px-8 md:pt-8',
                   scrollableHeight
                )}>

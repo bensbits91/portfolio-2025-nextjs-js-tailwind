@@ -34,8 +34,13 @@ const Home = () => {
                   wrap
                   pop
                   icons={skillIcons(homeSkills).filter(
-                     (icon): icon is { src: string; altText: string } =>
-                        icon.src !== undefined
+                     (
+                        icon
+                     ): icon is {
+                        src: string;
+                        altText: string;
+                        iconName: string;
+                     } => icon.src !== undefined
                   )}
                />
                <Button link="/skills">
