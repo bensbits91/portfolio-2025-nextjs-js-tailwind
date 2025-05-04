@@ -221,7 +221,7 @@ export const projects = [
          'SEO',
          'Performance Optimization',
          'A/B Testing',
-         'Multivariate Experimentation',
+         'Experimentation',
          'LaunchDarkly'
       ],
       description:
@@ -244,7 +244,7 @@ export const projects = [
          'Node.js',
          'RESTful APIs',
          'A/B Testing',
-         'Multivariate Experimentation',
+         'Experimentation',
          'LaunchDarkly'
       ],
       description:
@@ -267,7 +267,7 @@ export const projects = [
          'Node.js',
          'RESTful APIs',
          'A/B Testing',
-         'Multivariate Experimentation',
+         'Experimentation',
          'LaunchDarkly'
       ],
       description:
@@ -290,7 +290,7 @@ export const projects = [
          'Node.js',
          'RESTful APIs',
          'A/B Testing',
-         'Multivariate Experimentation',
+         'Experimentation',
          'LaunchDarkly'
       ],
       description:

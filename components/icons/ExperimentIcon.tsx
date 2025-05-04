@@ -1,0 +1,68 @@
+export default function ExperimentIcon() {
+   return (
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+         <g>
+            <polygon
+               fill="none"
+               stroke="currentColor"
+               strokeLinecap="round"
+               strokeLinejoin="round"
+               strokeMiterlimit="10"
+               points="11.5,9.5 17.5,15.5 13.5,23.5 4.5,23.5 0.5,15.5 6.5,9.5 6.5,4.5 4.5,0.5 13.5,0.5 11.5,4.5"
+            />
+            <polyline
+               fill="none"
+               stroke="currentColor"
+               strokeLinecap="round"
+               strokeLinejoin="round"
+               strokeMiterlimit="10"
+               points="16.5,11.5 16.5,7.5 15.5,3.5 23.5,3.5 22.5,7.5 22.5,21 19.5,23.5 16.5,21"
+            />
+            <line
+               fill="none"
+               stroke="currentColor"
+               strokeLinecap="round"
+               strokeLinejoin="round"
+               strokeMiterlimit="10"
+               x1="5.5"
+               y1="18.5"
+               x2="12.5"
+               y2="18.5"
+            />
+            <line
+               fill="none"
+               stroke="currentColor"
+               strokeLinecap="round"
+               strokeLinejoin="round"
+               strokeMiterlimit="10"
+               x1="19.5"
+               y1="18.5"
+               x2="22.5"
+               y2="18.5"
+            />
+            <line
+               fill="none"
+               stroke="currentColor"
+               strokeLinecap="round"
+               strokeLinejoin="round"
+               strokeMiterlimit="10"
+               x1="19.5"
+               y1="15.5"
+               x2="22.5"
+               y2="15.5"
+            />
+            <line
+               fill="none"
+               stroke="currentColor"
+               strokeLinecap="round"
+               strokeLinejoin="round"
+               strokeMiterlimit="10"
+               x1="19.5"
+               y1="12.5"
+               x2="22.5"
+               y2="12.5"
+            />
+         </g>
+      </svg>
+   );
+}

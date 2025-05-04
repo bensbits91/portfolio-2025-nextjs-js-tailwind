@@ -1,6 +1,7 @@
 import { Popover, Trigger, Content, Arrow } from '@radix-ui/react-popover';
 import { Rating } from '@/components/common';
 import { CloudinaryImage } from '@/components/image';
+import { Icon } from '@/components/icons';
 import { BaseSkill } from '@/types/Skill';
 import { skillsForTable } from '@/data/skills';
 
@@ -16,34 +17,36 @@ export default function SkillPopper({
    ) as BaseSkill;
 
    if (!skillToShow) return null;
-   const { cloudinary, name, rating, years } = skillToShow;
+   const { cloudinary, iconName, name, rating, years } = skillToShow;
    if (!cloudinary) return null;
 
    return (
       <Popover>
          <Trigger className="cursor-pointer">
-            {cloudinary && (
-               <div className={`relative h-[${size}px] w-[${size}px]`}>
+            <div className="relative" style={{ width: size, height: size }}>
+               {iconName && <Icon name={iconName} />}
+               {!iconName && cloudinary && (
                   <CloudinaryImage
                      cloudinaryId={cloudinary}
                      alt={name}
                      width={size}
                      height={size}
                   />
-               </div>
-            )}
+               )}
+            </div>
          </Trigger>
-         <Content className="z-50 flex items-center justify-center gap-4 rounded-lg border border-bb-teal bg-elevation-1 p-4">
-            {cloudinary && (
-               <div className="relative h-12 w-12">
+         <Content className="bg-elevation-1 z-50 flex items-center justify-center gap-4 rounded-lg border border-bb-teal p-4">
+            <div className="relative h-12 w-12">
+               {iconName && <Icon name={iconName} />}
+               {!iconName && cloudinary && (
                   <CloudinaryImage
                      cloudinaryId={cloudinary}
                      alt={name}
                      width={48}
                      height={48}
                   />
-               </div>
-            )}
+               )}
+            </div>
             <div>
                <div>{name}</div>
                {rating && (

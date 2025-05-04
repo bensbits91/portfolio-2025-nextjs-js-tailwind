@@ -38,7 +38,7 @@ const ProjectGridCard: React.FC<{
             {
                'card-elevated-force-dark card-clickable-force-dark': inverted
             },
-            { 'card-clickable': !inverted },
+            { 'card-clickable': !inverted }
          )}>
          {featuredImage &&
             featuredImage.name &&
@@ -67,16 +67,19 @@ const ProjectGridCard: React.FC<{
                   <IconBar
                      size={16}
                      icons={skillIcons(tech).filter(
-                        (icon): icon is { src: string; altText: string } =>
-                           icon.src !== undefined
+                        (
+                           icon
+                        ): icon is {
+                           src: string;
+                           altText: string;
+                           iconName: string;
+                        } => icon.src !== undefined
                      )}
                   />
                </div>
             )}
             {description && (
-               <p className="mb-4 text-sm">
-                  {truncatedDescription}
-               </p>
+               <p className="mb-4 text-sm">{truncatedDescription}</p>
             )}
          </div>
       </div>

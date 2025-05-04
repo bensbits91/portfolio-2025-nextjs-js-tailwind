@@ -2,6 +2,7 @@ import { CloudinaryImage } from '@/components/image';
 import { Rating } from '@/components/common';
 import { BaseSkill } from '@/types/Skill';
 import { truncateString } from '@/utils/string';
+import { Icon } from '@/components/icons';
 
 interface SkillsGridProps {
    skills: BaseSkill[];
@@ -17,24 +18,25 @@ export default function SkillsGrid({
    return (
       <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
          {skills.map((skill, index) => {
-            const { cloudinary, name, rating, years } = skill;
+            const { cloudinary, iconName, name, rating, years } = skill;
             const { newString: truncatedName } = truncateString(name, 14);
 
             return (
                <div
                   key={index}
-                  className="card-elevated card-clickable p-4 flex items-center justify-start gap-4 md:justify-center"
+                  className="card-elevated card-clickable flex items-center justify-start gap-4 p-4 md:justify-center"
                   onClick={() => handleItemClick(name)}>
-                  {cloudinary && (
-                     <div className="relative h-12 w-12">
+                  <div className="h-12 w-12">
+                     {iconName && <Icon name={iconName} />}
+                     {!iconName && cloudinary && (
                         <CloudinaryImage
                            cloudinaryId={cloudinary}
                            alt={name}
                            width={48}
                            height={48}
                         />
-                     </div>
-                  )}
+                     )}
+                  </div>
                   <div>
                      <div className="hidden md:block">{truncatedName}</div>
                      <div className="block md:hidden">{name}</div>

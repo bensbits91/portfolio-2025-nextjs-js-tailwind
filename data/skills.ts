@@ -5,11 +5,10 @@ import { DefinitionSkill } from '@/types/Skill';
 
 export const skills: DefinitionSkill[] = [
    {
+      name: 'JavaScript',
       type: 'Language',
       stackArea: 'General',
       stackCategory: 'Language',
-      name: 'JavaScript',
-      icon: '/js.svg',
       cloudinary: 'js_au9kmj',
       cloudinaryDark: 'javascript-dark-icon_diwklq',
       yearLearned: 2013,
@@ -22,11 +21,10 @@ export const skills: DefinitionSkill[] = [
       featureInCTAs: true
    },
    {
+      name: 'React.js',
       type: 'Frontend Library',
       stackArea: 'Frontend',
       stackCategory: 'Library',
-      name: 'React.js',
-      icon: '/react.svg',
       cloudinary: 'react_g4rwdx',
       cloudinaryDark: 'react-dark-icon_dibccl',
       yearLearned: 2015,
@@ -39,11 +37,11 @@ export const skills: DefinitionSkill[] = [
       featureInCTAs: true
    },
    {
+      name: 'Next.js',
       type: 'Frontend Framework',
       stackArea: 'Frontend',
       stackCategory: 'Framework',
-      name: 'Next.js',
-      icon: '/next.svg',
+      iconName: 'NextJsIcon',
       cloudinary: 'nextjs_jxdbqq',
       cloudinaryDark: 'next-dark-icon_qfvtkk',
       yearLearned: 2019,
@@ -56,11 +54,10 @@ export const skills: DefinitionSkill[] = [
       featureInCTAs: true
    },
    {
+      name: 'Vue.js',
       type: 'Frontend Framework',
       stackArea: 'Frontend',
       stackCategory: 'Framework',
-      name: 'Vue.js',
-      icon: '/vue.svg',
       cloudinary: 'vue_thuhnk',
       cloudinaryDark: 'vue-dark-icon_xghpvp',
       yearLearned: 2021,
@@ -73,11 +70,10 @@ export const skills: DefinitionSkill[] = [
       featureInCTAs: true
    },
    {
+      name: 'Node.js',
       type: 'Backend Development',
       stackArea: 'Backend',
       stackCategory: 'Language',
-      name: 'Node.js',
-      icon: '/node.svg',
       cloudinary: 'node_hl58om',
       cloudinaryDark: 'node-dark-icon_kl7oy6',
       yearLearned: 2015,
@@ -90,11 +86,10 @@ export const skills: DefinitionSkill[] = [
       featureInCTAs: true
    },
    {
+      name: 'TypeScript',
       type: 'Language',
       stackArea: 'General',
       stackCategory: 'Language',
-      name: 'TypeScript',
-      icon: '/ts1.svg',
       cloudinary: 'ts1_nbdvxm',
       cloudinaryDark: 'typescript-dark-icon_mj51g8',
       yearLearned: 2015,
@@ -107,11 +102,10 @@ export const skills: DefinitionSkill[] = [
       featureInCTAs: true
    },
    {
+      name: 'Redux',
       type: 'State Management',
       stackArea: 'Frontend',
       stackCategory: 'Library',
-      name: 'Redux',
-      icon: '/redux.svg',
       cloudinary: 'redux_vd28jd',
       yearLearned: 2019,
       years: 8,
@@ -122,11 +116,10 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'Zustand',
       type: 'State Management',
       stackArea: 'Frontend',
       stackCategory: 'Library',
-      name: 'Zustand',
-      icon: '/react.svg',
       cloudinary: 'zustand_wrx1q3',
       yearLearned: 2024,
       years: 1,
@@ -137,10 +130,10 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'D3.js',
       type: 'Visualization',
       stackArea: 'Frontend',
       stackCategory: 'Library',
-      name: 'D3.js',
       cloudinary: 'd3js_eakt6f',
       yearLearned: 2013,
       years: 8,
@@ -151,10 +144,10 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'React Simple Maps',
       type: 'Visualization',
       stackArea: 'Frontend',
       stackCategory: 'Library',
-      name: 'React Simple Maps',
       cloudinary: 'react-simple-maps_xvvujp',
       yearLearned: 2013,
       years: 8,
@@ -165,12 +158,12 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'CSS',
       type: 'Styling',
       stackArea: 'Frontend',
       stackCategory: 'Styling',
-      name: 'CSS',
-      icon: '/css3.svg',
       cloudinary: 'css3_mvgbbf',
+      iconName: 'CssIcon',
       yearLearned: 2004,
       years: 12,
       rating: 9,
@@ -180,12 +173,12 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'CSS Modules',
       type: 'Styling',
       stackArea: 'Frontend',
       stackCategory: 'Styling',
-      name: 'CSS Modules',
-      icon: '/sass.svg',
       cloudinary: 'css3_mvgbbf',
+      iconName: 'CssIcon',
       cloudinaryDark: 'css3-dark-icon_xtdb3t',
       yearLearned: 2015,
       years: 8,
@@ -197,11 +190,10 @@ export const skills: DefinitionSkill[] = [
       featureInCTAs: true
    },
    {
+      name: 'Sass/SCSS',
       type: 'Styling',
       stackArea: 'Frontend',
       stackCategory: 'Styling',
-      name: 'Sass/SCSS',
-      icon: '/sass.svg',
       cloudinary: 'sass_s3kz3x',
       cloudinaryDark: 'sass-dark-icon_h3esvt',
       yearLearned: 2015,
@@ -214,11 +206,10 @@ export const skills: DefinitionSkill[] = [
       featureInCTAs: true
    },
    {
+      name: 'Tailwind',
       type: 'Styling',
       stackArea: 'Frontend',
       stackCategory: 'Styling',
-      name: 'Tailwind',
-      icon: '/tailwind.svg',
       cloudinary: 'tailwind_k9r34s',
       cloudinaryDark: 'tailwind-dark-icon_mbvvtr',
       yearLearned: 2019,
@@ -231,11 +222,10 @@ export const skills: DefinitionSkill[] = [
       featureInCTAs: true
    },
    {
+      name: 'JSS',
       type: 'Styling',
       stackArea: 'Frontend',
       stackCategory: 'Styling',
-      name: 'JSS',
-      icon: '/jss.svg',
       cloudinary: 'jss_zewece',
       yearLearned: 2016,
       years: 8,
@@ -246,13 +236,13 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: false
    },
    {
+      name: 'Styled Components',
       type: 'Styling',
       stackArea: 'Frontend',
       stackCategory: 'Styling',
-      name: 'Styled Components',
-      icon: '/styled-components.svg',
       cloudinary: 'styled-components_fd8fvo',
       cloudinaryDark: 'styled-components-dark-icon_fs0kmr',
+      iconName: 'StyledComponentsIcon',
       yearLearned: 2016,
       years: 8,
       rating: 9,
@@ -263,11 +253,10 @@ export const skills: DefinitionSkill[] = [
       featureInCTAs: true
    },
    {
+      name: 'Panda CSS',
       type: 'Styling',
       stackArea: 'Frontend',
       stackCategory: 'Styling',
-      name: 'Panda CSS',
-      icon: '/react.svg',
       cloudinary: 'panda-css_av1hkt',
       yearLearned: 2025,
       years: 1,
@@ -278,12 +267,12 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: false
    },
    {
+      name: 'Responsive Design',
       type: 'UI/UX',
       stackArea: 'Frontend',
       stackCategory: 'UI/UX',
-      name: 'Responsive Design',
-      icon: '/rwd.svg',
       cloudinary: 'rwd_o9z8s0',
+      iconName: 'ResponsiveDesignIcon',
       yearLearned: 2007,
       years: 11,
       rating: 9,
@@ -293,12 +282,12 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'A/B Testing',
       type: 'UI/UX',
       stackArea: 'Experimentation & Optiminzation',
       stackCategory: '',
-      name: 'A/B Testing',
-      icon: '/beaker.svg',
       cloudinary: 'beaker_vqshpg',
+      iconName: 'BeakerIcon',
       yearLearned: 2010,
       years: 3,
       rating: 7,
@@ -308,12 +297,12 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'Experimentation',
       type: 'UI/UX',
       stackArea: 'Experimentation & Optiminzation',
       stackCategory: '',
-      name: 'Multivariate Experimentation',
-      icon: '/beaker1.svg',
       cloudinary: 'beakers_yellow_eehkpx',
+      iconName: 'ExperimentIcon',
       yearLearned: 2022,
       years: 3,
       rating: 7,
@@ -323,12 +312,12 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'LaunchDarkly',
       type: 'UI/UX',
       stackArea: 'Experimentation & Optiminzation',
       stackCategory: '',
-      name: 'LaunchDarkly',
-      icon: '/launchdarkly.svg',
       cloudinary: 'launchdarkly_kdznir',
+      iconName: 'LaunchDarklyIcon',
       yearLearned: 2022,
       years: 3,
       rating: 7,
@@ -338,11 +327,10 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'Webpack',
       type: 'Build Tools',
       stackArea: 'Build & Testing Tools',
       stackCategory: 'Build Tools',
-      name: 'Webpack',
-      icon: '/webpack.svg',
       cloudinary: 'webpack_ycdnkv',
       yearLearned: 2015,
       years: 7,
@@ -353,11 +341,10 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'Turbopack',
       type: 'Build Tools',
       stackArea: 'Build & Testing Tools',
       stackCategory: 'Build Tools',
-      name: 'Turbopack',
-      icon: '/turbopack.svg',
       cloudinary: 'turbopack_gvkvbu',
       yearLearned: 2024,
       years: 1,
@@ -368,11 +355,10 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'Parcel',
       type: 'Build Tools',
       stackArea: 'Build & Testing Tools',
       stackCategory: 'Build Tools',
-      name: 'Parcel',
-      icon: '/parcel.svg',
       cloudinary: 'parcel_ik2cum',
       yearLearned: 2024,
       years: 1,
@@ -383,11 +369,10 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: false
    },
    {
+      name: 'Jest',
       type: 'Testing',
       stackArea: 'Build & Testing Tools',
       stackCategory: 'Testing',
-      name: 'Jest',
-      icon: '/jest.svg',
       cloudinary: 'jest_djvbcr',
       yearLearned: 2022,
       years: 3,
@@ -398,12 +383,12 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'Cypress',
       type: 'Testing',
       stackArea: 'Build & Testing Tools',
       stackCategory: 'Testing',
-      name: 'Cypress',
-      icon: '/cypress.svg',
       cloudinary: 'cypress_ihahr3',
+      iconName: 'CypressIcon',
       yearLearned: 2021,
       years: 1,
       rating: 7,
@@ -413,11 +398,10 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'PHP',
       type: 'Backend Development',
       stackArea: 'Backend',
       stackCategory: 'Language',
-      name: 'PHP',
-      icon: '/php.svg',
       cloudinary: 'php-icon_apfbnf',
       cloudinaryDark: 'php01-dark-icon_fzefry',
       yearLearned: 2013,
@@ -430,13 +414,13 @@ export const skills: DefinitionSkill[] = [
       featureInCTAs: true
    },
    {
+      name: 'WordPress',
       type: 'Backend Development',
       stackArea: 'General',
       stackCategory: 'Content Management',
-      name: 'WordPress',
-      icon: '/wordpress.svg',
       cloudinary: 'wordpress_xkgfcd',
       cloudinaryDark: 'wordpress-dark-icon_volzbh',
+      iconName: 'WordpressIcon',
       yearLearned: 2013,
       years: 9,
       rating: 7,
@@ -447,11 +431,10 @@ export const skills: DefinitionSkill[] = [
       featureInCTAs: true
    },
    {
+      name: 'Python',
       type: 'Backend Development',
       stackArea: 'Backend',
       stackCategory: 'Language',
-      name: 'Python',
-      icon: '/python.svg',
       cloudinary: 'python_g5utim',
       cloudinaryDark: 'python-dark-icon_ogismc',
       yearLearned: 2021,
@@ -464,12 +447,12 @@ export const skills: DefinitionSkill[] = [
       featureInCTAs: true
    },
    {
+      name: 'Express',
       type: 'Backend Framework',
       stackArea: 'Backend',
       stackCategory: 'Framework',
-      name: 'Express',
-      icon: '/express.svg',
       cloudinary: 'express_bqzgin',
+      iconName: 'ExpressIcon',
       yearLearned: 2015,
       years: 9,
       rating: 8,
@@ -479,12 +462,12 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'Fastify',
       type: 'Backend Framework',
       stackArea: 'Backend',
       stackCategory: 'Framework',
-      name: 'Fastify',
-      icon: '/fastify.svg',
       cloudinary: 'fastify_zy8jul',
+      iconName: 'FastifyIcon',
       yearLearned: 2023,
       years: 2,
       rating: 8,
@@ -494,11 +477,10 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'Django',
       type: 'Backend Framework',
       stackArea: 'Backend',
       stackCategory: 'Framework',
-      name: 'Django',
-      icon: '/django.svg',
       cloudinary: 'django_yilgyq',
       yearLearned: 2020,
       years: 2,
@@ -509,11 +491,10 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'MongoDB',
       type: 'Database',
       stackArea: 'Data Storage & Databases',
       stackCategory: 'NoSQL',
-      name: 'MongoDB',
-      icon: '/mongodb.svg',
       cloudinary: 'mongodb_kv7lxz',
       yearLearned: 2020,
       years: 3,
@@ -524,11 +505,10 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'PostgreSQL',
       type: 'Database',
       stackArea: 'Data Storage & Databases',
       stackCategory: 'SQL',
-      name: 'PostgreSQL',
-      icon: '/postgresql.svg',
       cloudinary: 'postgresql_dx4o4h',
       yearLearned: 2019,
       years: 5,
@@ -539,11 +519,10 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'SQL',
       type: 'Database',
       stackArea: 'Data Storage & Databases',
       stackCategory: 'SQL',
-      name: 'SQL',
-      icon: '/sql.svg',
       cloudinary: 'sql_dxvo6o',
       yearLearned: 2007,
       years: 10,
@@ -554,12 +533,12 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'RESTful APIs',
       type: 'APIs',
       stackArea: 'Backend',
       stackCategory: 'API Design & Development',
-      name: 'RESTful APIs',
-      icon: '/rest.svg',
       cloudinary: 'rest_vt3dwy',
+      iconName: 'RestApiIcon',
       yearLearned: 2007,
       years: 12,
       rating: 9,
@@ -569,11 +548,10 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'GraphQL',
       type: 'APIs',
       stackArea: 'Backend',
       stackCategory: 'API Design & Development',
-      name: 'GraphQL',
-      icon: '/graphql.svg',
       cloudinary: 'graphql_ztconi',
       yearLearned: 2019,
       years: 5,
@@ -584,11 +562,10 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'Microservices',
       type: 'Architecture',
       stackArea: 'Architecture & Patterns',
       stackCategory: '',
-      name: 'Microservices',
-      icon: '/microservice.svg',
       cloudinary: 'microservice_xcczrj',
       yearLearned: 2022,
       years: 2,
@@ -599,11 +576,10 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'Micro-frontends',
       type: 'Architecture',
       stackArea: 'Architecture & Patterns',
       stackCategory: '',
-      name: 'Micro-frontends',
-      icon: '/micro-frontend.svg',
       cloudinary: 'micro-frontend_sx9fbr',
       yearLearned: 2022,
       years: 2,
@@ -614,11 +590,10 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'GCP',
       type: 'Cloud Platform',
       stackArea: 'DevOps & Cloud Infrastructure',
       stackCategory: 'Cloud Platforms',
-      name: 'GCP',
-      icon: '/gcp.svg',
       cloudinary: 'gcp_h0xhhn',
       yearLearned: 2021,
       years: 3,
@@ -629,11 +604,10 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'GKE',
       type: 'Cloud Platform',
       stackArea: 'DevOps & Cloud Infrastructure',
       stackCategory: 'Cloud Platforms',
-      name: 'GKE',
-      icon: '/gke.svg',
       cloudinary: 'gke_dwffq2',
       yearLearned: 2021,
       years: 3,
@@ -644,12 +618,12 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'AWS',
       type: 'Cloud Platform',
       stackArea: 'DevOps & Cloud Infrastructure',
       stackCategory: 'Cloud Platforms',
-      name: 'AWS',
-      icon: '/aws.svg',
       cloudinary: 'aws_ntzjf4',
+      iconName: 'AwsIcon',
       yearLearned: 2018,
       years: 2,
       rating: 6,
@@ -659,11 +633,10 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'Docker',
       type: 'Containerization',
       stackArea: 'DevOps & Cloud Infrastructure',
       stackCategory: 'Containerization & Orchestration',
-      name: 'Docker',
-      icon: '/docker.svg',
       cloudinary: 'docker_fx1vot',
       yearLearned: 2021,
       years: 4,
@@ -674,11 +647,10 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'Colima',
       type: 'Containerization',
       stackArea: 'DevOps & Cloud Infrastructure',
       stackCategory: 'Containerization & Orchestration',
-      name: 'Colima',
-      icon: '/colima-no-bg.png',
       cloudinary: 'colima-no-bg_t4awkl',
       yearLearned: 2023,
       years: 2,
@@ -689,11 +661,10 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: false
    },
    {
+      name: 'Kubernetes',
       type: 'Infrastructure Orchestration',
       stackArea: 'DevOps & Cloud Infrastructure',
       stackCategory: 'Containerization & Orchestration',
-      name: 'Kubernetes',
-      icon: '/kubernetes.svg',
       cloudinary: 'kubernetes_z2x5da',
       yearLearned: 2021,
       years: 3,
@@ -704,11 +675,10 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'Helm',
       type: 'Infrastructure Orchestration',
       stackArea: 'DevOps & Cloud Infrastructure',
       stackCategory: 'Containerization & Orchestration',
-      name: 'Helm',
-      icon: '/helm.svg',
       cloudinary: 'helm_nqdtj8',
       yearLearned: 2022,
       years: 3,
@@ -719,11 +689,10 @@ export const skills: DefinitionSkill[] = [
       showInSkillsTable: true
    },
    {
+      name: 'Terraform',
       type: 'Infrastructure Orchestration',
       stackArea: 'DevOps & Cloud Infrastructure',
       stackCategory: 'Infrastructure as Code',
-      name: 'Terraform',
-      icon: '/terraform.svg',
       cloudinary: 'terraform_elhgrr',
       yearLearned: 2022,
       years: 3,
@@ -786,6 +755,7 @@ export const skillIcons = (skillNames: string[] = [], dark = false) => {
          src: dark
             ? skill.cloudinaryDark || skill.cloudinary
             : skill.cloudinary,
+         iconName: dark ? null : skill.iconName || undefined,
          altText: skill.name
       }));
 };
