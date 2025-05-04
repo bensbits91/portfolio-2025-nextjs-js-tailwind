@@ -48,7 +48,7 @@ const Projects = () => {
          {selectedView === 'grid' && (
             <>
                <Section top="md" bottom="md" width="lg">
-                  <Heading level={2} appearance={2} color="jade">
+                  <Heading level={2} appearance={2} color="secondary">
                      Recent Projects
                   </Heading>
                </Section>
@@ -95,7 +95,7 @@ const Projects = () => {
                   />
                </Section>
                <Section top="lg" bottom="sm" width="lg">
-                  <Heading level={2} appearance={2} color="jade">
+                  <Heading level={2} appearance={2} color="secondary">
                      Clients (2020 &amp; Earlier)
                   </Heading>
                   <Text color="white" size="lg">
@@ -113,7 +113,7 @@ const Projects = () => {
                   />
                </Section>
                <Section top="sm" bottom="sm" width="lg">
-                  <Heading level={2} appearance={2} color="jade">
+                  <Heading level={2} appearance={2} color="secondary">
                      Apps, Widgets &amp; Components (2020 &amp; Earlier)
                   </Heading>
                   <Text color="white" size="lg">

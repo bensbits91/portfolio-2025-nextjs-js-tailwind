@@ -25,7 +25,7 @@ const Duty = ({ duty }: DutyProps) => {
       return (
          <>
             {name && (
-               <Heading level={4} appearance={5} color="jade">
+               <Heading level={4} appearance={5} color="secondary">
                   {name}
                </Heading>
             )}

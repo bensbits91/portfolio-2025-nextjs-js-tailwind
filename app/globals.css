@@ -47,6 +47,14 @@
    --bb-jade-500: #d1e8d7;
    --bb-jade-400: #e8f4eb;
 
+   --bb-jade-dark-100: #569d67;
+   --bb-jade-dark-200: #4c8c5c;
+   --bb-jade-dark-300: #437a50;
+   --bb-jade-dark-400: #396945;
+   --bb-jade-dark-500: #305739;
+   --bb-jade-dark-600: #26462e;
+   --bb-jade-dark-700: #1c3422;
+
    --bb-red: #d95468;
    --bb-pink: #e370dc;
    --bb-purple: #9033d8;
@@ -105,6 +113,16 @@ body {
 }
 .link-active {
    @apply light:text-[var(--light-link-active)] cursor-default text-[var(--link-active)];
+}
+
+.secondary-text {
+   @apply light:text-[var(--bb-jade-dark-100)] text-[var(--bb-jade)];
+}
+.tertiary-text {
+   @apply light:text-[var(--bb-yellow-dark-300)] text-[var(--bb-yellow)];
+}
+.dark-text {
+   @apply text-[var(--bb-gray)];
 }
 
 .bg-bg {

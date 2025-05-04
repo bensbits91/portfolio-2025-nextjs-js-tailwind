@@ -13,7 +13,7 @@ const Home = () => {
             <div className="flex items-start justify-between sm:justify-start sm:gap-12">
                <div>
                   <Heading>Ben Brooks</Heading>
-                  <Text color="white" size="lg">
+                  <Text size="lg">
                      {about.summary}
                   </Text>
                </div>
@@ -26,7 +26,7 @@ const Home = () => {
                   />
                </div>
             </div>
-            <Heading level={2} appearance={2} bottom="md" color="white">
+            <Heading level={2} appearance={2} bottom="md">
                Frontend + Fullstack
             </Heading>
             <div className="mb-8 max-w-[560px]">
@@ -89,7 +89,7 @@ const Home = () => {
                <Heading level={2} appearance={2} color="gray">
                   Open to Work
                </Heading>
-               <Text color="gray" size="lg">
+               <Text size="lg">
                   Looking for a rock-solid software engineer?
                </Text>
             </div>
