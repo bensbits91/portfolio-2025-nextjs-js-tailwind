@@ -52,10 +52,10 @@ export default function SkillModal({
    return (
       <Dialog open={isOpen} onOpenChange={onOpenChange}>
          <Overlay className="fixed inset-0 bg-black/70" />
-         <Content className="fixed left-2 right-2 top-20 z-20 h-[calc(100vh-100px)] overflow-hidden rounded-lg bg-bb-gray-900 p-2 md:p-4 shadow-lg md:left-12 md:right-12 md:top-20">
-            <div className="flex h-36 md:h-48 flex-col gap-2 pt-8 md:gap-4 md:p-4">
+         <Content className="bg-elevation-1 fixed left-2 right-2 top-20 z-20 h-[calc(100vh-100px)] overflow-hidden rounded-lg p-2 md:left-12 md:right-12 md:top-20 md:p-4">
+            <div className="flex h-36 flex-col gap-2 pt-8 md:h-48 md:gap-4 md:p-4">
                <Close
-                  className="fixed right-6 top-24 h-6 w-6 cursor-pointer transition duration-500 ease-in-out hover:text-[yellow] md:right-16 md:top-24"
+                  className="link fixed right-6 top-24 h-6 w-6 md:right-16 md:top-24"
                   aria-label="Close"
                   onClick={() => onOpenChange(false)}>
                   <CloseIcon />
@@ -69,23 +69,21 @@ export default function SkillModal({
                         height={208}
                      />
                   </div>
-                  <div>
+                  <div className="flex flex-col gap-2">
                      <Title className={titleSize}>{name}</Title>
                      <Description className="hidden">{name}</Description>
-                     <div className="flex flex-col sm:flex-row sm:items-center md:gap-4">
-                        {rating && (
-                           <div className="flex h-4">
-                              <Rating rating={rating} />
-                           </div>
-                        )}
-                        <Text top="no" bottom="no">
-                           {years}+ years
-                        </Text>
-                     </div>
+                     {rating && (
+                        <div className="flex h-4">
+                           <Rating rating={rating} />
+                        </div>
+                     )}
+                     <Text top="no" bottom="no">
+                        {years}+ years
+                     </Text>
                   </div>
                </div>
             </div>
-            <div className="relative h-[calc(100%-148px)] md:h-[calc(100%-196px)] overflow-y-auto rounded-md bg-[var(--bb-gray-dark-100)] p-4">
+            <div className="asdf-well relative h-[calc(100%-148px)] overflow-y-auto rounded-md p-4 md:h-[calc(100%-196px)]">
                <div className="pt-4 md:px-8 md:pb-4">
                   <Heading level={3} appearance={4}>
                      My experience with {name}
@@ -97,12 +95,15 @@ export default function SkillModal({
                               Full-Time Roles
                            </Heading>
                            <List
+                              size="sm"
                               items={jobs.map(
                                  job => job.role + ' at ' + job.company
                               )}
                            />
                            <div>
-                              <Link className="text-bb-teal" href="/experience">
+                              <Link
+                                 className="link"
+                                 href="/experience">
                                  View all experience
                               </Link>
                            </div>
@@ -114,12 +115,15 @@ export default function SkillModal({
                               Contracts
                            </Heading>
                            <List
+                              size="sm"
                               items={clientProjects.map(
                                  project => project.name
                               )}
                            />
                            <div>
-                              <Link className="text-bb-teal" href="/projects">
+                              <Link
+                                 className="link"
+                                 href="/projects">
                                  View all projects
                               </Link>
                            </div>
@@ -131,10 +135,13 @@ export default function SkillModal({
                               Apps & Components
                            </Heading>
                            <List
+                              size="sm"
                               items={appProjects.map(project => project.name)}
                            />
                            <div>
-                              <Link className="text-bb-teal" href="/projects">
+                              <Link
+                                 className="link"
+                                 href="/projects">
                                  View all projects
                               </Link>
                            </div>

@@ -16,11 +16,11 @@ const NavLink = ({ text, link, pad = false }: NavLinkProps) => {
       <li className={pad ? 'p-2' : ''}>
          <Link
             className={clsx(
-               'hover-delay text-bb-teal',
+               'hover-delay',
                pad && 'p-2',
                isActive
-                  ? 'text-bb-yellow'
-                  : 'lg:hover:text-bb-yellow'
+                  ? 'link-active'
+                  : 'link'
             )}
             href={link}>
             {text}

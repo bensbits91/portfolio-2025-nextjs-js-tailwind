@@ -52,7 +52,7 @@ const Duty = ({ duty }: DutyProps) => {
             <span>
                {description}
                {moreInfo && (
-                  <span className="px-2 text-bb-teal">
+                  <span className="px-2 link">
                      {open ? 'Show less' : 'Show more'}
                      <span className="inline-block h-6 w-6 align-middle">
                         <ChevronIcon direction={open ? 'up' : 'down'} />
@@ -62,7 +62,7 @@ const Duty = ({ duty }: DutyProps) => {
             </span>
             {moreInfoLink && (
                <Link
-                  className="inline text-sm text-bb-teal"
+                  className="inline text-sm link"
                   href={moreInfoLink.href}>
                   {moreInfoLink.text}
                </Link>
@@ -81,7 +81,7 @@ const Duty = ({ duty }: DutyProps) => {
                </Trigger>
                <Content
                   className={clsx(
-                     'rounded-md border border-bb-teal bg-bb-gray-900 p-4',
+                     'rounded-md border border-bb-teal bg-bb-gray-900 light:bg-[var(--bb-gray-10)] p-4',
                      open ? 'animate-slide-down' : 'animate-slide-up'
                   )}>
                   {moreInfo.map((info, index) => (

@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { Analytics } from '@vercel/analytics/next';
+import { ThemeProvider } from 'next-themes';
 import { Roboto, Roboto_Mono } from 'next/font/google';
 import { Nav } from '@/components/nav';
 import { Footer } from '@/components/footer';
@@ -30,7 +31,7 @@ interface RootLayoutProps {
 
 export default async function RootLayout({ children }: RootLayoutProps) {
    return (
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
          <Head>
             <link
                rel="icon"
@@ -41,11 +42,13 @@ export default async function RootLayout({ children }: RootLayoutProps) {
          </Head>
          <body
             className={`${robotoSans.variable} ${robotoMono.variable} antialiased`}>
-            <Nav />
-            <main>
-               {children}
-               <Analytics />
-            </main>
+            <ThemeProvider attribute="class">
+               <Nav />
+               <main>
+                  {children}
+                  <Analytics />
+               </main>
+            </ThemeProvider>
             <Footer />
          </body>
       </html>

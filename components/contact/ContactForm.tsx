@@ -5,8 +5,6 @@ import ContactLinks from './ContactLinks';
 import { CloudinaryImage } from '../image';
 import { noop } from '@/utils/misc';
 
-// todo: break into smaller components
-
 const ContactForm = () => {
    const initialData = {
       name: '',
@@ -195,7 +193,7 @@ const ContactForm = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="text-bb-white h-9 rounded bg-[var(--bb-gray-800)] px-3"
+                  className="h-9 rounded bg-elevation-1 px-3"
                />
             </div>
             <div className="form-group mb-4 flex flex-col gap-1">
@@ -208,7 +206,7 @@ const ContactForm = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="text-bb-white h-9 rounded bg-[var(--bb-gray-800)] px-3"
+                  className="h-9 rounded bg-elevation-1 px-3"
                />
             </div>
             <div className="form-group mb-4 flex flex-col gap-1">
@@ -220,7 +218,7 @@ const ContactForm = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="text-bb-white h-24 rounded bg-[var(--bb-gray-800)] px-3"
+                  className="h-24 rounded bg-elevation-1 px-3"
                />
             </div>
             <button

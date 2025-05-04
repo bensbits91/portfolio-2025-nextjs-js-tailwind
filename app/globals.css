@@ -56,7 +56,23 @@
    --foreground: var(--bb-gray); */
 
    --background: var(--bb-gray);
+   --bg-elevation-1: var(--bb-gray-900);
+   --bg-elevation-2: var(--bb-gray-800);
+   --bg-elevation-3: var(--bb-gray-700);
    --foreground: #a0b3c6;
+
+   --link: var(--bb-teal);
+   --link-hover: var(--bb-yellow);
+   --link-active: var(--bb-yellow);
+
+   --light-link: var(--bb-teal-dark-300);
+   --light-link-hover: var(--bb-gray);
+   --light-link-active: var(--bb-gray);
+
+   --light-bg: var(--bb-gray-0);
+   --light-bg-elevation-2: var(--bb-gray-10);
+   --light-bg-elevation-3: var(--bb-gray-25);
+   --light-fg: var(--bb-gray);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -77,10 +93,67 @@ body {
       Helvetica, sans-serif;
 }
 
+.light {
+   body {
+      color: var(--light-fg);
+      background: var(--light-bg);
+   }
+}
+
+.link {
+   @apply hover-delay light:text-[var(--light-link)] lg:hover:light:text-[var(--light-link-hover)] text-[var(--link)] lg:hover:text-[var(--link-hover)];
+}
+.link-active {
+   @apply light:text-[var(--light-link-active)] cursor-default text-[var(--link-active)];
+}
+
+.bg-bg {
+   @apply light:bg-[var(--light-bg)] bg-[var(--background)];
+}
+
+.shadow-elevation-1 {
+   @apply light:shadow-lg shadow-black/70;
+}
+.bg-elevation-1 {
+   @apply light:bg-[var(--light-bg-elevation-2)] shadow-elevation-1 bg-[var(--bg-elevation-1)];
+}
+
+.shadow-elevation-2 {
+   @apply light:shadow-md shadow-black/70;
+}
+.bg-elevation-2 {
+   @apply light:bg-[var(--light-bg-elevation-2)] shadow-elevation-2 bg-[var(--bg-elevation-2)];
+}
+.bg-elevation-3 {
+   @apply light:bg-[var(--light-bg-elevation-3)] shadow-elevation-2 bg-[var(--bg-elevation-3)];
+}
+
+.card-elevated {
+   @apply bg-bg shadow-elevation-2 light:border-bb-gray-200 rounded-lg border border-bb-gray-500;
+}
+.card-clickable {
+   @apply hover-delay card-elevated light:md:hover:bg-bb-gray-100 md:cursor-pointer md:hover:border-bb-teal md:hover:bg-bb-gray-800;
+}
+.card-elevated-force-dark {
+   @apply rounded-lg border bg-bb-gray shadow-black/70;
+}
+.card-clickable-force-dark {
+   @apply hover-delay card-elevated-force-dark text-foreground md:cursor-pointer md:hover:border-bb-teal md:hover:bg-bb-gray-800;
+}
+
+.table-row {
+   @apply light:odd:bg-[var(--bb-gray-10)] cursor-pointer border-b-0 border-t border-solid border-transparent odd:bg-bb-gray-900 hover:border-b hover:border-y-bb-teal;
+}
+
+.asdf-well {
+   @apply light:bg-[var(--bb-gray-0)] bg-[var(--bb-gray-dark-100)];
+}
+
+/* disable scroll when modal is open
 body:has(.translate-y-0),
 body:has(.translate-x-0) {
-   overflow: hidden;
-}
+   overflow: hidden; 
+} */
 
 .hover-delay {
    @apply md:transition-all md:duration-500 md:ease-in-out;
