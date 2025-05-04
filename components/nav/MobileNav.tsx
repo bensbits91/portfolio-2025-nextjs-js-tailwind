@@ -1,16 +1,24 @@
 'use client';
 import { useState } from 'react';
-import Link from 'next/link';
 import ContactLinks from '@/components/contact/ContactLinks';
 import ThemeChanger from '@/components/ThemeChanger';
 import { HamburgerIcon, CloseIcon } from '@/components/icons';
 import { navLinkDefs } from '@/data/nav';
 
-interface NavLinkProps {
-   text: string;
-   link: string;
-   isFirst?: boolean;
-}
+import {
+   Dialog,
+   Overlay,
+   Content,
+   Title,
+   Description
+   // Close
+} from '@radix-ui/react-dialog';
+import {
+   NavigationMenu,
+   List,
+   Item,
+   Link
+} from '@radix-ui/react-navigation-menu';
 
 const MobileNav = () => {
    const [isOpen, setIsOpen] = useState(false);
@@ -19,62 +27,52 @@ const MobileNav = () => {
       setIsOpen(!isOpen);
    };
 
-   const NavLink = ({ link, text, isFirst }: NavLinkProps) => (
-      <li className="my-2">
-         <Link
-            href={link}
-            onClick={toggleMenu}
-            className={`mb-6 inline-block px-9 ${isFirst ? 'mt-6' : ''}`}>
-            {text}
-         </Link>
-      </li>
-   );
-
    return (
       <nav className="light:border-b-gray-300 bg-bg fixed left-0 right-0 top-0 z-40 border-b-2 border-b-gray-800 p-4 lg:hidden">
          <div className="container z-50 mx-auto flex items-center justify-between">
             <div className="text-lg font-bold">
                <ContactLinks />
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex h-6 items-center gap-4">
                <ThemeChanger />
-               <button onClick={toggleMenu} className="focus:outline-none">
-                  <div className="link h-6 w-6">
-                     <HamburgerIcon />
-                  </div>
-               </button>
+               {isOpen ? (
+                  <button onClick={toggleMenu} className="focus:outline-none">
+                     <div className="link h-6 w-6">
+                        <CloseIcon />
+                     </div>
+                  </button>
+               ) : (
+                  <button onClick={toggleMenu} className="focus:outline-none">
+                     <div className="link h-6 w-6">
+                        <HamburgerIcon />
+                     </div>
+                  </button>
+               )}
             </div>
          </div>
-         {isOpen && (
-            <div
-               onClick={toggleMenu}
-               className="fixed inset-0 z-40 bg-black bg-opacity-50"
-            />
-         )}
-         <div
-            className={`fixed right-0 top-[60px] z-40 h-[calc(100vh-60px)] w-[300px] bg-bg text-2xl ${
-               isOpen
-                  ? 'translate-x-0'
-                  : 'translate-x-[100vh] md:translate-x-[130vh]'
-            } transform transition-transform duration-500 ease-in-out`}>
-            <div className="flex h-full items-start justify-between overflow-y-auto p-4">
-               <ul>
-                  {navLinkDefs.map(({ link, text }, index) => (
-                     <NavLink
-                        key={index}
-                        link={link}
-                        text={text}
-                        isFirst={index === 0}
-                     />
-                  ))}
-               </ul>
-               <button onClick={toggleMenu} className="p-1 focus:outline-none">
-                  <div className="h-6 w-6">
-                     <CloseIcon />
-                  </div>
-               </button>
-            </div>
-         </div>
+         <Dialog open={isOpen} /* onOpenChange={onOpenChange} */>
+            <Overlay onClick={() => toggleMenu()} className="fixed inset-0" />
+            <Content className="bg-elevation-2 fixed bottom-2 left-2 right-2 top-16 z-20 rounded-lg p-2">
+               {/* <Close /> */}
+               <Title className="hidden">Mobile Navigation Menu</Title>
+               <Description className="hidden">
+                  Mobile Navigation Menu
+               </Description>
+               <NavigationMenu aria-label="Main navigation">
+                  <List className="flex flex-col gap-2 text-2xl">
+                     {navLinkDefs.map(({ link, text }, index) => (
+                        <Item key={index}>
+                           <Link
+                              href={link}
+                              className={`mb-6 inline-block px-9 ${index === 0 ? 'mt-6' : ''}`}>
+                              {text}
+                           </Link>
+                        </Item>
+                     ))}
+                  </List>
+               </NavigationMenu>
+            </Content>
+         </Dialog>
       </nav>
    );
 };
