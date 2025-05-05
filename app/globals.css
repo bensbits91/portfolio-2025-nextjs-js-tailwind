@@ -78,8 +78,9 @@
    --light-link-active: var(--bb-gray);
 
    --light-bg: var(--bb-gray-0);
-   --light-bg-elevation-2: var(--bb-gray-10);
-   --light-bg-elevation-3: var(--bb-gray-25);
+   --light-bg-elevation-1: var(--bb-gray-10);
+   --light-bg-elevation-2: var(--bb-gray-25);
+   --light-bg-elevation-3: var(--bb-gray-50);
    --light-fg: var(--bb-gray);
 }
 
@@ -133,17 +134,27 @@ body {
    @apply light:shadow-lg shadow-black/70;
 }
 .bg-elevation-1 {
-   @apply light:bg-[var(--light-bg-elevation-2)] shadow-elevation-1 bg-[var(--bg-elevation-1)];
+   @apply light:bg-[var(--light-bg-elevation-1)] bg-[var(--bg-elevation-1)];
+}
+.elevation-1 {
+   @apply bg-elevation-1 shadow-elevation-1;
 }
 
 .shadow-elevation-2 {
    @apply light:shadow-md shadow-black/70;
 }
 .bg-elevation-2 {
-   @apply light:bg-[var(--light-bg-elevation-2)] shadow-elevation-2 bg-[var(--bg-elevation-2)];
+   @apply light:bg-[var(--light-bg-elevation-2)] bg-[var(--bg-elevation-2)];
 }
+.elevation-2 {
+   @apply bg-elevation-2 shadow-elevation-2;
+}
+
 .bg-elevation-3 {
-   @apply light:bg-[var(--light-bg-elevation-3)] shadow-elevation-2 bg-[var(--bg-elevation-3)];
+   @apply light:bg-[var(--light-bg-elevation-3)] bg-[var(--bg-elevation-3)];
+}
+.elevation-3 {
+   @apply bg-elevation-3 shadow-elevation-2;
 }
 
 .card-elevated {

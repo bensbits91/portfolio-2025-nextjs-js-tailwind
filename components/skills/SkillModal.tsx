@@ -53,7 +53,7 @@ export default function SkillModal({
    return (
       <Dialog open={isOpen} onOpenChange={onOpenChange}>
          <Overlay className="fixed inset-0 bg-black/70" />
-         <Content className="bg-elevation-1 fixed left-2 right-2 top-20 z-20 h-[calc(100vh-100px)] overflow-hidden rounded-lg p-2 md:left-12 md:right-12 md:top-20 md:p-4">
+         <Content className="elevation-1 fixed left-2 right-2 top-20 z-20 h-[calc(100vh-100px)] overflow-hidden rounded-lg p-2 md:left-12 md:right-12 md:top-20 md:p-4">
             <div className="flex h-36 flex-col gap-2 pt-8 md:h-48 md:gap-4 md:p-4">
                <Close
                   className="link fixed right-6 top-24 h-6 w-6 md:right-16 md:top-24"

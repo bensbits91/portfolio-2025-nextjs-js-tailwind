@@ -1,6 +1,6 @@
 import { CloudinaryImage } from '@/components/image';
 import { Heading } from '@/components/typography';
-import { Button } from '@/components/common';
+import { ContactPopper } from '@/components/contact';
 import { IconBar } from '@/components/common';
 import { ctaSkills, skillIcons } from '@/data/skills';
 
@@ -54,9 +54,11 @@ const PrimaryCta = ({
                </div>
 
                <div className="hidden md:block">
-                  <Button inverted link={link.href}>
-                     <div className="md:min-w-[400px]">{link.text}</div>
-                  </Button>
+                  <ContactPopper>
+                     <button className="hover-delay hover-brightness mt-12 rounded-md bg-bb-gray p-4 text-bb-teal min-w-[400px] max-w-max">
+                        {link.text}
+                     </button>
+                  </ContactPopper>
                </div>
             </div>
             <div className="mx-auto md:mx-0">
@@ -70,9 +72,11 @@ const PrimaryCta = ({
          </div>
 
          <div className="block md:hidden">
-            <Button inverted link={link.href}>
-               <div className="md:min-w-[400px]">{link.text}</div>
-            </Button>
+            <ContactPopper>
+               <button className="mt-12 rounded-md bg-bb-gray p-4 text-bb-teal w-full">
+                  {link.text}
+               </button>
+            </ContactPopper>
          </div>
       </div>
    </section>

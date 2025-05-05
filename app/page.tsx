@@ -3,6 +3,7 @@ import { IconBar } from '@/components/common';
 import { Section } from '@/components/layout';
 import { Heading, Text } from '@/components/typography';
 import Button from '@/components/common/Button';
+import { ContactPopper } from '@/components/contact';
 import { about } from '@/data/about';
 import { skillIcons, homeSkills } from '@/data/skills';
 
@@ -13,9 +14,7 @@ const Home = () => {
             <div className="flex items-start justify-between sm:justify-start sm:gap-12">
                <div>
                   <Heading>Ben Brooks</Heading>
-                  <Text size="lg">
-                     {about.summary}
-                  </Text>
+                  <Text size="lg">{about.summary}</Text>
                </div>
                <div className="w-[80px] md:w-[150px]">
                   <CloudinaryImage
@@ -93,9 +92,11 @@ const Home = () => {
                   Looking for a rock-solid software engineer?
                </Text>
             </div>
-            <Button inverted link="/contact">
-               <div className="md:min-w-[400px]">Let&apos;s connect</div>
-            </Button>
+            <ContactPopper>
+               <button className="hover-delay hover-brightness min-w-[400px] max-w-max rounded-md bg-bb-gray p-4 text-bb-teal">
+                  Let&apos;s connect
+               </button>
+            </ContactPopper>
          </Section>
       </>
    );
