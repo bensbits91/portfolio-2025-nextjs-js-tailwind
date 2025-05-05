@@ -93,7 +93,7 @@ const Home = () => {
                </Text>
             </div>
             <ContactPopper>
-               <button className="hover-delay hover-brightness min-w-[400px] max-w-max rounded-md bg-bb-gray p-4 text-bb-teal">
+               <button className="hover-delay hover-brightness min-w-full md:min-w-[400px] max-w-max rounded-md bg-bb-gray p-4 text-bb-teal">
                   Let&apos;s connect
                </button>
             </ContactPopper>
