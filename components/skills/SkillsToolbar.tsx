@@ -24,7 +24,7 @@ export default function SkillsViewToolbar({
    return (
       <Toolbar
          orientation="horizontal"
-         className="bg-elevation-2 flex w-full min-w-max items-center gap-4 rounded-md px-2 py-3 shadow-[-1px_4px_8px_0] sm:gap-8 sm:px-8">
+         className="elevation-1 flex w-full min-w-max items-center gap-4 rounded-md px-2 py-3 shadow-[-1px_4px_8px_0] sm:gap-8 sm:px-8">
          <div className="hidden sm:block">View</div>
          <ToggleGroup
             type="single"

@@ -62,7 +62,7 @@ const ContactLinks = ({
                   <ResumeIcon />
                </div>
 
-               {showText && <span>Resume</span>}
+               {showText && <span>R&eacute;sum&eacute;</span>}
             </Link>
          </li>
       </ul>

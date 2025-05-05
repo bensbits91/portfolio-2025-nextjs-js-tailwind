@@ -62,10 +62,10 @@ const Projects = () => {
                <Section top="lg" bottom="lg" width="lg" bg="teal">
                   <div className="mb-20 flex max-w-[960px] mx-auto flex-col gap-8 md:flex-row">
                      <div className="max-w-[400px]">
-                        <Heading level={2} appearance={2} color="gray">
+                        <Heading level={2} appearance={2} color="dark">
                            ZenBusiness
                         </Heading>
-                        <Heading level={3} appearance={4} color="gray">
+                        <Heading level={3} appearance={4} color="dark">
                            (2021 to 2024)
                         </Heading>
                         <Text color="gray" size="lg">

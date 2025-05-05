@@ -16,7 +16,7 @@ const Button = ({
 }: ButtonProps) => (
    <Link href={link}>
       <div
-         className={`hover-delay hover-brightness mt-12 rounded-sm sm:w-[100%] md:min-w-10 md:max-w-max ${
+         className={`hover-delay hover-brightness mt-12 rounded-md sm:w-[100%] md:min-w-10 md:max-w-max ${
             inverted ? 'bg-bb-gray' : 'bg-bb-teal'
          } p-4 text-center font-roboto-sans text-sm tracking-wide ${
             inverted

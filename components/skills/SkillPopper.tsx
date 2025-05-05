@@ -35,7 +35,7 @@ export default function SkillPopper({
                )}
             </div>
          </Trigger>
-         <Content className="bg-elevation-1 z-50 flex items-center justify-center gap-4 rounded-lg border border-bb-teal p-4">
+         <Content className="elevation-1 z-50 flex items-center justify-center gap-4 rounded-lg border border-bb-teal p-4">
             <div className="relative h-12 w-12">
                {iconName && <Icon name={iconName} />}
                {!iconName && cloudinary && (

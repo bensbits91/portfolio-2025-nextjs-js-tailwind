@@ -46,7 +46,7 @@ const ProjectGridCard: React.FC<{
             !featuredImage.hideFromGridCard === true && (
                <div
                   className={clsx(
-                     'hover-delay mb-4 inline-block h-40 w-full overflow-hidden rounded-sm border border-l-0 border-r-0 border-t-0 border-b-bb-gray-900',
+                     'hover-delay mb-4 inline-block h-40 w-full overflow-hidden rounded-md border border-l-0 border-r-0 border-t-0 border-b-bb-gray-900',
                      { 'md:scale-110': isHovered }
                   )}>
                   <CloudinaryImage
