@@ -54,7 +54,7 @@ const PrimaryCta = ({
                </div>
 
                <div className="hidden md:block">
-                  <ContactPopper>
+                  <ContactPopper dark>
                      <button className="hover-delay hover-brightness mt-12 rounded-md bg-bb-gray p-4 text-bb-teal min-w-[400px] max-w-max">
                         {link.text}
                      </button>
@@ -72,7 +72,7 @@ const PrimaryCta = ({
          </div>
 
          <div className="block md:hidden">
-            <ContactPopper>
+            <ContactPopper dark>
                <button className="mt-12 rounded-md bg-bb-gray p-4 text-bb-teal w-full">
                   {link.text}
                </button>

@@ -1,8 +1,9 @@
 'use client';
 import { useState } from 'react';
 import ContactLinks from './ContactLinks';
+import clsx from 'clsx';
 
-const ContactForm = () => {
+const ContactForm = ({ dark = false }: { dark?: boolean }) => {
    const initialData = {
       name: '',
       email: '',
@@ -104,7 +105,11 @@ const ContactForm = () => {
       <>
          {!(isSending || isSent || errorData) && (
             <form onSubmit={handleSubmit}>
-               <div className="form-group mb-4 flex flex-col gap-1">
+               <div
+                  className={clsx(
+                     'form-group mb-4 flex flex-col gap-1',
+                     dark ? 'light-text' : 'dark-text'
+                  )}>
                   <label htmlFor="name">Name</label>
                   <input
                      type="text"
@@ -114,10 +119,14 @@ const ContactForm = () => {
                      value={formData.name}
                      onChange={handleChange}
                      required
-                     className="bg-elevation-2 h-9 rounded px-3"
+                     className="h-9 rounded bg-[var(--bb-gray-25)] px-3"
                   />
                </div>
-               <div className="form-group mb-4 flex flex-col gap-1">
+               <div
+                  className={clsx(
+                     'form-group mb-4 flex flex-col gap-1',
+                     dark ? 'light-text' : 'dark-text'
+                  )}>
                   <label htmlFor="email">Email</label>
                   <input
                      type="email"
@@ -127,10 +136,14 @@ const ContactForm = () => {
                      value={formData.email}
                      onChange={handleChange}
                      required
-                     className="bg-elevation-2 h-9 rounded px-3"
+                     className="h-9 rounded bg-[var(--bb-gray-25)] px-3"
                   />
                </div>
-               <div className="form-group mb-4 flex flex-col gap-1">
+               <div
+                  className={clsx(
+                     'form-group mb-4 flex flex-col gap-1',
+                     dark ? 'light-text' : 'dark-text'
+                  )}>
                   <label htmlFor="message">Message</label>
                   <textarea
                      id="message"
@@ -139,13 +152,16 @@ const ContactForm = () => {
                      value={formData.message}
                      onChange={handleChange}
                      required
-                     className="bg-elevation-2 h-24 rounded px-3"
+                     className="h-24 rounded bg-[var(--bb-gray-25)] p-3"
                   />
                </div>
                <button
                   type="submit"
                   id="submitBtn"
-                  className="hover-delay hover-brightness mt-4 w-full rounded-md bg-bb-teal p-4 text-center font-roboto-sans text-sm tracking-wide text-bb-gray md:w-40">
+                  className={clsx(
+                     'hover-delay hover-brightness mt-4 w-full rounded-md  p-4 text-center font-roboto-sans text-sm tracking-wide  md:w-40',
+                     dark ? 'dark-text bg-bb-teal' : 'text-bb-teal bg-bb-gray'
+                  )}>
                   Send
                </button>
             </form>

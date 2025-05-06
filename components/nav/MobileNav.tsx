@@ -1,18 +1,11 @@
 'use client';
 import { useState } from 'react';
-import ContactLinks from '@/components/contact/ContactLinks';
-import ThemeChanger from '@/components/ThemeChanger';
-import { HamburgerIcon, CloseIcon, EnvelopeIcon } from '@/components/icons';
-import { ContactPopper } from '@/components/contact';
-import { navLinkDefs } from '@/data/nav';
-
 import {
    Dialog,
    Overlay,
    Content,
    Title,
    Description
-   // Close
 } from '@radix-ui/react-dialog';
 import {
    NavigationMenu,
@@ -20,6 +13,10 @@ import {
    Item,
    Link
 } from '@radix-ui/react-navigation-menu';
+import ThemeChanger from '@/components/ThemeChanger';
+import { HamburgerIcon, CloseIcon, EnvelopeIcon } from '@/components/icons';
+import { ContactPopper, ContactLinks } from '@/components/contact';
+import { navLinkDefs } from '@/data/nav';
 
 const MobileNav = () => {
    const [isOpen, setIsOpen] = useState(false);
@@ -41,25 +38,16 @@ const MobileNav = () => {
                      <EnvelopeIcon />
                   </div>
                </ContactPopper>
-               {isOpen ? (
-                  <button onClick={toggleMenu} className="focus:outline-none">
-                     <div className="link h-6 w-6">
-                        <CloseIcon />
-                     </div>
-                  </button>
-               ) : (
-                  <button onClick={toggleMenu} className="focus:outline-none">
-                     <div className="link h-6 w-6">
-                        <HamburgerIcon />
-                     </div>
-                  </button>
-               )}
+               <button onClick={toggleMenu} className="focus:outline-none">
+                  <div className="link h-6 w-6">
+                     {isOpen ? <CloseIcon /> : <HamburgerIcon />}
+                  </div>
+               </button>
             </div>
          </div>
-         <Dialog open={isOpen} /* onOpenChange={onOpenChange} */>
+         <Dialog open={isOpen}>
             <Overlay onClick={() => toggleMenu()} className="fixed inset-0" />
-            <Content className="bg-elevation-2 fixed bottom-2 left-2 right-2 top-16 z-20 rounded-lg p-2">
-               {/* <Close /> */}
+            <Content className="bg-gradient-teal shadow-lg fixed left-2 right-2 rounded-lg top-12 text-bb-gray z-20 p-2">
                <Title className="hidden">Mobile Navigation Menu</Title>
                <Description className="hidden">
                   Mobile Navigation Menu

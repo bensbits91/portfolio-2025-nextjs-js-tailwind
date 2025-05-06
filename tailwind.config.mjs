@@ -5,7 +5,7 @@ const config = {
       './components/**/*.{js,ts,jsx,tsx,mdx}',
       './app/**/*.{js,ts,jsx,tsx,mdx}'
    ],
-   safelist: ['bg-gradient-yellow', 'bg-gradient-teal', 'text-bb-jade'],
+   safelist: ['bg-gradient-yellow', 'bg-gradient-teal', 'text-bb-jade', 'text-bb-dark'],
    theme: {
       extend: {
          boxShadow: {
@@ -31,7 +31,7 @@ const config = {
          },
          backgroundImage: {
             'gradient-dark':
-               'linear-gradient(45deg, var(--bb-gray-dark-100), var(--bb-gray-dark-300))',
+               'linear-gradient(45deg, var(--bb-gray-800), var(--bb-gray-dark-300))',
             'gradient-teal':
                'linear-gradient(45deg, var(--bb-teal), var(--bb-teal-dark-300))',
             'gradient-yellow':
