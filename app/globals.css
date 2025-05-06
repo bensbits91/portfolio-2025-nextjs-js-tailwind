@@ -34,6 +34,16 @@
    --bb-teal: #33ced8;
    --bb-teal-dark-300: #239097;
 
+   --bb-teal-900: #47d2db;
+   --bb-teal-800: #5bd7df;
+   --bb-teal-700: #70dce3;
+   --bb-teal-600: #84e1e7;
+   --bb-teal-500: #99e6eb;
+   --bb-teal-400: #adebef;
+   --bb-teal-300: #c1f0f3;
+   --bb-teal-200: #d6f5f7;
+   --bb-teal-100: #eafafb;
+
    --bb-yellow: #f0be72;
    --bb-yellow-dark-300: #a8854f;
 
@@ -125,6 +135,9 @@ body {
 .dark-text {
    @apply text-[var(--bb-gray)];
 }
+.light-text {
+   @apply text-[var(--bb-gray-25)];
+}
 
 .bg-bg {
    @apply light:bg-[var(--light-bg)] bg-[var(--background)];
@@ -155,6 +168,10 @@ body {
 }
 .elevation-3 {
    @apply bg-elevation-3 shadow-elevation-2;
+}
+
+.bg-teal {
+   @apply light:bg-[var(--bb-teal-400)] bg-[var(--bb-teal-dark-300)];
 }
 
 .card-elevated {

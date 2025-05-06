@@ -6,7 +6,7 @@ interface HeadingProps {
    children: React.ReactNode;
    level?: 1 | 2 | 3 | 4 | 5 | 6;
    appearance?: 1 | 2 | 3 | 4 | 5 | 6;
-   color?: 'white' | 'gray' | 'jade' | 'yellow' | 'secondary' | 'tertiary' | 'dark';
+   color?: 'white' | 'gray' | 'jade' | 'yellow' | 'secondary' | 'tertiary' | 'dark' | 'light';
    weight?: 'normal' | 'bold' | 'light';
    top?: 'sm' | 'md' | 'lg' | 'no';
    bottom?: 'sm' | 'md' | 'lg' | 'no';

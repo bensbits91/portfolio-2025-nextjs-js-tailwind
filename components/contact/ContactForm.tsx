@@ -1,81 +1,17 @@
 'use client';
-import { useState } from 'react';
+import useContactForm from '@/hooks/useContactForm';
 import ContactLinks from './ContactLinks';
+import clsx from 'clsx';
 
-const ContactForm = () => {
-   const initialData = {
-      name: '',
-      email: '',
-      message: ''
-   };
-   const [formData, setFormData] = useState({ ...initialData });
-   const [isSending, setIsSending] = useState(false);
-   const [isSent, setIsSent] = useState(false);
-   const [errorData, setErrorData] = useState<ErrorData | null>(null);
-
-   const handleChange = (
-      e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-   ) => {
-      const { name, value } = e.target;
-      setFormData((prevData: typeof initialData) => ({
-         ...prevData,
-         [name]: value
-      }));
-   };
-
-   const handleSending = () => {
-      setIsSending(true);
-   };
-
-   const handleSuccess = () => {
-      setIsSending(false);
-      setIsSent(true);
-      setFormData(initialData);
-   };
-
-   interface ErrorData {
-      message?: string;
-      [key: string]: unknown;
-   }
-
-   const handleError = (error: ErrorData) => {
-      setIsSending(false);
-      setIsSent(false);
-      setErrorData(error);
-   };
-
-   interface FetchErrorData extends ErrorData {
-      message: string;
-   }
-
-   const handleSubmit = async (
-      e: React.FormEvent<HTMLFormElement>
-   ): Promise<void> => {
-      e.preventDefault();
-      handleSending();
-      try {
-         const response: Response = await fetch('/api/send-email', {
-            method: 'POST',
-            headers: {
-               'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)
-         });
-
-         if (response.ok) {
-            handleSuccess();
-         } else {
-            console.info('bb ~ response:', response);
-            const errorData: FetchErrorData = {
-               message: await response.text()
-            };
-            handleError(errorData);
-         }
-      } catch (error) {
-         console.error('bb ~ error:', error);
-         handleError(error as ErrorData);
-      }
-   };
+const ContactForm = ({ dark = false }: { dark?: boolean }) => {
+   const {
+      formData,
+      isSending,
+      isSent,
+      errorData,
+      handleChange,
+      handleSubmit
+   } = useContactForm();
 
    const SendingComponent = () => (
       <div className="mt-8 flex flex-col items-center gap-4">
@@ -90,11 +26,11 @@ const ContactForm = () => {
       </div>
    );
 
-   interface ErrorComponentProps {
-      error: ErrorData;
-   }
-
-   const ErrorComponent = ({ error }: ErrorComponentProps) => (
+   const ErrorComponent = ({
+      error
+   }: {
+      error: Record<string, unknown> | null;
+   }) => (
       <div className="mt-8 flex flex-col items-center gap-4">
          <p>Error: {JSON.stringify(error)}</p>
          <ContactLinks />
@@ -104,7 +40,11 @@ const ContactForm = () => {
       <>
          {!(isSending || isSent || errorData) && (
             <form onSubmit={handleSubmit}>
-               <div className="form-group mb-4 flex flex-col gap-1">
+               <div
+                  className={clsx(
+                     'form-group mb-4 flex flex-col gap-1',
+                     dark ? 'light-text' : 'dark-text'
+                  )}>
                   <label htmlFor="name">Name</label>
                   <input
                      type="text"
@@ -114,10 +54,14 @@ const ContactForm = () => {
                      value={formData.name}
                      onChange={handleChange}
                      required
-                     className="bg-elevation-2 h-9 rounded px-3"
+                     className="h-9 rounded bg-[var(--bb-gray-25)] px-3"
                   />
                </div>
-               <div className="form-group mb-4 flex flex-col gap-1">
+               <div
+                  className={clsx(
+                     'form-group mb-4 flex flex-col gap-1',
+                     dark ? 'light-text' : 'dark-text'
+                  )}>
                   <label htmlFor="email">Email</label>
                   <input
                      type="email"
@@ -127,10 +71,14 @@ const ContactForm = () => {
                      value={formData.email}
                      onChange={handleChange}
                      required
-                     className="bg-elevation-2 h-9 rounded px-3"
+                     className="h-9 rounded bg-[var(--bb-gray-25)] px-3"
                   />
                </div>
-               <div className="form-group mb-4 flex flex-col gap-1">
+               <div
+                  className={clsx(
+                     'form-group mb-4 flex flex-col gap-1',
+                     dark ? 'light-text' : 'dark-text'
+                  )}>
                   <label htmlFor="message">Message</label>
                   <textarea
                      id="message"
@@ -139,13 +87,16 @@ const ContactForm = () => {
                      value={formData.message}
                      onChange={handleChange}
                      required
-                     className="bg-elevation-2 h-24 rounded px-3"
+                     className="h-24 rounded bg-[var(--bb-gray-25)] p-3"
                   />
                </div>
                <button
                   type="submit"
                   id="submitBtn"
-                  className="hover-delay hover-brightness mt-4 w-full rounded-md bg-bb-teal p-4 text-center font-roboto-sans text-sm tracking-wide text-bb-gray md:w-40">
+                  className={clsx(
+                     'hover-delay hover-brightness mt-4 w-full rounded-md p-4 text-center font-roboto-sans text-sm tracking-wide md:w-40',
+                     dark ? 'dark-text bg-bb-teal' : 'bg-bb-gray text-bb-teal'
+                  )}>
                   Send
                </button>
             </form>
