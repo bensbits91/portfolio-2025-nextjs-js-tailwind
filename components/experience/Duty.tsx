@@ -90,7 +90,11 @@ const Duty = ({ duty }: DutyProps) => {
                   {moreInfo.map((info, index) => (
                      <div key={index}>
                         {Array.isArray(info) ? (
-                           <List items={info} bottom="no" />
+                           <List
+                              items={info}
+                              bottom="no"
+                              ariaLabel="List of responsibilities and accomplishments"
+                           />
                         ) : (
                            <Text>{info}</Text>
                         )}

@@ -7,10 +7,10 @@ const Breadcrumb = () => {
    const pathParts = pathname.split('/').filter(part => part); // removes empty strings
 
    return (
-      <div className="absolute top-20 bg-background pl-4 text-xs">
+      <div className="absolute top-20 bg-bg pl-4 text-xs">
          <span>
             <Link
-               className="hover-delay hover-brightness border-b-transparent text-bb-teal lg:hover:border-b-bb-teal lg:hover:text-bb-teal"
+               className="hover-delay hover-brightness border-b-transparent link lg:hover:border-b-bb-teal"
                href="/">
                ben
             </Link>{' '}
@@ -27,7 +27,7 @@ const Breadcrumb = () => {
                      part
                   ) : (
                      <Link
-                        className="hover-delay hover-brightness border-b-transparent text-bb-teal lg:hover:border-b-bb-teal lg:hover:text-bb-teal"
+                        className="hover-delay hover-brightness border-b-transparent link lg:hover:border-b-bb-teal"
                         href={href}>
                         {part}
                      </Link>

@@ -42,7 +42,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
          </Head>
          <body
             className={`${robotoSans.variable} ${robotoMono.variable} antialiased`}>
-            <ThemeProvider attribute="class">
+            <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
                <Nav />
                <main>
                   {children}

@@ -16,42 +16,47 @@ export default function SkillsGrid({
       return <div>No skills available</div>;
    }
    return (
-      <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <ul className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
          {skills.map((skill, index) => {
             const { cloudinary, iconName, name, rating, years } = skill;
             const { newString: truncatedName } = truncateString(name, 14);
 
             return (
-               <div
+               <li
                   key={index}
-                  className="card-elevated card-clickable flex items-center justify-start gap-4 p-4 md:justify-center"
-                  onClick={() => handleItemClick(name)}>
-                  <div className="h-12 w-12">
-                     {iconName && <Icon name={iconName} />}
-                     {!iconName && cloudinary && (
-                        <CloudinaryImage
-                           cloudinaryId={cloudinary}
-                           alt={name}
-                           width={48}
-                           height={48}
-                        />
-                     )}
-                  </div>
-                  <div>
-                     <div className="hidden md:block">{truncatedName}</div>
-                     <div className="block md:hidden">{name}</div>
-                     {rating && (
-                        <div className="flex h-4">
-                           <Rating rating={rating} />
-                        </div>
-                     )}
-                     <div className="min-w-24 whitespace-nowrap text-[0.7rem] md:text-sm">
-                        {years}+ years
+                  className="card-elevated card-clickable"
+               >
+                  <button
+                     onClick={() => handleItemClick(name)}
+                     className="flex w-full items-center justify-start gap-4 p-4 md:justify-center focus:outline-none focus:ring-2 focus:ring-bb-teal"
+                     aria-label={`View details about ${name}`}>
+                     <div className="h-12 w-12">
+                        {iconName && <Icon name={iconName} />}
+                        {!iconName && cloudinary && (
+                           <CloudinaryImage
+                              cloudinaryId={cloudinary}
+                              alt={name}
+                              width={48}
+                              height={48}
+                           />
+                        )}
                      </div>
-                  </div>
-               </div>
+                     <div className='flex flex-col justify-start items-start'>
+                        <div className="hidden md:block">{truncatedName}</div>
+                        <div className="block md:hidden">{name}</div>
+                        {rating && (
+                           <div className="flex h-4">
+                              <Rating rating={rating} />
+                           </div>
+                        )}
+                        <div className="whitespace-nowrap text-sm">
+                           {years}+ years
+                        </div>
+                     </div>
+                  </button>
+               </li>
             );
          })}
-      </div>
+      </ul>
    );
 }

@@ -53,13 +53,19 @@ export default function SkillModal({
    return (
       <Dialog open={isOpen} onOpenChange={onOpenChange}>
          <Overlay className="fixed inset-0 bg-black/70" />
-         <Content className="elevation-1 fixed left-2 right-2 top-20 z-20 h-[calc(100vh-100px)] overflow-hidden rounded-lg p-2 md:left-12 md:right-12 md:top-20 md:p-4">
+         <Content
+            // onOpenAutoFocus={event => event.preventDefault()} // prevent auto-focus
+            className="elevation-1 fixed left-2 right-2 top-20 z-20 h-[calc(100vh-100px)] overflow-hidden rounded-lg p-2 md:left-12 md:right-12 md:top-20 md:p-4">
             <div className="flex h-36 flex-col gap-2 pt-8 md:h-48 md:gap-4 md:p-4">
                <Close
-                  className="link fixed right-6 top-24 h-6 w-6 md:right-16 md:top-24"
-                  aria-label="Close"
-                  onClick={() => onOpenChange(false)}>
-                  <CloseIcon />
+                  asChild
+                  className="fixed right-6 top-24 md:right-16 md:top-24"
+                  aria-label="Close">
+                  <button
+                     onClick={() => onOpenChange(false)}
+                     className="link h-6 w-6 appearance-none focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bb-teal">
+                     <CloseIcon />
+                  </button>
                </Close>
                <div className="flex items-center gap-6 px-4 md:gap-12 md:p-4">
                   <div className="relative h-24 w-24 md:h-32 md:w-32">
@@ -101,6 +107,7 @@ export default function SkillModal({
                            </Heading>
                            <List
                               size="sm"
+                              ariaLabel="List of full-time roles"
                               items={jobs.map(
                                  job => job.role + ' at ' + job.company
                               )}
@@ -119,6 +126,7 @@ export default function SkillModal({
                            </Heading>
                            <List
                               size="sm"
+                              ariaLabel="List of client projects"
                               items={clientProjects.map(
                                  project => project.name
                               )}
@@ -137,6 +145,7 @@ export default function SkillModal({
                            </Heading>
                            <List
                               size="sm"
+                              ariaLabel="List of apps and components"
                               items={appProjects.map(project => project.name)}
                            />
                            <div>

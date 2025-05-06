@@ -202,7 +202,7 @@ body:has(.translate-x-0) {
 } */
 
 .hover-delay {
-   @apply md:transition-all md:duration-500 md:ease-in-out;
+   @apply md:transition-all md:duration-500 md:ease-in-out motion-reduce:transition-none;
 }
 
 .hover-brightness {

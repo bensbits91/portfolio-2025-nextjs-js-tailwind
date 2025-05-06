@@ -61,9 +61,7 @@ export default function SkillsTable({
          cell: (info: CellContext<BaseSkill, unknown>) => {
             const years = info.getValue() as number;
             return (
-               <div className="min-w-24 whitespace-nowrap text-[0.7rem] md:text-sm">
-                  {years}+ years
-               </div>
+               <div className="whitespace-nowrap text-sm">{years}+ years</div>
             );
          }
       },
@@ -103,8 +101,9 @@ export default function SkillsTable({
    }
 
    return (
-      <div>
-         <table>
+      <div className="md:px-4">
+         <table className="w-full table-auto">
+            <caption className="hidden">Skills Table</caption>
             <thead>
                {table.getHeaderGroups().map(headerGroup => (
                   <tr key={headerGroup.id}>
@@ -122,10 +121,19 @@ export default function SkillsTable({
                {table.getRowModel().rows.map(row => (
                   <tr
                      key={row.id}
-                     className="table-row"
+                     className="table-row focus:outline-none focus:ring-2 focus:ring-bb-teal"
+                     tabIndex={0} // Make the row focusable
+                     role="button"
                      onClick={() => {
                         handleItemClick(row.original.name);
-                     }}>
+                     }}
+                     onKeyDown={e => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                           e.preventDefault();
+                           handleItemClick(row.original.name);
+                        }
+                     }}
+                     aria-label={`View details about ${row.original.name}`}>
                      {row.getVisibleCells().map(cell => (
                         <SkillsTableCell
                            key={cell.id}

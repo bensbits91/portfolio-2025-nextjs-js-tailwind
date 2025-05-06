@@ -22,8 +22,11 @@ export default function SkillPopper({
 
    return (
       <Popover>
-         <Trigger className="cursor-pointer">
-            <div className="relative" style={{ width: size, height: size }}>
+         <Trigger asChild className="cursor-pointer">
+            <button
+               className="relative focus:outline-none focus:ring-2 focus:ring-bb-teal"
+               aria-label={`More information about ${name}`}
+               style={{ width: size, height: size }}>
                {iconName && <Icon name={iconName} />}
                {!iconName && cloudinary && (
                   <CloudinaryImage
@@ -33,9 +36,13 @@ export default function SkillPopper({
                      height={size}
                   />
                )}
-            </div>
+            </button>
          </Trigger>
-         <Content className="elevation-1 z-50 flex items-center justify-center gap-4 rounded-lg border border-bb-teal p-4">
+         <Content
+            id="skill-popper-content"
+            aria-labelledby="skill-popper-title"
+            aria-describedby="skill-popper-description"
+            className="elevation-1 z-50 flex items-center justify-center gap-4 rounded-lg border border-bb-teal p-4">
             <div className="relative h-12 w-12">
                {iconName && <Icon name={iconName} />}
                {!iconName && cloudinary && (
@@ -48,13 +55,15 @@ export default function SkillPopper({
                )}
             </div>
             <div>
-               <div>{name}</div>
+               <div id="skill-popper-title">{name}</div>
                {rating && (
                   <div className="flex h-4">
                      <Rating rating={rating} />
                   </div>
                )}
-               <div className="min-w-24 whitespace-nowrap text-[0.7rem] md:text-sm">
+               <div
+                  id="skill-popper-description"
+                  className="min-w-24 whitespace-nowrap text-[0.7rem] md:text-sm">
                   {years}+ years
                </div>
             </div>

@@ -2,11 +2,12 @@
 import { useState, useCallback } from 'react';
 import { Section } from '@/components/layout';
 import { Heading } from '@/components/typography';
-import { AreaChart, RadarChart } from '@/components/charts';
 import { PrimaryCta } from '@/components/common';
 import {
    SkillsTable,
    SkillsGrid,
+   SkillsByYear,
+   SkillsByStack,
    SkillsToolbar,
    SkillModal
 } from '@/components/skills';
@@ -52,8 +53,8 @@ const Skills = () => {
                      handleItemClick={handleItemClick}
                   />
                )}
-               {selectedView === 'growth' && <AreaChart />}
-               {selectedView === 'stack' && <RadarChart />}
+               {selectedView === 'growth' && <SkillsByYear />}
+               {selectedView === 'stack' && <SkillsByStack />}
             </div>
          </Section>
          <PrimaryCta />

@@ -1,3 +1,4 @@
+'use client';
 import dynamic from 'next/dynamic';
 import {
    Area,
@@ -11,7 +12,7 @@ import {
 
 // note to self: dynamic import required for recharts chart-level components to work with next.js
 // todo: move all dynamic imports to a single file (import {AreaChart} from './dynamic')?
-// todo: rename components and files to be specific to the data they represent (e.g. skillsByYear)
+
 const AreaChart = dynamic(
    () => import('recharts').then(recharts => recharts.AreaChart),
    { ssr: false }
@@ -122,7 +123,7 @@ const myAreaChart = () => (
             stroke="#60af73"
             fillOpacity={1}
             fill="url(#colorPv)"
-            label="Learned"
+            label="Learned this year"
          />
          <Area
             type="monotone"
