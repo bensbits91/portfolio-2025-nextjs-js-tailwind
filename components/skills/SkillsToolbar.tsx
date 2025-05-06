@@ -12,19 +12,57 @@ import {
 } from '@/components/icons';
 import clsx from 'clsx';
 
+type ViewType = 'table' | 'grid' | 'growth' | 'stack';
+
 interface SkillsViewToolbarProps {
-   handleViewClick: (newView: 'table' | 'grid' | 'growth' | 'stack') => void;
-   selectedView: 'table' | 'grid' | 'growth' | 'stack';
+   handleViewClick: (newView: ViewType) => void;
+   selectedView: ViewType;
+}
+
+interface ViewItemProps {
+   view: ViewType;
 }
 
 export default function SkillsViewToolbar({
    handleViewClick,
    selectedView
 }: SkillsViewToolbarProps) {
-   const isGridView = selectedView === 'grid';
-   const isTableView = selectedView === 'table';
-   const isGrowthView = selectedView === 'growth';
-   const isStackView = selectedView === 'stack';
+   const ViewItem = ({ view }: ViewItemProps) => {
+      const displayName = view.charAt(0).toUpperCase() + view.slice(1);
+      const ariaLabel = displayName + ' view';
+      const isSelected = selectedView === view;
+      return (
+         <ToggleItem
+            asChild
+            value={view}
+            role="tab"
+            tabIndex={0}
+            aria-label={ariaLabel}
+            aria-selected={isSelected}>
+            <Button
+               onClick={() => handleViewClick(view)}
+               onKeyDown={e => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                     e.preventDefault();
+                     handleViewClick(view);
+                  }
+               }}
+               title={ariaLabel}
+               className={clsx(
+                  'flex items-center gap-2 rounded-md',
+                  isSelected ? 'link-active' : 'link'
+               )}>
+               <div className="h-4 w-4">
+                  {view === 'grid' && <GridIcon />}
+                  {view === 'table' && <TableIcon />}
+                  {view === 'growth' && <LineChartIcon />}
+                  {view === 'stack' && <RadarChartIcon />}
+               </div>
+               <div>{displayName}</div>
+            </Button>
+         </ToggleItem>
+      );
+   };
 
    return (
       <Toolbar
@@ -36,110 +74,10 @@ export default function SkillsViewToolbar({
             defaultValue={'table'}
             role="tablist"
             className="mx-2 flex items-center gap-4 md:gap-8">
-            <ToggleItem
-               asChild
-               value="grid"
-               role="tab"
-               tabIndex={0}
-               aria-label="Grid view"
-               aria-selected={isGridView}>
-               <Button
-                  onClick={() => handleViewClick('grid')}
-                  onKeyDown={e => {
-                     if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        handleViewClick('grid');
-                     }
-                  }}
-                  title="Grid view"
-                  className={clsx(
-                     'flex items-center gap-2 rounded-md',
-                     isGridView ? 'link-active' : 'link'
-                  )}>
-                  <div className="h-4 w-4">
-                     <GridIcon />
-                  </div>
-                  <div>Grid</div>
-               </Button>
-            </ToggleItem>
-            <ToggleItem
-               asChild
-               value="table"
-               role="tab"
-               tabIndex={0}
-               aria-label="Table view"
-               aria-selected={isTableView}>
-               <Button
-                  onClick={() => handleViewClick('table')}
-                  onKeyDown={e => {
-                     if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        handleViewClick('table');
-                     }
-                  }}
-                  title="Table view"
-                  className={clsx(
-                     'flex items-center gap-2 rounded-md',
-                     isTableView ? 'link-active' : 'link'
-                  )}>
-                  <div className="h-4 w-4">
-                     <TableIcon />
-                  </div>
-                  <div>Table</div>
-               </Button>
-            </ToggleItem>
-            <ToggleItem
-               asChild
-               value="growth"
-               role="tab"
-               tabIndex={0}
-               aria-label="Growth by year view"
-               aria-selected={isGrowthView}>
-               <Button
-                  onClick={() => handleViewClick('growth')}
-                  onKeyDown={e => {
-                     if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        handleViewClick('growth');
-                     }
-                  }}
-                  title="Growth by year view"
-                  className={clsx(
-                     'flex items-center gap-2 rounded-md',
-                     isGrowthView ? 'link-active' : 'link'
-                  )}>
-                  <div className="h-4 w-4">
-                     <LineChartIcon />
-                  </div>
-                  <div>Growth</div>
-               </Button>
-            </ToggleItem>
-            <ToggleItem
-               asChild
-               value="stack"
-               role="tab"
-               tabIndex={0}
-               aria-label="Stack coverage view"
-               aria-selected={isStackView}>
-               <Button
-                  onClick={() => handleViewClick('stack')}
-                  onKeyDown={e => {
-                     if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        handleViewClick('stack');
-                     }
-                  }}
-                  title="Stack coverage view"
-                  className={clsx(
-                     'flex items-center gap-2 rounded-md',
-                     isStackView ? 'link-active' : 'link'
-                  )}>
-                  <div className="h-4 w-4">
-                     <RadarChartIcon />
-                  </div>
-                  <div>Stack</div>
-               </Button>
-            </ToggleItem>
+            <ViewItem view="grid" />
+            <ViewItem view="table" />
+            <ViewItem view="growth" />
+            <ViewItem view="stack" />
          </ToggleGroup>
       </Toolbar>
    );
