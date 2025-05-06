@@ -2,7 +2,8 @@
 import { useState } from 'react';
 import ContactLinks from '@/components/contact/ContactLinks';
 import ThemeChanger from '@/components/ThemeChanger';
-import { HamburgerIcon, CloseIcon } from '@/components/icons';
+import { HamburgerIcon, CloseIcon, EnvelopeIcon } from '@/components/icons';
+import { ContactPopper } from '@/components/contact';
 import { navLinkDefs } from '@/data/nav';
 
 import {
@@ -35,6 +36,11 @@ const MobileNav = () => {
             </div>
             <div className="flex h-6 items-center gap-4">
                <ThemeChanger />
+               <ContactPopper>
+                  <div className="link h-6 w-6">
+                     <EnvelopeIcon />
+                  </div>
+               </ContactPopper>
                {isOpen ? (
                   <button onClick={toggleMenu} className="focus:outline-none">
                      <div className="link h-6 w-6">

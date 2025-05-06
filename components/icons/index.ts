@@ -27,6 +27,7 @@ export { default as WordpressIcon } from './WordpressIcon';
 export { default as GithubIcon } from './GithubIcon';
 export { default as LinkedInIcon } from './LinkedInIcon';
 export { default as ResumeIcon } from './ResumeIcon';
+export { default as EnvelopeIcon } from './EnvelopeIcon';
 
 export { default as TableIcon } from './TableIcon';
 export { default as GridIcon } from './GridIcon';
