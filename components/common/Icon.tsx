@@ -32,7 +32,7 @@ const Icon = ({ src, iconName, altText, link, size = 24 }: IconProps) => {
    return (
       <div className="flex">
          {link ? (
-            <Link href={link}>
+            <Link href={link} aria-label={altText}>
                <IconImage />
             </Link>
          ) : (

@@ -25,7 +25,7 @@ export default function SkillsGrid({
                <li key={index} className="card-elevated card-clickable">
                   <button
                      onClick={() => handleItemClick(name)}
-                     className="flex w-full items-center justify-start gap-4 p-4 focus:outline-none focus:ring-2 focus:ring-bb-teal md:justify-center"
+                     className="wcag-focus flex w-full items-center justify-start gap-4 p-4"
                      aria-label={`View details about ${name}`}>
                      <div className="h-12 w-12">
                         {iconName && <Icon name={iconName} />}

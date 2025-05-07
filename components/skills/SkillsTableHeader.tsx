@@ -48,7 +48,7 @@ export default function SkillsTableHeader<TData>({
          )}>
          <div
             onClick={getToggleSortingHandler()}
-            className="flex"
+            className="wcag-focus flex"
             role={canSort ? 'button' : undefined} // Make it a button for sorting
             tabIndex={canSort ? 0 : undefined} // Make it focusable if sortable
             aria-label={`Sort by ${columnDef.header}`}

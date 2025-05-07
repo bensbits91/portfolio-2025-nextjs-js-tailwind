@@ -33,7 +33,7 @@ const NavLinks = ({ vertical = false }: NavLinksProps) => {
                         href={link}
                         aria-current={isCurrent ? 'page' : undefined}
                         className={clsx(
-                           'hover-delay',
+                           'hover-delay wcag-focus',
                            isCurrent ? 'link-active' : 'link'
                         )}>
                         {text}
@@ -43,7 +43,7 @@ const NavLinks = ({ vertical = false }: NavLinksProps) => {
             })}
             <Item>
                <ContactPopper align="start" alignOffset={-300} sideOffset={15}>
-                  <button className="link focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bb-teal">
+                  <button className="link wcag-focus">
                      Contact
                   </button>
                </ContactPopper>

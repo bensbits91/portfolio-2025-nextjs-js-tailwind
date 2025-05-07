@@ -24,7 +24,7 @@ export default function SkillPopper({
       <Popover>
          <Trigger asChild className="cursor-pointer">
             <button
-               className="relative focus:outline-none focus:ring-2 focus:ring-bb-teal"
+               className="wcag-focus relative"
                aria-label={`More information about ${name}`}
                style={{ width: size, height: size }}>
                {iconName && <Icon name={iconName} />}

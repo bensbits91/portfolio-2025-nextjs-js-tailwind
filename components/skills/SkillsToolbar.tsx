@@ -49,7 +49,7 @@ export default function SkillsViewToolbar({
                }}
                title={ariaLabel}
                className={clsx(
-                  'flex items-center gap-2 rounded-md',
+                  'wcag-focus flex items-center gap-2 rounded-md',
                   isSelected ? 'link-active' : 'link'
                )}>
                <div className="h-4 w-4">

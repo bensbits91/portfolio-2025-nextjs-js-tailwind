@@ -38,7 +38,7 @@ export default function ProjectGridCard({
          onClick={() => handleClick && handleClick(name)}
          aria-label={`View details about ${name}`}
          className={clsx(
-            'overflow-hidden focus:outline-none focus:ring-2 focus:ring-bb-teal text-left',
+            'wcag-focus overflow-hidden text-left',
             inverted
                ? 'card-elevated-force-dark card-clickable-force-dark'
                : 'card-clickable'
@@ -47,18 +47,19 @@ export default function ProjectGridCard({
             featuredImage.name &&
             featuredImage.name !== 'default' &&
             !featuredImage.hideFromGridCard === true && (
-               <div
-                  className={clsx(
-                     'hover-delay mb-4 inline-block h-40 w-full overflow-hidden rounded-md border border-l-0 border-r-0 border-t-0 border-b-bb-gray-900',
-                     { 'md:scale-110': isHovered }
-                  )}>
-                  <CloudinaryImage
-                     cloudinaryId={featuredImage.name}
-                     alt={`Featured image for ${name}`}
-                     width={300}
-                     height={300}
-                     full={true}
-                  />
+               <div className="mb-4 inline-block h-40 w-full overflow-hidden">
+                  <div
+                     className={clsx('hover-delay', {
+                        'md:scale-110': isHovered
+                     })}>
+                     <CloudinaryImage
+                        cloudinaryId={featuredImage.name}
+                        alt={`Featured image for ${name}`}
+                        width={300}
+                        height={300}
+                        full={true}
+                     />
+                  </div>
                </div>
             )}
          <div className="p-4">

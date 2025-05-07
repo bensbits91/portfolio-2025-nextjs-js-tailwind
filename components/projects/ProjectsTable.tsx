@@ -159,7 +159,7 @@ export default function ProjectsTable({
                         handleItemClick(row.original.name);
                      }
                   }}
-                  className="table-row focus:outline-none focus:ring-2 focus:ring-bb-teal">
+                  className="wcag-focus table-row">
                   {row.getVisibleCells().map(cell => (
                      <ProjectsTableCell
                         key={cell.id}

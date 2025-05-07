@@ -60,7 +60,7 @@ const Projects = () => {
                   />
                </Section>
                <Section top="lg" bottom="lg" width="lg" bg="teal">
-                  <div className="mb-20 flex max-w-[960px] mx-auto flex-col gap-8 md:flex-row">
+                  <div className="mx-auto mb-20 flex max-w-[960px] flex-col gap-8 md:flex-row">
                      <div className="max-w-[400px]">
                         <Heading level={2} appearance={2} color="dark">
                            ZenBusiness
@@ -73,7 +73,10 @@ const Projects = () => {
                            the public website, customer-facing apps, internal
                            tools, APIs, microservices, experiments and more.
                         </Text>
-                        <Button inverted link="/experience">
+                        <Button
+                           ariaLabel="Navigate to Experience page"
+                           inverted
+                           link="/experience">
                            Read more about my experience
                         </Button>
                      </div>
@@ -132,7 +135,7 @@ const Projects = () => {
             </>
          )}
          {selectedView === 'table' && (
-            <Section width='lg' bottom='lg'>
+            <Section width="lg" bottom="lg">
                <ProjectsTable
                   projects={projectsToPass}
                   handleItemClick={handleItemClick}

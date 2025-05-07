@@ -63,7 +63,7 @@ export default function SkillModal({
                   aria-label="Close modal">
                   <button
                      onClick={() => onOpenChange(false)}
-                     className="link h-6 w-6 appearance-none focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bb-teal">
+                     className="link wcag-focus h-6 w-6">
                      <CloseIcon />
                   </button>
                </Close>
@@ -109,7 +109,9 @@ export default function SkillModal({
                               )}
                            />
                            <div>
-                              <Link className="link" href="/experience">
+                              <Link
+                                 className="link wcag-focus"
+                                 href="/experience">
                                  View all experience
                               </Link>
                            </div>
@@ -128,7 +130,9 @@ export default function SkillModal({
                               )}
                            />
                            <div>
-                              <Link className="link" href="/projects">
+                              <Link
+                                 className="link wcag-focus"
+                                 href="/projects">
                                  View all projects
                               </Link>
                            </div>
@@ -145,7 +149,9 @@ export default function SkillModal({
                               items={appProjects.map(project => project.name)}
                            />
                            <div>
-                              <Link className="link" href="/projects">
+                              <Link
+                                 className="link wcag-focus"
+                                 href="/projects">
                                  View all projects
                               </Link>
                            </div>

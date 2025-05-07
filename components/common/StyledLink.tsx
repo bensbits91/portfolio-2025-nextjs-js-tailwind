@@ -3,16 +3,18 @@ import { NewTabIcon, Icon } from '@/components/icons';
 
 interface StyledLinkProps {
    href: string;
-   text?: string;
    icon?: string;
+   text?: string;
+   showText?: boolean;
    newTab?: boolean;
    ariaLabel?: string;
 }
 
 export default function StyledLink({
    href,
-   text,
    icon,
+   text,
+   showText = true,
    newTab,
    ariaLabel
 }: StyledLinkProps) {
@@ -24,18 +26,19 @@ export default function StyledLink({
       <Link
          href={href}
          target={newTab ? '_blank' : '_self'}
-         aria-label={ariaLabel || `${text} link`}
+         title={showText ? undefined : text}
+         aria-label={!showText ? ariaLabel || `${text} link` : undefined}
          rel={newTab ? 'noopener noreferrer' : undefined}
-         className="link focus-visible:outline-none focus-visible:ring-2">
+         className="link wcag-focus flex items-center gap-2">
          <div className="flex items-center gap-1">
             {icon && (
-               <div className="h-4 w-4" aria-hidden="true">
+               <div className="mr-1 h-4 w-4" aria-hidden="true">
                   <Icon name={icon} />
                </div>
             )}
-            <div>{text}</div>
-            {newTab && (
-               <div className="h-3 w-3 pb-6" aria-hidden="true">
+            {text && showText && <div>{text}</div>}
+            {newTab && showText && (
+               <div className="h-3 w-3 pb-6 opacity-70" aria-hidden="true">
                   <NewTabIcon />
                </div>
             )}
