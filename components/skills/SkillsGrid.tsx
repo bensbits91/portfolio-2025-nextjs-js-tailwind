@@ -22,13 +22,10 @@ export default function SkillsGrid({
             const { newString: truncatedName } = truncateString(name, 14);
 
             return (
-               <li
-                  key={index}
-                  className="card-elevated card-clickable"
-               >
+               <li key={index} className="card-elevated card-clickable">
                   <button
                      onClick={() => handleItemClick(name)}
-                     className="flex w-full items-center justify-start gap-4 p-4 md:justify-center focus:outline-none focus:ring-2 focus:ring-bb-teal"
+                     className="flex w-full items-center justify-start gap-4 p-4 focus:outline-none focus:ring-2 focus:ring-bb-teal md:justify-center"
                      aria-label={`View details about ${name}`}>
                      <div className="h-12 w-12">
                         {iconName && <Icon name={iconName} />}
@@ -41,14 +38,10 @@ export default function SkillsGrid({
                            />
                         )}
                      </div>
-                     <div className='flex flex-col justify-start items-start'>
+                     <div className="flex flex-col items-start justify-start">
                         <div className="hidden md:block">{truncatedName}</div>
                         <div className="block md:hidden">{name}</div>
-                        {rating && (
-                           <div className="flex h-4">
-                              <Rating rating={rating} />
-                           </div>
-                        )}
+                        {rating && <Rating rating={rating} />}
                         <div className="whitespace-nowrap text-sm">
                            {years}+ years
                         </div>

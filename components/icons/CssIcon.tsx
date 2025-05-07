@@ -1,6 +1,10 @@
 export default function CssIcon() {
    return (
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg
+         viewBox="0 0 24 24"
+         fill="none"
+         xmlns="http://www.w3.org/2000/svg"
+         aria-hidden="true">
          <path
             d="M7.50159 0H10.0797V1.07812H8.57971V2.15625H10.0797V3.23438H7.50159V0Z"
             fill="currentColor"></path>

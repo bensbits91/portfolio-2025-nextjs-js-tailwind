@@ -5,7 +5,7 @@ interface IconProps {
    name: string; // Allow any string
 }
 
-const Icon: React.FC<IconProps> = ({ name }) => {
+export default function Icon({ name }: IconProps) {
    const IconComponent = Icons[name as keyof typeof Icons]; // Type assertion to access the Icons object
 
    if (!IconComponent) {
@@ -14,6 +14,4 @@ const Icon: React.FC<IconProps> = ({ name }) => {
    }
 
    return <IconComponent name={name} />;
-};
-
-export default Icon;
+}

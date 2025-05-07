@@ -9,7 +9,6 @@ export { default as PlayIcon } from './PlayIcon';
 
 export { default as MoonIcon } from './MoonIcon';
 export { default as SunIcon } from './SunIcon';
-export { default as SunMoonIcon } from './SunMoonIcon';
 
 export { default as AwsIcon } from './AwsIcon';
 export { default as CssIcon } from './CssIcon';

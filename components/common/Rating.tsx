@@ -23,5 +23,9 @@ export default function Rating({ rating }: RatingProps) {
       );
    }
 
-   return stars;
+   return (
+      <div role="image" aria-label="Skill rating" className="flex">
+         {stars}
+      </div>
+   );
 }

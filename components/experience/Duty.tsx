@@ -6,8 +6,9 @@ import { IconBar } from '@/components/common';
 import { Heading, Text, List } from '@/components/typography';
 import { ChevronIcon } from '@/components/icons';
 import { skillIcons } from '@/data/skills';
-import clsx from 'clsx';
 import { BaseDuty } from '@/types/Job';
+import { replaceNonAphanumeric } from '@/utils/string';
+import clsx from 'clsx';
 
 interface DutyProps {
    duty: BaseDuty;
@@ -15,6 +16,7 @@ interface DutyProps {
 
 const Duty = ({ duty }: DutyProps) => {
    const { name, skillNames, description, moreInfo, moreInfoLink } = duty;
+   const ariaText = replaceNonAphanumeric(`duty-content-${duty.name}`);
 
    const [open, setOpen] = useState(false);
    const handleToggle = () => {
@@ -79,10 +81,15 @@ const Duty = ({ duty }: DutyProps) => {
          <DutyHeader />
          {moreInfo && moreInfo.length > 0 ? (
             <Collapsible onOpenChange={handleToggle} className="mt-2">
-               <Trigger className="text-left">
+               <Trigger
+                  className="text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bb-teal"
+                  aria-expanded={open}
+                  aria-controls={ariaText}>
                   <DutyMain />
                </Trigger>
                <Content
+                  id={ariaText}
+                  aria-hidden={!open}
                   className={clsx(
                      'light:bg-[var(--bb-gray-10)] rounded-md border border-bb-teal bg-bb-gray-900 p-4',
                      open ? 'animate-slide-down' : 'animate-slide-up'

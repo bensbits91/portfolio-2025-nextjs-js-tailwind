@@ -60,7 +60,7 @@ export default function SkillModal({
                <Close
                   asChild
                   className="fixed right-6 top-24 md:right-16 md:top-24"
-                  aria-label="Close">
+                  aria-label="Close modal">
                   <button
                      onClick={() => onOpenChange(false)}
                      className="link h-6 w-6 appearance-none focus:outline-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bb-teal">
@@ -83,11 +83,7 @@ export default function SkillModal({
                   <div className="flex flex-col gap-2">
                      <Title className={titleSize}>{name}</Title>
                      <Description className="hidden">{name}</Description>
-                     {rating && (
-                        <div className="flex h-4">
-                           <Rating rating={rating} />
-                        </div>
-                     )}
+                     {rating && <Rating rating={rating} />}
                      <Text top="no" bottom="no">
                         {years}+ years
                      </Text>

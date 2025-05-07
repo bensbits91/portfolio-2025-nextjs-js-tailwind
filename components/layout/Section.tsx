@@ -7,6 +7,7 @@ interface SectionProps {
    bottom?: 'no' | 'sm' | 'md' | 'lg' | 'xl';
    bg?: 'transparent' | 'blue' | 'green' | 'red' | 'yellow' | 'purple' | 'teal';
    fullheight?: boolean;
+   ariaLabelledby?: string;
 }
 
 const Section = ({
@@ -15,10 +16,13 @@ const Section = ({
    top = 'md',
    bottom = 'md',
    bg = 'transparent',
-   fullheight = false
+   fullheight = false,
+   ariaLabelledby,
 }: SectionProps) => {
    return (
       <section
+         role="region"
+         aria-labelledby={ariaLabelledby}
          className={clsx(
             'flex-col px-5',
             bg === 'transparent' ? 'bg-transparent' : `bg-gradient-${bg}`,

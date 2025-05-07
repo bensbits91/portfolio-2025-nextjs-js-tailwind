@@ -42,7 +42,7 @@ export default function SkillPopper({
             id="skill-popper-content"
             aria-labelledby="skill-popper-title"
             aria-describedby="skill-popper-description"
-            className="elevation-1 z-50 flex items-center justify-center gap-4 rounded-lg border border-bb-teal p-4">
+            className="elevation-1 z-50 flex items-center justify-center gap-4 rounded-lg border border-bb-teal p-4 focus:outline-none">
             <div className="relative h-12 w-12">
                {iconName && <Icon name={iconName} />}
                {!iconName && cloudinary && (
@@ -56,11 +56,7 @@ export default function SkillPopper({
             </div>
             <div>
                <div id="skill-popper-title">{name}</div>
-               {rating && (
-                  <div className="flex h-4">
-                     <Rating rating={rating} />
-                  </div>
-               )}
+               {rating && <Rating rating={rating} />}
                <div
                   id="skill-popper-description"
                   className="min-w-24 whitespace-nowrap text-[0.7rem] md:text-sm">

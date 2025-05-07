@@ -71,11 +71,7 @@ export default function SkillsTable({
          enableColumnFilter: false,
          cell: (info: CellContext<BaseSkill, unknown>) => {
             const rating = info.getValue() as number;
-            return (
-               <div className="flex h-4">
-                  <Rating rating={rating} />
-               </div>
-            );
+            return <Rating rating={rating} />;
          }
       }
    ];

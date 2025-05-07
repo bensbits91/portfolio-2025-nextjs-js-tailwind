@@ -7,11 +7,11 @@ interface DutiesProps {
 
 const Duties = ({ duties }: DutiesProps) => {
    if (!duties || duties.length === 0) {
-      return null;
+      return <p>No duties available for this job.</p>;
    }
    return (
       <div>
-         <ul>
+         <ul aria-label="Job responsibilities">
             {duties.map((duty, index) => (
                <Duty key={index} duty={duty} />
             ))}
