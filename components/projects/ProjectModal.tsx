@@ -72,14 +72,14 @@ export default function ProjectModal({
          <Content className="elevation-1 fixed left-2 right-2 top-20 z-20 h-[calc(100vh-100px)] overflow-hidden rounded-lg p-2 shadow-lg md:left-12 md:right-12 md:top-20">
             <div className={clsx('flex flex-col gap-4', headerHeight)}>
                <Close
-                  className="link fixed right-6 top-24 h-6 w-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bb-teal md:right-16 md:top-24"
+                  className="link fixed right-6 top-24 h-6 w-6 wcag-focus md:right-16 md:top-24"
                   aria-label="Close modal"
                   onClick={() => onOpenChange(false)}>
                   <CloseIcon />
                </Close>
                <div className="flex flex-col gap-4 pt-12 md:pt-8">
                   <Title className={clsx('px-4', titleSize)}>{name}</Title>
-                  <Description id="modal-description" className="hidden">
+                  <Description id="modal-description" className="sr-only">
                      {description || 'Project details'}
                   </Description>
                   <div className="flex items-center gap-8 px-4">

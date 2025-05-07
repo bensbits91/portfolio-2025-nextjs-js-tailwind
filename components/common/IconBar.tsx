@@ -26,6 +26,7 @@ const IconBar = ({
    if (!icons || icons.length === 0) {
       return null;
    }
+
    return (
       <ul
          className={clsx(
