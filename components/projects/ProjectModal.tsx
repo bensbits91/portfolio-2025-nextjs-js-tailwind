@@ -63,19 +63,25 @@ export default function ProjectModal({
       : 'h-[calc(100%-172px)] md:h-[calc(100%-142px)]';
 
    return (
-      <Dialog open={isOpen} onOpenChange={onOpenChange}>
+      <Dialog
+         open={isOpen}
+         onOpenChange={onOpenChange}
+         // aria-labelledby="modal-title"
+         aria-describedby="modal-description">
          <Overlay className="fixed inset-0 bg-black/70" />
          <Content className="elevation-1 fixed left-2 right-2 top-20 z-20 h-[calc(100vh-100px)] overflow-hidden rounded-lg p-2 shadow-lg md:left-12 md:right-12 md:top-20">
             <div className={clsx('flex flex-col gap-4', headerHeight)}>
                <Close
-                  className="link fixed right-6 top-24 h-6 w-6 md:right-16 md:top-24"
-                  aria-label="Close"
+                  className="link fixed right-6 top-24 h-6 w-6 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bb-teal md:right-16 md:top-24"
+                  aria-label="Close modal"
                   onClick={() => onOpenChange(false)}>
                   <CloseIcon />
                </Close>
                <div className="flex flex-col gap-4 pt-12 md:pt-8">
                   <Title className={clsx('px-4', titleSize)}>{name}</Title>
-                  <Description className="hidden">{name}</Description>
+                  <Description id="modal-description" className="hidden">
+                     {description || 'Project details'}
+                  </Description>
                   <div className="flex items-center gap-8 px-4">
                      {tech && tech.length > 0 && (
                         <IconBar

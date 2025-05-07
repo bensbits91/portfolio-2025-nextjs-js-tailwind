@@ -1,5 +1,5 @@
 import { Header, flexRender } from '@tanstack/react-table';
-import { ChevronIcon } from '@/components/icons';
+import { ChevronIcon, DoubleChevronIcon } from '@/components/icons';
 import clsx from 'clsx';
 
 interface SkillsTableHeaderProps<TData> {
@@ -35,6 +35,7 @@ export default function SkillsTableHeader<TData>({
 
    return (
       <th
+         key={id}
          scope="col"
          aria-sort={
             isSortedAsc ? 'ascending' : isSortedDesc ? 'descending' : 'none'
@@ -44,20 +45,19 @@ export default function SkillsTableHeader<TData>({
                ? 'cursor-pointer pl-2 text-left align-top'
                : 'pl-2 text-left align-top',
             hideOnMobile && 'hidden md:table-cell'
-         )}
-         key={id}>
+         )}>
          <div
             onClick={getToggleSortingHandler()}
             className="flex"
             role={canSort ? 'button' : undefined} // Make it a button for sorting
             tabIndex={canSort ? 0 : undefined} // Make it focusable if sortable
+            aria-label={`Sort by ${columnDef.header}`}
             onKeyDown={e => {
                if (canSort && (e.key === 'Enter' || e.key === ' ')) {
                   e.preventDefault();
                   getToggleSortingHandler()?.(e);
                }
-            }}
-            aria-label={`Sort by ${columnDef.header}`}>
+            }}>
             {isPlaceholder ? null : flexRender(columnDef.header, getContext())}
             {isSortedAsc && (
                <div className="h-6 w-6">
@@ -69,7 +69,11 @@ export default function SkillsTableHeader<TData>({
                   <ChevronIcon direction={'down'} />
                </div>
             )}
-            {canSort && !isSorted && ' ⬍'}
+            {canSort && !isSorted && (
+               <div className="h-6 w-6">
+                  <DoubleChevronIcon />
+               </div>
+            )}
          </div>
          {canFilter && (
             <input

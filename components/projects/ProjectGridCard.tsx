@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import useProjectGridCard from '@/hooks/useProjectGridCard';
 import { CloudinaryImage } from '@/components/image';
 import { Heading } from '@/components/typography';
 import { IconBar } from '@/components/common';
@@ -8,18 +8,19 @@ import { truncateString } from '@/utils/string';
 import { GridProject } from '@/types/Project';
 import clsx from 'clsx';
 
-const ProjectGridCard: React.FC<{
+interface ProjectGridCardProps {
    project: GridProject;
    inverted?: boolean;
    handleClick?: (projectName: string) => void;
-}> = ({ project, inverted, handleClick }) => {
-   const [isHovered, setIsHovered] = useState(false);
-   const handleMouseEnter = () => {
-      setIsHovered(true);
-   };
-   const handleMouseLeave = () => {
-      setIsHovered(false);
-   };
+}
+
+export default function ProjectGridCard({
+   project,
+   inverted,
+   handleClick
+}: ProjectGridCardProps) {
+   const { isHovered, handleMouseEnter, handleMouseLeave } =
+      useProjectGridCard();
 
    const { name, tech, description } = project;
    const featuredImage = project.getFeaturedImage();
@@ -29,16 +30,18 @@ const ProjectGridCard: React.FC<{
       : {};
 
    return (
-      <div
+      <button
          onMouseEnter={handleMouseEnter}
          onMouseLeave={handleMouseLeave}
+         onFocus={handleMouseEnter}
+         onBlur={handleMouseLeave}
          onClick={() => handleClick && handleClick(name)}
+         aria-label={`View details about ${name}`}
          className={clsx(
-            'overflow-hidden',
-            {
-               'card-elevated-force-dark card-clickable-force-dark': inverted
-            },
-            { 'card-clickable': !inverted }
+            'overflow-hidden focus:outline-none focus:ring-2 focus:ring-bb-teal text-left',
+            inverted
+               ? 'card-elevated-force-dark card-clickable-force-dark'
+               : 'card-clickable'
          )}>
          {featuredImage &&
             featuredImage.name &&
@@ -51,7 +54,7 @@ const ProjectGridCard: React.FC<{
                   )}>
                   <CloudinaryImage
                      cloudinaryId={featuredImage.name}
-                     alt={name}
+                     alt={`Featured image for ${name}`}
                      width={300}
                      height={300}
                      full={true}
@@ -82,8 +85,6 @@ const ProjectGridCard: React.FC<{
                <p className="mb-4 text-sm">{truncatedDescription}</p>
             )}
          </div>
-      </div>
+      </button>
    );
-};
-
-export default ProjectGridCard;
+}

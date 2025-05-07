@@ -121,9 +121,9 @@ export default function SkillsTable({
                {table.getRowModel().rows.map(row => (
                   <tr
                      key={row.id}
-                     className="table-row focus:outline-none focus:ring-2 focus:ring-bb-teal"
                      tabIndex={0} // Make the row focusable
                      role="button"
+                     aria-label={`View details about ${row.original.name}`}
                      onClick={() => {
                         handleItemClick(row.original.name);
                      }}
@@ -133,7 +133,7 @@ export default function SkillsTable({
                            handleItemClick(row.original.name);
                         }
                      }}
-                     aria-label={`View details about ${row.original.name}`}>
+                     className="table-row focus:outline-none focus:ring-2 focus:ring-bb-teal">
                      {row.getVisibleCells().map(cell => (
                         <SkillsTableCell
                            key={cell.id}

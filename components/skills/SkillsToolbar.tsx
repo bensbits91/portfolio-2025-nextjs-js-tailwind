@@ -71,7 +71,7 @@ export default function SkillsViewToolbar({
          <div className="hidden sm:block">View</div>
          <ToggleGroup
             type="single"
-            defaultValue={'table'}
+            defaultValue={'grid'}
             role="tablist"
             className="mx-2 flex items-center gap-4 md:gap-8">
             <ViewItem view="grid" />
