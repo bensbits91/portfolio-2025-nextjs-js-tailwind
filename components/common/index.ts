@@ -1,3 +1,4 @@
+export { default as Loading } from './Loading';
 export { default as Button } from './Button';
 export { default as PrimaryCta } from './PrimaryCta';
 export { default as StyledLink } from './StyledLink';

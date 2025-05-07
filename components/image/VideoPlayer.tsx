@@ -1,5 +1,6 @@
 'use client';
 import { Suspense } from 'react';
+import { Loading } from '@/components/common';
 import useVideoPlayer from '@/hooks/useVideoPlayer';
 
 interface VideoPlayerProps {
@@ -9,11 +10,10 @@ interface VideoPlayerProps {
 export default function VideoPlayer({ filename }: VideoPlayerProps) {
    const videoUrl = useVideoPlayer(filename);
 
-   // todo: add loading spinner
    return (
       <div className="w-full">
          {videoUrl ? (
-            <Suspense fallback={<p aria-live="polite">Loading video...</p>}>
+            <Suspense fallback={<Loading message='Loading video...' />}>
                <video
                   className="w-full"
                   controls
@@ -31,7 +31,9 @@ export default function VideoPlayer({ filename }: VideoPlayerProps) {
                </p>
             </Suspense>
          ) : (
-            <p aria-live="polite">Loading video...</p>
+            <div>
+               <Loading message='Loading video...' />
+            </div>
          )}
       </div>
    );

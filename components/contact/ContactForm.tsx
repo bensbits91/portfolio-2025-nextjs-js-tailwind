@@ -1,6 +1,7 @@
 'use client';
 import useContactForm from '@/hooks/useContactForm';
 import ContactLinks from './ContactLinks';
+import { Loading } from '@/components/common';
 import clsx from 'clsx';
 
 const ContactForm = ({ dark = false }: { dark?: boolean }) => {
@@ -14,14 +15,14 @@ const ContactForm = ({ dark = false }: { dark?: boolean }) => {
    } = useContactForm();
 
    const SendingComponent = () => (
-      <div aria-live="polite" className="mt-8 flex flex-col items-center gap-4">
-         <p>Sending message...</p>
+      <div className="flex flex-col items-center gap-4 dark-text">
+         <Loading message='Sending message...' />
       </div>
    );
 
    const SentComponent = () => (
-      <div aria-live="polite" className="mt-8 flex flex-col items-center gap-4">
-         <p>Thanks! I&apos;ll get back to you asap</p>
+      <div aria-live="polite" className="flex flex-col items-center gap-4">
+         <p>Thanks! I&apos;ll get back to you soon.</p>
          <ContactLinks />
       </div>
    );
@@ -34,7 +35,7 @@ const ContactForm = ({ dark = false }: { dark?: boolean }) => {
       <div
          role="alert"
          aria-live="assertive"
-         className="mt-8 flex flex-col items-center gap-4">
+         className="flex flex-col items-center gap-4">
          <p>Error: {JSON.stringify(error)}</p>
          <ContactLinks />
       </div>
