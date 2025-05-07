@@ -1,34 +1,13 @@
 'use client';
 import { Suspense } from 'react';
-import { useEffect, useState } from 'react';
+import useVideoPlayer from '@/hooks/useVideoPlayer';
 
 interface VideoPlayerProps {
    filename: string;
 }
 
 export default function VideoPlayer({ filename }: VideoPlayerProps) {
-   const [videoUrl, setVideoUrl] = useState('');
-
-   useEffect(() => {
-      const fetchVideoUrl = async () => {
-         try {
-            const response = await fetch(
-               `/api/vercel-blob?filename=${filename}`,
-               {
-                  method: 'GET',
-                  headers: { 'Content-Type': 'application/json' }
-               }
-            );
-            const data = await response.json();
-            setVideoUrl(data.videoUrl);
-         } catch (error) {
-            // todo: handle error
-            console.error('Error fetching video URL:', error);
-         }
-      };
-
-      fetchVideoUrl();
-   }, [filename]);
+   const videoUrl = useVideoPlayer(filename);
 
    // todo: add loading spinner
    return (

@@ -1,5 +1,5 @@
 'use client';
-import { useState, useCallback, useMemo } from 'react';
+import useProjects from '@/hooks/useProjects';
 import { Section } from '@/components/layout';
 import { Heading, Text } from '@/components/typography';
 import { CloudinaryImage } from '@/components/image';
@@ -10,31 +10,16 @@ import {
    ProjectModal
 } from '@/components/projects';
 import { PrimaryCta, Button } from '@/components/common';
-import { projectsForGallery } from '@/data/projects';
 
 const Projects = () => {
-   const [selectedView, setSelectedView] = useState<'table' | 'grid'>('grid');
-   const handleViewClick = useCallback((newView: 'table' | 'grid') => {
-      setSelectedView(newView);
-   }, []);
-
-   const [selectedProject, setSelectedProject] = useState<string | null>(null);
-
-   const projectsToPass = useMemo(
-      () =>
-         projectsForGallery.map(project => ({
-            ...project,
-            getFeaturedImage: () => ({
-               name: project.images[0]?.name || 'default',
-               frame: 'default-frame'
-            })
-         })),
-      []
-   );
-
-   const handleItemClick = useCallback((projectName: string) => {
-      setSelectedProject(projectName);
-   }, []);
+   const {
+      selectedView,
+      handleViewClick,
+      selectedProject,
+      setSelectedProject,
+      projectsToPass,
+      handleItemClick
+   } = useProjects();
 
    return (
       <>
@@ -146,7 +131,7 @@ const Projects = () => {
          <ProjectModal
             project={
                selectedProject
-                  ? projectsForGallery.find(
+                  ? projectsToPass.find(
                        project => project.name === selectedProject
                     )
                   : null
