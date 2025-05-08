@@ -61,9 +61,7 @@ export default function SkillsTable({
          cell: (info: CellContext<BaseSkill, unknown>) => {
             const years = info.getValue() as number;
             return (
-               <div className="min-w-24 whitespace-nowrap text-[0.7rem] md:text-sm">
-                  {years}+ years
-               </div>
+               <div className="whitespace-nowrap text-sm">{years}+ years</div>
             );
          }
       },
@@ -73,11 +71,7 @@ export default function SkillsTable({
          enableColumnFilter: false,
          cell: (info: CellContext<BaseSkill, unknown>) => {
             const rating = info.getValue() as number;
-            return (
-               <div className="flex h-4">
-                  <Rating rating={rating} />
-               </div>
-            );
+            return <Rating rating={rating} />;
          }
       }
    ];
@@ -103,8 +97,9 @@ export default function SkillsTable({
    }
 
    return (
-      <div>
-         <table>
+      <div className="md:px-4">
+         <table className="w-full table-auto">
+            <caption className="hidden">Skills Table</caption>
             <thead>
                {table.getHeaderGroups().map(headerGroup => (
                   <tr key={headerGroup.id}>
@@ -122,10 +117,19 @@ export default function SkillsTable({
                {table.getRowModel().rows.map(row => (
                   <tr
                      key={row.id}
-                     className="table-row"
+                     tabIndex={0} // Make the row focusable
+                     role="button"
+                     aria-label={`View details about ${row.original.name}`}
                      onClick={() => {
                         handleItemClick(row.original.name);
-                     }}>
+                     }}
+                     onKeyDown={e => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                           e.preventDefault();
+                           handleItemClick(row.original.name);
+                        }
+                     }}
+                     className="wcag-focus table-row">
                      {row.getVisibleCells().map(cell => (
                         <SkillsTableCell
                            key={cell.id}

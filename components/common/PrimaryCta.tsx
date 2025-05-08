@@ -5,9 +5,7 @@ import { IconBar } from '@/components/common';
 import { ctaSkills, skillIcons } from '@/data/skills';
 
 const PrimaryCta = ({
-   //    data,
    link = { href: '/contact', text: 'Contact me' },
-   //    size = 'narrow',
    bigBottom = false,
    bg = 'teal'
 }) => (
@@ -26,6 +24,7 @@ const PrimaryCta = ({
                <div className="mb-12 md:max-w-[640px]">
                   <IconBar
                      wrap
+                     dark
                      icons={skillIcons(ctaSkills, true).filter(
                         (
                            icon
@@ -40,22 +39,24 @@ const PrimaryCta = ({
 
                <div className="mb-8 flex gap-12 text-bb-gray md:gap-20">
                   <div>
-                     <div className="text-4xl md:text-5xl">23+</div> years in{' '}
+                     <div className="text-4xl md:text-5xl">23+</div> years in
                      <div className="text-xl md:text-2xl">Tech</div>
                   </div>
                   <div>
-                     <div className="text-4xl md:text-5xl">12+</div> years in{' '}
+                     <div className="text-4xl md:text-5xl">12+</div> years in
                      <div className="text-xl md:text-2xl">Frontend</div>
                   </div>
                   <div>
-                     <div className="text-4xl md:text-5xl">9+</div> years in{' '}
+                     <div className="text-4xl md:text-5xl">9+</div> years in
                      <div className="text-xl md:text-2xl">Fullstack</div>
                   </div>
                </div>
 
                <div className="hidden md:block">
                   <ContactPopper dark>
-                     <button className="hover-delay hover-brightness mt-12 rounded-md bg-bb-gray p-4 text-bb-teal min-w-[400px] max-w-max">
+                     <button
+                        aria-label="Open contact form"
+                        className="hover-delay hover-brightness wcag-focus mt-12 min-w-[400px] max-w-max rounded-md bg-bb-gray p-4 text-bb-teal">
                         {link.text}
                      </button>
                   </ContactPopper>
@@ -73,7 +74,9 @@ const PrimaryCta = ({
 
          <div className="block md:hidden">
             <ContactPopper dark>
-               <button className="mt-12 rounded-md bg-bb-gray p-4 text-bb-teal w-full">
+               <button
+                  aria-label="Open contact form"
+                  className="wcag-focus mt-12 w-full rounded-md bg-bb-gray p-4 text-bb-teal">
                   {link.text}
                </button>
             </ContactPopper>

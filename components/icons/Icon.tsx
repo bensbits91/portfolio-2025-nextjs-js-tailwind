@@ -3,9 +3,10 @@ import * as Icons from './index';
 
 interface IconProps {
    name: string; // Allow any string
+   dark?: boolean; // Optional prop to force icon to be dark
 }
 
-const Icon: React.FC<IconProps> = ({ name }) => {
+export default function Icon({ name, dark }: IconProps) {
    const IconComponent = Icons[name as keyof typeof Icons]; // Type assertion to access the Icons object
 
    if (!IconComponent) {
@@ -13,7 +14,5 @@ const Icon: React.FC<IconProps> = ({ name }) => {
       return null; // Return null if the icon name is invalid
    }
 
-   return <IconComponent name={name} />;
-};
-
-export default Icon;
+   return <IconComponent name={name} dark={dark} />;
+}

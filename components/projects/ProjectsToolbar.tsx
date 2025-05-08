@@ -1,22 +1,62 @@
 import {
    Toolbar,
    Button,
-   //    Separator,
    ToggleGroup,
    ToggleItem
 } from '@radix-ui/react-toolbar';
 import { TableIcon, GridIcon } from '@/components/icons';
 import clsx from 'clsx';
 
+type ViewType = 'table' | 'grid';
+
 interface ProjectsViewToolbarProps {
-   handleViewClick: (newView: 'table' | 'grid') => void;
-   selectedView: 'table' | 'grid';
+   handleViewClick: (newView: ViewType) => void;
+   selectedView: ViewType;
+}
+
+interface ViewItemProps {
+   view: ViewType;
 }
 
 export default function ProjectsViewToolbar({
    handleViewClick,
    selectedView
 }: ProjectsViewToolbarProps) {
+   const ViewItem = ({ view }: ViewItemProps) => {
+      const displayName = view.charAt(0).toUpperCase() + view.slice(1);
+      const ariaLabel = displayName + ' view';
+      const isSelected = selectedView === view;
+      return (
+         <ToggleItem
+            asChild
+            value={view}
+            role="tab"
+            tabIndex={0}
+            aria-label={ariaLabel}
+            aria-selected={isSelected}>
+            <Button
+               onClick={() => handleViewClick(view)}
+               onKeyDown={e => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                     e.preventDefault();
+                     handleViewClick(view);
+                  }
+               }}
+               title={ariaLabel}
+               className={clsx(
+                  'flex items-center gap-2 rounded-md',
+                  isSelected ? 'link-active' : 'link'
+               )}>
+               <div className="h-4 w-4">
+                  {view === 'grid' && <GridIcon />}
+                  {view === 'table' && <TableIcon />}
+               </div>
+               <div>{displayName}</div>
+            </Button>
+         </ToggleItem>
+      );
+   };
+
    return (
       <Toolbar
          orientation="horizontal"
@@ -24,36 +64,11 @@ export default function ProjectsViewToolbar({
          <div className="hidden sm:block">View</div>
          <ToggleGroup
             type="single"
-            defaultValue={'table'}
-            className="flex items-center gap-4 mx-2 md:gap-8">
-            <ToggleItem asChild value="grid" aria-label="Grid view">
-               <Button
-                  onClick={() => handleViewClick('grid')}
-                  className={clsx(
-                     'flex items-center gap-2 rounded-md',
-                     selectedView === 'grid' ? 'link-active' : 'link'
-                  )}
-                  title="Grid view">
-                  <div className="h-4 w-4">
-                     <GridIcon />
-                  </div>
-                  <div>Grid</div>
-               </Button>
-            </ToggleItem>
-            <ToggleItem asChild value="table" aria-label="Table view">
-               <Button
-                  onClick={() => handleViewClick('table')}
-                  className={clsx(
-                     'flex items-center gap-2 rounded-md',
-                     selectedView === 'table' ? 'link-active' : 'link'
-                  )}
-                  title="Table view">
-                  <div className="h-4 w-4">
-                     <TableIcon />
-                  </div>
-                  <div>Table</div>
-               </Button>
-            </ToggleItem>
+            defaultValue={'grid'}
+            role="tablist"
+            className="mx-2 flex items-center gap-4 md:gap-8">
+            <ViewItem view="grid" />
+            <ViewItem view="table" />
          </ToggleGroup>
       </Toolbar>
    );

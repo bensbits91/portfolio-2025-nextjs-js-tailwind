@@ -8,14 +8,22 @@ interface IconProps {
    altText: string;
    link?: string;
    size?: number;
+   dark?: boolean;
 }
 
-const Icon = ({ src, iconName, altText, link, size = 24 }: IconProps) => {
+const Icon = ({
+   src,
+   iconName,
+   altText,
+   link,
+   size = 24,
+   dark = false
+}: IconProps) => {
    const IconImage = () => (
       <div title={altText} className="flex items-center">
          {iconName && (
             <div style={{ width: size, height: size }}>
-               <DynamicIcon name={iconName} />
+               <DynamicIcon name={iconName} dark={dark} />
             </div>
          )}
          {!iconName && src && (
@@ -32,7 +40,7 @@ const Icon = ({ src, iconName, altText, link, size = 24 }: IconProps) => {
    return (
       <div className="flex">
          {link ? (
-            <Link href={link}>
+            <Link href={link} aria-label={altText}>
                <IconImage />
             </Link>
          ) : (

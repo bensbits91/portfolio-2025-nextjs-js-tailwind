@@ -1,5 +1,4 @@
-import Link from 'next/link';
-import { GithubIcon, LinkedInIcon, ResumeIcon } from '@/components/icons';
+import { StyledLink } from '@/components/common';
 import clsx from 'clsx';
 
 interface ContactLinksProps {
@@ -7,63 +6,42 @@ interface ContactLinksProps {
    showText?: boolean;
 }
 
-const ContactLinks = ({
-   vertical = false,
-   showText = false
-}: ContactLinksProps) => {
+const ContactLinks = ({ vertical = false }: ContactLinksProps) => {
    return (
       <ul
          className={clsx(
             'flex text-sm',
-            vertical ? 'flex-col justify-start gap-2' : 'h-5 gap-4'
+            vertical ? 'flex-col justify-start gap-2' : 'h-4 gap-4'
          )}>
          <li>
-            <Link
-               href="https://www.linkedin.com/in/benbrooks/"
-               target="_blank"
-               title="LinkedIn"
-               rel="noreferrer"
-               className={clsx(
-                  'link',
-                  vertical && 'flex items-center gap-2'
-               )}>
-               <div className="h-5 w-5">
-                  <LinkedInIcon />
-               </div>
-               {showText && <span>LinkedIn</span>}
-            </Link>
+            <StyledLink
+               href="https://www.linkedin.com/in/benbrooks"
+               icon="LinkedInIcon"
+               newTab
+               text="LinkedIn"
+               showText={vertical}
+               ariaLabel="View my LinkedIn profile"
+            />
          </li>
          <li>
-            <Link
+            <StyledLink
                href="https://github.com/bensbits91"
-               target="_blank"
-               title="GitHub"
-               rel="noreferrer"
-               className={clsx(
-                  'link',
-                  vertical && 'flex items-center gap-2'
-               )}>
-               <div className="h-5 w-5">
-                  <GithubIcon />
-               </div>
-               {showText && <span>GitHub</span>}
-            </Link>
+               icon="GithubIcon"
+               newTab
+               text="GitHub"
+               showText={vertical}
+               ariaLabel="View my GitHub profile"
+            />
          </li>
          <li>
-            <Link
+            <StyledLink
                href="https://res.cloudinary.com/ddfrx5278/image/upload/v1739151148/Ben_Brooks_Resume_vqqprw.pdf"
-               target="_blank"
-               title="Download Resume"
-               className={clsx(
-                  'link',
-                  vertical && 'flex items-center gap-2'
-               )}>
-               <div className="h-5 w-5">
-                  <ResumeIcon />
-               </div>
-
-               {showText && <span>R&eacute;sum&eacute;</span>}
-            </Link>
+               icon="ResumeIcon"
+               newTab
+               text="R&eacute;sum&eacute;"
+               showText={vertical}
+               ariaLabel="Download my Resume as a PDF"
+            />
          </li>
       </ul>
    );

@@ -1,4 +1,5 @@
 import { StarIcon, StarHalfIcon } from '@/components/icons';
+
 interface RatingProps {
    rating: number;
 }
@@ -9,7 +10,7 @@ export default function Rating({ rating }: RatingProps) {
    const stars = [];
    for (let i = 0; i < fullStars; i++) {
       stars.push(
-         <div key={`full-${i}`} className="h-3 w-3">
+         <div key={`full-${i}`} className="h-3 w-3" aria-hidden="true">
             <StarIcon />
          </div>
       );
@@ -17,11 +18,18 @@ export default function Rating({ rating }: RatingProps) {
 
    if (halfStar) {
       stars.push(
-         <div key="half" className="h-3 w-3">
+         <div key="half" className="h-3 w-3" aria-hidden="true">
             <StarHalfIcon />
          </div>
       );
    }
 
-   return stars;
+   return (
+      <div
+         role="group"
+         aria-label={`I rate myself ${rating} out of ten for this skill`}
+         className="flex">
+         {stars}
+      </div>
+   );
 }

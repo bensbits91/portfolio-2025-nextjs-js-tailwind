@@ -1,6 +1,7 @@
 'use client';
 import useContactForm from '@/hooks/useContactForm';
 import ContactLinks from './ContactLinks';
+import { Loading } from '@/components/common';
 import clsx from 'clsx';
 
 const ContactForm = ({ dark = false }: { dark?: boolean }) => {
@@ -14,14 +15,14 @@ const ContactForm = ({ dark = false }: { dark?: boolean }) => {
    } = useContactForm();
 
    const SendingComponent = () => (
-      <div className="mt-8 flex flex-col items-center gap-4">
-         <p>Sending message...</p>
+      <div className="flex flex-col items-center gap-4 dark-text">
+         <Loading message='Sending message...' />
       </div>
    );
 
    const SentComponent = () => (
-      <div className="mt-8 flex flex-col items-center gap-4">
-         <p>Thanks! I&apos;ll get back to you asap</p>
+      <div aria-live="polite" className="flex flex-col items-center gap-4">
+         <p>Thanks! I&apos;ll get back to you soon.</p>
          <ContactLinks />
       </div>
    );
@@ -31,7 +32,10 @@ const ContactForm = ({ dark = false }: { dark?: boolean }) => {
    }: {
       error: Record<string, unknown> | null;
    }) => (
-      <div className="mt-8 flex flex-col items-center gap-4">
+      <div
+         role="alert"
+         aria-live="assertive"
+         className="flex flex-col items-center gap-4">
          <p>Error: {JSON.stringify(error)}</p>
          <ContactLinks />
       </div>
@@ -54,7 +58,7 @@ const ContactForm = ({ dark = false }: { dark?: boolean }) => {
                      value={formData.name}
                      onChange={handleChange}
                      required
-                     className="h-9 rounded bg-[var(--bb-gray-25)] px-3"
+                     className="wcag-focus h-9 rounded bg-[var(--bb-gray-25)] px-3"
                   />
                </div>
                <div
@@ -71,7 +75,7 @@ const ContactForm = ({ dark = false }: { dark?: boolean }) => {
                      value={formData.email}
                      onChange={handleChange}
                      required
-                     className="h-9 rounded bg-[var(--bb-gray-25)] px-3"
+                     className="wcag-focus h-9 rounded bg-[var(--bb-gray-25)] px-3"
                   />
                </div>
                <div
@@ -87,14 +91,14 @@ const ContactForm = ({ dark = false }: { dark?: boolean }) => {
                      value={formData.message}
                      onChange={handleChange}
                      required
-                     className="h-24 rounded bg-[var(--bb-gray-25)] p-3"
+                     className="wcag-focus h-24 rounded bg-[var(--bb-gray-25)] p-3"
                   />
                </div>
                <button
                   type="submit"
                   id="submitBtn"
                   className={clsx(
-                     'hover-delay hover-brightness mt-4 w-full rounded-md p-4 text-center font-roboto-sans text-sm tracking-wide md:w-40',
+                     'wcag-focus hover-delay hover-brightness mt-4 w-full rounded-md p-4 text-center font-roboto-sans text-sm tracking-wide md:w-40',
                      dark ? 'dark-text bg-bb-teal' : 'bg-bb-gray text-bb-teal'
                   )}>
                   Send

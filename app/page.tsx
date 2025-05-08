@@ -42,7 +42,7 @@ const Home = () => {
                      } => icon.src !== undefined
                   )}
                />
-               <Button link="/skills">
+               <Button ariaLabel="Navigate to Skills page" link="/skills">
                   <div className="md:min-w-[400px]">View all skills</div>
                </Button>
             </div>
@@ -62,7 +62,10 @@ const Home = () => {
                   <div className="text-xl md:text-2xl">Fullstack</div>
                </div>
             </div>
-            <Button inverted link="/experience">
+            <Button
+               ariaLabel="Navigate to Experience page"
+               inverted
+               link="/experience">
                <div className="md:min-w-[400px]">View experience</div>
             </Button>
          </Section>
@@ -79,7 +82,7 @@ const Home = () => {
                   <div className="text-2xl">Component Libraries</div>
                </div>
             </div>
-            <Button link="/projects">
+            <Button ariaLabel="Navigate to Projects page" link="/projects">
                <div className="md:min-w-[400px]">View work samples</div>
             </Button>
          </Section>
@@ -93,7 +96,7 @@ const Home = () => {
                </Text>
             </div>
             <ContactPopper dark>
-               <button className="hover-delay hover-brightness min-w-full md:min-w-[400px] max-w-max rounded-md bg-bb-gray p-4 text-bb-teal">
+               <button className="hover-delay hover-brightness min-w-full max-w-max rounded-md bg-bb-gray p-4 text-bb-teal md:min-w-[400px]">
                   Let&apos;s connect
                </button>
             </ContactPopper>

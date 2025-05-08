@@ -1,33 +1,26 @@
 'use client';
-import { useState, useCallback } from 'react';
+import useSkills from '@/hooks/useSkills';
 import { Section } from '@/components/layout';
 import { Heading } from '@/components/typography';
-import { AreaChart, RadarChart } from '@/components/charts';
 import { PrimaryCta } from '@/components/common';
 import {
    SkillsTable,
    SkillsGrid,
+   SkillsByYear,
+   SkillsByStack,
    SkillsToolbar,
    SkillModal
 } from '@/components/skills';
-import { skillsForTable } from '@/data/skills';
 
 const Skills = () => {
-   const [selectedView, setSelectedView] = useState<
-      'table' | 'grid' | 'growth' | 'stack'
-   >('grid');
-   const handleViewClick = useCallback(
-      (newView: 'table' | 'grid' | 'growth' | 'stack') => {
-         setSelectedView(newView);
-      },
-      []
-   );
-
-   const [selectedSkill, setSelectedSkill] = useState<string | null>(null);
-
-   const handleItemClick = useCallback((skillName: string) => {
-      setSelectedSkill(skillName);
-   }, []);
+   const {
+      selectedView,
+      handleViewClick,
+      selectedSkill,
+      setSelectedSkill,
+      skillsToPass,
+      handleItemClick
+   } = useSkills();
 
    return (
       <>
@@ -42,25 +35,25 @@ const Skills = () => {
             <div className="pt-4">
                {selectedView === 'table' && (
                   <SkillsTable
-                     skills={skillsForTable}
+                     skills={skillsToPass}
                      handleItemClick={handleItemClick}
                   />
                )}
                {selectedView === 'grid' && (
                   <SkillsGrid
-                     skills={skillsForTable}
+                     skills={skillsToPass}
                      handleItemClick={handleItemClick}
                   />
                )}
-               {selectedView === 'growth' && <AreaChart />}
-               {selectedView === 'stack' && <RadarChart />}
+               {selectedView === 'growth' && <SkillsByYear />}
+               {selectedView === 'stack' && <SkillsByStack />}
             </div>
          </Section>
          <PrimaryCta />
          <SkillModal
             skill={
                selectedSkill
-                  ? skillsForTable.find(skill => skill.name === selectedSkill)
+                  ? skillsToPass.find(skill => skill.name === selectedSkill)
                   : null
             }
             isOpen={!!selectedSkill}

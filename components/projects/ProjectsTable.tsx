@@ -42,7 +42,7 @@ export default function ProjectsTable({
                <div className="mr-2 flex h-8 w-8">
                   <CloudinaryImage
                      cloudinaryId={imageUrl}
-                     alt={getCoreRowModel.name}
+                     alt={`Thumbnail for ${info.row.original.name}`}
                      width={32}
                      height={32}
                   />
@@ -147,10 +147,19 @@ export default function ProjectsTable({
             {table.getRowModel().rows.map(row => (
                <tr
                   key={row.id}
-                  className="table-row"
+                  tabIndex={0} // Make the row focusable
+                  role="button"
+                  aria-label={`View details about ${row.original.name}`}
                   onClick={() => {
                      handleItemClick(row.original.name);
-                  }}>
+                  }}
+                  onKeyDown={e => {
+                     if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        handleItemClick(row.original.name);
+                     }
+                  }}
+                  className="wcag-focus table-row">
                   {row.getVisibleCells().map(cell => (
                      <ProjectsTableCell
                         key={cell.id}

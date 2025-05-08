@@ -29,18 +29,23 @@ export default function ContactPopper({
 }: ContactPopperProps) {
    return (
       <Popover>
-         <Trigger asChild>{children || <div>Contact</div>}</Trigger>
+         <Trigger asChild aria-label="Open contact form">
+            {children || <div>Contact</div>}
+         </Trigger>
          <Content
             side={side}
             sideOffset={sideOffset}
             align={align}
             alignOffset={alignOffset}
-            // className="elevation-1 light:border-[var(--bb-gray-10)] z-50 mx-auto w-[calc(100vw-8px)] rounded-lg border border-[var(--bg-elevation-1)] p-4 md:mx-0 md:w-96">
+            aria-labelledby="contact-heading"
+            aria-describedby="contact-description"
             className={clsx(
                'z-40 mx-auto w-[calc(100vw-8px)] rounded-lg p-4 shadow-2xl md:mx-0 md:w-96',
                dark ? 'bg-gradient-dark' : 'bg-gradient-teal'
             )}>
-            <Close className="absolute right-2 top-2 cursor-pointer">
+            <Close
+               aria-label="Close contact form"
+               className="absolute right-2 top-2 cursor-pointer wcag-focus">
                <div
                   className={clsx(
                      'hover-delay hover-brightness h-4 w-4',
@@ -50,12 +55,16 @@ export default function ContactPopper({
                </div>
             </Close>
             <Heading
+               id="contact-heading"
                level={2}
                appearance={4}
                bottom="md"
                color={dark ? 'light' : 'dark'}>
                Contact me
             </Heading>
+            <p id="contact-description" className="sr-only">
+               Use this form to send me a message.
+            </p>
             <ContactForm dark={dark} />
             <Arrow
                className={clsx(

@@ -1,5 +1,5 @@
 'use client';
-import { useMemo } from 'react';
+import useProjectGrid from '@/hooks/useProjectGrid';
 import ProjectGridCard from './ProjectGridCard';
 import { GridProject } from '@/types/Project';
 
@@ -20,51 +20,17 @@ const ProjectGrid = ({
    inverted = false,
    handleItemClick
 }: ProjectGridProps) => {
-   let projectsToShow = useMemo(
-      () =>
-         projects.map(project => ({
-            ...project,
-            getFeaturedImage: () => ({
-               name: project.images[0]?.name || 'default',
-               frame: 'default-frame',
-               hideFromGridCard: project.images[0]?.hideFromGridCard
-                  ? project.images[0]?.hideFromGridCard
-                  : false
-            })
-         })),
-      [projects]
-   );
-
-   if (onOrAfter) {
-      projectsToShow = projectsToShow.filter(project => {
-         return Number(project.year) >= onOrAfter;
-      });
-   }
-
-   if (before) {
-      projectsToShow = projectsToShow.filter(project => {
-         return Number(project.year) < before;
-      });
-   }
-
-   if (type) {
-      projectsToShow = projectsToShow.filter(project => {
-         return project.type === type;
-      });
-   }
+   const projectsToShow = useProjectGrid({ projects, before, onOrAfter, type });
 
    return (
       <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
          {projectsToShow.map((project, index) => (
-            <div
+            <ProjectGridCard
                key={index}
-               onClick={() => handleItemClick && handleItemClick(project.name)}>
-               <ProjectGridCard
-                  project={project}
-                  inverted={inverted}
-                  handleClick={handleItemClick}
-               />
-            </div>
+               project={project}
+               inverted={inverted}
+               handleClick={handleItemClick}
+            />
          ))}
       </div>
    );

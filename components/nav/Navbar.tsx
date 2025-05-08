@@ -1,3 +1,4 @@
+import { NavigationMenu } from '@radix-ui/react-navigation-menu';
 import { ContactLinks } from '@/components/contact';
 import NavLinks from './NavLinks';
 import clsx from 'clsx';
@@ -20,7 +21,8 @@ const NavBar = ({
             ? 'light:border-b-gray-300 fixed left-0 right-0 top-0 z-10 hidden border-b-2 border-b-gray-800 md:block'
             : 'light:border-t-gray-300 border-t-2 border-t-gray-800 py-10'
       )}>
-      <nav
+      <NavigationMenu
+         aria-label="Main navigation menu"
          className={clsx(
             'flex w-full',
             vertical
@@ -29,7 +31,7 @@ const NavBar = ({
          )}>
          <ContactLinks vertical={vertical} showText={showText} />
          <NavLinks vertical={vertical} />
-         </nav>
+      </NavigationMenu>
    </div>
 );
 

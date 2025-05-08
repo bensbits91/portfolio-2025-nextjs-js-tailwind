@@ -5,13 +5,17 @@ import { Icon } from '@/components/icons';
 import { BaseSkill } from '@/types/Skill';
 import { skillsForTable } from '@/data/skills';
 
-export default function SkillPopper({
-   skillName,
-   size = 24
-}: {
+interface SkillPopperProps {
    skillName: string;
    size?: number;
-}) {
+   dark?: boolean;
+}
+
+export default function SkillPopper({
+   skillName,
+   size = 24,
+   dark = false
+}: SkillPopperProps) {
    const skillToShow = skillsForTable.find(
       skill => skill.name === skillName
    ) as BaseSkill;
@@ -22,9 +26,12 @@ export default function SkillPopper({
 
    return (
       <Popover>
-         <Trigger className="cursor-pointer">
-            <div className="relative" style={{ width: size, height: size }}>
-               {iconName && <Icon name={iconName} />}
+         <Trigger asChild className="cursor-pointer">
+            <button
+               className="wcag-focus relative"
+               aria-label={`More information about ${name}`}
+               style={{ width: size, height: size }}>
+               {iconName && <Icon name={iconName} dark={dark} />}
                {!iconName && cloudinary && (
                   <CloudinaryImage
                      cloudinaryId={cloudinary}
@@ -33,9 +40,13 @@ export default function SkillPopper({
                      height={size}
                   />
                )}
-            </div>
+            </button>
          </Trigger>
-         <Content className="elevation-1 z-50 flex items-center justify-center gap-4 rounded-lg border border-bb-teal p-4">
+         <Content
+            id="skill-popper-content"
+            aria-labelledby="skill-popper-title"
+            aria-describedby="skill-popper-description"
+            className="elevation-1 z-50 flex items-center justify-center gap-4 rounded-lg border border-bb-teal p-4 focus:outline-none">
             <div className="relative h-12 w-12">
                {iconName && <Icon name={iconName} />}
                {!iconName && cloudinary && (
@@ -48,13 +59,11 @@ export default function SkillPopper({
                )}
             </div>
             <div>
-               <div>{name}</div>
-               {rating && (
-                  <div className="flex h-4">
-                     <Rating rating={rating} />
-                  </div>
-               )}
-               <div className="min-w-24 whitespace-nowrap text-[0.7rem] md:text-sm">
+               <div id="skill-popper-title">{name}</div>
+               {rating && <Rating rating={rating} />}
+               <div
+                  id="skill-popper-description"
+                  className="min-w-24 whitespace-nowrap text-[0.7rem] md:text-sm">
                   {years}+ years
                </div>
             </div>

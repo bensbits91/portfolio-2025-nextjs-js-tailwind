@@ -159,7 +159,12 @@ const BasicPage = ({ content }: BasicPageProps) => {
                                           {heading}
                                        </Heading>
                                        <div className="mb-8">
-                                          {stack && <List items={stack} />}
+                                          {stack && (
+                                             <List
+                                                items={stack}
+                                                ariaLabel="List of tech used in the project"
+                                             />
+                                          )}
                                           {codeLink && (
                                              <StyledLink
                                                 href={codeLink.href}
@@ -200,7 +205,11 @@ const BasicPage = ({ content }: BasicPageProps) => {
 
                return (
                   <Section key={index}>
-                     <Heading level={2} appearance={2} color="secondary" bottom="md">
+                     <Heading
+                        level={2}
+                        appearance={2}
+                        color="secondary"
+                        bottom="md">
                         {heading}
                      </Heading>
 

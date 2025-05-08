@@ -34,7 +34,7 @@ const CloudinaryImage = ({
          height={height}
          alt={alt}
          className={full ? 'h-auto w-full' : ''}
-         //  unoptimized={true} // todo: add param to disable optimization for animated images
+         unoptimized={frame ? true : false} // Disable optimization for animated images
       />
    );
 };

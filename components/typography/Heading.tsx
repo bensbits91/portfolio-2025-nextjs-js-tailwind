@@ -10,6 +10,7 @@ interface HeadingProps {
    weight?: 'normal' | 'bold' | 'light';
    top?: 'sm' | 'md' | 'lg' | 'no';
    bottom?: 'sm' | 'md' | 'lg' | 'no';
+   id?: string;
 }
 
 const Heading = ({
@@ -19,12 +20,14 @@ const Heading = ({
    color = 'white',
    weight = 'normal',
    top = 'no',
-   bottom = 'no'
+   bottom = 'no',
+   id
 }: HeadingProps) => {
    const Tag = `h${level}` as keyof JSX.IntrinsicElements;
 
    return (
       <Tag
+         id={id}
          className={clsx(
             { 'mt-0': top === 'no' },
             { 'mt-2': top === 'sm' },

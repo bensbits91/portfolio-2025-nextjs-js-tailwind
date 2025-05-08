@@ -5,7 +5,12 @@ const config = {
       './components/**/*.{js,ts,jsx,tsx,mdx}',
       './app/**/*.{js,ts,jsx,tsx,mdx}'
    ],
-   safelist: ['bg-gradient-yellow', 'bg-gradient-teal', 'text-bb-jade', 'text-bb-dark'],
+   safelist: [
+      'bg-gradient-yellow',
+      'bg-gradient-teal',
+      'text-bb-jade',
+      'text-bb-dark'
+   ],
    theme: {
       extend: {
          boxShadow: {
@@ -68,25 +73,6 @@ const config = {
                }
             }
          }
-         /* ,
-         keyframes: {
-            fadeIn: {
-               '0%': { opacity: '0' },
-               '100%': { opacity: '1' }
-            },
-            fadeOut: {
-               '0%': { opacity: '1' },
-               '100%': { opacity: '0' }
-            },
-            slideUp: {
-               '0%': { transform: 'translateY(0)' },
-               '100%': { transform: 'translateY(-120%)' }
-            },
-            slideDown: {
-               '0%': { transform: 'translateY(-120%)' },
-               '100%': { transform: 'translateY(0)' }
-            }
-         } */
       }
    },
    plugins: [

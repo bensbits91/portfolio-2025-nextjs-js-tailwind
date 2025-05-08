@@ -1,5 +1,5 @@
 import { Header, flexRender } from '@tanstack/react-table';
-import { ChevronIcon } from '@/components/icons';
+import { ChevronIcon, DoubleChevronIcon } from '@/components/icons';
 import clsx from 'clsx';
 
 interface SkillsTableHeaderProps<TData> {
@@ -15,43 +15,75 @@ export default function SkillsTableHeader<TData>({
       ? colsToHideOnMobile.includes(header.id)
       : false;
 
+   const { id, column, isPlaceholder, getContext } = header;
+   const {
+      getIsSorted,
+      getCanSort,
+      getToggleSortingHandler,
+      columnDef,
+      getCanFilter,
+      getFilterValue,
+      setFilterValue
+   } = column;
+
+   const isSorted = getIsSorted();
+   const isSortedAsc = isSorted === 'asc';
+   const isSortedDesc = isSorted === 'desc';
+
+   const canSort = getCanSort();
+   const canFilter = getCanFilter();
+
    return (
       <th
+         key={id}
+         scope="col"
+         aria-sort={
+            isSortedAsc ? 'ascending' : isSortedDesc ? 'descending' : 'none'
+         }
          className={clsx(
-            header.column.getCanSort()
+            canSort
                ? 'cursor-pointer pl-2 text-left align-top'
                : 'pl-2 text-left align-top',
             hideOnMobile && 'hidden md:table-cell'
-         )}
-         key={header.id}>
-         <div onClick={header.column.getToggleSortingHandler()} className='flex'>
-            {header.isPlaceholder
-               ? null
-               : flexRender(
-                    header.column.columnDef.header,
-                    header.getContext()
-                 )}
-            {header.column.getIsSorted() === 'asc' && (
+         )}>
+         <div
+            onClick={getToggleSortingHandler()}
+            className="wcag-focus flex"
+            role={canSort ? 'button' : undefined} // Make it a button for sorting
+            tabIndex={canSort ? 0 : undefined} // Make it focusable if sortable
+            aria-label={`Sort by ${columnDef.header}`}
+            onKeyDown={e => {
+               if (canSort && (e.key === 'Enter' || e.key === ' ')) {
+                  e.preventDefault();
+                  getToggleSortingHandler()?.(e);
+               }
+            }}>
+            {isPlaceholder ? null : flexRender(columnDef.header, getContext())}
+            {isSortedAsc && (
                <div className="h-6 w-6">
                   <ChevronIcon direction={'up'} />
                </div>
             )}
-            {header.column.getIsSorted() === 'desc' && (
+            {isSortedDesc && (
                <div className="h-6 w-6">
                   <ChevronIcon direction={'down'} />
                </div>
             )}
-            {header.column.getCanSort() && !header.column.getIsSorted() && ' ⬍'}
+            {canSort && !isSorted && (
+               <div className="h-6 w-6">
+                  <DoubleChevronIcon />
+               </div>
+            )}
          </div>
-         {header.column.getCanFilter() && (
+         {canFilter && (
             <input
                className="mt-2 w-full"
                type="text"
-               value={(header.column.getFilterValue() as string) || ''}
+               value={(getFilterValue() as string) || ''}
                onChange={e => {
-                  header.column.setFilterValue(e.target.value);
+                  setFilterValue(e.target.value);
                }}
-               placeholder={`Filter ${header.column.columnDef.header}`}
+               placeholder={`Filter ${columnDef.header}`}
             />
          )}
       </th>

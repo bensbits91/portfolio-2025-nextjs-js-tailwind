@@ -26,7 +26,9 @@ const MobileNav = () => {
    };
 
    return (
-      <nav className="light:border-b-gray-300 bg-bg fixed left-0 right-0 top-0 z-40 border-b-2 border-b-gray-800 p-4 lg:hidden">
+      <NavigationMenu
+         arial-label="Mobile navigation menu"
+         className="light:border-b-gray-300 bg-bg fixed left-0 right-0 top-0 z-40 border-b-2 border-b-gray-800 p-4 lg:hidden">
          <div className="container z-50 mx-auto flex items-center justify-between">
             <div className="text-lg font-bold">
                <ContactLinks />
@@ -38,7 +40,10 @@ const MobileNav = () => {
                      <EnvelopeIcon />
                   </div>
                </ContactPopper>
-               <button onClick={toggleMenu} className="focus:outline-none">
+               <button
+                  onClick={toggleMenu}
+                  aria-label={isOpen ? 'Close menu' : 'Open menu'}
+                  className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bb-teal focus-visible:ring-offset-2 focus-visible:ring-offset-bb-gray">
                   <div className="link h-6 w-6">
                      {isOpen ? <CloseIcon /> : <HamburgerIcon />}
                   </div>
@@ -47,12 +52,12 @@ const MobileNav = () => {
          </div>
          <Dialog open={isOpen}>
             <Overlay onClick={() => toggleMenu()} className="fixed inset-0" />
-            <Content className="bg-gradient-teal shadow-lg fixed left-2 right-2 rounded-lg top-12 text-bb-gray z-20 p-2">
-               <Title className="hidden">Mobile Navigation Menu</Title>
+            <Content className="fixed left-2 right-2 top-12 z-20 rounded-lg bg-gradient-teal p-2 text-bb-gray shadow-lg">
+               <Title className="sr-only">Mobile Navigation Menu</Title>
                <Description className="hidden">
                   Mobile Navigation Menu
                </Description>
-               <NavigationMenu aria-label="Main navigation">
+               <NavigationMenu aria-label="Main site navigation links">
                   <List className="flex flex-col gap-2 text-2xl">
                      {navLinkDefs.map(({ link, text }, index) => (
                         <Item key={index}>
@@ -67,7 +72,7 @@ const MobileNav = () => {
                </NavigationMenu>
             </Content>
          </Dialog>
-      </nav>
+      </NavigationMenu>
    );
 };
 

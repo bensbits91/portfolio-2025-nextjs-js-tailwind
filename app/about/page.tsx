@@ -1,5 +1,5 @@
 import { Section } from '@/components/layout';
-import { Heading, Text } from '@/components/typography';
+import { Heading, Text, List } from '@/components/typography';
 import { PrimaryCta } from '@/components/common';
 import { about, certifications, education, expertise } from '@/data/about';
 
@@ -30,19 +30,13 @@ const About = () => {
                      <Heading level={3} appearance={4} color="white">
                         {degree} in {major}
                      </Heading>
-                     <h4>{institution}</h4>
+                     <Heading level={4} appearance={6} color="white">
+                        {institution}
+                     </Heading>
                      <p className="mb-4">
-                        {location} {endYear}
+                        {location} <span className="sr-only">Graduated in </span>{endYear}
                      </p>
-                     <ul className="list-outisde list-disc pl-4">
-                        {awards.map((award, index) => {
-                           return (
-                              <li key={index} className="pl-2">
-                                 {award}
-                              </li>
-                           );
-                        })}
-                     </ul>
+                     <List items={awards} bottom="sm" size="sm" />
                   </div>
                );
             })}
@@ -59,16 +53,11 @@ const About = () => {
 
    const Certifications = ({ certifications }: CertificationProps) => (
       <div>
-         <ul className="list-outisde list-disc pl-4">
-            {certifications.map((item, index) => {
-               const { name, date } = item;
-               return (
-                  <li key={index} className="pl-2">
-                     {name} {date}
-                  </li>
-               );
-            })}
-         </ul>
+         <List
+            items={certifications.map(c => `${c.name} ${c.date}`)}
+            bottom="sm"
+            size="sm"
+         />
       </div>
    );
 

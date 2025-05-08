@@ -4,11 +4,13 @@ interface ListProps {
    items: string[];
    bottom?: 'no' | 'sm' | 'md' | 'lg' | 'xl';
    size?: 'sm' | 'md';
+   ariaLabel?: string;
 }
 
-const List = ({ items, bottom = 'md', size = 'md' }: ListProps) => {
+const List = ({ items, bottom = 'md', size = 'md', ariaLabel = 'List of items' }: ListProps) => {
    return (
       <ul
+         aria-label={ariaLabel}
          className={clsx(
             'ml-6 list-outside list-disc',
             { 'text-sm': size === 'sm' },

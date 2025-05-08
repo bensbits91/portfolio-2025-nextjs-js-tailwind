@@ -2,7 +2,8 @@ export default function CypressIcon() {
    return (
       <svg
          viewBox="6.5 6.4 950.0999999999999 948.5"
-         xmlns="http://www.w3.org/2000/svg">
+         xmlns="http://www.w3.org/2000/svg"
+         aria-hidden="true">
          <linearGradient
             id="a"
             gradientUnits="userSpaceOnUse"

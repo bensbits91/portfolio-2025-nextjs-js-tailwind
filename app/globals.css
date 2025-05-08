@@ -202,7 +202,7 @@ body:has(.translate-x-0) {
 } */
 
 .hover-delay {
-   @apply md:transition-all md:duration-500 md:ease-in-out;
+   @apply motion-reduce:transition-none md:transition-all md:duration-500 md:ease-in-out;
 }
 
 .hover-brightness {
@@ -211,4 +211,8 @@ body:has(.translate-x-0) {
 
 .hover-scale {
    @apply md:hover:scale-110;
+}
+
+.wcag-focus {
+   @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bb-teal focus-visible:ring-offset-2;
 }
