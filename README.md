@@ -35,6 +35,7 @@ This is a modern portfolio website built with [Next.js](https://nextjs.org), [Ta
     - Custom components and design system
     - Some components built with [Radix UI](https://www.radix-ui.com)
     - [Tanstack Table](https://tanstack.com/table)
+    - A few simple charts built with [Recharts](https://recharts.org/en-US)
 - **State Management**: Simple state managed with custom hooks
 - **Utilities**: 
   - [clsx](https://github.com/lukeed/clsx) for conditional class names
@@ -44,8 +45,6 @@ This is a modern portfolio website built with [Next.js](https://nextjs.org), [Ta
     - Images hosted on [Cloudinary](https://cloudinary.com/)
     - Images optimized using Cloudinary and Next.js
     - Videos stored as [Vercel Blobs](https://vercel.com/docs/vercel-blob) and fetch using a custom hook and an API route
-- **Data Visualization**
-    - A few simple charts built with [Recharts](https://recharts.org/en-US)
 - **Contact Form**: 
     - Custom hooks for state management and input validation
     - [Nodemailer](https://www.npmjs.com/package/nodemailer)
