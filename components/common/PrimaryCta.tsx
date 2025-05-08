@@ -24,6 +24,7 @@ const PrimaryCta = ({
                <div className="mb-12 md:max-w-[640px]">
                   <IconBar
                      wrap
+                     dark
                      icons={skillIcons(ctaSkills, true).filter(
                         (
                            icon

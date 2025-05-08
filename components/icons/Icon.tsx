@@ -3,9 +3,10 @@ import * as Icons from './index';
 
 interface IconProps {
    name: string; // Allow any string
+   dark?: boolean; // Optional prop to force icon to be dark
 }
 
-export default function Icon({ name }: IconProps) {
+export default function Icon({ name, dark }: IconProps) {
    const IconComponent = Icons[name as keyof typeof Icons]; // Type assertion to access the Icons object
 
    if (!IconComponent) {
@@ -13,5 +14,5 @@ export default function Icon({ name }: IconProps) {
       return null; // Return null if the icon name is invalid
    }
 
-   return <IconComponent name={name} />;
+   return <IconComponent name={name} dark={dark} />;
 }

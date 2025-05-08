@@ -5,13 +5,17 @@ import { Icon } from '@/components/icons';
 import { BaseSkill } from '@/types/Skill';
 import { skillsForTable } from '@/data/skills';
 
-export default function SkillPopper({
-   skillName,
-   size = 24
-}: {
+interface SkillPopperProps {
    skillName: string;
    size?: number;
-}) {
+   dark?: boolean;
+}
+
+export default function SkillPopper({
+   skillName,
+   size = 24,
+   dark = false
+}: SkillPopperProps) {
    const skillToShow = skillsForTable.find(
       skill => skill.name === skillName
    ) as BaseSkill;
@@ -27,7 +31,7 @@ export default function SkillPopper({
                className="wcag-focus relative"
                aria-label={`More information about ${name}`}
                style={{ width: size, height: size }}>
-               {iconName && <Icon name={iconName} />}
+               {iconName && <Icon name={iconName} dark={dark} />}
                {!iconName && cloudinary && (
                   <CloudinaryImage
                      cloudinaryId={cloudinary}
