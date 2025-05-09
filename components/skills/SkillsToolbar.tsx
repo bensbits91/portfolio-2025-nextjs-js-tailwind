@@ -79,7 +79,9 @@ export default function SkillsViewToolbar({
          <Toolbar
             orientation="horizontal"
             className={clsx(
-               inView ? 'w-full' : 'fixed left-8 right-8 top-[52px]',
+               inView
+                  ? 'w-full'
+                  : 'fixed left-3 right-3 top-[52px] lg:left-8 lg:right-8',
                'elevation-1 flex min-w-max items-center gap-4 rounded-md px-2 py-3 shadow-[-1px_4px_8px_0] sm:gap-8 sm:px-8'
             )}>
             <div className="hidden sm:block">View</div>
