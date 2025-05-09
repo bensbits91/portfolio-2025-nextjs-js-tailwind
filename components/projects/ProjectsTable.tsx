@@ -129,47 +129,50 @@ export default function ProjectsTable({
    }
 
    return (
-      <table className="mx-auto">
-         <thead>
-            {table.getHeaderGroups().map(headerGroup => (
-               <tr key={headerGroup.id}>
-                  {headerGroup.headers.map(header => (
-                     <ProjectsTableHeader
-                        key={header.id}
-                        header={header}
-                        colsToHideOnMobile={colsToHideOnMobile}
-                     />
-                  ))}
-               </tr>
-            ))}
-         </thead>
-         <tbody>
-            {table.getRowModel().rows.map(row => (
-               <tr
-                  key={row.id}
-                  tabIndex={0} // Make the row focusable
-                  role="button"
-                  aria-label={`View details about ${row.original.name}`}
-                  onClick={() => {
-                     handleItemClick(row.original.name);
-                  }}
-                  onKeyDown={e => {
-                     if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
+      <div className="md:px-4">
+         <table className="w-full table-auto">
+            <caption className="hidden">Projects Table</caption>
+            <thead>
+               {table.getHeaderGroups().map(headerGroup => (
+                  <tr key={headerGroup.id}>
+                     {headerGroup.headers.map(header => (
+                        <ProjectsTableHeader
+                           key={header.id}
+                           header={header}
+                           colsToHideOnMobile={colsToHideOnMobile}
+                        />
+                     ))}
+                  </tr>
+               ))}
+            </thead>
+            <tbody>
+               {table.getRowModel().rows.map(row => (
+                  <tr
+                     key={row.id}
+                     tabIndex={0} // Make the row focusable
+                     role="button"
+                     aria-label={`View details about ${row.original.name}`}
+                     onClick={() => {
                         handleItemClick(row.original.name);
-                     }
-                  }}
-                  className="wcag-focus table-row">
-                  {row.getVisibleCells().map(cell => (
-                     <ProjectsTableCell
-                        key={cell.id}
-                        cell={cell}
-                        colsToHideOnMobile={colsToHideOnMobile}
-                     />
-                  ))}
-               </tr>
-            ))}
-         </tbody>
-      </table>
+                     }}
+                     onKeyDown={e => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                           e.preventDefault();
+                           handleItemClick(row.original.name);
+                        }
+                     }}
+                     className="wcag-focus table-row">
+                     {row.getVisibleCells().map(cell => (
+                        <ProjectsTableCell
+                           key={cell.id}
+                           cell={cell}
+                           colsToHideOnMobile={colsToHideOnMobile}
+                        />
+                     ))}
+                  </tr>
+               ))}
+            </tbody>
+         </table>
+      </div>
    );
 }
