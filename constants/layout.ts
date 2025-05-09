@@ -1,0 +1,1 @@
+export const mainNavHeight = '52px';
