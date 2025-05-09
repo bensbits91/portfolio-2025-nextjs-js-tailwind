@@ -11,7 +11,6 @@ import {
    LineChartIcon,
    RadarChartIcon
 } from '@/components/icons';
-import { mainNavHeight } from '@/constants/layout';
 import clsx from 'clsx';
 
 type ViewType = 'table' | 'grid' | 'growth' | 'stack';
@@ -31,7 +30,7 @@ export default function SkillsViewToolbar({
 }: SkillsViewToolbarProps) {
    const { ref, inView } = useInView({
       threshold: 0,
-      rootMargin: `-${mainNavHeight} 0px 0px 0px`, // adjust for main nav bar height
+      rootMargin: '-52px 0px 0px 0px', // adjust for main nav bar height
       initialInView: true
    });
 
@@ -82,7 +81,7 @@ export default function SkillsViewToolbar({
             className={clsx(
                inView
                   ? 'w-full'
-                  : `fixed left-3 right-3 top-[${mainNavHeight} + env(safe-area-inset-top))] lg:left-8 lg:right-8`,
+                  : 'fixed left-3 right-3 top-[52px] lg:left-8 lg:right-8',
                'elevation-1 flex min-w-max items-center gap-4 rounded-md px-2 py-3 shadow-[-1px_4px_8px_0] sm:gap-8 sm:px-8'
             )}>
             <div className="hidden sm:block">View</div>
