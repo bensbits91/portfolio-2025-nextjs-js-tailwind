@@ -1,3 +1,4 @@
+import { useInView } from 'react-intersection-observer';
 import {
    Toolbar,
    Button,
@@ -22,6 +23,12 @@ export default function ProjectsViewToolbar({
    handleViewClick,
    selectedView
 }: ProjectsViewToolbarProps) {
+   const { ref, inView } = useInView({
+      threshold: 0,
+      rootMargin: '-52px 0px 0px 0px', // adjust for main nav bar height
+      initialInView: true
+   });
+
    const ViewItem = ({ view }: ViewItemProps) => {
       const displayName = view.charAt(0).toUpperCase() + view.slice(1);
       const ariaLabel = displayName + ' view';
@@ -58,18 +65,26 @@ export default function ProjectsViewToolbar({
    };
 
    return (
-      <Toolbar
-         orientation="horizontal"
-         className="elevation-1 flex w-full min-w-max items-center gap-4 rounded-md px-2 py-3 shadow-[-1px_4px_8px_0] sm:gap-8 sm:px-8">
-         <div className="hidden sm:block">View</div>
-         <ToggleGroup
-            type="single"
-            defaultValue={'grid'}
-            role="tablist"
-            className="mx-2 flex items-center gap-4 md:gap-8">
-            <ViewItem view="grid" />
-            <ViewItem view="table" />
-         </ToggleGroup>
-      </Toolbar>
+      <>
+         {/* Invisible placeholders that retain natural position and height for reliable observation */}
+         <div ref={ref} />
+         <div className={inView ? 'h-0' : 'h-12'} />
+         <Toolbar
+            orientation="horizontal"
+            className={clsx(
+               inView ? 'w-full' : 'fixed left-2 right-2 top-[52px]',
+               'elevation-1 flex min-w-max items-center gap-4 rounded-md px-2 py-3 shadow-[-1px_4px_8px_0] sm:gap-8 sm:px-8'
+            )}>
+            <div className="hidden sm:block">View</div>
+            <ToggleGroup
+               type="single"
+               defaultValue={'grid'}
+               role="tablist"
+               className="mx-2 flex items-center gap-4 md:gap-8">
+               <ViewItem view="grid" />
+               <ViewItem view="table" />
+            </ToggleGroup>
+         </Toolbar>
+      </>
    );
 }
