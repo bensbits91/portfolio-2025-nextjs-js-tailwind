@@ -13,6 +13,7 @@ export { default as SunIcon } from './SunIcon';
 export { default as AwsIcon } from './AwsIcon';
 export { default as BeakerIcon } from './BeakerIcon';
 export { default as CssIcon } from './CssIcon';
+export { default as CSSModluesIcon } from './CSSModluesIcon';
 export { default as CypressIcon } from './CypressIcon';
 export { default as ExperimentIcon } from './ExperimentIcon';
 export { default as ExpressIcon } from './ExpressIcon';

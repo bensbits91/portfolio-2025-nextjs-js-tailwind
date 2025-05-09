@@ -183,7 +183,7 @@ export const skills: DefinitionSkill[] = [
       stackArea: 'Frontend',
       stackCategory: 'Styling',
       cloudinary: 'css3_mvgbbf',
-      iconName: 'CssIcon',
+      iconName: 'CSSModluesIcon',
       cloudinaryDark: 'css3-dark-icon_xtdb3t',
       yearLearned: 2015,
       years: 8,

@@ -70,7 +70,7 @@ const CustomizedTooltip = ({
       </ul>
    );
    return (
-      <div className="border-bb-gray-700 rounded-md border bg-bb-gray-900 p-2 shadow-md">
+      <div className="border-bb-gray-700 rounded-md border bg-bg p-2 shadow-md">
          <p>{year}</p>
          <p>{countLearned} skills learned:</p>
          <div>{skillList}</div>
