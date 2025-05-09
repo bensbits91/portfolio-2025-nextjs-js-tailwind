@@ -82,7 +82,7 @@ export default function SkillsViewToolbar({
             className={clsx(
                inView
                   ? 'w-full'
-                  : `fixed left-3 right-3 top-[${mainNavHeight}] lg:left-8 lg:right-8`,
+                  : `fixed left-3 right-3 top-[${mainNavHeight} + env(safe-area-inset-top))] lg:left-8 lg:right-8`,
                'elevation-1 flex min-w-max items-center gap-4 rounded-md px-2 py-3 shadow-[-1px_4px_8px_0] sm:gap-8 sm:px-8'
             )}>
             <div className="hidden sm:block">View</div>
