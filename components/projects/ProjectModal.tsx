@@ -68,8 +68,8 @@ export default function ProjectModal({
          onOpenChange={onOpenChange}
          // aria-labelledby="modal-title"
          aria-describedby="modal-description">
-         <Overlay className="fixed inset-0 bg-black/70" />
-         <Content className="elevation-1 fixed left-2 right-2 top-20 z-20 h-[calc(100vh-100px)] overflow-hidden rounded-lg p-2 shadow-lg md:left-12 md:right-12 md:top-20">
+         <Overlay className="fixed inset-0 bg-black/70 z-30" />
+         <Content className="elevation-1 fixed left-2 right-2 top-20 z-40 h-[calc(100vh-100px)] overflow-hidden rounded-lg p-2 shadow-lg md:left-12 md:right-12 md:top-20">
             <div className={clsx('flex flex-col gap-4', headerHeight)}>
                <Close
                   className="link fixed right-6 top-24 h-6 w-6 wcag-focus md:right-16 md:top-24"
