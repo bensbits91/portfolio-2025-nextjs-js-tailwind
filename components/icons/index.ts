@@ -20,6 +20,7 @@ export { default as ExpressIcon } from './ExpressIcon';
 export { default as FastifyIcon } from './FastifyIcon';
 export { default as JavaScriptIcon } from './JavaScriptIcon';
 export { default as LaunchDarklyIcon } from './LaunchDarklyIcon';
+export { default as MicroservicesIcon } from './MicroservicesIcon';
 export { default as NextJsIcon } from './NextJsIcon';
 export { default as NodeIcon } from './NodeIcon';
 export { default as PhpIcon } from './PhpIcon';

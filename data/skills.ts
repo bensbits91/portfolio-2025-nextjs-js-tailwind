@@ -575,6 +575,7 @@ export const skills: DefinitionSkill[] = [
       type: 'Architecture',
       stackArea: 'Architecture & Patterns',
       stackCategory: '',
+      iconName: 'MicroservicesIcon',
       cloudinary: 'microservice_xcczrj',
       yearLearned: 2022,
       years: 2,

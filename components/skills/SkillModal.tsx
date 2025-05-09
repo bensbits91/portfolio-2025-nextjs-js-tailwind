@@ -52,10 +52,10 @@ export default function SkillModal({
 
    return (
       <Dialog open={isOpen} onOpenChange={onOpenChange}>
-         <Overlay className="fixed inset-0 bg-black/70" />
+         <Overlay className="fixed inset-0 bg-black/70 z-30" />
          <Content
             // onOpenAutoFocus={event => event.preventDefault()} // prevent auto-focus
-            className="elevation-1 fixed left-2 right-2 top-20 z-20 h-[calc(100vh-100px)] overflow-hidden rounded-lg p-2 md:left-12 md:right-12 md:top-20 md:p-4">
+            className="elevation-1 fixed left-2 right-2 top-20 z-40 h-[calc(100vh-100px)] overflow-hidden rounded-lg p-2 md:left-12 md:right-12 md:top-20 md:p-4">
             <div className="flex h-36 flex-col gap-2 pt-8 md:h-48 md:gap-4 md:p-4">
                <Close
                   asChild
