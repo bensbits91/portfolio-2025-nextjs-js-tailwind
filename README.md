@@ -20,6 +20,7 @@ This is a modern portfolio website built with [Next.js](https://nextjs.org), [Ta
 
 - **Responsive Design**: Fully optimized for desktop, tablet, and mobile devices.
 - **Dynamic Content**: Projects, skills, and experience are dynamically rendered.
+- **Dynamic Views**: Display skills and projects in responsive grids, tables, and charts.
 - **Dark Mode**: Built-in dark mode support using `next-themes`.
 - **Accessibility**: WCAG-compliant components for an inclusive user experience.
 - **Fast Performance**: Optimized with Next.js. SSR by default with CSR where needed.
@@ -29,7 +30,7 @@ This is a modern portfolio website built with [Next.js](https://nextjs.org), [Ta
 
 ## Technologies Used
 
-- **Framework**: [Next.js](https://nextjs.org) (App Router)
+- **Framework**: [Next.js](https://nextjs.org) (App Router) with [TypeScript](https://www.typescriptlang.org/)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com)
 - **UI Components**: 
     - Custom components and design system
