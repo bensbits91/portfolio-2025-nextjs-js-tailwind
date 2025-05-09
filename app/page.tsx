@@ -28,7 +28,7 @@ const Home = () => {
             <Heading level={2} appearance={2} bottom="md">
                Frontend + Fullstack
             </Heading>
-            <div className="mb-8 max-w-[560px]">
+            <div className="mb-8 max-w-[420px]">
                <IconBar
                   wrap
                   pop

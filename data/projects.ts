@@ -37,6 +37,37 @@ export const projects = [
       featureOnHome: true
    },
    {
+      name: 'Contracting Website',
+      year: '2025',
+      tech: [
+         'Next.js',
+         'React.js',
+         'JavaScript',
+         'CSS Modules',
+         'CSS',
+         'Responsive Design',
+         'Node.js',
+         'RESTful APIs',
+         'nodemailer',
+         'Turbopack',
+         'Vercel',
+         'Cloudinary',
+         'Mongoose',
+         'MongoDB',
+         'Zustand'
+      ],
+      liveLink: 'https://www.benbdev.com',
+      codeLink: 'https://github.com/bensbits91/contracts-website',
+      description: 'My website that helps find, educate and manage my clients.',
+      motivation:
+         'To help my clients understand tech, plan projects and ask questions. To help me manage my clients and projects. To practice some skills.',
+      outcome:
+         'A clean, responsive, and accessible website that meets my needs and is easy to update and maintain. Hosted on Vercel with a custom domain benbdev.com. Static content stored as markdown (.md) files, rendered in server components using react-markdown and in client components using markdown-to-jsx. Dynamic content stored as JSON.',
+      images: [{ name: 'contracts-home_mpofmm', caption: 'Home page' }],
+      showInProjectsGallery: true,
+      featureOnHome: true
+   },
+   {
       name: 'Journey Builder',
       year: '2025',
       tech: [
@@ -125,45 +156,19 @@ export const projects = [
       codeLink:
          'https://github.com/bensbits91/portfolio-2025-nextjs-js-tailwind',
       description:
-         "My personal website, built in about a week... custom components and theme... atomic component structure, including custom typography and layout... minimal dependencies... content stored as JSON inside the project... a few li'l custom animations and transitions... images stored in cloudinary and optimized using next/image... videos stored using Vercel Blob storage... contact form sends email using nodemailer... api routes for contact form and image/video storage... Turbopack for faster page loads... dayjs for date formatting... Tailwind CSS for styling... Next.js for SSR and SSG... Vercel for auto-deployment from GitHub...",
+         "My personal website to showcase my skills and experience. Built with Next.js, React.js, TypeScript, Tailwind CSS and other modern technologies. Responsive design ensures it looks good and works well on any device. Learn more in the readme (click the Code link in the toolbar near the top of this page).",
       motivation:
          'To showcase my skills and experience. To brush the rust off some of my front-end skills.',
       outcome:
          'A clean, responsive, and accessible website that showcases my skills and experience. Fun excerise.',
-      images: [{ name: 'this-site_cpaazg' }],
+      images: [
+         { name: 'portfolio-skills-mobile-themes-views_evcmgc', caption: 'Skills as grid or table' },
+         // { name: 'portfolio-site-light_jgw7yf' },
+         { name: 'portfolio-home-mobile-themes_ktpid3', caption: 'Responsive in light or dark' },
+         // { name: 'this-site_cpaazg' }
+      ],
       showInProjectsGallery: true,
       featureOnHome: false
-   },
-   {
-      name: 'Contracting Website',
-      year: '2025',
-      tech: [
-         'Next.js',
-         'React.js',
-         'JavaScript',
-         'CSS Modules',
-         'CSS',
-         'Responsive Design',
-         'Node.js',
-         'RESTful APIs',
-         'nodemailer',
-         'Turbopack',
-         'Vercel',
-         'Cloudinary',
-         'Mongoose',
-         'MongoDB',
-         'Zustand'
-      ],
-      liveLink: 'https://www.benbdev.com',
-      codeLink: 'https://github.com/bensbits91/contracts-website',
-      description: 'My website that helps find, educate and manage my clients.',
-      motivation:
-         'To help my clients understand tech, plan projects and ask questions. To help me manage my clients and projects. To practice some skills.',
-      outcome:
-         'A clean, responsive, and accessible website that meets my needs and is easy to update and maintain. Hosted on Vercel with a custom domain benbdev.com. Static content stored as markdown (.md) files, rendered in server components using react-markdown and in client components using markdown-to-jsx. Dynamic content stored as JSON.',
-      images: [{ name: 'contracts-home_mpofmm', caption: 'Home page' }],
-      showInProjectsGallery: true,
-      featureOnHome: true
    },
    {
       name: 'Things App v1.0',
@@ -202,8 +207,8 @@ export const projects = [
          }
          // { name: 'things_w7q8lq', hideFromModal: true },
       ],
-      showInProjectsGallery: true,
-      featureOnHome: true
+      showInProjectsGallery: false,
+      featureOnHome: false
    },
    {
       name: 'Public Website',

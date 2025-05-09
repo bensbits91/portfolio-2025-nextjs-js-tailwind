@@ -178,13 +178,13 @@ body {
    @apply bg-bg shadow-elevation-2 light:border-bb-gray-200 rounded-lg border border-bb-gray-500;
 }
 .card-clickable {
-   @apply hover-delay card-elevated light:md:hover:bg-bb-gray-100 md:cursor-pointer md:hover:border-bb-teal md:hover:bg-bb-gray-800;
+   @apply hover-delay card-elevated light:md:hover:bg-white md:cursor-pointer md:hover:border-bb-teal md:hover:bg-black;
 }
 .card-elevated-force-dark {
    @apply rounded-lg border bg-bb-gray shadow-black/70;
 }
 .card-clickable-force-dark {
-   @apply hover-delay card-elevated-force-dark text-foreground md:cursor-pointer md:hover:border-bb-teal md:hover:bg-bb-gray-800;
+   @apply hover-delay card-elevated-force-dark text-foreground md:cursor-pointer md:hover:border-bb-teal md:hover:bg-black;
 }
 
 .table-row {
