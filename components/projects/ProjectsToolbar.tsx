@@ -73,7 +73,7 @@ export default function ProjectsViewToolbar({
             orientation="horizontal"
             className={clsx(
                inView ? 'w-full' : 'fixed left-2 right-2 top-[52px]',
-               'elevation-1 flex min-w-max items-center gap-4 rounded-md px-2 py-3 shadow-[-1px_4px_8px_0] sm:gap-8 sm:px-8'
+               'elevation-1 z-20 flex min-w-max items-center gap-4 rounded-md px-2 py-3 shadow-[-1px_4px_8px_0] sm:gap-8 sm:px-8'
             )}>
             <div className="hidden sm:block">View</div>
             <ToggleGroup
