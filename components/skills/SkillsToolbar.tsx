@@ -13,6 +13,12 @@ import {
 } from '@/components/icons';
 import clsx from 'clsx';
 
+// todo: attempt to use mainNavHeight from layout constants
+// was causing issues with the toolbar placement
+// WEIRD: changing THIS file affects the ProjectsToolbar too -- if we use mainNavHeight here, it
+// causes the ProjectsToolbar AND this toolbar to be 1/3 down the page on iOS
+// import { mainNavHeight } from '@/constants/layout';
+
 type ViewType = 'table' | 'grid' | 'growth' | 'stack';
 
 interface SkillsViewToolbarProps {
@@ -82,7 +88,7 @@ export default function SkillsViewToolbar({
                inView
                   ? 'w-full'
                   : 'fixed left-3 right-3 top-[52px] lg:left-8 lg:right-8',
-               'elevation-1 flex min-w-max items-center gap-4 rounded-md px-2 py-3 shadow-[-1px_4px_8px_0] sm:gap-8 sm:px-8'
+               'elevation-1 z-20 flex min-w-max items-center gap-4 rounded-md px-2 py-3 shadow-[-1px_4px_8px_0] sm:gap-8 sm:px-8'
             )}>
             <div className="hidden sm:block">View</div>
             <ToggleGroup
