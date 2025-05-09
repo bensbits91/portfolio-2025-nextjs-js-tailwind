@@ -581,7 +581,7 @@ export const skills: DefinitionSkill[] = [
       rating: 8,
       haveUsedProfessionally: true,
       haveUsedForFun: false,
-      featureOnHome: true,
+      featureOnHome: false,
       showInSkillsTable: true
    },
    {

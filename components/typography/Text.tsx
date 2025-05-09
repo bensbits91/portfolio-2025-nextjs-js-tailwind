@@ -29,7 +29,7 @@ const Text = ({
          { 'mb-12': bottom === 'xl' },
          { 'text-sm': size === 'sm' },
          { 'text-base tracking-wide': size === 'md' },
-         { 'text-lg/6 tracking-wide': size === 'lg' },
+         { 'text-base tracking-wide sm:text-lg/6': size === 'lg' },
          { 'text-lg/8 tracking-wide': size === 'xl' },
          `text-bb-${color}`
       )}>
