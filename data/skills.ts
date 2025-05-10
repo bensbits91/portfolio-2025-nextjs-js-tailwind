@@ -590,6 +590,7 @@ export const skills: DefinitionSkill[] = [
       type: 'Architecture',
       stackArea: 'Architecture & Patterns',
       stackCategory: '',
+      iconName: 'MicroFrontendsIcon',
       cloudinary: 'micro-frontend_sx9fbr',
       yearLearned: 2022,
       years: 2,

@@ -23,6 +23,7 @@ export const experience = [
                'Tailwind',
                'RESTful APIs',
                'Fastify',
+               'Express',
                'MongoDB',
                'Zustand'
             ]
@@ -147,6 +148,7 @@ export const experience = [
                'JavaScript',
                'Node.js',
                'Fastify',
+               'Express',
                'Python',
                'Jest',
                'Microservices',
