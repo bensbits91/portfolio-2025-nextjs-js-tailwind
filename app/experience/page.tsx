@@ -6,6 +6,7 @@ import { Section } from '@/components/layout';
 import { Heading } from '@/components/typography';
 import { PrimaryCta } from '@/components/common';
 import { experience } from '@/data/experience';
+import { resumeUrl } from '@/constants/info';
 
 const Experience = () => {
    const xp = useMemo(() => experience, []);
@@ -17,7 +18,7 @@ const Experience = () => {
             </Heading>
             <div className="mb-8 lg:mb-12">
                <Link
-                  href="https://res.cloudinary.com/ddfrx5278/image/upload/v1739151148/Ben_Brooks_Resume_vqqprw.pdf"
+                  href={resumeUrl}
                   target="_blank"
                   title="Download Resume"
                   className="flex w-max items-center gap-2 link">

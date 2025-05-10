@@ -35,7 +35,7 @@ This is a modern portfolio website built with [Next.js](https://nextjs.org), [Ta
 - **UI Components**: 
     - Custom components and design system
     - Some components built with [Radix UI](https://www.radix-ui.com)
-    - [Tanstack Table](https://tanstack.com/table)
+    - [TanStack Table](https://tanstack.com/table)
     - A few simple charts built with [Recharts](https://recharts.org/en-US)
 - **State Management**: Simple state managed with custom hooks
 - **Utilities**: 

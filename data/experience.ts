@@ -353,7 +353,7 @@ export const experience = [
       role: 'Contract Web Developer',
       company: 'USDA Forest Service',
       location: 'Albuquerque, NM (Remote)',
-      start: '2013-06',
+      start: '2013-10',
       end: '2020-12',
       duties: [
          {
