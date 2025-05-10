@@ -1,4 +1,5 @@
 import { StyledLink } from '@/components/common';
+import { resumeUrl } from '@/constants/info';
 import clsx from 'clsx';
 
 interface ContactLinksProps {
@@ -35,7 +36,7 @@ const ContactLinks = ({ vertical = false }: ContactLinksProps) => {
          </li>
          <li>
             <StyledLink
-               href="https://res.cloudinary.com/ddfrx5278/image/upload/v1739151148/Ben_Brooks_Resume_vqqprw.pdf"
+                  href={resumeUrl}
                icon="ResumeIcon"
                newTab
                text="R&eacute;sum&eacute;"
