@@ -24,7 +24,7 @@ export const duration = (
    const { years, months } = getYearsAndMonths({ start, end });
    const prettyStart = getPrettyDate(start);
    const prettyEnd = end ? getPrettyDate(end) : 'Present';
-   const prettyDate = `${prettyStart} to ${prettyEnd}`;
+   const prettyDate = `${prettyStart} — ${prettyEnd}`;
    const yoMo = `${years ? `${years} years ` : ''}${months} months`;
    const approxYears = `~ ${Math.round(years + months / 12)} years`;
 

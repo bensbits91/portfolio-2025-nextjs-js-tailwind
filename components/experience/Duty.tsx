@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Link from 'next/link';
 import { Collapsible, Trigger, Content } from '@radix-ui/react-collapsible';
 import { IconBar } from '@/components/common';
@@ -8,19 +8,32 @@ import { ChevronIcon } from '@/components/icons';
 import { skillIcons } from '@/data/skills';
 import { BaseDuty } from '@/types/Job';
 import { replaceNonAphanumeric } from '@/utils/string';
-import clsx from 'clsx';
 
 interface DutyProps {
    duty: BaseDuty;
 }
 
 const Duty = ({ duty }: DutyProps) => {
-   const { name, skillNames, description, moreInfo, moreInfoLink } = duty;
+   const { name, skillNames, details, moreInfo, moreInfoLink } = duty;
    const ariaText = replaceNonAphanumeric(`duty-content-${duty.name}`);
+
+   const triggerRef = useRef<HTMLLIElement>(null); // Reference for the Trigger element
 
    const [open, setOpen] = useState(false);
    const handleToggle = () => {
-      setOpen(prev => !prev);
+      if (open) {
+         // If the accordion is closing
+         setOpen(false); // Close the accordion immediately
+         setTimeout(() => {
+            triggerRef.current?.scrollIntoView({
+               behavior: 'smooth',
+               block: 'start',
+            });
+         }, 10); // delay to allow the closing to finish before scrolling
+      } else {
+         // If the accordion is opening
+         setOpen(true);
+      }
    };
 
    const DutyHeader = () => {
@@ -56,17 +69,13 @@ const Duty = ({ duty }: DutyProps) => {
    const DutyMain = () => {
       return (
          <>
-            <span>
-               {description}
-               {moreInfo && (
-                  <span className="link px-2">
-                     {open ? 'Show less' : 'Show more'}
-                     <span className="inline-block h-6 w-6 align-middle">
-                        <ChevronIcon direction={open ? 'up' : 'down'} />
-                     </span>
-                  </span>
-               )}
-            </span>
+            {details && details.length > 0 && (
+               <List
+                  items={details}
+                  bottom="no"
+                  ariaLabel="List of responsibilities and accomplishments"
+               />
+            )}
             {moreInfoLink && (
                <Link className="link inline text-sm" href={moreInfoLink.href}>
                   {moreInfoLink.text}
@@ -77,40 +86,51 @@ const Duty = ({ duty }: DutyProps) => {
    };
 
    return (
-      <li className="mb-6">
+      <li ref={triggerRef} className="mb-6">
          <DutyHeader />
-         {moreInfo && moreInfo.length > 0 ? (
-            <Collapsible onOpenChange={handleToggle} className="mt-2">
+         <DutyMain />
+
+         {moreInfo && moreInfo.length > 0 && (
+            <Collapsible onOpenChange={handleToggle}>
+               <Content
+                  id={ariaText}
+                  aria-hidden={!open}
+                  /* className={clsx(
+                     // 'rounded-md border border-bb-teal bg-bb-gray-900 p-4 light:bg-[var(--bb-gray-10)]',
+                     open ? 'animate-slide-down' : 'animate-slide-up'
+                  )} */
+               >
+                  <Trigger
+                     className="text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bb-teal"
+                     aria-expanded={open}
+                     aria-controls={ariaText}>
+                     {moreInfo.map((info, index) => (
+                        <div key={index}>
+                           {Array.isArray(info) ? (
+                              <List
+                                 items={info}
+                                 bottom="no"
+                                 ariaLabel="More responsibilities and accomplishments"
+                              />
+                           ) : (
+                              <Text>{info}</Text>
+                           )}
+                        </div>
+                     ))}
+                  </Trigger>
+               </Content>
                <Trigger
                   className="text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bb-teal"
                   aria-expanded={open}
                   aria-controls={ariaText}>
-                  <DutyMain />
+                  <span className="link px-2">
+                     {open ? 'Show less' : 'Show more'}
+                     <span className="inline-block h-6 w-6 align-middle">
+                        <ChevronIcon direction={open ? 'up' : 'down'} />
+                     </span>
+                  </span>
                </Trigger>
-               <Content
-                  id={ariaText}
-                  aria-hidden={!open}
-                  className={clsx(
-                     'light:bg-[var(--bb-gray-10)] rounded-md border border-bb-teal bg-bb-gray-900 p-4',
-                     open ? 'animate-slide-down' : 'animate-slide-up'
-                  )}>
-                  {moreInfo.map((info, index) => (
-                     <div key={index}>
-                        {Array.isArray(info) ? (
-                           <List
-                              items={info}
-                              bottom="no"
-                              ariaLabel="List of responsibilities and accomplishments"
-                           />
-                        ) : (
-                           <Text>{info}</Text>
-                        )}
-                     </div>
-                  ))}
-               </Content>
             </Collapsible>
-         ) : (
-            <DutyMain />
          )}
       </li>
    );
