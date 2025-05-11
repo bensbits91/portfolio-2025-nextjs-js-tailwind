@@ -9,17 +9,17 @@ export const experience = [
          {
             name: '',
             details: [
-               'Building websites and apps using JavaScript, React, TypeScript, Next.js, CSS, and Tailwind CSS',
-               'Prioritizing usability and accessibility best practices',
-               'Optimizing web applications for performance, scalability, and cross-browser compatibility'
+               'Building websites and apps using JavaScript, React, TypeScript, Next.js, CSS, and Tailwind CSS.',
+               'Prioritizing usability and accessibility best practices.',
+               'Optimizing web applications for performance, scalability, and cross-browser compatibility.',
             ],
             moreInfo: [
                [
-                  'Writing clean, maintainable code with solid architecture',
-                  'Building reusable components and libraries to improve efficiency and maintainability',
-                  'Integrating third-party APIs and services',
-                  'Building and maintaining RESTful APIs and microservices using Node.js, Fastify, and Express',
-                  'Building databases and data models using MongoDB and PostgreSQL'
+                  'Writing clean, maintainable code with solid architecture.',
+                  'Building reusable components and libraries to improve efficiency and maintainability.',
+                  'Integrating third-party APIs and services.',
+                  'Building and maintaining RESTful APIs and microservices using Node.js, Fastify, and Express.',
+                  'Building databases and data models using MongoDB and PostgreSQL.',
                ]
             ],
             skillNames: [
@@ -100,59 +100,59 @@ export const experience = [
                'Helm'
             ],
             details: [
-               'Developed and maintained customer-facing applications using JavaScript, React, Redux, TypeScript, Styled Components, and CSS',
-               'Developed and maintained internal applications using JavaScript, Vue.js, Vuex, and CSS',
-               'Significantly improved core web vitals for the public website using JavaScript, PHP, WordPress, and CSS, increasing traffic and conversion rates',
-               'Integrated UI with RESTful APIs, contributed to Python APIs, and built microservices using Node.js',
-               'Mentored engineers and led large cross-team projects, driving improvements in coding practices, usability, documentation, and performance'
+               'Developed and maintained customer-facing applications using JavaScript, React, Redux, TypeScript, Styled Components, and CSS.',
+               'Developed and maintained internal applications using JavaScript, Vue.js, Vuex, and CSS.',
+               'Significantly improved core web vitals for the public website using JavaScript, PHP, WordPress, and CSS, increasing traffic and conversion rates.',
+               'Integrated UI with RESTful APIs, contributed to Python APIs, and built microservices using Node.js.',
+               'Mentored engineers and led large cross-team projects, driving improvements in coding practices, usability, documentation, and performance.',
             ],
             moreInfo: [
                [
-                  'Built real-time, interactive applications with complex state management',
-                  'Implemented responsive design and accessibility best practices',
-                  'Contributed to customer-facing features, including onboarding flows, shopping and cart experiences, dashboards, post-purchase upsell flows, and more',
-                  'Developed and maintained a design system and atomic component library for consistent UI across products',
-                  'Collaborated with design teams to implement engaging, pixel-perfect interfaces',
-                  'Supported a shift to a page-speed-focused SEO strategy, collaborating with the SEO team to meet performance targets (e.g., TTFB, LCP, CLS)'
+                  'Built real-time, interactive applications with complex state management.',
+                  'Implemented responsive design and accessibility best practices.',
+                  'Contributed to customer-facing features, including onboarding flows, shopping and cart experiences, dashboards, post-purchase upsell flows, and more.',
+                  'Developed and maintained a design system and atomic component library for consistent UI across products.',
+                  'Collaborated with design teams to implement engaging, pixel-perfect interfaces.',
+                  'Supported a shift to a page-speed-focused SEO strategy, collaborating with the SEO team to meet performance targets (e.g., TTFB, LCP, CLS).'
                ],
 
                'A/B Testing and experimentation',
                [
-                  'Led planning, building, tracking, and reporting on A/B and multivariate tests',
-                  'Collaborated with Design and Product teams to develop hypotheses, define metrics, and design variants',
-                  'Built variants and worked with Data teams to analyze and present results',
-                  'Partnered with stakeholders to confirm winners, implement solutions, and plan follow-up tests',
-                  'Fostered a culture of experimentation and A/B Testing, leading the transition to LaunchDarkly for feature flagging and experimentation',
-                  'Led an experimentation team dedicated to A/B testing and multivariate experimentation, building a culture of experimentation to speed iterative improvements and increase revenue',
-                  'Trained other teams and presented to stakeholders regarding experimentation and LaunchDarkly',
-                  'Acquired LaunchDarkly Gold Certification and provided ongoing support',
-                  'Trained engineers to be experimentation experts throughout the company'
+                  'Led planning, building, tracking, and reporting on A/B and multivariate tests.',
+                  'Collaborated with Design and Product teams to develop hypotheses, define metrics, and design variants.',
+                  'Built variants and worked with Data teams to analyze and present results.',
+                  'Partnered with stakeholders to confirm winners, implement solutions, and plan follow-up tests.',
+                  'Fostered a culture of experimentation and A/B Testing, leading the transition to LaunchDarkly for feature flagging and experimentation.',
+                  'Led an experimentation team dedicated to A/B testing and multivariate experimentation, building a culture of experimentation to speed iterative improvements and increase revenue.',
+                  'Trained other teams and presented to stakeholders regarding experimentation and LaunchDarkly.',
+                  'Acquired LaunchDarkly Gold Certification and provided ongoing support.',
+                  'Trained engineers to be experimentation experts throughout the company.',
                ],
 
                'Cross-functional and general engineering',
                [
-                  'Defined technical requirements, collaborated with Product and Design teams, and led story mapping sessions',
-                  'Implemented automated testing (Jest, Cypress) and CI/CD pipelines to ensure code quality and reliability',
-                  'Participated in Agile/Scrum methodologies, including story mapping, sprint planning, retrospectives, and daily stand-ups',
-                  'Provided documentation, training, and support related to performance and coding best practices',
-                  'Managed projects from technical scoping to deployment and user support, ensuring delivery of high-quality, goal-aligned features',
-                  'Administered and documented developer tools to streamline workflows',
-                  'Provided technical support and mentoring across multiple codebases and teams',
-                  'Implemented tracking systems, such as MixPanel, and Datadog to capture and assess user behavior'
+                  'Defined technical requirements, collaborated with Product and Design teams, and led story mapping sessions.',
+                  'Implemented automated testing (Jest, Cypress) and CI/CD pipelines to ensure code quality and reliability.',
+                  'Participated in Agile/Scrum methodologies, including story mapping, sprint planning, retrospectives, and daily stand-ups.',
+                  'Provided documentation, training, and support related to performance and coding best practices.',
+                  'Managed projects from technical scoping to deployment and user support, ensuring delivery of high-quality, goal-aligned features.',
+                  'Administered and documented developer tools to streamline workflows.',
+                  'Provided technical support and mentoring across multiple codebases and teams.',
+                  'Implemented tracking systems, such as MixPanel, and Datadog to capture and assess user behavior.',
                ],
 
                'Backend/infrastructure',
                [
-                  'Built and maintained scalable microservices to improve developer experience',
-                  'Leveraged technologies such as Node.js, Fastify, JavaScript, and GCP',
-                  'Contributed to the development and decommissioning of APIs, including migrating from a monolithic API to microservices',
-                  'Developed robust solutions for validating JSON and XML and converting between data formats',
-                  'Led development of a critical microservice to automate data handling for a federal API, boosting efficiency and revenue',
-                  'Integrated logging and monitoring in GCP to ensure reliability and observability',
-                  'Improved logging and alerting standards (Sentry and GCP) to facilitate timely understanding and resolution of issues across a distributed system',
-                  'Implemented secure storage and processing of Personally Identifiable Information (PII) using a proxy architecture',
-                  'Contributed to API abstractions, CI/CD pipelines, and release workflows',
-                  'Contributed to a centralized event distributor using Pub/Sub, Protobuf, and Go'
+                  'Built and maintained scalable microservices to improve developer experience.',
+                  'Leveraged technologies such as Node.js, Fastify, JavaScript, and GCP.',
+                  'Contributed to the development and decommissioning of APIs, including migrating from a monolithic API to microservices.',
+                  'Developed robust solutions for validating JSON and XML and converting between data formats.',
+                  'Led development of a critical microservice to automate data handling for a federal API, boosting efficiency and revenue.',
+                  'Integrated logging and monitoring in GCP to ensure reliability and observability.',
+                  'Improved logging and alerting standards (Sentry and GCP) to facilitate timely understanding and resolution of issues across a distributed system.',
+                  'Implemented secure storage and processing of Personally Identifiable Information (PII) using a proxy architecture.',
+                  'Contributed to API abstractions, CI/CD pipelines, and release workflows.',
+                  'Contributed to a centralized event distributor using Pub/Sub, Protobuf, and Go.',
                ]
             ]
          }
@@ -427,21 +427,21 @@ export const experience = [
                'Performance Optimization'
             ],
             details: [
-               'Developed hundreds of applications using JavaScript, React, TypeScript, Next.js, and CSS',
-               'Built a library of reusable, styleable, composable components to accelerate delivery and ensure consistent usability, accessibility, and performance',
-               'Designed and built the company website using WordPress, PHP, JavaScript, and CSS—including custom templates, menus, and widgets—for frequent content updates and SEO improvement',
-               'Owned projects end-to-end, from discovery and requirements to delivery and support'
+               'Developed hundreds of applications using JavaScript, React, TypeScript, Next.js, and CSS.',
+               'Built a library of reusable, styleable, composable components to accelerate delivery and ensure consistent usability, accessibility, and performance.',
+               'Designed and built the company website using WordPress, PHP, JavaScript, and CSS—including custom templates, menus, and widgets—for frequent content updates and SEO improvement.',
+               'Owned projects end-to-end, from discovery and requirements to delivery and support.',
             ],
             moreInfo: [
                [
-                  'Led SEO, marketing, and sales initiatives, steadily improving traffic, core web vitals, and conversions',
-                  'Built visualizations, maps and animations using D3.js, Recharts, React-Simple-Maps, React, and CSS',
+                  'Led SEO, marketing, and sales initiatives, steadily improving traffic, core web vitals, and conversions.',
+                  'Built visualizations, maps and animations using D3.js, Recharts, React-Simple-Maps, React, and CSS.',
                   "Managed the company's online presence and digital marketing strategy.",
-                  'Implemented SEO best practices to improve search rankings and increase organic traffic',
-                  'Maintained strong relationships with over 50 organizations, including government agencies, universities, restaurants, and global corporations',
-                  'Managed all aspects of the business, including client relationships, marketing, and customer support',
-                  'Provided training and support to clients to ensure long-term success',
-                  'Conducted usability studies and collaborated with clients to understand and address their unique needs'
+                  'Implemented SEO best practices to improve search rankings and increase organic traffic.',
+                  'Maintained strong relationships with over 50 organizations, including government agencies, universities, restaurants, and global corporations.',
+                  'Managed all aspects of the business, including client relationships, marketing, and customer support.',
+                  'Provided training and support to clients to ensure long-term success.',
+                  'Conducted usability studies and collaborated with clients to understand and address their unique needs.',
                ]
             ]
          }
@@ -538,24 +538,24 @@ export const experience = [
                'Accessibility (WCAG)'
             ],
             details: [
-               'Trained and mentored developers while building apps using JavaScript, CSS, PHP, and SQLite, improving performance and coding standards',
-               'Led development of a Content Review Tool to support large-scale reviews of hundreds of thousands of web pages',
-               'Created templates and delivered training to help teams build responsive, accessible websites for sharing and managing documents and data',
-               'Managed web projects and improved system performance using JavaScript, CSS, PHP, and SQLite'
+               'Trained and mentored developers while building apps using JavaScript, CSS, PHP, and SQLite, improving performance and coding standards.',
+               'Led development of a Content Review Tool to support large-scale reviews of hundreds of thousands of web pages.',
+               'Created templates and delivered training to help teams build responsive, accessible websites for sharing and managing documents and data.',
+               'Managed web projects and improved system performance using JavaScript, CSS, PHP, and SQLite.',
             ],
             moreInfo: [
                [
-                  'Developed and maintained a custom web application for the USDA Forest Service',
-                  'Managed a steady stream of internal and public-facing web projects for www.fs.usda.gov',
-                  'Built web apps using JavaScript, CSS, PHP, and SQLite, reducing reliance on jQuery with modern JavaScript components',
-                  'Built and maintained templates to enable self-serve website creation for non-technical users',
-                  'Improved web accessibility for Forest Service websites and templates after training with a senior accessibility expert (WCAG)',
-                  'Designed and delivered accessibility training to colleagues and content creators',
-                  'Used Git and GitHub to collaborate on code, conduct reviews, and drive incremental refactoring',
-                  'Helped demonstrate application improvements and performance gains to leadership',
-                  'Provided technical training, support, and documentation to empower internal teams',
+                  'Developed and maintained a custom web application for the USDA Forest Service.',
+                  'Managed a steady stream of internal and public-facing web projects for www.fs.usda.gov.',
+                  'Built web apps using JavaScript, CSS, PHP, and SQLite, reducing reliance on jQuery with modern JavaScript components.',
+                  'Built and maintained templates to enable self-serve website creation for non-technical users.',
+                  'Improved web accessibility for Forest Service websites and templates after training with a senior accessibility expert (WCAG).',
+                  'Designed and delivered accessibility training to colleagues and content creators.',
+                  'Used Git and GitHub to collaborate on code, conduct reviews, and drive incremental refactoring.',
+                  'Helped demonstrate application improvements and performance gains to leadership.',
+                  'Provided technical training, support, and documentation to empower internal teams.',
                   "Led development of a Content Review Tool to streamline a complex review process across the agency's public web presence.",
-                  'Participated in Agile/Scrum practices including story mapping, sprint planning, retrospectives, and daily stand-ups'
+                  'Participated in Agile/Scrum practices including story mapping, sprint planning, retrospectives, and daily stand-ups.',
                ]
             ]
          }
@@ -627,25 +627,25 @@ export const experience = [
                'Scrum'
             ],
             details: [
-               'Re-engineered business processes and tools, improving efficiency, engagement, and job satisfaction',
-               'Built custom software and delivered documentation, training, and support to help teams collaborate and evolve—enhancing usability and adoption of internal tools and processes',
-               "Led usability studies and built a customer community to help shape the company's software."
+               'Re-engineered business processes and tools, improving efficiency, engagement, and job satisfaction.',
+               'Built custom software and delivered documentation, training, and support to help teams collaborate and evolve—enhancing usability and adoption of internal tools and processes.',
+               "Led usability studies and built a customer community to help shape the company's software.",
             ],
             moreInfo: [
                [
-                  'Re-engineered processes and tools across the organization to better utilize talent and experience',
-                  'Improved efficiency, accuracy, customer satisfaction, and employee engagement',
-                  'Defined SCAS, KPIs, and team metrics to guide performance and decision-making',
-                  'Implemented a continuous improvement initiative, empowering employees to evolve systems and workflows',
-                  'Provided custom software, documentation, training, and support to ensure successful adoption',
-                  'Integrated customer service, sales, and marketing teams into a cohesive Business Solutions Department',
-                  'Worked directly with customers to increase engagement and facilitate idea sharing',
-                  'Built and nurtured a customer community to gather feedback and promote collaboration',
-                  'Conducted stakeholder and SME interviews, documented requirements, and produced software specifications',
-                  'Authored and maintained technical content, improving documentation standards',
-                  'Learned PMP/PMI project management methodologies and led a local stydy group',
-                  'Wrote detailed responses to government RFPs, RFQs, and RFIs. Maintained a reusable content library and supported sales teams to close deals and onboard new clients',
-                  'Participated in Agile/Scrum methodologies, including story mapping, sprint planning, retrospectives, and daily stand-ups'
+                  'Re-engineered processes and tools across the organization to better utilize talent and experience.',
+                  'Improved efficiency, accuracy, customer satisfaction, and employee engagement.',
+                  'Defined SCAS, KPIs, and team metrics to guide performance and decision-making.',
+                  'Implemented a continuous improvement initiative, empowering employees to evolve systems and workflows.',
+                  'Provided custom software, documentation, training, and support to ensure successful adoption.',
+                  'Integrated customer service, sales, and marketing teams into a cohesive Business Solutions Department.',
+                  'Worked directly with customers to increase engagement and facilitate idea sharing.',
+                  'Built and nurtured a customer community to gather feedback and promote collaboration.',
+                  'Conducted stakeholder and SME interviews, documented requirements, and produced software specifications.',
+                  'Authored and maintained technical content, improving documentation standards.',
+                  'Learned PMP/PMI project management methodologies and led a local stydy group.',
+                  'Wrote detailed responses to government RFPs, RFQs, and RFIs. Maintained a reusable content library and supported sales teams to close deals and onboard new clients.',
+                  'Participated in Agile/Scrum methodologies, including story mapping, sprint planning, retrospectives, and daily stand-ups.',
                ]
             ]
          }
@@ -662,13 +662,13 @@ export const experience = [
             name: '',
             // skillNames: ['CSS', 'HTML5']
             details: [
-               'Produced extensive technical content related to software integrations with biometric security devices (e.g. fingerprint, retina, iris, voice, face, and keystroke)',
-               'Contributed to patent applications related to cryptographic security, including research and mathematical analysis'
+               'Produced extensive technical content related to software integrations with biometric security devices (e.g. fingerprint, retina, iris, voice, face, and keystroke).',
+               'Contributed to patent applications related to cryptographic security, including research and mathematical analysis.',
             ],
             moreInfo: [
                [
-                  'Interviewed developers and other stakeholders',
-                  'Developed and improved technical documentation processes and standards'
+                  'Interviewed developers and other stakeholders.',
+                  'Developed and improved technical documentation processes and standards.',
                ]
             ]
          }
