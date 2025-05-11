@@ -12,7 +12,7 @@ const Experience = () => {
    const xp = useMemo(() => experience, []);
    return (
       <>
-         <Section top="xl" width="sm">
+         <Section top="xl" width="md">
             <Heading level={1} appearance={1} bottom="lg">
                Experience
             </Heading>

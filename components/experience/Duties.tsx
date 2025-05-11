@@ -10,13 +10,11 @@ const Duties = ({ duties }: DutiesProps) => {
       return <p>No duties available for this job.</p>;
    }
    return (
-      <div>
-         <ul aria-label="Job responsibilities">
-            {duties.map((duty, index) => (
-               <Duty key={index} duty={duty} />
-            ))}
-         </ul>
-      </div>
+      <ul aria-label="Job responsibilities">
+         {duties.map((duty, index) => (
+            <Duty key={index} duty={duty} />
+         ))}
+      </ul>
    );
 };
 export default Duties;

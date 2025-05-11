@@ -742,7 +742,7 @@ const yearsSinceLearned = function (yearLearned: number) {
 
 function getJobsWithSkill(skillName: string) {
    return experience.filter(job =>
-      job.duties.some(duty => duty.skillNames?.includes(skillName))
+      job.duties.some(duty => 'skillNames' in duty && duty.skillNames?.includes(skillName))
    );
 }
 

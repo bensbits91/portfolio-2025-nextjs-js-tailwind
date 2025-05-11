@@ -8,14 +8,13 @@ import { ChevronIcon } from '@/components/icons';
 import { skillIcons } from '@/data/skills';
 import { BaseDuty } from '@/types/Job';
 import { replaceNonAphanumeric } from '@/utils/string';
-import clsx from 'clsx';
 
 interface DutyProps {
    duty: BaseDuty;
 }
 
 const Duty = ({ duty }: DutyProps) => {
-   const { name, skillNames, description, moreInfo, moreInfoLink } = duty;
+   const { name, skillNames, details, moreInfo, moreInfoLink } = duty;
    const ariaText = replaceNonAphanumeric(`duty-content-${duty.name}`);
 
    const [open, setOpen] = useState(false);
@@ -56,17 +55,13 @@ const Duty = ({ duty }: DutyProps) => {
    const DutyMain = () => {
       return (
          <>
-            <span>
-               {description}
-               {moreInfo && (
-                  <span className="link px-2">
-                     {open ? 'Show less' : 'Show more'}
-                     <span className="inline-block h-6 w-6 align-middle">
-                        <ChevronIcon direction={open ? 'up' : 'down'} />
-                     </span>
-                  </span>
-               )}
-            </span>
+            {details && details.length > 0 && (
+               <List
+                  items={details}
+                  bottom="no"
+                  ariaLabel="List of responsibilities and accomplishments"
+               />
+            )}
             {moreInfoLink && (
                <Link className="link inline text-sm" href={moreInfoLink.href}>
                   {moreInfoLink.text}
@@ -79,35 +74,48 @@ const Duty = ({ duty }: DutyProps) => {
    return (
       <li className="mb-6">
          <DutyHeader />
+         <DutyMain />
+
          {moreInfo && moreInfo.length > 0 ? (
-            <Collapsible onOpenChange={handleToggle} className="mt-2">
-               <Trigger
-                  className="text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bb-teal"
-                  aria-expanded={open}
-                  aria-controls={ariaText}>
-                  <DutyMain />
-               </Trigger>
+            <Collapsible onOpenChange={handleToggle}>
                <Content
                   id={ariaText}
                   aria-hidden={!open}
-                  className={clsx(
-                     'light:bg-[var(--bb-gray-10)] rounded-md border border-bb-teal bg-bb-gray-900 p-4',
+                  /* className={clsx(
+                     // 'rounded-md border border-bb-teal bg-bb-gray-900 p-4 light:bg-[var(--bb-gray-10)]',
                      open ? 'animate-slide-down' : 'animate-slide-up'
-                  )}>
+                  )} */
+               >
+                  <Trigger
+                  className="text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bb-teal"
+                  aria-expanded={open}
+                  aria-controls={ariaText}>
                   {moreInfo.map((info, index) => (
                      <div key={index}>
                         {Array.isArray(info) ? (
                            <List
                               items={info}
                               bottom="no"
-                              ariaLabel="List of responsibilities and accomplishments"
+                              ariaLabel="More responsibilities and accomplishments"
                            />
                         ) : (
                            <Text>{info}</Text>
                         )}
                      </div>
-                  ))}
+                  ))}</Trigger>
                </Content>
+               <Trigger
+                  className="text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-bb-teal"
+                  aria-expanded={open}
+                  aria-controls={ariaText}>
+                  {/* <DutyMain /> */}
+                  <span className="link px-2">
+                     {open ? 'Show less' : 'Show more'}
+                     <span className="inline-block h-6 w-6 align-middle">
+                        <ChevronIcon direction={open ? 'up' : 'down'} />
+                     </span>
+                  </span>
+               </Trigger>
             </Collapsible>
          ) : (
             <DutyMain />

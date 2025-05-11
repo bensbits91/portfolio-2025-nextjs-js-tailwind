@@ -8,7 +8,8 @@ export interface BaseJob {
 export interface BaseDuty {
    name: string;
    skillNames?: string[];
-   description: string;
+   description?: string;
+   details?: string[];
    moreInfo?: (string | string[])[];
    moreInfoLink?: {
       text: string;

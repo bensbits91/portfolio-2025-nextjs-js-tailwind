@@ -1,4 +1,4 @@
-import { Heading, Text } from '@/components/typography';
+import { Heading } from '@/components/typography';
 import { duration } from '@/utils/date';
 import { HeaderJob } from '@/types/Job';
 
@@ -10,21 +10,26 @@ interface JobHeaderProps {
 const JobHeader = ({ job, id }: JobHeaderProps) => {
    const { company, role, start, end, location } = job;
    return (
-      <div id={id} className="mb-8">
-         <Heading level={2} appearance={2} bottom="md" color="secondary">
-            {role}
-         </Heading>
-         <Heading level={3} appearance={4} color="white">
-            {company}
-            <span className="light:text-bb-gray-500 text-bb-gray-300">
-               {' '}
-               in {location}
-            </span>
-         </Heading>
-         <Text>
-            <span className="sr-only">Job duration: </span>
-            {duration(start, end)}
-         </Text>
+      <div
+         id={id}
+         className="flex flex-col gap-1 md:flex-row md:justify-between mb-4 bg-bg">
+         <div className="flex flex-col gap-1 md:flex-row md:gap-0">
+            <Heading weight="bold" bottom="no" level={2} appearance={6}>
+               {role}
+            </Heading>
+            <Heading bottom="no" level={3} appearance={6}>
+               <span className="hidden md:inline">, </span>
+               {company}
+               <span> &mdash; </span>
+               {location}
+            </Heading>
+         </div>
+         <div>
+            <Heading bottom="no" level={3} appearance={6}>
+               <span className="sr-only">Job duration: </span>
+               {duration(start, end, 'pretty')}
+            </Heading>
+         </div>
       </div>
    );
 };
